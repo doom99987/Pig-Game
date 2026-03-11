@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerMovment : MonoBehaviour
 {
-    [SerializeField] int speed = 1;
+    [SerializeField] float speed = 25f;
     [SerializeField] Rigidbody2D rb;
 
     // Update is called once per frame

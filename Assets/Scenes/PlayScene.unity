@@ -601,8 +601,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 3
-  m_AngularDamping: 1
+  m_LinearDamping: 10
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5649e5031c92c4d4396fb0db653f1d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 25
   rb: {fileID: 1156143648}
 --- !u!1 &1414844063
 GameObject:
