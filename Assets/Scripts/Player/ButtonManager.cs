@@ -20,4 +20,9 @@ public class ButtonManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public static void goToTitleScreen()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }
