@@ -1255,9 +1255,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Director - Amelia \nProducer - Caleb Bohm\nProgrammers - David Konvisser
-    & Caleb Bohm\nArtists - Amelia & Nikki\nGame Designer - Audrey\nSound Designer
-    - Polak\n"
+  m_text: 'Game Director - Amelia Venturini
+
+    Producer - Caleb Bohm
+
+    Programmers
+    - David Konvisser & Caleb Bohm
+
+    Artists - Amelia Venturini & Nikki Szavuly
+
+    Game
+    Designer - Audrey  Wu
+
+    Sound Designer - Polak Kumar
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1350,6 +1362,7 @@ GameObject:
   - component: {fileID: 1595941132}
   - component: {fileID: 1595941135}
   - component: {fileID: 1595941136}
+  - component: {fileID: 1595941137}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1487,6 +1500,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5151d0078cd092445ba91b95afbe92f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1595941137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595941131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963d0cddce3d8904083716fe4c8b47a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1826185334}
+  panelOpen: 0
 --- !u!1 &1739825789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,9 +1597,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1595941136}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1595941137}
+        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
+        m_MethodName: togglePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
