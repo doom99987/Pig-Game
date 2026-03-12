@@ -1512,8 +1512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963d0cddce3d8904083716fe4c8b47a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 1826185334}
-  panelOpen: 0
+  creditsPanel: {fileID: 1826185334}
+  titleScreenPanel: {fileID: 284923425}
 --- !u!1 &1739825789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,7 +1599,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1595941137}
         m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
-        m_MethodName: togglePanel
+        m_MethodName: openCreditsPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
