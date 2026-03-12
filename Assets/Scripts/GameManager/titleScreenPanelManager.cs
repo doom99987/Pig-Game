@@ -12,6 +12,7 @@ using UnityEngine;
 
 public class PanelManager : MonoBehaviour
 {
+    [Header("Title Screen Panels")]
     [SerializeField] GameObject creditsPanel;
     [SerializeField] GameObject titleScreenPanel;
     public void openCreditsPanel()

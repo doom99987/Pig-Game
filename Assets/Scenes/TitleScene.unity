@@ -1105,7 +1105,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 4, y: -28}
-  m_SizeDelta: {x: 700, y: 400}
+  m_SizeDelta: {x: 800, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295979578
 MonoBehaviour:
@@ -1139,7 +1139,7 @@ MonoBehaviour:
     Game
     Designer - Audrey  Wu
 
-    Sound Designer - Polak Kumar
+    Sound Designer - Palak Kumar
 
 '
   m_isRightToLeft: 0
@@ -1547,7 +1547,7 @@ RectTransform:
   m_GameObject: {fileID: 1739825789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2121, y: 1.2121, z: 1.2121}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 68295074}
@@ -1555,7 +1555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 88}
+  m_AnchoredPosition: {x: -4, y: 37.20202}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739825791
@@ -1758,7 +1758,7 @@ RectTransform:
   m_GameObject: {fileID: 1975145843}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2121, y: 1.2121, z: 1.2121}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1037462462}
@@ -1766,7 +1766,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 42}
+  m_AnchoredPosition: {x: -4, y: -18.55598}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975145845
@@ -1912,6 +1912,18 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9068435522230287399, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2121
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068435522230287399, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2121
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068435522230287399, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2121
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068435522230287399, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1941,11 +1953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9068435522230287399, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 9068435522230287399, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 137
+      value: 96.6
       objectReference: {fileID: 0}
     - target: {fileID: 9068435522230287399, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
