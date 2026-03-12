@@ -289,10 +289,10 @@ RectTransform:
   - {fileID: 1128684188}
   m_Father: {fileID: 1932740672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -332.93, y: 153.01}
-  m_SizeDelta: {x: -665.85, y: -306.02}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 102.25995, y: -91.65251}
+  m_SizeDelta: {x: 204.5299, y: 183.305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229963443
 MonoBehaviour:
@@ -1433,6 +1433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 25
+  moneyText: {fileID: 1128684189}
 --- !u!1 &978515675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,8 +2274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.5, y: 67.9}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -0.0008547304, y: 67.090866}
+  m_SizeDelta: {x: 207.95, y: 49.4742}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1128684189
 MonoBehaviour:
@@ -2362,7 +2363,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 1.0515442}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

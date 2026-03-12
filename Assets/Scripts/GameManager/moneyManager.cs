@@ -1,20 +1,18 @@
+using TMPro;
 using UnityEngine;
 
 public class moneyManager : MonoBehaviour
 {
     [Header("Money")]
     [SerializeField] float money = 25f;
+    [SerializeField] TextMeshProUGUI moneyText;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    /// <summary>
+    /// updates money. 
+    /// </summary>
     void Update()
     {
-        
+        moneyText.text = $"${money}";
     }
 
     public void addMoney(float amount)
@@ -24,5 +22,10 @@ public class moneyManager : MonoBehaviour
 
     public void removeMoney(float amount) {
         money -= amount;
+    }
+
+    public float getMoney()
+    {
+        return money; 
     }
 }
