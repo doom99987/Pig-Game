@@ -11,5 +11,11 @@ public class roundManager : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
+        int minutes = Mathf.FloorToInt
+        timerText.text = elapsedTime.ToString();
+    }
+    private void FixedUpdate()
+    {
+        
     }
 }
