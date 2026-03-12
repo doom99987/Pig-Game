@@ -12,6 +12,7 @@ using UnityEngine;
 
 public class PlayerMovment : MonoBehaviour
 {
+    [Header("Player Movement")]
     [SerializeField] protected float curSpeed = 25f; //variable to control the current speed of the player
     [SerializeField] protected float maxSpeed = 35f; //variable to control the max speed of the player
     [SerializeField] Rigidbody2D rb; //Player rigid body

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class playScenePanelManager : MonoBehaviour
 {
+    [Header("Panels")]
     [SerializeField] GameObject shopPanel;
     [SerializeField] GameObject deathPanel;
     [SerializeField] GameObject victoryPanel;
