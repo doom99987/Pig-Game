@@ -10,7 +10,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerMovment : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Movement")]
     [SerializeField] protected float curSpeed = 25f; //variable to control the current speed of the player
