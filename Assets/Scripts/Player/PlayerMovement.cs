@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: PlayerMovement.c
+* File Name: PlayerMovement.cs
 * Author: David Konvisser
 * DigiPen Email: david.konvisser@digipen.edu
 * Course: Wanic Game Project
@@ -10,7 +10,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class playerMovement : MonoBehaviour
 {
     [Header("Player Movement")]
     [SerializeField] protected float curSpeed = 25f; //variable to control the current speed of the player

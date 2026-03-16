@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: ButtonManager.c
+* File Name: ButtonManager.cs
 * Author: David Konvisser
 * DigiPen Email: david.konvisser@digipen.edu
 * Course: Wanic Game Project

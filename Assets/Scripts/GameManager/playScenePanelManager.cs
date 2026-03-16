@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: playScenePanelManager.c
+* File Name: playScenePanelManager.cs
 * Author: David Konvisser
 * DigiPen Email: david.konvisser@digipen.edu
 * Course: Wanic Game Project
@@ -18,22 +18,34 @@ public class playScenePanelManager : MonoBehaviour
     protected bool isShopOpen = false;
     protected bool isDeathOpen = false;
     protected bool isVictoryOpen = false;
+    /// <summary>
+    /// Toggles the visibility of the shop panel.
+    /// </summary>
     public void toggleShopPanel()
     {
         isShopOpen = !isShopOpen;
         shopPanel.SetActive(isShopOpen);
 
     }
+    /// <summary>
+    /// Toggles the visibility of the death panel.
+    /// </summary>
     public void toggleDeathPanel()
     {
         isDeathOpen = !isDeathOpen;
         deathPanel.SetActive(isDeathOpen);
     }
+    /// <summary>
+    /// Toggles the visibility of the victory panel.
+    /// </summary>
     public void toggleVictoryPanel()
     {
         isVictoryOpen = !isVictoryOpen;
         victoryPanel.SetActive(isVictoryOpen);
     }
+    /// <summary>
+    /// Closes all active UI panels, including shop, death, and victory panels.
+    /// </summary>
     public void closeAllPanel()
     {
         shopPanel.SetActive(false);

@@ -1,9 +1,20 @@
+/****************************************************************************
+* File Name: shopManager.cs
+* Author: David Konvisser
+* DigiPen Email: david.konvisser@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: This script manages the shop, including the functions to buy upgrades for the player, such as speed, max HP, and healing. 
+* It also keeps track of the counts for each upgrade to determine the cost of the next upgrade.
+*
+****************************************************************************/
 using System;
 using TMPro;
 using UnityEngine;
 
 public class shopManager : MonoBehaviour
 {
+    // all the counts for the upgrades, used to determine the cost of the next upgrade.
     protected int sCount = 0;
     protected int hCount = 0;
     protected int healingCount = 0;
@@ -12,6 +23,7 @@ public class shopManager : MonoBehaviour
     [SerializeField] GameObject gameManager;
     [SerializeField] GameObject player;
     [SerializeField] TextMeshProUGUI buySpeedText;
+    [Header("Upgrade Costs")]
     [SerializeField] float[] speedCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] hpCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] healingCost = { 5, 50, 500, 5000 };
@@ -20,7 +32,7 @@ public class shopManager : MonoBehaviour
     {
                 if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount])
                 {
-                    player.GetComponent<PlayerMovement>().setCurSpeed(player.GetComponent<PlayerMovement>().getCurrentSpeed() + 1);
+                    player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1);
                     gameManager.GetComponent<moneyManager>().removeMoney(speedCost[sCount]);
                     buySpeedText.text = $"Buy ${speedCost[sCount + 1] / 100f}";
                     sCount++;

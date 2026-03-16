@@ -1,9 +1,19 @@
+/****************************************************************************
+* File Name: moneyManager.cs
+* Author: David Konvisser
+* DigiPen Email: david.konvisser@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: This script manages the player's money, including displaying the money on the UI, adding and removing money, and toggling the money text on and off.
+*
+****************************************************************************/
 using TMPro;
 using UnityEngine;
 
 public class moneyManager : MonoBehaviour
 {
     [Header("Money")]
+    protected bool isMoneyTextOn = true;
     [SerializeField] float money = 2500f;
     [SerializeField] TextMeshProUGUI moneyText;
 
@@ -14,12 +24,17 @@ public class moneyManager : MonoBehaviour
     {
         moneyText.text = $"${money/100f}";
     }
-
+    /// <summary>
+    /// adds money to the player.
+    /// <param name="amount"></param>
     public void addMoney(float amount)
     {
         money += amount;
     }
-
+    /// <summary>
+    /// removes money from the player.
+    /// </summary>
+    /// <param name="amount"></param>
     public void removeMoney(float amount) {
         money -= amount;
     }
@@ -27,5 +42,11 @@ public class moneyManager : MonoBehaviour
     public float getMoney()
     {
         return money; 
+    }
+
+    public void toggleMoneyText()
+    {
+        isMoneyTextOn = !isMoneyTextOn;
+        moneyText.gameObject.SetActive(isMoneyTextOn);
     }
 }

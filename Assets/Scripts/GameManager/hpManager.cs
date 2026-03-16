@@ -1,12 +1,26 @@
+/****************************************************************************
+* File Name: hpManager.cs
+* Author: David Konvisser
+* DigiPen Email: david.konvisser@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: this script manages the player's HP, including displaying the hearts on the UI, taking damage, healing, and upgrading max HP. 
+* It also handles the player's death by toggling the death panel and money text when HP reaches 0.
+*
+****************************************************************************/
+using TMPro;
 using UnityEngine;
 public class HpManager : MonoBehaviour
 {
+    [Header("HP Settings")]
     [SerializeField] protected int hp = 3;
     [SerializeField] protected int maxHp = 3;
     [SerializeField] protected int heartsPerRow = 4;
+    [Header("Prefabs, Containers and Refrences")]
     [SerializeField] GameObject heartPrefab;
     [SerializeField] GameObject emptyHeartPrefab;
     [SerializeField] Transform heartsContainer;
+    [SerializeField] GameObject gameManager;
 
     GameObject[] fullHearts;
     GameObject[] emptyHearts;
@@ -26,14 +40,16 @@ public class HpManager : MonoBehaviour
 
     public void spawnPrefabs()
     {
+        //destroys all the children of the hearts container before spawning new ones to avoid duplicates.
         foreach (Transform child in heartsContainer)
             Destroy(child.gameObject);
 
         fullHearts = new GameObject[maxHp];
         emptyHearts = new GameObject[maxHp];
-        
+
         int index = 0;
-        int rows = (maxHp + heartsPerRow - 1) / heartsPerRow;
+        // sets the number of rows needed to display all hearts based on the maxHp and heartsPerRow.
+        int rows = (maxHp + heartsPerRow - 1) / heartsPerRow; 
 
         for (int row = 0; row < rows; row++)
         {
@@ -51,12 +67,20 @@ public class HpManager : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// updates the heart display based on the current HP. It sets the active state of the full hearts based on the current HP and checks if the player is dead (HP <= 0) to toggle the death panel and money text.
+    /// </summary>
     public void updateHearts()
     {
         for (int i = 0; i < fullHearts.Length; i++)
         {
             fullHearts[i].SetActive(i < hp);
+        }
+        if(hp<= 0)
+        {
+            gameManager.GetComponent<moneyManager>().toggleMoneyText();
+            gameManager.GetComponent<playScenePanelManager>().toggleDeathPanel();
+            Debug.Log("Player is dead!");
         }
     }
     /// <summary>
