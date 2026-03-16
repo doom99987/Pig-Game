@@ -9,7 +9,32 @@ public class shopManager : MonoBehaviour
     [SerializeField] GameObject gameManager;
     [SerializeField] GameObject player;
     [SerializeField] TextMeshProUGUI buySpeedText;
+   public enum UpgradeType
+    {
+        Speed,
+        Hp,
+        healing,
+        Pierce
+    }
     [SerializeField] float[] speedCost = { 5, 50, 500, 5000 };
+    [SerializeField]
+    //public void buyUpgrade(UpgradeType type)
+    //{
+    //    switch (type)
+    //    {
+    //        case UpgradeType.Speed:
+    //            buySpeed();
+    //            break;
+    //        case UpgradeType.Hp:
+    //            break;
+    //        case UpgradeType.healing:
+    //            break;
+    //        case UpgradeType.Pierce:
+    //            break;
+    //        default:
+    //            throw new ArgumentOutOfRangeException(nameof(type), type, null);
+    //    }
+    //}
     public void buySpeed()
     {
                 if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[count])
