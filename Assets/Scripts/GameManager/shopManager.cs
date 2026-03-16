@@ -19,6 +19,11 @@ public class shopManager : MonoBehaviour
     protected int hCount = 0;
     protected int healingCount = 0;
     protected int pierceCount = 0;
+    [Header("Upgrade Limits")]
+    [SerializeField] protected int sCountMax =10;
+    [SerializeField] protected int hCountMax = 10;
+    [SerializeField] protected int healingCountMax = 10;
+    //[SerializeField] protected int pierceCountMax = 10;
     [Header("References")]
     [SerializeField] GameObject gameManager;
     [SerializeField] GameObject player;
@@ -30,7 +35,7 @@ public class shopManager : MonoBehaviour
     //[SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
     public void buySpeed()
     {
-                if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount])
+                if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax)
                 {
                     player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1);
                     gameManager.GetComponent<moneyManager>().removeMoney(speedCost[sCount]);
@@ -41,7 +46,7 @@ public class shopManager : MonoBehaviour
 
     public void buyHp()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount])
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && hCount < hCountMax)
         {
             gameManager.GetComponent<HpManager>().upgradeMaxHp();
             gameManager.GetComponent<moneyManager>().removeMoney(hpCost[hCount]);
@@ -51,7 +56,7 @@ public class shopManager : MonoBehaviour
     }
     public void buyHealing()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount])
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax)
         {
             gameManager.GetComponent<HpManager>().heal();
             gameManager.GetComponent<moneyManager>().removeMoney(healingCost[healingCount]);
