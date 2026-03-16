@@ -15,14 +15,11 @@ public class PanelManager : MonoBehaviour
     [Header("Title Screen Panels")]
     [SerializeField] GameObject creditsPanel;
     [SerializeField] GameObject titleScreenPanel;
-    public void openCreditsPanel()
+    protected bool isCreditsOpen = false;
+    public void toggleCreditsPanel()
     {
-        creditsPanel.SetActive(true);
-        titleScreenPanel.SetActive(false);
-    }
-    public void closeCreditsPanel() 
-    { 
-        creditsPanel.SetActive(false);
-        titleScreenPanel.SetActive(true);
+        isCreditsOpen = !isCreditsOpen;
+        creditsPanel.SetActive(isCreditsOpen);
+        titleScreenPanel.SetActive(!isCreditsOpen);
     }
 }
