@@ -4,7 +4,7 @@ using UnityEngine;
 public class moneyManager : MonoBehaviour
 {
     [Header("Money")]
-    [SerializeField] float money = 25f;
+    [SerializeField] float money = 2500f;
     [SerializeField] TextMeshProUGUI moneyText;
 
     /// <summary>
@@ -12,7 +12,7 @@ public class moneyManager : MonoBehaviour
     /// </summary>
     void Update()
     {
-        moneyText.text = $"${money}";
+        moneyText.text = $"${money/100f}";
     }
 
     public void addMoney(float amount)

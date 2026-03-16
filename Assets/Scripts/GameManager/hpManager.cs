@@ -2,7 +2,7 @@ using UnityEngine;
 public class HpManager : MonoBehaviour
 {
     [SerializeField] protected int hp = 3;
-    [SerializeField] protected int maxHp = 5;
+    [SerializeField] protected int maxHp = 3;
     [SerializeField] protected int heartsPerRow = 4;
     [SerializeField] GameObject heartPrefab;
     [SerializeField] GameObject emptyHeartPrefab;
