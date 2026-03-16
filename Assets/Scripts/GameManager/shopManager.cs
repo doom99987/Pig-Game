@@ -29,21 +29,21 @@ public class shopManager : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] TextMeshProUGUI buySpeedText;
     [Header("Upgrade Costs")]
-    [SerializeField] float[] speedCost = { 5, 50, 500, 5000 };
-    [SerializeField] float[] hpCost = { 5, 50, 500, 5000 };
-    [SerializeField] float[] healingCost = { 5, 50, 500, 5000 };
+    [SerializeField] float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
+    [SerializeField] float[] hpCost = { 5, 50, 500, 5000, 50000, 500000 };
+    [SerializeField] float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
     //[SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
     public void buySpeed()
     {
                 if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax)
                 {
-                    player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1);
-                    gameManager.GetComponent<moneyManager>().removeMoney(speedCost[sCount]);
+            //upgrades the player's speed by 1.
+            player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1); 
+            gameManager.GetComponent<moneyManager>().removeMoney(speedCost[sCount]);
                     buySpeedText.text = $"Buy ${speedCost[sCount + 1] / 100f}";
                     sCount++;
-                }
+        }
     }
-
     public void buyHp()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && hCount < hCountMax)

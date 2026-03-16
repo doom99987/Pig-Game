@@ -118,7 +118,7 @@ public class HpManager : MonoBehaviour
     /// <summary>
     /// reset hp to max hp and updates the heart display.
     /// </summary>
-    public void reseHp()
+    public void resetHp()
     {
         hp = maxHp;
         updateHearts();

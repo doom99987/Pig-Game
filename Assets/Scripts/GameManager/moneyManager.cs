@@ -4,7 +4,8 @@
 * DigiPen Email: david.konvisser@digipen.edu
 * Course: Wanic Game Project
 *
-* Description: This script manages the player's money, including displaying the money on the UI, adding and removing money, and toggling the money text on and off.
+* Description: This script manages the player's money, including displaying the money on the UI, 
+* adding and removing money, and toggling the money text on and off.
 *
 ****************************************************************************/
 using TMPro;
@@ -43,7 +44,10 @@ public class moneyManager : MonoBehaviour
     {
         return money; 
     }
-
+    /// <summary>
+    /// Toggles the visibility of the money text on the UI. 
+    /// It switches the active state of the money text game object and updates the isMoneyTextOn boolean accordingly.
+    /// </summary>
     public void toggleMoneyText()
     {
         isMoneyTextOn = !isMoneyTextOn;
