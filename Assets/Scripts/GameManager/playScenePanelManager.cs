@@ -16,32 +16,28 @@ public class playScenePanelManager : MonoBehaviour
     [SerializeField] GameObject deathPanel;
     [SerializeField] GameObject victoryPanel;
     protected bool isShopOpen = false;
+    protected bool isDeathOpen = false;
+    protected bool isVictoryOpen = false;
     public void toggleShopPanel()
     {
         isShopOpen = !isShopOpen;
         shopPanel.SetActive(isShopOpen);
 
     }
-    public void openDeathPanel()
+    public void toggleDeathPanel()
     {
-        deathPanel.SetActive(true);
+        isDeathOpen = !isDeathOpen;
+        deathPanel.SetActive(isDeathOpen);
     }
-    public void openVictoryPanel()
+    public void toggleVictoryPanel()
     {
-        deathPanel.SetActive(true);
+        isVictoryOpen = !isVictoryOpen;
+        victoryPanel.SetActive(isVictoryOpen);
     }
     public void closeAllPanel()
     {
         shopPanel.SetActive(false);
         deathPanel.SetActive(false);
-        victoryPanel.SetActive(false);
-    }
-    public void closeDeathPanel()
-    {
-        deathPanel.SetActive(false);
-    }
-    public void closeVictoryPanel()
-    {
         victoryPanel.SetActive(false);
     }
 }
