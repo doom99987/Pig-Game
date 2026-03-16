@@ -8,7 +8,6 @@ public class shopManager : MonoBehaviour
     [SerializeField] GameObject gameManager;
     [SerializeField] GameObject player;
     [SerializeField] TextMeshProUGUI buySpeedText;
-
     public void buySpeed()
     {
         switch (count)
