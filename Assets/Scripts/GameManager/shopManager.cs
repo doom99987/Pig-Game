@@ -15,7 +15,7 @@ public class shopManager : MonoBehaviour
     [SerializeField] float[] speedCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] hpCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] healingCost = { 5, 50, 500, 5000 };
-    [SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
+    //[SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
     public void buySpeed()
     {
                 if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount])
@@ -41,20 +41,20 @@ public class shopManager : MonoBehaviour
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount])
         {
-            player.GetComponent<PlayerMovement>().setCurSpeed(player.GetComponent<PlayerMovement>().getCurrentSpeed() + 1);
+            gameManager.GetComponent<HpManager>().heal();
             gameManager.GetComponent<moneyManager>().removeMoney(healingCost[healingCount]);
             buySpeedText.text = $"Buy ${healingCost[healingCount + 1] / 100f}";
             healingCount++;
         }
     }
-    public void buyPierce()
-    {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount])
-        {
-            player.GetComponent<PlayerMovement>().setCurSpeed(player.GetComponent<PlayerMovement>().getCurrentSpeed() + 1);
-            gameManager.GetComponent<moneyManager>().removeMoney(pierceCost[pierceCount]);
-            buySpeedText.text = $"Buy ${pierceCost[pierceCount + 1] / 100f}";
-            pierceCount++;
-        }
-    }
+    //public void buyPierce()
+    //{
+    //    if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount])
+    //    {
+    //        //player.GetComponent<PlayerMovement>().setCurSpeed(player.GetComponent<PlayerMovement>().getCurrentSpeed() + 1);
+    //        gameManager.GetComponent<moneyManager>().removeMoney(pierceCost[pierceCount]);
+    //        buySpeedText.text = $"Buy ${pierceCost[pierceCount + 1] / 100f}";
+    //        pierceCount++;
+    //    }
+    //}
 }
