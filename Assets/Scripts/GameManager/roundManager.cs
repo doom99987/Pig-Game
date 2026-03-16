@@ -3,23 +3,30 @@ using TMPro;
 
 public class roundManager : MonoBehaviour
 {
-    [Header("")]
+    [Header("Round")]
+    [SerializeField] protected int round = 0;
+    [SerializeField] protected int totalRounds = 0;
     [SerializeField] protected float roundTime = 120f;
-    [SerializeField] TextMeshProUGUI timerText;
-
+    [Header("Text Timer")]
+    [SerializeField] TextMeshProUGUI timerText; 
     // Update is called once per frame
     void Update()
     {
+        // Checks if the game is paused
         if (!gameObject.GetComponent<gameManager>().getGameState())
         {
+            // Updates the total time thats passed
             roundTime -= Time.deltaTime;
 
+            // Displays the Time in 0:00 format
             int minutes = Mathf.FloorToInt((roundTime) / 60);
             int seconds = Mathf.FloorToInt((roundTime) % 60);
             timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+            // Checks if the round needs to be ended
             if (roundTime < 1)
             {
-                gameObject.GetComponent<gameManager>().setGameClear(true);
+                gameObject.GetComponent<gameManager>().setRoundClear(true);
+                round++;
             }
         }
     }
