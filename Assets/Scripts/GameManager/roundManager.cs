@@ -3,7 +3,7 @@ using TMPro;
 
 public class roundManager : MonoBehaviour
 {
-    protected float elapsedTime;
+    protected float elapsedTime;        
 
     [Header("Round")]
     [SerializeField] protected int round = 0;
@@ -11,6 +11,13 @@ public class roundManager : MonoBehaviour
     [SerializeField] protected float roundTime = 120f;
     [Header("Text Timer")]
     [SerializeField] TextMeshProUGUI timerText; 
+
+    // Run is called before any update is called the first time
+    private void Start()
+    {
+        elapsedTime = roundTime;
+    }
+
     // Update is called once per frame
     void Update()
     {
