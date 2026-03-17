@@ -28,7 +28,6 @@ public class playerMovement : MonoBehaviour
 
         Vector2 movement = new Vector2(horizontal, vertical);
         rb.AddForce(movement * curSpeed);
-
     }
 
     public float getCurrentSpeed()
