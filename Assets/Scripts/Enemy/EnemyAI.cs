@@ -21,6 +21,14 @@ public class EnemyAI : MonoBehaviour
             rb.AddForce(movement * curSpeed);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("player collided with");
+        }
+    }
     public float getCurrentSpeed()
     {
         return curSpeed;
