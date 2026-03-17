@@ -32,7 +32,7 @@ public class roundManager : MonoBehaviour
             int seconds = Mathf.FloorToInt((elapsedTime) % 60);
             timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
             // Checks if the round needs to be ended
-            if (roundTime < 1)
+            if (elapsedTime < 1)
             {
                 gameObject.GetComponent<gameManager>().setRoundClear(true);
                 gameObject.GetComponent<gameManager>().roundEnded();
