@@ -21,6 +21,7 @@ public class HpManager : MonoBehaviour
     [SerializeField] GameObject emptyHeartPrefab;
     [SerializeField] Transform heartsContainer;
     [SerializeField] GameObject gameManager;
+    [SerializeField] TextMeshProUGUI deathPanelMoneyText;
 
     GameObject[] fullHearts;
     GameObject[] emptyHearts;
@@ -80,6 +81,7 @@ public class HpManager : MonoBehaviour
         {
             gameManager.GetComponent<moneyManager>().toggleMoneyText();
             gameManager.GetComponent<playScenePanelManager>().toggleDeathPanel();
+            deathPanelMoneyText.text = $"You Had ${gameManager.GetComponent<moneyManager>().getMoney() / 100f} left";
             Debug.Log("Player is dead!");
         }
     }
