@@ -3,7 +3,7 @@ using TMPro;
 
 public class roundManager : MonoBehaviour
 {
-    protected float elapsedTime
+    protected float elapsedTime;
 
     [Header("Round")]
     [SerializeField] protected int round = 0;

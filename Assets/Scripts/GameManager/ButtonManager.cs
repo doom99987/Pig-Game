@@ -30,6 +30,6 @@ public class ButtonManager : MonoBehaviour
     public void closeShop()
     {
         gameManager.GetComponent<playScenePanelManager>().toggleShopPanel();
-       // gameManager.GetComponent<gameManager>()
+        gameManager.GetComponent<gameManager>().setRoundClear(false);
     }
 }
