@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class enemyAI : MonoBehaviour
 {
     protected float timer;
     protected float enemyDistanceFromPlayer;
