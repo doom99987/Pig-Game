@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5e8fe5e01f6914db3d3d99a287f962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  gameManager: {fileID: 0}
+  player: {fileID: 925202391219473229, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
+  gameManager: {fileID: 3293688853142343199, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
   curSpeed: 20
   pushBackMult: 2
   rangedEnemyStopDis: 7
