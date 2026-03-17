@@ -38,4 +38,13 @@ public class gameManager : MonoBehaviour
         roundClear = gameState;
         gamePaused = gameState;
     }
+
+    public void FixedUpdate()
+    {
+        if (roundClear)
+        {
+            gameObject.GetComponent<playScenePanelManager>().toggleShopPanel();
+        }
+    }
 }
+
