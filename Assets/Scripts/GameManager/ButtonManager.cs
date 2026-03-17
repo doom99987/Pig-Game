@@ -11,6 +11,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
+    [SerializeField] GameObject gameManager;
     public static void goToPlayScene()
     {
         SceneManager.LoadScene("PlayScene");
@@ -24,5 +25,11 @@ public class ButtonManager : MonoBehaviour
     public static void goToTitleScreen()
     {
         SceneManager.LoadScene("TitleScene");
+    }
+    
+    public void closeShop()
+    {
+        gameManager.GetComponent<playScenePanelManager>().toggleShopPanel();
+       // gameManager.GetComponent<gameManager>()
     }
 }

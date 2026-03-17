@@ -38,8 +38,10 @@ public class gameManager : MonoBehaviour
         roundClear = gameState;
         gamePaused = gameState;
     }
-
-    public void FixedUpdate()
+    /// <summary>
+    /// when round end open shop panel
+    /// </summary>
+    public void roundEnded()
     {
         if (roundClear)
         {

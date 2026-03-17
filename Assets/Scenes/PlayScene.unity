@@ -1615,6 +1615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5151d0078cd092445ba91b95afbe92f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 972771244}
 --- !u!114 &972771247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1710,7 +1711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   round: 0
   totalRounds: 10
-  roundTime: 120
+  roundTime: 20
   timerText: {fileID: 1360411631}
 --- !u!114 &972771252
 MonoBehaviour:
@@ -3068,7 +3069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1247873610
 RectTransform:
   m_ObjectHideFlags: 0

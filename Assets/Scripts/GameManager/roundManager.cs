@@ -26,6 +26,7 @@ public class roundManager : MonoBehaviour
             if (roundTime < 1)
             {
                 gameObject.GetComponent<gameManager>().setRoundClear(true);
+                gameObject.GetComponent<gameManager>().roundEnded();
                 round++;
             }
         }
