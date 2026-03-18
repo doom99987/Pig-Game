@@ -13,8 +13,11 @@ using UnityEngine;
 public class HpManager : MonoBehaviour
 {
     [Header("HP Settings")]
+    [Tooltip("Current HP of the player.")]
     [SerializeField] protected int hp = 3;
+    [Tooltip("Maximum HP of the player.")]
     [SerializeField] protected int maxHp = 3;
+    [Tooltip("Number of hearts to display per row in the UI.")]
     [SerializeField] protected int heartsPerRow = 4;
     [Header("Prefabs, Containers and Refrences")]
     [SerializeField] GameObject heartPrefab;
@@ -57,7 +60,7 @@ public class HpManager : MonoBehaviour
             for (int col = 0; col < heartsPerRow && index < maxHp; col++)
             {
                 Vector3 pos = new Vector3(col * 1.25f, -row * 1.25f, 0f);
-
+                //spawns the empty hearts prefab at the same position under the full colored heart.
                 emptyHearts[index] = Instantiate(emptyHeartPrefab, heartsContainer);
                 emptyHearts[index].transform.localPosition = pos;
 
