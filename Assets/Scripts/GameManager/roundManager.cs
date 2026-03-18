@@ -1,3 +1,14 @@
+/****************************************************************************
+* File Name: gameManager.cs
+* Author: Caleb Bohm
+* DigiPen Email: caleb.bohm@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: Manages the round timer, ends the round, and opens
+*              the victory panel after a certain amount of rounds
+*
+****************************************************************************/
+
 using UnityEngine;
 using TMPro;
 
@@ -6,10 +17,14 @@ public class roundManager : MonoBehaviour
     protected float elapsedTime;
 
     [Header("Round")]
+    [Tooltip("Current Round")]
     [SerializeField] protected int round = 0;
+    [Tooltip(("Total number of Rounds"))]
     [SerializeField] protected int totalRounds = 0;
-    [SerializeField] protected float roundTime = 120f;
+    [Tooltip("Amount of time in a Round")]
+    [SerializeField] protected float roundTime = 121f;
     [Header("Text Timer")]
+    [Tooltip("The Textbox for the Timer")]
     [SerializeField] TextMeshProUGUI timerText; 
 
     // Run is called before any update is called the first time
@@ -49,7 +64,7 @@ public class roundManager : MonoBehaviour
         }
     }
     /// <summary>
-    /// resets the Timer
+    /// Resets the Timer
     /// </summary>
     public void resetTimer()
     {
