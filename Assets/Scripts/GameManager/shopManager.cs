@@ -20,8 +20,11 @@ public class shopManager : MonoBehaviour
     protected int healingCount = 0;
     protected int pierceCount = 0;
     [Header("Upgrade Limits")]
+    [Tooltip("The maximum number of times the player can upgrade their speed.")]
     [SerializeField] protected int sCountMax =10;
+    [Tooltip("The maximum number of times the player can upgrade their hp.")]
     [SerializeField] protected int hCountMax = 10;
+    [Tooltip("The maximum number of times the player can heal.")]
     [SerializeField] protected int healingCountMax = 10;
     //[SerializeField] protected int pierceCountMax = 10;
     [Header("References")]

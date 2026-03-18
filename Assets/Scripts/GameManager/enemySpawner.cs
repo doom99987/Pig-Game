@@ -1,3 +1,12 @@
+/****************************************************************************
+* File Name: enemySpawner.cs
+* Author: David Konvisser
+* DigiPen Email: david.konvisser@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: This script spawns enemies at random spawn points after a certain delay and also checks the game state to stop spawning when the player dies.
+*
+****************************************************************************/
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -6,6 +15,7 @@ public class enemySpawner : MonoBehaviour
     [Header("Enemy Spawning Settings")]
     [SerializeField] protected GameObject enemyPrefab;
     [SerializeField] Transform[] spawnPoints;
+    [Tooltip("The delay between each enemy spawn in seconds.")]
     [SerializeField] protected float spawnDelay = 5f;
     protected float nextSpawnTime = 5;
 
@@ -16,6 +26,7 @@ public class enemySpawner : MonoBehaviour
             if (Time.time > nextSpawnTime)
             {
                 spawnEnemy();
+                //spawn delay
                 nextSpawnTime = Time.time + spawnDelay;
             }
         }
@@ -23,6 +34,7 @@ public class enemySpawner : MonoBehaviour
 
     public void spawnEnemy()
     {
+        //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location.
         int random = Random.Range(0, spawnPoints.Length);
         Instantiate(enemyPrefab, spawnPoints[random].position, spawnPoints[random].rotation);
     }
