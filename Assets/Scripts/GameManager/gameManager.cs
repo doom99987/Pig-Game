@@ -1,9 +1,21 @@
+/****************************************************************************
+* File Name: gameManager.cs
+* Author: Caleb Bohm
+* DigiPen Email: caleb.bohm@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: Manages the game being paused and the round being cleared
+*
+****************************************************************************/
+
 using UnityEngine;
 
 public class gameManager : MonoBehaviour
 {
-    [Header("Game States")] 
+    [Header("Game States")]
+    [Tooltip("True = Game is Paused, False = Game is Unpaused")]
     [SerializeField] protected bool gamePaused;
+    [Tooltip("Variable to check if the round has been cleared")]
     [SerializeField] protected bool roundClear;
     /// <summary>
     /// Tells you if the game is paused
@@ -30,7 +42,7 @@ public class gameManager : MonoBehaviour
         gamePaused = gameState;
     }
     /// <summary>
-    /// Called to set if the round is cleared and pauses the game
+    /// Called to set if the round is cleared and to set if the game is paused
     /// </summary>
     /// <param name="gameState"></param>
     public void setRoundClear(bool gameState)

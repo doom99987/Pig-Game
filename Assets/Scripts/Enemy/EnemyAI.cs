@@ -1,7 +1,7 @@
 /****************************************************************************
-* File Name: enemyAi.cs
-* Author: David Konvisser
-* DigiPen Email: david.konvisser@digipen.edu
+* File Name: gameManager.cs
+* Author: Caleb Bohm
+* DigiPen Email: caleb.bohm@digipen.edu
 * Course: Wanic Game Project
 *
 * Description: Dictates how the enemy moves depending on its type
