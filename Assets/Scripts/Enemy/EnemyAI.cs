@@ -1,3 +1,13 @@
+/****************************************************************************
+* File Name: enemyAi.cs
+* Author: David Konvisser
+* DigiPen Email: david.konvisser@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: Dictates how the enemy moves depending on its type
+*
+****************************************************************************/
+
 using UnityEngine;
 
 public class enemyAI : MonoBehaviour
@@ -8,11 +18,16 @@ public class enemyAI : MonoBehaviour
     protected GameObject gameManager;
 
     [Header("Player Movement")]
-    [SerializeField] protected float curSpeed = 25f; //variable to control the current speed of the Enemy
+    [Tooltip("Variable to control the current speed of the Enemy")]
+    [SerializeField] protected float curSpeed = 25f;
+    [Tooltip("A multiplier of how strong the enemy gets pushed back after hitting a player")]
     [SerializeField] protected float pushBackMult = 100;
-    [SerializeField] protected float rangedEnemyStopDis;
-    [SerializeField] protected float rangedEnemyBackOffDis;
-    [SerializeField] Rigidbody2D rb; //Enemy rigid body
+    [Tooltip("The distance an enemy stops from the player")]
+    [SerializeField] protected float rangedEnemyStopDis = 7;
+    [Tooltip("How close the player has to be for the enemy to run away")]
+    [SerializeField] protected float rangedEnemyBackOffDis = 3;
+    [Tooltip("Enemy rigid body")]
+    [SerializeField] Rigidbody2D rb;
 
     private void Start()
     {
@@ -57,6 +72,11 @@ public class enemyAI : MonoBehaviour
             rb.AddForce(movement * -(curSpeed * pushBackMult));
         }
     }
+
+    /// <summary>
+    /// Gives the current speed of the Enemy
+    /// </summary>
+    /// <returns></returns>
     public float getCurrentSpeed()
     {
         return curSpeed;

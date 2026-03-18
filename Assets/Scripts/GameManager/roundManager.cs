@@ -3,7 +3,7 @@ using TMPro;
 
 public class roundManager : MonoBehaviour
 {
-    protected float elapsedTime;        
+    protected float elapsedTime;
 
     [Header("Round")]
     [SerializeField] protected int round = 0;
@@ -35,9 +35,16 @@ public class roundManager : MonoBehaviour
             if (elapsedTime < 1)
             {
                 gameObject.GetComponent<gameManager>().setRoundClear(true);
-                gameObject.GetComponent<gameManager>().roundEnded();
-                resetTimer();
-                round++;
+                if (round == totalRounds)
+                {
+                    gameObject.GetComponent<playScenePanelManager>().toggleVictoryPanel();
+                }
+                else
+                {
+                    gameObject.GetComponent<gameManager>().roundEnded();
+                    resetTimer();
+                    round++;
+                }
             }
         }
     }
