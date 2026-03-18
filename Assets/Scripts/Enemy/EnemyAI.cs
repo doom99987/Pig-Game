@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class enemyAI : MonoBehaviour
 {
+    protected GameObject player;
     protected float timer;
     protected float enemyDistanceFromPlayer;
-
-    [Header("GameObjects")]
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject gameManager;
+    protected GameObject gameManager;
 
     [Header("Player Movement")]
     [SerializeField] protected float curSpeed = 25f; //variable to control the current speed of the Enemy
@@ -15,7 +13,12 @@ public class enemyAI : MonoBehaviour
     [SerializeField] protected float rangedEnemyStopDis;
     [SerializeField] protected float rangedEnemyBackOffDis;
     [SerializeField] Rigidbody2D rb; //Enemy rigid body
-    
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+        gameManager = GameObject.Find("gameManager");
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -44,7 +47,7 @@ public class enemyAI : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !gameManager.GetComponent<gameManager>().getGameState())
         {
             // Takes 1 Dmg
             gameManager.GetComponent<HpManager>().takeDmg();

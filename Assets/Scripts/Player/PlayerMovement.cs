@@ -12,6 +12,9 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+    [Header("Game Manager")]
+    [SerializeField] protected GameObject gameManager;
+
     [Header("Player Movement")]
     //variable to control the current speed of the player
     [SerializeField] protected float curSpeed = 25f;
@@ -23,11 +26,14 @@ public class playerMovement : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        if (!gameManager.GetComponent<gameManager>().getGameState())
+        {
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(horizontal, vertical);
-        rb.AddForce(movement * curSpeed);
+            Vector2 movement = new Vector2(horizontal, vertical);
+            rb.AddForce(movement * curSpeed);
+        }
     }
 
     public float getCurrentSpeed()

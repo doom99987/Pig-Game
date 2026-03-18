@@ -79,6 +79,7 @@ public class HpManager : MonoBehaviour
         }
         if(hp<= 0)
         {
+            gameManager.GetComponent<gameManager>().setGameState(true);
             gameManager.GetComponent<moneyManager>().toggleMoneyText();
             gameManager.GetComponent<playScenePanelManager>().toggleDeathPanel();
             deathPanelMoneyText.text = $"You Had ${gameManager.GetComponent<moneyManager>().getMoney() / 100f} left";
