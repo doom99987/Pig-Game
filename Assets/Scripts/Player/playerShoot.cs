@@ -3,7 +3,7 @@ public class playerShoot : MonoBehaviour
 {
     protected float elapsedTime;
 
-    [SerializeField] GameObject Bullet;
+    [SerializeField] GameObject bullet;
 
     [SerializeField] protected float delay = 1f;
     [SerializeField] protected int bulletDmg = 1;
@@ -19,7 +19,7 @@ public class playerShoot : MonoBehaviour
             Vector3 dir = (mousePos - gameObject.transform.position);
             float angle = (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg) + 90;
 
-            Instantiate(Bullet, gameObject.transform.position, Quaternion.Euler(0, 0, angle));
+            Instantiate(bullet, gameObject.transform.position, Quaternion.Euler(0, 0, angle));
             elapsedTime = delay;
         }
         if (elapsedTime >= 0)
