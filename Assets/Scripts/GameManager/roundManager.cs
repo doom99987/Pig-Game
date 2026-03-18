@@ -25,7 +25,8 @@ public class roundManager : MonoBehaviour
     [SerializeField] protected float roundTime = 121f;
     [Header("Text Timer")]
     [Tooltip("The Textbox for the Timer")]
-    [SerializeField] TextMeshProUGUI timerText; 
+    [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000 };
 
     // Run is called before any update is called the first time
     private void Start()
@@ -58,7 +59,9 @@ public class roundManager : MonoBehaviour
                 {
                     gameObject.GetComponent<gameManager>().roundEnded();
                     resetTimer();
+                    gameObject.GetComponent<moneyManager>().addMoney(endOfRoundBonus[round]);
                     round++;
+                   
                 }
             }
         }
