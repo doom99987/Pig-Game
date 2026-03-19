@@ -62,7 +62,10 @@ public class enemyHp : MonoBehaviour
     {
         hp = maxHp;
     }
-
+    /// <summary>
+    /// gives money to the player once the enemy die.
+    /// The amount of money given is determined by the moneyOnDeath variable.
+    /// </summary>
     public void giveMoneyOnDeath()
     {
         gameManager.GetComponent<moneyManager>().addMoney(moneyOnDeath);
