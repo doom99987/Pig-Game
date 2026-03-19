@@ -15,11 +15,11 @@ public class bullet : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Gets a vector in the direction the bullet travels
+        // Gets a vector in the direction the bullet travels and adds force to the bullet
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         Vector3 dir = (mousePos - gameObject.transform.position);
-        rb.AddForce(dir * bulletSpeed);
+        rb.AddForce(dir.normalized * bulletSpeed * 100f);
     }
 
     // Update is called once per frame
