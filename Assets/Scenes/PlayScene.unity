@@ -2808,26 +2808,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23bde4c3212b4324f8682eac95180c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &972771256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789329630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c897796612b8ab47ac95013186c4cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombPrefab: {fileID: 41805188532667555, guid: b11fef3fa6e212b4bb7111bac463c603, type: 3}
-  bombCdText: {fileID: 493677823}
-  player: {fileID: 1156143644}
-  bombDmg: 10
-  coolDown: 10
-  bombBought: 1
-  cdTimer: 0
-  imgRotation: 90
 --- !u!1 &978515675
 GameObject:
   m_ObjectHideFlags: 0
@@ -7023,10 +7003,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3293688853142343199, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 972771256}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
 --- !u!1001 &7693117642344008861
 PrefabInstance:
