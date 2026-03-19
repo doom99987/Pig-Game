@@ -76,5 +76,13 @@ public class roundManager : MonoBehaviour
     {
         elapsedTime = roundTime;
     }
+    /// <summary>
+    /// gets the current round
+    /// </summary>
+    /// <returns></returns>
+    public int getRound()
+    {
+               return round;
+    }
 }
 
