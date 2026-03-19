@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class enemyHp : MonoBehaviour
 {
+    [SerializeField] protected GameObject gameManager;
     [Header("HP Settings")]
     [Tooltip("Current HP of the enemy.")]
     [SerializeField] protected int hp = 1;
     [Tooltip("Maximum HP of the enemy. (Not Used)")]
     [SerializeField] protected int maxHp = 3;
+    [Tooltip("Money give to player on enemy kill")]
+    [SerializeField] protected int moneyOnDeath = 5;
 
     /// <summary>
     /// take 1 dmg
@@ -20,6 +23,7 @@ public class enemyHp : MonoBehaviour
         }
         else
         {
+            giveMoneyOnDeath();
             Destroy(gameObject);
         }
     }
@@ -53,5 +57,10 @@ public class enemyHp : MonoBehaviour
     public void resetHp()
     {
         hp = maxHp;
+    }
+
+    public void giveMoneyOnDeath()
+    {
+        gameManager.GetComponent<moneyManager>().addMoney(moneyOnDeath);
     }
 }
