@@ -9,7 +9,7 @@ public class enemyHp : MonoBehaviour
     [SerializeField] protected int hp = 1;
     [Tooltip("Maximum HP of the enemy. (Not Used)")]
     [SerializeField] protected int maxHp = 3;
-    [Tooltip("Money give to player on enemy kill")]
+    [Tooltip("Money give to player on enemy kill (5 = $0.05)")]
     [SerializeField] protected int moneyOnDeath = 5;
 
     public void Start()
