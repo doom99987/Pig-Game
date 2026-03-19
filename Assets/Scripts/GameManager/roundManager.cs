@@ -55,6 +55,7 @@ public class roundManager : MonoBehaviour
                 gameObject.GetComponent<gameManager>().setRoundClear(true);
                 if (round == totalRounds)
                 {
+                    gameObject.GetComponent<moneyManager>().toggleMoneyText();
                     gameObject.GetComponent<playScenePanelManager>().toggleVictoryPanel();
                 }
                 else
