@@ -39,6 +39,7 @@ public class shopManager : MonoBehaviour
     [SerializeField] float[] hpCost = { 5, 50, 500, 5000, 50000, 500000 };
     [SerializeField] float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
     //[SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
+    //[SerializeField] float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
     public void buySpeed()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax)
@@ -70,6 +71,7 @@ public class shopManager : MonoBehaviour
             healingCount++;
         }
     }
+
     //public void buyPierce()
     //{
     //    if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount])
