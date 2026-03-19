@@ -12,9 +12,14 @@ using UnityEngine;
 public class playerShoot : MonoBehaviour
 {
     protected float elapsedTime;
+    [Tooltip("Amount of money removed when shooting (1 = $0.01)")]
+    [SerializeField] int removeAmount = 1;
 
     [Header("Projectile")] 
     [SerializeField] GameObject bullet;
+
+    [Header("Refrences")]
+    [SerializeField] GameObject gameManager;
 
     [Header("Bullet Variables")]
     [Tooltip("Manages the angle the object is spawned in at")]
@@ -35,6 +40,7 @@ public class playerShoot : MonoBehaviour
 
             // Spawns an object pointing towards the mouse
             Instantiate(bullet, gameObject.transform.position, Quaternion.Euler(0, 0, angle));
+            gameManager.GetComponent<moneyManager>().removeMoney(removeAmount);
             elapsedTime = delay;
         }
         // lowers until 0

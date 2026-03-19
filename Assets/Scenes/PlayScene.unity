@@ -3817,7 +3817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8c32419d848d14eb7dc92433c60cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  removeAmount: 1
   bullet: {fileID: 2944631408402898741, guid: f1e6de5b75f497c40a9d7227246a7ede, type: 3}
+  gameManager: {fileID: 789329630}
   imgRotation: 90
   delay: 1
 --- !u!1 &1169595377
