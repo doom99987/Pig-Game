@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class enemyHp : MonoBehaviour
 {
-    [SerializeField] protected GameObject gameManager;
+    protected GameObject gameManager;
     [Header("HP Settings")]
     [Tooltip("Current HP of the enemy.")]
     [SerializeField] protected int hp = 1;
@@ -12,6 +12,10 @@ public class enemyHp : MonoBehaviour
     [Tooltip("Money give to player on enemy kill")]
     [SerializeField] protected int moneyOnDeath = 5;
 
+    public void Start()
+    {
+        gameManager = GameObject.Find("gameManager");
+    }
     /// <summary>
     /// take 1 dmg
     /// </summary>
