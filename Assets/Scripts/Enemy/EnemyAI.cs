@@ -65,7 +65,7 @@ public class enemyAI : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !gameManager.GetComponent<gameManager>().getGameState())
         {
             // Takes 1 Dmg
-            gameManager.GetComponent<HpManager>().takeDmg();
+            gameManager.GetComponent<hpManager>().takeDmg();
 
             // Pushes player back
             Vector2 movement = (player.transform.position - gameObject.transform.position).normalized;

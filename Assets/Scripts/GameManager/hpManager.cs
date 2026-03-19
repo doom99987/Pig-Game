@@ -10,7 +10,7 @@
 ****************************************************************************/
 using TMPro;
 using UnityEngine;
-public class HpManager : MonoBehaviour
+public class hpManager : MonoBehaviour
 {
     [Header("HP Settings")]
     [Tooltip("Current HP of the player.")]

@@ -54,7 +54,7 @@ public class shopManager : MonoBehaviour
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && hCount < hCountMax)
         {
-            gameManager.GetComponent<HpManager>().upgradeMaxHp();
+            gameManager.GetComponent<hpManager>().upgradeMaxHp();
             gameManager.GetComponent<moneyManager>().removeMoney(hpCost[hCount]);
             buySpeedText.text = $"Buy ${hpCost[hCount + 1] / 100f}";
             hCount++;
@@ -64,7 +64,7 @@ public class shopManager : MonoBehaviour
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax)
         {
-            gameManager.GetComponent<HpManager>().heal();
+            gameManager.GetComponent<hpManager>().heal();
             gameManager.GetComponent<moneyManager>().removeMoney(healingCost[healingCount]);
             buySpeedText.text = $"Buy ${healingCost[healingCount + 1] / 100f}";
             healingCount++;
