@@ -18,7 +18,7 @@ public class playerShoot : MonoBehaviour
 
     [Header("Bullet Variables")]
     [Tooltip("Manages the angle the object is spawned in at")]
-    [SerializeField] protected float imgRotation = 90;
+    [SerializeField] protected float imgRotation = 90f;
     [Tooltip("Delay between bullets fired")]
     [SerializeField] protected float delay = 1f;
     // Update is called once per frame

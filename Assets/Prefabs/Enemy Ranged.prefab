@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8210707290463482403}
   - component: {fileID: 5248186364154497741}
   - component: {fileID: 5565773729220719129}
+  - component: {fileID: -8344172245532028718}
   m_Layer: 0
   m_Name: Enemy Ranged
   m_TagString: Ranged
@@ -170,3 +171,17 @@ MonoBehaviour:
   rangedEnemyStopDis: 7
   rangedEnemyBackOffDis: 3
   rb: {fileID: 8210707290463482403}
+--- !u!114 &-8344172245532028718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117554061443828387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917b97b0a64dccb469aba4feb3b064e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  maxHp: 3

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7359706426757322193}
   - component: {fileID: 1289149286652109733}
   - component: {fileID: 6700048791214290355}
+  - component: {fileID: 4288574710743653012}
   m_Layer: 0
   m_Name: Enemy Melee
   m_TagString: Melee
@@ -170,3 +171,17 @@ MonoBehaviour:
   rangedEnemyStopDis: 7
   rangedEnemyBackOffDis: 3
   rb: {fileID: 7359706426757322193}
+--- !u!114 &4288574710743653012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138140974693094062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917b97b0a64dccb469aba4feb3b064e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  maxHp: 3
