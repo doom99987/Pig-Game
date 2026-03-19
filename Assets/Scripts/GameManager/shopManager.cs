@@ -27,7 +27,7 @@ public class shopManager : MonoBehaviour
     [SerializeField] protected int hCountMax = 10;
     [Tooltip("The maximum number of times the player can heal.")]
     [SerializeField] protected int healingCountMax = 10;
-    //[SerializeField] protected int pierceCountMax = 10;
+    [SerializeField] protected int pierceCountMax = 10;
 
     [Header("References")]
     [SerializeField] GameObject gameManager;
@@ -38,8 +38,8 @@ public class shopManager : MonoBehaviour
     [SerializeField] float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
     [SerializeField] float[] hpCost = { 5, 50, 500, 5000, 50000, 500000 };
     [SerializeField] float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
-    //[SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
-    //[SerializeField] float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
+    [SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
+    [SerializeField] float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
     public void buySpeed()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax)
@@ -72,14 +72,21 @@ public class shopManager : MonoBehaviour
         }
     }
 
-    //public void buyPierce()
-    //{
-    //    if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount])
-    //    {
-    //        //player.GetComponent<PlayerMovement>().setCurSpeed(player.GetComponent<PlayerMovement>().getCurrentSpeed() + 1);
-    //        gameManager.GetComponent<moneyManager>().removeMoney(pierceCost[pierceCount]);
-    //        buySpeedText.text = $"Buy ${pierceCost[pierceCount + 1] / 100f}";
-    //        pierceCount++;
-    //    }
-    //}
+    public void buyPierce()
+    {
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount])
+        {
+            gameManager.GetComponent<moneyManager>().removeMoney(pierceCost[pierceCount]);
+            buySpeedText.text = $"Buy ${pierceCost[pierceCount + 1] / 100f}";
+            pierceCount++;
+        }
+    }
+    /// <summary>
+    /// Gives the current pierce level
+    /// </summary>
+    /// <returns></returns>
+    public int getPierceCount()
+    {
+        return pierceCount + 1;
+    }
 }

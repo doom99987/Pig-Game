@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    
+    protected int bulletPierce;
+
     [Header("RigidBody")]
     [Tooltip("Rigidbody of the object")]
     [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] protected GameObject gameManager;
 
     [Header("Bullet Variables")]
     [SerializeField] protected float bulletSpeed = 5f;
@@ -15,6 +17,9 @@ public class bullet : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManager = GameObject.Find("gameManager");
+        bulletPierce = gameManager.GetComponent<shopManager>().getPierceCount();
+
         // Gets a vector in the direction the bullet travels and adds force to the bullet
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
@@ -40,7 +45,14 @@ public class bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Ranged") || collision.gameObject.CompareTag("Melee"))
         {
             collision.gameObject.GetComponent<enemyHp>().takeDmg();
-            Destroy(gameObject);
+            if (bulletPierce <= 0)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                bulletPierce--;
+            }
         }
     }
 }
