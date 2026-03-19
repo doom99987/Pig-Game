@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: gameManager.cs
+* File Name: roundManager.cs
 * Author: Caleb Bohm
 * DigiPen Email: caleb.bohm@digipen.edu
 * Course: Wanic Game Project
