@@ -19,6 +19,7 @@ public class shopManager : MonoBehaviour
     protected int hCount = 0;
     protected int healingCount = 0;
     protected int pierceCount = 0;
+    protected int bulletUpgradeCount = 0;
 
     [Header("Upgrade Limits")]
     [Tooltip("The maximum number of times the player can upgrade their speed.")]
@@ -27,7 +28,10 @@ public class shopManager : MonoBehaviour
     [SerializeField] protected int hCountMax = 10;
     [Tooltip("The maximum number of times the player can heal.")]
     [SerializeField] protected int healingCountMax = 10;
+    [Tooltip("The maximum number of times the player can upgrade pierce.")]
     [SerializeField] protected int pierceCountMax = 10;
+    [Tooltip("The maximum number of times the player can upgrade bullet damage")]
+    [SerializeField] protected int bulletUpgradeCountMax = 10;
 
     [Header("References")]
     [SerializeField] GameObject gameManager;
@@ -81,12 +85,32 @@ public class shopManager : MonoBehaviour
             pierceCount++;
         }
     }
+
+    public void buyBulletUpgrade()
+    {
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= bulletUpgradeCost[bulletUpgradeCount] && bulletUpgradeCount < bulletUpgradeCountMax)
+        {
+            //upgrades the player's speed by 1.
+            player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1);
+            gameManager.GetComponent<moneyManager>().removeMoney(speedCost[bulletUpgradeCount]);
+            buySpeedText.text = $"Buy ${speedCost[bulletUpgradeCount + 1] / 100f}";
+            bulletUpgradeCount++;
+        }
+    }
     /// <summary>
     /// Gives the current pierce level
     /// </summary>
     /// <returns></returns>
     public int getPierceCount()
     {
-        return pierceCount + 1;
+        return pierceCount;
+    }
+    /// <summary>
+    /// Gives the current bulletUpgrade level
+    /// </summary>
+    /// <returns></returns>
+    public int getBulletUpgradeCount()
+    {
+        return bulletUpgradeCount;
     }
 }
