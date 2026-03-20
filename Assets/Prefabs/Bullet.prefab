@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2c88b5b887657498e86446514bb279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 5498945145923307860}
   rb: {fileID: -4041330939062071958}
-  gameManager: {fileID: 0}
   bulletSpeed: 10
   bulletDmg: 1
   bulletTime: 1
