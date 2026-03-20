@@ -19,14 +19,21 @@ public class roundManager : MonoBehaviour
     [Header("Round")]
     [Tooltip("Current Round")]
     [SerializeField] protected int round = 0;
+
     [Tooltip(("Total number of Rounds"))]
     [SerializeField] protected int totalRounds = 0;
+
     [Tooltip("Amount of time in a Round")]
     [SerializeField] protected float roundTime = 121f;
+
     [Header("Text Timer")]
     [Tooltip("The Textbox for the Timer")]
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] TextMeshProUGUI roundText;
+    [SerializeField] TextMeshProUGUI deathText;
+
+    [Header("End of Round Bonus")]
+    [Tooltip("The amount of money given at the end of each round")]
     [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000};
 
     // Run is called before any update is called the first time
@@ -49,6 +56,7 @@ public class roundManager : MonoBehaviour
             int minutes = Mathf.FloorToInt((elapsedTime) / 60);
             int seconds = Mathf.FloorToInt((elapsedTime) % 60);
             timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+            deathText.text = string.Format("you had: " + "{0:0}:{1:00}", minutes, seconds + " seconds left");
             // Checks if the round needs to be ended
             if (elapsedTime < 1)
             {
