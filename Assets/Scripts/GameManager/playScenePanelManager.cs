@@ -18,6 +18,11 @@ public class playScenePanelManager : MonoBehaviour
     protected bool isShopOpen = false;
     protected bool isDeathOpen = false;
     protected bool isVictoryOpen = false;
+
+    public void Start()
+    {
+        closeAllPanel();
+    }
     /// <summary>
     /// Toggles the visibility of the shop panel.
     /// </summary>
