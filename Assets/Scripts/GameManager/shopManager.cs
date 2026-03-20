@@ -90,8 +90,6 @@ public class shopManager : MonoBehaviour
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= bulletUpgradeCost[bulletUpgradeCount] && bulletUpgradeCount < bulletUpgradeCountMax)
         {
-            //upgrades the player's speed by 1.
-            player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1);
             gameManager.GetComponent<moneyManager>().removeMoney(speedCost[bulletUpgradeCount]);
             buySpeedText.text = $"Buy ${speedCost[bulletUpgradeCount + 1] / 100f}";
             bulletUpgradeCount++;

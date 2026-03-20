@@ -27,7 +27,7 @@ public class roundManager : MonoBehaviour
     [Tooltip("The Textbox for the Timer")]
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] TextMeshProUGUI roundText;
-    [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000 };
+    [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000};
 
     // Run is called before any update is called the first time
     private void Start()
@@ -56,6 +56,7 @@ public class roundManager : MonoBehaviour
                 if (round == totalRounds)
                 {
                     gameObject.GetComponent<moneyManager>().toggleMoneyText();
+                    gameObject.GetComponent<playScenePanelManager>().toggleShopPanel();
                     gameObject.GetComponent<playScenePanelManager>().toggleVictoryPanel();
                 }
                 else

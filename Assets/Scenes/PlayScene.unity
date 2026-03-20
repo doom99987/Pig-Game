@@ -2786,17 +2786,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5151d0078cd092445ba91b95afbe92f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &972771247 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
-  m_PrefabInstance: {fileID: 200045620867612165}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789329630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ab3687df9576841bb88396dce997d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &972771249 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
@@ -5006,18 +4995,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 972771247}
-        m_TargetAssemblyTypeName: playScenePanelManager, Assembly-CSharp
-        m_MethodName: closeAllPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 972771246}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: goToTitleScreen
@@ -6968,12 +6945,32 @@ PrefabInstance:
       objectReference: {fileID: 467091595}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: roundTime
-      value: 61
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1360411631}
+    - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: endOfRoundBonus.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'endOfRoundBonus.Array.data[6]'
+      value: 500000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'endOfRoundBonus.Array.data[7]'
+      value: 500000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'endOfRoundBonus.Array.data[8]'
+      value: 500000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'endOfRoundBonus.Array.data[9]'
+      value: 500000
+      objectReference: {fileID: 0}
     - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: heartsContainer
       value: 
