@@ -170,7 +170,7 @@ MonoBehaviour:
   curSpeed: 20
   pushBackMult: 100
   rangedEnemyStopDis: 7
-  rangedEnemyBackOffDis: 3
+  rangedEnemyBackOffDis: 4
   rb: {fileID: 8210707290463482403}
 --- !u!114 &-8344172245532028718
 MonoBehaviour:
