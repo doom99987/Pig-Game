@@ -56,7 +56,10 @@ public class roundManager : MonoBehaviour
             int minutes = Mathf.FloorToInt((elapsedTime) / 60);
             int seconds = Mathf.FloorToInt((elapsedTime) % 60);
             timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
-            deathText.text = string.Format("you had: " + "{0:0}:{1:00}", minutes, seconds + " seconds left");
+            if(deathText != null)
+            {
+                deathText.text = string.Format("you had: " + "{0:0}:{1:00}", minutes, seconds + " seconds left");
+            }
             // Checks if the round needs to be ended
             if (elapsedTime < 1)
             {
