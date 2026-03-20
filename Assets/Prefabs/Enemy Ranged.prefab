@@ -187,6 +187,12 @@ MonoBehaviour:
   hp: 1
   maxHp: 3
   moneyOnDeath: 5
+  mulitplier: 5
+  money:
+  - 5
+  - 10
+  - 25
+  - 35
 --- !u!114 &-156059216757164469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,5 +206,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2944631408402898741, guid: 54376ac984f91d54bb1c16fab7da98f2, type: 3}
+  rb: {fileID: 8210707290463482403}
   imgRotation: 90
   delay: 1

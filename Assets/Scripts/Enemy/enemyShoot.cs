@@ -18,6 +18,8 @@ public class enemyShoot : MonoBehaviour
     [Header("Projectile")] 
     [SerializeField] GameObject bullet;
 
+    [Header("Rigidbody2D")]
+    [SerializeField] Rigidbody2D rb;
 
     [Header("Bullet Variables")]
     [Tooltip("Manages the angle the object is spawned in at")]
@@ -29,13 +31,14 @@ public class enemyShoot : MonoBehaviour
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("gameManager");
+        elapsedTime = delay;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Checks if your left clicking and delays shooting by the delay
-        if (elapsedTime <= 0 && (!gameManager.GetComponent<gameManager>().getGameState()))
+        if (elapsedTime <= 0 && !gameManager.GetComponent<gameManager>().getGameState() && rb.linearVelocity.magnitude <= 1f)
         {
             // Gets the angle towards the player from the enemy
             Vector3 dir = (player.transform.position - gameObject.transform.position);

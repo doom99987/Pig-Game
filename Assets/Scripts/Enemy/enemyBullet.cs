@@ -46,7 +46,7 @@ public class enemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !gameManager.GetComponent<gameManager>().getGameState())
         {
             gameManager.GetComponent<hpManager>().takeDmg();
             Destroy(gameObject);
