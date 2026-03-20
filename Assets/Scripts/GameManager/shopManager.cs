@@ -36,7 +36,13 @@ public class shopManager : MonoBehaviour
     [Header("References")]
     [SerializeField] GameObject gameManager;
     [SerializeField] GameObject player;
+
+    [Header("UI")]
     [SerializeField] TextMeshProUGUI buySpeedText;
+    [SerializeField] TextMeshProUGUI buyHpText;
+    [SerializeField] TextMeshProUGUI buyHealingText;
+    [SerializeField] TextMeshProUGUI buyPierceText;
+    [SerializeField] TextMeshProUGUI buyBulletUpgradeText;
 
     [Header("Upgrade Costs")]
     [SerializeField] float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
@@ -61,7 +67,7 @@ public class shopManager : MonoBehaviour
         {
             gameManager.GetComponent<hpManager>().upgradeMaxHp();
             gameManager.GetComponent<moneyManager>().removeMoney(hpCost[hCount]);
-            buySpeedText.text = $"Buy ${hpCost[hCount + 1] / 100f}";
+            buyHpText.text = $"Buy ${hpCost[hCount + 1] / 100f}";
             hCount++;
         }
     }
@@ -71,7 +77,7 @@ public class shopManager : MonoBehaviour
         {
             gameManager.GetComponent<hpManager>().heal();
             gameManager.GetComponent<moneyManager>().removeMoney(healingCost[healingCount]);
-            buySpeedText.text = $"Buy ${healingCost[healingCount + 1] / 100f}";
+            buyHealingText.text = $"Buy ${healingCost[healingCount + 1] / 100f}";
             healingCount++;
         }
     }
@@ -81,7 +87,7 @@ public class shopManager : MonoBehaviour
         if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount])
         {
             gameManager.GetComponent<moneyManager>().removeMoney(pierceCost[pierceCount]);
-            buySpeedText.text = $"Buy ${pierceCost[pierceCount + 1] / 100f}";
+            buyPierceText.text = $"Buy ${pierceCost[pierceCount + 1] / 100f}";
             pierceCount++;
         }
     }
@@ -90,8 +96,8 @@ public class shopManager : MonoBehaviour
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= bulletUpgradeCost[bulletUpgradeCount] && bulletUpgradeCount < bulletUpgradeCountMax)
         {
-            gameManager.GetComponent<moneyManager>().removeMoney(speedCost[bulletUpgradeCount]);
-            buySpeedText.text = $"Buy ${speedCost[bulletUpgradeCount + 1] / 100f}";
+            gameManager.GetComponent<moneyManager>().removeMoney(bulletUpgradeCost[bulletUpgradeCount]);
+            buyBulletUpgradeText.text = $"Buy ${bulletUpgradeCost[bulletUpgradeCount + 1] / 100f}";
             bulletUpgradeCount++;
         }
     }

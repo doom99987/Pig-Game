@@ -6948,9 +6948,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1156143644}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: buyHpText
+      value: 
+      objectReference: {fileID: 668740719}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: buySpeedText
       value: 
       objectReference: {fileID: 403601632}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: buyPierceText
+      value: 
+      objectReference: {fileID: 2064632796}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: buyHealingText
+      value: 
+      objectReference: {fileID: 1169595379}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: buyBulletUpgradeText
+      value: 
+      objectReference: {fileID: 2111507441}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: roundText
       value: 
@@ -6991,6 +7007,10 @@ PrefabInstance:
       propertyPath: deathPanelMoneyText
       value: 
       objectReference: {fileID: 1082498319}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: spawnDelay
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: spawnPoints.Array.size
       value: 4
