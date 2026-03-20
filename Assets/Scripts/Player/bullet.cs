@@ -3,11 +3,14 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     protected int bulletPierce;
+    protected GameObject gameManager;
+
+    [Header("Animator")]
+    [SerializeField] protected Animator animator;
 
     [Header("RigidBody")]
     [Tooltip("Rigidbody of the object")]
     [SerializeField] protected Rigidbody2D rb;
-    [SerializeField] protected GameObject gameManager;
 
     [Header("Bullet Variables")]
     [SerializeField] protected float bulletSpeed = 5f;
@@ -19,6 +22,7 @@ public class bullet : MonoBehaviour
     {
         gameManager = GameObject.Find("gameManager");
         bulletPierce = gameManager.GetComponent<shopManager>().getPierceCount();
+        animator.SetInteger("coinState", gameManager.GetComponent<shopManager>().getBulletUpgradeCount());
 
         // Gets a vector in the direction the bullet travels and adds force to the bullet
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
