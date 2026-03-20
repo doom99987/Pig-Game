@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using TMPro;
 using UnityEngine;
 
@@ -12,10 +13,13 @@ public class enemyHp : MonoBehaviour
     [Tooltip("Money give to player on enemy kill (5 = $0.05)")]
     [SerializeField] protected int moneyOnDeath = 0;
     [SerializeField] protected int mulitplier = 5;
+    [SerializeField] protected float[] money = {5, 10 , 25, 35};
+    
     public void Start()
     {
         gameManager = GameObject.Find("gameManager");
-        moneyOnDeath = (gameManager.GetComponent<roundManager>().getRound() + 1) * mulitplier;
+        int round = gameManager.GetComponent<roundManager>().getRound();
+        moneyOnDeath = (int)money[round];
     }
     /// <summary>
     /// take 1 dmg
