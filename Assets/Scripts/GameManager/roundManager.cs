@@ -63,7 +63,10 @@ public class roundManager : MonoBehaviour
                 {
                     gameObject.GetComponent<gameManager>().roundEnded();
                     resetTimer();
-                    gameObject.GetComponent<moneyManager>().addMoney(endOfRoundBonus[round]);
+                    if(endOfRoundBonus.Length > round)
+                    {
+                        gameObject.GetComponent<moneyManager>().addMoney(endOfRoundBonus[round]);
+                    }
                     round++;
                     roundText.text = "Round: " + round + "/" + totalRounds;
 
