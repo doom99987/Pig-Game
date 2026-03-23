@@ -185,13 +185,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  maxHp: 3
   moneyOnDeath: 5
   mulitplier: 5
   money:
   - 5
   - 10
   - 25
+  - 35
+  - 35
+  - 35
+  - 35
+  - 35
+  - 35
   - 35
 --- !u!114 &-156059216757164469
 MonoBehaviour:
