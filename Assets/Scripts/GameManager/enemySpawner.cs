@@ -21,13 +21,15 @@ public class enemySpawner : MonoBehaviour
 
     private void Update()
     {
+        int round = gameObject.GetComponent<roundManager>().getRound();
+
         if (!gameObject.GetComponent<gameManager>().getGameState())
         {
             if (Time.time > nextSpawnTime)
             {
                 spawnEnemy();
                 //spawn delay
-                nextSpawnTime = Time.time + spawnDelay;
+                nextSpawnTime = Time.time + spawnDelay - (float)(round * 0.25f) +10;
             }
         }
     }
