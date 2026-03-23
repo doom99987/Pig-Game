@@ -3866,11 +3866,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 925202391219473229, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
   m_PrefabInstance: {fileID: 7693117642344008861}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &1156143647 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 9177979896649856605, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
-  m_PrefabInstance: {fileID: 7693117642344008861}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1156143651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3900,10 +3895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5649e5031c92c4d4396fb0db653f1d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 789329630}
-  curSpeed: 15
-  maxSpeed: 35
-  rb: {fileID: 1156143647}
 --- !u!1 &1169595377
 GameObject:
   m_ObjectHideFlags: 0
@@ -7092,7 +7083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3293688853142343199, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: player
