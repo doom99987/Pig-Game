@@ -3901,7 +3901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 789329630}
-  curSpeed: 25
+  curSpeed: 15
   maxSpeed: 35
   rb: {fileID: 1156143647}
 --- !u!1 &1169595377
