@@ -29,7 +29,7 @@ public class enemySpawner : MonoBehaviour
             {
                 spawnEnemy();
                 //spawn delay
-                nextSpawnTime = Time.time + spawnDelay - (float)(round * 0.25f) +10;
+                nextSpawnTime = Time.time + spawnDelay - (float)(round * 0.25f);
             }
         }
     }
