@@ -7111,9 +7111,149 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1169595379}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: hpCost.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: buyBulletUpgradeText
       value: 
       objectReference: {fileID: 2111507441}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'hpCost.Array.data[4]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'hpCost.Array.data[5]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'hpCost.Array.data[6]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'hpCost.Array.data[7]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'hpCost.Array.data[8]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'hpCost.Array.data[9]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: speedCost.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: pierceCost.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: healingCost.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'speedCost.Array.data[4]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'speedCost.Array.data[5]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'speedCost.Array.data[6]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'speedCost.Array.data[7]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'speedCost.Array.data[8]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'speedCost.Array.data[9]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'pierceCost.Array.data[4]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'pierceCost.Array.data[5]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'pierceCost.Array.data[6]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'pierceCost.Array.data[7]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'pierceCost.Array.data[8]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'pierceCost.Array.data[9]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'healingCost.Array.data[4]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'healingCost.Array.data[5]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'healingCost.Array.data[6]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'healingCost.Array.data[7]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'healingCost.Array.data[8]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'healingCost.Array.data[9]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: bulletUpgradeCost.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bulletUpgradeCost.Array.data[4]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bulletUpgradeCost.Array.data[5]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bulletUpgradeCost.Array.data[6]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bulletUpgradeCost.Array.data[7]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bulletUpgradeCost.Array.data[8]'
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bulletUpgradeCost.Array.data[9]'
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: roundText
       value: 

@@ -8,8 +8,6 @@ public class enemyHp : MonoBehaviour
     [Header("HP Settings")]
     [Tooltip("Current HP of the enemy.")]
     [SerializeField] protected int hp = 1;
-    [Tooltip("Maximum HP of the enemy. (Not Used)")]
-    [SerializeField] protected int maxHp = 3;
     [Tooltip("Money give to player on enemy kill (5 = $0.05)")]
     [SerializeField] protected int moneyOnDeath = 0;
     [SerializeField] protected int mulitplier = 5;
@@ -19,6 +17,7 @@ public class enemyHp : MonoBehaviour
     {
         gameManager = GameObject.Find("gameManager");
         int round = gameManager.GetComponent<roundManager>().getRound();
+        hp = round += hp;
         moneyOnDeath = (int)money[round];
     }
     /// <summary>
@@ -49,23 +48,6 @@ public class enemyHp : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    /// <summary>
-    /// heal 1 hp
-    /// </summary>
-    public void heal()
-    {
-        if (hp < maxHp)
-        {
-            hp++;
-        }
-    }
-    /// <summary>
-    /// reset hp to max hp and updates the heart display.
-    /// </summary>
-    public void resetHp()
-    {
-        hp = maxHp;
     }
 
     /// <summary>
