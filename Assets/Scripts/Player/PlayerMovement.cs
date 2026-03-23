@@ -32,7 +32,7 @@ public class playerMovement : MonoBehaviour
             float vertical = Input.GetAxis("Vertical");
 
             Vector2 movement = new Vector2(horizontal, vertical);
-            rb.AddForce(movement * curSpeed);
+            rb.linearVelocity = movement * curSpeed;
         }
     }
 
