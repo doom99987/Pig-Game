@@ -1,3 +1,12 @@
+/****************************************************************************
+* File Name: randomMessageManager.cs
+* Author: David Konvisser
+* DigiPen Email: david.konvisser@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: This script randomises the message you get when you win or lose the game.
+*
+****************************************************************************/
 using TMPro;
 using UnityEngine;
 
