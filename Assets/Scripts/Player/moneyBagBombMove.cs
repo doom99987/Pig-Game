@@ -1,0 +1,63 @@
+using UnityEngine;
+
+public class moneyBagBombMove : MonoBehaviour
+{
+    protected int bulletPierce;
+    protected GameObject gameManager;
+    protected bool explode = false;
+    [SerializeField] protected float explosionSize = 1;
+
+    [Header("RigidBody")]
+    [Tooltip("Rigidbody of the object")]
+    [SerializeField] protected Rigidbody2D rb;
+
+    [Header("Bullet Variables")]
+    [SerializeField] protected float bulletSpeed = 5f;
+    [SerializeField] protected float bulletDmg = 1f;
+    [SerializeField] protected float bulletTime = 1f;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        gameManager = GameObject.Find("gameManager");
+        bulletPierce = gameManager.GetComponent<shopManager>().getPierceCount();
+
+        // Gets a vector in the direction the bullet travels and adds force to the bullet
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+        Vector3 dir = (mousePos - gameObject.transform.position);
+        rb.AddForce(dir * bulletSpeed);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (bulletTime <= 0f)
+        {
+            ExplosionDamage(transform.position, explosionSize);
+        }
+        else
+        {
+            bulletTime -= Time.deltaTime;
+        }
+    }
+        void ExplosionDamage(Vector2 center, float radius)
+        {
+            //Collider2D[] hitColliders = Physics2D.OverlapCircle(center, radius);
+            //foreach (var hitCollider in hitColliders)
+            //{
+             //   hitCollider.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
+            //    hitCollider.SendMessage("AddDamage");
+            //}
+            Destroy(gameObject);
+        }
+
+    // Draw the Box Overlap as a gizmo to show where it currently is testing. Click the Gizmos button to see this.
+    void OnDrawGizmos()
+    {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, explosionSize);
+        // Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
+    }
+}
+
