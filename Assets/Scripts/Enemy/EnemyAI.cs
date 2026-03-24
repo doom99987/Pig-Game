@@ -46,11 +46,11 @@ public class enemyAI : MonoBehaviour
             {
                 rb.AddForce(movement * curSpeed);
             }
-            if (gameObject.CompareTag("Ranged") && Mathf.Abs(enemyDistanceFromPlayer) > rangedEnemyStopDis)
+            else if (gameObject.CompareTag("Ranged") && Mathf.Abs(enemyDistanceFromPlayer) > rangedEnemyStopDis)
             {
                 rb.AddForce(movement * curSpeed);
             }
-            if (gameObject.CompareTag("Ranged") && Mathf.Abs(enemyDistanceFromPlayer) < rangedEnemyBackOffDis)
+            else if (gameObject.CompareTag("Ranged") && Mathf.Abs(enemyDistanceFromPlayer) < rangedEnemyBackOffDis)
             {
                 rb.AddForce(movement * -curSpeed);
             }

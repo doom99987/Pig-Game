@@ -50,6 +50,14 @@ public class enemyHp : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    public int getEnemyHp()
+    {
+        return hp;
+    }
 
     /// <summary>
     /// gives money to the player once the enemy die.
