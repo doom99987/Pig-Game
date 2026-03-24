@@ -81,7 +81,6 @@ public class roundManager : MonoBehaviour
                     }
                     round++;
                     roundText.text = "Round: " + round + "/" + totalRounds;
-
                 }
             }
         }

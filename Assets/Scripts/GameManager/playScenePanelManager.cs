@@ -7,6 +7,8 @@
 * Description: This script has all the functions to open and close panels in the play scene, such as the shop panel, death, and victory panels.
 *
 ****************************************************************************/
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class playScenePanelManager : MonoBehaviour
@@ -15,9 +17,11 @@ public class playScenePanelManager : MonoBehaviour
     [SerializeField] GameObject shopPanel;
     [SerializeField] GameObject deathPanel;
     [SerializeField] GameObject victoryPanel;
+
     protected bool isShopOpen = false;
     protected bool isDeathOpen = false;
     protected bool isVictoryOpen = false;
+    protected bool isTutorialTextOn = false;
 
     public void Start()
     {
@@ -57,4 +61,5 @@ public class playScenePanelManager : MonoBehaviour
         deathPanel.SetActive(false);
         victoryPanel.SetActive(false);
     }
+
 }

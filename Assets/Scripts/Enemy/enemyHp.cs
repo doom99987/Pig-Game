@@ -12,7 +12,7 @@ public class enemyHp : MonoBehaviour
     [SerializeField] protected int moneyOnDeath = 0;
     [SerializeField] protected int mulitplier = 5;
     [SerializeField] protected float[] money = {5, 10 , 25, 35};
-    
+
     public void Start()
     {
         gameManager = GameObject.Find("gameManager");

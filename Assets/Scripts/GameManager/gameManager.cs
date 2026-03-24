@@ -8,6 +8,8 @@
 *
 ****************************************************************************/
 
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class gameManager : MonoBehaviour
@@ -17,6 +19,13 @@ public class gameManager : MonoBehaviour
     [SerializeField] protected bool gamePaused;
     [Tooltip("Variable to check if the round has been cleared")]
     [SerializeField] protected bool roundClear;
+
+    [SerializeField] protected bool isTutorialTextOn = true;
+    [SerializeField] protected TextMeshProUGUI tutorialText;
+
+    public void Start() {
+        StartCoroutine(stallTutorialText(11f));
+    }
     /// <summary>
     /// Tells you if the game is paused
     /// </summary>
@@ -59,6 +68,22 @@ public class gameManager : MonoBehaviour
         {
             gameObject.GetComponent<playScenePanelManager>().toggleShopPanel();
         }
+    }
+
+    /// <summary>
+    /// toggles the visibility of the tutorial text.
+    /// </summary>
+    public void toggleTutorialText()
+    {
+        isTutorialTextOn = !isTutorialTextOn;
+        tutorialText.gameObject.SetActive(isTutorialTextOn);
+    }
+
+    IEnumerator stallTutorialText(float waitTime)
+    {
+        toggleTutorialText();
+        yield return new WaitForSecondsRealtime(waitTime);
+        toggleTutorialText();
     }
 }
 
