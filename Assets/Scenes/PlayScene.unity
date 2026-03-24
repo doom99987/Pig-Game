@@ -1211,7 +1211,7 @@ GameObject:
   - component: {fileID: 423564500}
   - component: {fileID: 423564499}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: winText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2878,6 +2878,36 @@ MonoBehaviour:
   - {fileID: 585783067}
   - {fileID: 533552292}
   spawnDelay: 3.1
+--- !u!114 &972771256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5556571325964931556, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+  m_PrefabInstance: {fileID: 200045620867612165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789329630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef22148c5c8d174b851a70657dc85bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &972771258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789329630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c177a10c220d6c4382ad84a59143572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 972771256}
+  winMessageText: {fileID: 423564499}
+  loseMessageText: {fileID: 1463077069}
+  winMessages:
+  - you won!
+  loseMessages:
+  - you got robbed
 --- !u!1 &978515675
 GameObject:
   m_ObjectHideFlags: 0
@@ -4355,7 +4385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258520855}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -17, y: 7.51, z: -2.75508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4942,7 +4972,7 @@ GameObject:
   - component: {fileID: 1463077070}
   - component: {fileID: 1463077069}
   m_Layer: 5
-  m_Name: DeathText
+  m_Name: deathText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7341,6 +7371,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3293688853142343199, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 972771250}
+    - targetCorrespondingSourceObject: {fileID: 3293688853142343199, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 972771258}
   m_SourcePrefab: {fileID: 100100000, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
 --- !u!1001 &7693117642344008861
 PrefabInstance:
@@ -7425,5 +7458,5 @@ SceneRoots:
   - {fileID: 1932740672}
   - {fileID: 1610587103}
   - {fileID: 200045620867612165}
-  - {fileID: 1258520856}
   - {fileID: 1617732346}
+  - {fileID: 1258520856}
