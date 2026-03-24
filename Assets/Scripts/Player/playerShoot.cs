@@ -30,7 +30,9 @@ public class playerShoot : MonoBehaviour
     void Update()
     {
         // Checks if your left clicking and delays shooting by the delay
-        if (Input.GetMouseButton(0) && elapsedTime <= 0)
+        if (Input.GetMouseButton(0) && elapsedTime <= 0 && 
+            gameManager.GetComponent<moneyManager>().getMoney() > (gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 
+            removeAmount) && !gameManager.GetComponent<gameManager>().getGameState())
         {
             // Gets the angle towards the mouse
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -40,7 +42,7 @@ public class playerShoot : MonoBehaviour
 
             // Spawns an object pointing towards the mouse
             Instantiate(bullet, gameObject.transform.position, Quaternion.Euler(0, 0, angle));
-            gameManager.GetComponent<moneyManager>().removeMoney(removeAmount);
+            gameManager.GetComponent<moneyManager>().removeMoney(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + removeAmount);
             elapsedTime = delay;
         }
         // lowers until 0

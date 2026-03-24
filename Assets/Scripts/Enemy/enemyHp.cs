@@ -40,12 +40,13 @@ public class enemyHp : MonoBehaviour
     /// </summary>
     public void takeDmg(int dmg)
     {
-        if (hp > 1)
+        if (hp >= 1)
         {
             hp -= dmg;
         }
-        else
+        if (hp <= 0)
         {
+            giveMoneyOnDeath();
             Destroy(gameObject);
         }
     }

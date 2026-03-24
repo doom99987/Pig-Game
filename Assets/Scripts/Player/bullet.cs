@@ -48,7 +48,7 @@ public class bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ranged") || collision.gameObject.CompareTag("Melee"))
         {
-            collision.gameObject.GetComponent<enemyHp>().takeDmg();
+            collision.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
             if (bulletPierce <= 0)
             {
                 Destroy(gameObject);
