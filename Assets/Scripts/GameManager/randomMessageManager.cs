@@ -18,7 +18,9 @@ public class randomMessageManager : MonoBehaviour
     [SerializeField] protected TextMeshProUGUI loseMessageText;
 
     [Header("Messages")]
+    [Tooltip("The messages that can be randomly selected when the player wins the game.")]
     [SerializeField] private string[] winMessages = { "you won!" };
+    [Tooltip("The messages that can be randomly selected when the player loses the game.")]
     [SerializeField] private string[] loseMessages = { "you got robbed" };
 
     /// <summary>

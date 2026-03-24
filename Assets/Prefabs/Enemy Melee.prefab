@@ -187,11 +187,11 @@ MonoBehaviour:
   moneyOnDeath: 0
   mulitplier: 5
   money:
-  - 5
+  - 2
+  - 4
+  - 6
+  - 8
   - 10
-  - 25
-  - 35
-  - 35
   - 35
   - 35
   - 35
