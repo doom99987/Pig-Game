@@ -63,7 +63,7 @@ public class shopManager : MonoBehaviour
     }
     public void buyHp()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && hCount < hCountMax -1)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && (hCount < hCountMax -3))
         {
             gameManager.GetComponent<hpManager>().upgradeMaxHp();
             gameManager.GetComponent<moneyManager>().removeMoney(hpCost[hCount]);
