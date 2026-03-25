@@ -26,7 +26,7 @@ public class moneyBagBombMove : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         Vector3 dir = (mousePos - gameObject.transform.position);
-        rb.AddForce(dir * bulletSpeed);
+        rb.linearVelocity = dir.normalized * bulletSpeed;
     }
 
     // Update is called once per frame
@@ -43,12 +43,14 @@ public class moneyBagBombMove : MonoBehaviour
     }
         void ExplosionDamage(Vector2 center, float radius)
         {
-            //Collider2D[] hitColliders = Physics2D.OverlapCircle(center, radius);
-            //foreach (var hitCollider in hitColliders)
-            //{
-             //   hitCollider.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
-            //    hitCollider.SendMessage("AddDamage");
-            //}
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(center, radius);
+            foreach (var hitCollider in hitColliders)
+            {
+            if (hitCollider.gameObject.CompareTag("Ranged") || hitCollider.gameObject.CompareTag("Melee"))
+                {
+                    hitCollider.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
+                }
+            }
             Destroy(gameObject);
         }
 

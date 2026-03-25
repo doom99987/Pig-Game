@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b938c1e7534374da72fe66cf647611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionSize: 1
+  explosionSize: 2
   rb: {fileID: 5250516516134586605}
-  bulletSpeed: 50
+  bulletSpeed: 1
   bulletDmg: 1
   bulletTime: 1

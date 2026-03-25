@@ -19,7 +19,7 @@ public class moneyBagBombShoot : MonoBehaviour
     void Update()
     {
         // Checks if your left clicking and delays shooting by the delay
-        if (Input.GetMouseButton(0) && elapsedTime <= 0)
+        if (Input.GetMouseButton(1) && elapsedTime <= 0)
         {
             // Gets the angle towards the mouse
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
