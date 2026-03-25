@@ -1315,6 +1315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamePaused: 0
   roundClear: 0
+  isTutorialTextOn: 1
+  tutorialText: {fileID: 0}
 --- !u!4 &314735962
 Transform:
   m_ObjectHideFlags: 0
@@ -2023,6 +2025,10 @@ PrefabInstance:
     - target: {fileID: 8117554061443828387, guid: 794af5204356e754e8ee79517f4bdf87, type: 3}
       propertyPath: m_Name
       value: Enemy Ranged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117554061443828387, guid: 794af5204356e754e8ee79517f4bdf87, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3160,6 +3166,10 @@ PrefabInstance:
     - target: {fileID: 9138140974693094062, guid: 3a8da8a5ddb935c49973f445c4ed32f2, type: 3}
       propertyPath: m_Name
       value: Enemy Melee
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138140974693094062, guid: 3a8da8a5ddb935c49973f445c4ed32f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

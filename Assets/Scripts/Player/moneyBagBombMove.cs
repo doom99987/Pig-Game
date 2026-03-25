@@ -26,7 +26,7 @@ public class moneyBagBombMove : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         Vector3 dir = (mousePos - gameObject.transform.position);
-        rb.linearVelocity = dir.normalized * bulletSpeed;
+        rb.linearVelocity = dir;
     }
 
     // Update is called once per frame
