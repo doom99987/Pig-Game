@@ -52,7 +52,7 @@ public class shopManager : MonoBehaviour
     [SerializeField] float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
     public void buySpeed()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax -1)
                 {
             //upgrades the player's speed by 1.
             player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1); 
@@ -63,7 +63,7 @@ public class shopManager : MonoBehaviour
     }
     public void buyHp()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && hCount < hCountMax)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && hCount < hCountMax -1)
         {
             gameManager.GetComponent<hpManager>().upgradeMaxHp();
             gameManager.GetComponent<moneyManager>().removeMoney(hpCost[hCount]);
@@ -73,7 +73,7 @@ public class shopManager : MonoBehaviour
     }
     public void buyHealing()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax -1)
         {
             gameManager.GetComponent<hpManager>().heal();
             gameManager.GetComponent<moneyManager>().removeMoney(healingCost[healingCount]);
@@ -84,7 +84,7 @@ public class shopManager : MonoBehaviour
 
     public void buyPierce()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount])
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount] && pierceCount < pierceCountMax - 1)
         {
             gameManager.GetComponent<moneyManager>().removeMoney(pierceCost[pierceCount]);
             buyPierceText.text = $"Buy ${pierceCost[pierceCount + 1] / 100f}";
