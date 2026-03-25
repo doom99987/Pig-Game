@@ -94,7 +94,7 @@ public class shopManager : MonoBehaviour
 
     public void buyBulletUpgrade()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= bulletUpgradeCost[bulletUpgradeCount] && bulletUpgradeCount < bulletUpgradeCountMax)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= bulletUpgradeCost[bulletUpgradeCount] && bulletUpgradeCount < bulletUpgradeCountMax - 1)
         {
             gameManager.GetComponent<moneyManager>().removeMoney(bulletUpgradeCost[bulletUpgradeCount]);
             buyBulletUpgradeText.text = $"Buy ${bulletUpgradeCost[bulletUpgradeCount + 1] / 100f}";
