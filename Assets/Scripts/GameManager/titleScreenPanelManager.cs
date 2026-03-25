@@ -14,11 +14,20 @@ public class PanelManager : MonoBehaviour
     [Header("Title Screen Panels")]
     [SerializeField] GameObject creditsPanel;
     [SerializeField] GameObject titleScreenPanel;
+    [SerializeField] GameObject tipsPanel;
     protected bool isCreditsOpen = false;
+    protected bool isTipsOpen = false;
     public void toggleCreditsPanel()
     {
         isCreditsOpen = !isCreditsOpen;
         creditsPanel.SetActive(isCreditsOpen);
         titleScreenPanel.SetActive(!isCreditsOpen);
+    }
+
+    public void toggleTipsPanel()
+    {
+        isTipsOpen = !isTipsOpen;
+        tipsPanel.SetActive(isTipsOpen);
+        titleScreenPanel.SetActive(!isTipsOpen);
     }
 }
