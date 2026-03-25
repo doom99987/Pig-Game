@@ -20,11 +20,11 @@ public class gameManager : MonoBehaviour
     [Tooltip("Variable to check if the round has been cleared")]
     [SerializeField] protected bool roundClear;
 
-    [SerializeField] protected bool isTutorialTextOn = true;
+    [SerializeField] protected bool isTutorialTextOn = false;
     [SerializeField] protected TextMeshProUGUI tutorialText;
 
     public void Start() {
-        StartCoroutine(stallTutorialText(11f));
+      
     }
     /// <summary>
     /// Tells you if the game is paused
@@ -77,13 +77,6 @@ public class gameManager : MonoBehaviour
     {
         isTutorialTextOn = !isTutorialTextOn;
         tutorialText.gameObject.SetActive(isTutorialTextOn);
-    }
-
-    IEnumerator stallTutorialText(float waitTime)
-    {
-        toggleTutorialText();
-        yield return new WaitForSecondsRealtime(waitTime);
-        toggleTutorialText();
     }
 }
 
