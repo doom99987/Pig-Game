@@ -4054,7 +4054,7 @@ MonoBehaviour:
   bullet: {fileID: 2944631408402898741, guid: f1e6de5b75f497c40a9d7227246a7ede, type: 3}
   gameManager: {fileID: 789329630}
   imgRotation: 90
-  delay: 1
+  delay: 0.4
 --- !u!114 &1156143655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4523,7 +4523,7 @@ Transform:
   m_GameObject: {fileID: 1258520855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.5, y: 7.51, z: -2.75508}
+  m_LocalPosition: {x: -16.72, y: 7.51, z: -2.75508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
