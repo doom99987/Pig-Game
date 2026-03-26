@@ -17,7 +17,7 @@ public class enemySpawner : MonoBehaviour
     [SerializeField] Transform[] spawnPoints;
     [Tooltip("The delay between each enemy spawn in seconds.")]
     [SerializeField] protected float spawnDelay = 5f;
-    protected float nextSpawnTime = 5;
+    protected float nextSpawnTime;
 
     private void Update()
     {
