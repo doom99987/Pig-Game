@@ -73,4 +73,22 @@ public class playScenePanelManager : MonoBehaviour
         pausePanel.SetActive(isPauseOpen);
     }
 
+    public bool getIsShopOpen()
+    {
+        return isShopOpen;
+    }
+
+    public bool getVictoryOpen()
+    {
+        return isVictoryOpen;
+    }
+     public bool getIsDeathOpen()
+    {
+        return isDeathOpen;
+    }
+     public bool getIsPauseOpen()
+    {
+        return isPauseOpen;
+    }
+
 }

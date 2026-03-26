@@ -25,8 +25,9 @@ public class gameManager : MonoBehaviour
     [SerializeField] protected TextMeshProUGUI tutorialText;
 
     public void Update() {
-       if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false)
-       {
+       if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false && 
+           gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() == false && gameObject.GetComponent<playScenePanelManager>().getVictoryOpen() == false)
+        {
            gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
         }
     }
