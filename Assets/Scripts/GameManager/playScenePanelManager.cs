@@ -17,11 +17,13 @@ public class playScenePanelManager : MonoBehaviour
     [SerializeField] GameObject shopPanel;
     [SerializeField] GameObject deathPanel;
     [SerializeField] GameObject victoryPanel;
+    [SerializeField] GameObject pausePanel;
 
     protected bool isShopOpen = false;
     protected bool isDeathOpen = false;
     protected bool isVictoryOpen = false;
     protected bool isTutorialTextOn = false;
+    protected bool isPauseOpen = false;
 
     public void Start()
     {
@@ -60,6 +62,14 @@ public class playScenePanelManager : MonoBehaviour
         shopPanel.SetActive(false);
         deathPanel.SetActive(false);
         victoryPanel.SetActive(false);
+    }
+    /// <summary>
+    /// toggles the visibility of the pause panel.
+    /// </summary>
+    public void togglePausePanel()
+    {
+        isPauseOpen = !isPauseOpen;
+        pausePanel.SetActive(isPauseOpen);
     }
 
 }

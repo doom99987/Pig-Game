@@ -234,8 +234,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6202288398673327266, guid: b8893fcfd6ca42949beab28061a7946a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -504,8 +504,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6202288398673327266, guid: b8893fcfd6ca42949beab28061a7946a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1676,7 +1676,7 @@ MonoBehaviour:
     Programmers
     - David Konvisser & Caleb Bohm
 
-    Artists - Amelia Venturini & Nikki Szavuly
+    Artists - Amelia Venturini & Niki Szavuly
 
     Game
     Designer - Audrey  Wu
@@ -2096,8 +2096,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6202288398673327266, guid: b8893fcfd6ca42949beab28061a7946a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2670,8 +2670,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6202288398673327266, guid: b8893fcfd6ca42949beab28061a7946a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3155,8 +3155,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6202288398673327266, guid: b8893fcfd6ca42949beab28061a7946a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3189,6 +3189,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: startButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7810737166724200830, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810737166724200830, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6202288398673327266, guid: b8893fcfd6ca42949beab28061a7946a, type: 3}
     - target: {fileID: 9068435522230287399, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
