@@ -14,12 +14,18 @@ using UnityEngine;
 
 public class shopManager : MonoBehaviour
 {
+    [Header("bomb settings")]
+    protected bool bombBought = false;
+    [SerializeField] TextMeshProUGUI bombAmount;
+    [SerializeField] GameObject bombAmountObject;
+
     // all the counts for the upgrades, used to determine the cost of the next upgrade.
     protected int sCount = 0;
     protected int hCount = 0;
     protected int healingCount = 0;
     protected int pierceCount = 0;
     protected int bulletUpgradeCount = 0;
+    protected int bombCount = 0;
 
     [Header("Upgrade Limits")]
     [Tooltip("The maximum number of times the player can upgrade their speed.")]
@@ -32,6 +38,8 @@ public class shopManager : MonoBehaviour
     [SerializeField] protected int pierceCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade bullet damage")]
     [SerializeField] protected int bulletUpgradeCountMax = 10;
+    [Tooltip("The maximum number of times the player can buy bombs")]
+    [SerializeField] protected int bombCountMax = 10;
 
     [Header("References")]
     [SerializeField] GameObject gameManager;
@@ -50,6 +58,7 @@ public class shopManager : MonoBehaviour
     [SerializeField] float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
     [SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
+    [SerializeField] float[] bombCost = { 5, 50, 500, 5000 };
     public void buySpeed()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax -1)
@@ -101,6 +110,22 @@ public class shopManager : MonoBehaviour
             bulletUpgradeCount++;
         }
     }
+
+    public void buyBombs()
+    {
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= bombCost[bombCount] && bombCount < bombCountMax - 1)
+        {
+            if(bombBought == true)
+            {
+                bombAmountObject.SetActive(true);
+                bombAmount.SetText ($"{bombCount}");
+            }
+            gameManager.GetComponent<moneyManager>().removeMoney(bombCost[bombCount]);
+            buyBulletUpgradeText.text = $"Buy ${bombCost[bombCount + 1] / 100f}";
+            bombCount++;
+        }
+    }
+
     /// <summary>
     /// Gives the current pierce level
     /// </summary>
