@@ -115,11 +115,8 @@ public class shopManager : MonoBehaviour
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= bombCost[bombCount] && bombCount < bombCountMax - 1)
         {
-            if(bombBought == true)
-            {
-                bombAmountObject.SetActive(true);
-                bombAmount.SetText ($"{bombCount}");
-            }
+            bombAmountObject.SetActive(true);
+            bombAmount.SetText ($"{bombCount + 1}");
             gameManager.GetComponent<moneyManager>().removeMoney(bombCost[bombCount]);
             buyBulletUpgradeText.text = $"Buy ${bombCost[bombCount + 1] / 100f}";
             bombCount++;
