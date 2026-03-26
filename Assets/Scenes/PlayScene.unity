@@ -6018,7 +6018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1842138135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7894,6 +7894,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2013922725}
     - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 1842138134}
+    - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: tutorialText
       value: 
       objectReference: {fileID: 123576201}
@@ -7912,6 +7916,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 972771258}
   m_SourcePrefab: {fileID: 100100000, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+--- !u!114 &200045620867612166 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+  m_PrefabInstance: {fileID: 200045620867612165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789329630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ab3687df9576841bb88396dce997d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6291251281720467127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7923,10 +7938,14 @@ PrefabInstance:
     - target: {fileID: 1560313060278479289, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 789329630}
+      objectReference: {fileID: 200045620867612166}
     - target: {fileID: 1560313060278479289, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: togglePausePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560313060278479289, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: playScenePanelManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4368867488430342446, guid: e5d55fbeddf2a2b46b38a60ba96478fa, type: 3}
       propertyPath: m_Name

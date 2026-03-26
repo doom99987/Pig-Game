@@ -19,6 +19,7 @@ public class hpManager : MonoBehaviour
     [SerializeField] protected int maxHp = 3;
     [Tooltip("Number of hearts to display per row in the UI.")]
     [SerializeField] protected int heartsPerRow = 4;
+    protected bool isDead = false;
     [Header("Prefabs, Containers and Refrences")]
     [SerializeField] GameObject heartPrefab;
     [SerializeField] GameObject emptyHeartPrefab;
@@ -82,6 +83,7 @@ public class hpManager : MonoBehaviour
         }
         if(hp<= 0)
         {
+            isDead = true;
             gameManager.GetComponent<gameManager>().setGameState(true);
             gameManager.GetComponent<moneyManager>().toggleMoneyText();
             gameManager.GetComponent<randomMessageManager>().displayLoseMessage();
@@ -129,6 +131,11 @@ public class hpManager : MonoBehaviour
     {
         hp = maxHp;
         updateHearts();
+    }
+
+    public bool getIsDead()
+    {
+               return isDead;
     }
 }
 

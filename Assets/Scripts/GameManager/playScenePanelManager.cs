@@ -69,6 +69,7 @@ public class playScenePanelManager : MonoBehaviour
     public void togglePausePanel()
     {
         isPauseOpen = !isPauseOpen;
+        gameObject.GetComponent<gameManager>().setGameState(isPauseOpen);
         pausePanel.SetActive(isPauseOpen);
     }
 

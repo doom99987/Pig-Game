@@ -11,6 +11,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class gameManager : MonoBehaviour
 {
@@ -23,8 +24,11 @@ public class gameManager : MonoBehaviour
     [SerializeField] protected bool isTutorialTextOn = false;
     [SerializeField] protected TextMeshProUGUI tutorialText;
 
-    public void Start() {
-      
+    public void Update() {
+       if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false)
+       {
+           gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
+        }
     }
     /// <summary>
     /// Tells you if the game is paused
