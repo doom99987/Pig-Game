@@ -72,6 +72,7 @@ public class hpManager : MonoBehaviour
             }
         }
     }
+
     /// <summary>
     /// updates the heart display based on the current HP. It sets the active state of the full hearts based on the current HP and checks if the player is dead (HP <= 0) to toggle the death panel and money text.
     /// </summary>
@@ -92,6 +93,7 @@ public class hpManager : MonoBehaviour
             Debug.Log("Player is dead!");
         }
     }
+
     /// <summary>
     /// Increases the maximum and current HP by one and updates the heart display.
     /// </summary>
@@ -102,6 +104,7 @@ public class hpManager : MonoBehaviour
         spawnPrefabs();
         updateHearts();
     }
+
     /// <summary>
     /// take 1 dmg
     /// </summary>
@@ -113,6 +116,7 @@ public class hpManager : MonoBehaviour
         }
         updateHearts();
     }
+
     /// <summary>
     /// heal 1 hp
     /// </summary>
@@ -124,6 +128,7 @@ public class hpManager : MonoBehaviour
         }
         updateHearts();
     }
+
     /// <summary>
     /// reset hp to max hp and updates the heart display.
     /// </summary>
@@ -133,6 +138,10 @@ public class hpManager : MonoBehaviour
         updateHearts();
     }
 
+    /// <summary>
+    /// gets if the player is dead.
+    /// </summary>
+    /// <returns></returns>
     public bool getIsDead()
     {
                return isDead;

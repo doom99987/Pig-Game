@@ -30,6 +30,7 @@ public class gameManager : MonoBehaviour
            gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
         }
     }
+
     /// <summary>
     /// Tells you if the game is paused
     /// </summary>
@@ -38,6 +39,7 @@ public class gameManager : MonoBehaviour
     {
         return gamePaused;
     }
+
     /// <summary>
     /// Tells you if you cleared a round
     /// </summary>
@@ -46,6 +48,7 @@ public class gameManager : MonoBehaviour
     {
         return roundClear;
     }
+
     /// <summary>
     /// Called to set if the game is paused
     /// </summary>
@@ -54,6 +57,7 @@ public class gameManager : MonoBehaviour
     {
         gamePaused = gameState;
     }
+
     /// <summary>
     /// Called to set if the round is cleared and to set if the game is paused
     /// </summary>
@@ -63,6 +67,7 @@ public class gameManager : MonoBehaviour
         roundClear = gameState;
         gamePaused = gameState;
     }
+
     /// <summary>
     /// when round end open shop panel
     /// </summary>
