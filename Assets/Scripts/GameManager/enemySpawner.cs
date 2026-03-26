@@ -13,12 +13,11 @@ using UnityEngine.Rendering;
 public class enemySpawner : MonoBehaviour
 {
     [Header("Enemy Spawning Settings")]
-    [SerializeField] protected GameObject enemyPrefab;
+    [SerializeField] protected GameObject[] enemyPrefab;
     [SerializeField] Transform[] spawnPoints;
     [Tooltip("The delay between each enemy spawn in seconds.")]
     [SerializeField] protected float spawnDelay = 5f;
     protected float nextSpawnTime = 5;
-
 
     private void Update()
     {
@@ -37,9 +36,10 @@ public class enemySpawner : MonoBehaviour
 
     public void spawnEnemy()
     {
-        //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location.
-        int random = Random.Range(0, spawnPoints.Length);
-        Instantiate(enemyPrefab, spawnPoints[random].position, spawnPoints[random].rotation);
+        //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location and randomizes which enemy spawns.
+        int randomSpawn = Random.Range(0, spawnPoints.Length);
+        int randomEnemy = Random.Range(0, enemyPrefab.Length);
+        Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position, spawnPoints[randomSpawn].rotation);
     }
 }
 
