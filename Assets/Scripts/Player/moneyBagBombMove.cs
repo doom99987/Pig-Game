@@ -5,16 +5,16 @@ public class moneyBagBombMove : MonoBehaviour
     protected int bulletPierce;
     protected GameObject gameManager;
     protected bool explode = false;
-    [SerializeField] protected float explosionSize = 1;
 
     [Header("RigidBody")]
     [Tooltip("Rigidbody of the object")]
     [SerializeField] protected Rigidbody2D rb;
 
-    [Header("Bullet Variables")]
-    [SerializeField] protected float bulletSpeed = 5f;
-    [SerializeField] protected float bulletDmg = 1f;
-    [SerializeField] protected float bulletTime = 1f;
+    [Header("Variables")]
+    [SerializeField] protected float explosionSize = 1;
+    [SerializeField] protected float speed = 1.95f;
+    [SerializeField] protected float dmg = 1f;
+    [SerializeField] protected float lifeTime = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,19 +26,19 @@ public class moneyBagBombMove : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         Vector3 dir = (mousePos - gameObject.transform.position);
-        rb.linearVelocity = dir;
+        rb.linearVelocity = dir * speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (bulletTime <= 0f)
+        if (lifeTime <= 0f)
         {
             ExplosionDamage(transform.position, explosionSize);
         }
         else
         {
-            bulletTime -= Time.deltaTime;
+            lifeTime -= Time.deltaTime;
         }
     }
         void ExplosionDamage(Vector2 center, float radius)
