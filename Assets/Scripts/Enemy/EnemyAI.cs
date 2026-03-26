@@ -17,7 +17,10 @@ public class enemyAI : MonoBehaviour
     protected float enemyDistanceFromPlayer;
     protected GameObject gameManager;
 
-    [Header("Player Movement")]
+    [Header("Animator")]
+    [SerializeField] Animator animator;
+
+    [Header("Enemy Movement")]
     [Tooltip("Variable to control the current speed of the Enemy")]
     [SerializeField] protected float curSpeed = 25f;
     [Tooltip("A multiplier of how strong the enemy gets pushed back after hitting a player")]
@@ -29,12 +32,42 @@ public class enemyAI : MonoBehaviour
     [Tooltip("Enemy rigid body")]
     [SerializeField] Rigidbody2D rb;
 
+    private direction enemyDir;
+    private enum direction
+    {
+        left, right, up, down
+    }
+
     private void Start()
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("gameManager");
     }
     // Update is called once per frame
+    private void Update()
+    {
+        Vector3 dir = (player.transform.position - transform.position);
+        // checks if the mouse is facing which direction relative to the player
+        if (transform.position.x > dir.x && Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        {
+            enemyDir = direction.left;
+        }
+        else if (transform.position.x < dir.x && Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        {
+            enemyDir = direction.right;
+        }
+        else if (transform.position.y > dir.y && Mathf.Abs(dir.y) > Mathf.Abs(dir.x))
+        {
+            enemyDir = direction.down;
+        }
+        else
+        {
+            enemyDir = direction.up;
+        }
+
+        animator.SetInteger("enemyDirection", (int) enemyDir);
+    }
+
     void FixedUpdate()
     {
         if (!gameManager.GetComponent<gameManager>().getGameState())

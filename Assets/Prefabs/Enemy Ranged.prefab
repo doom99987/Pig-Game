@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5565773729220719129}
   - component: {fileID: -8344172245532028718}
   - component: {fileID: -156059216757164469}
+  - component: {fileID: 7359617895359802677}
   m_Layer: 0
   m_Name: Enemy Ranged
   m_TagString: Ranged
@@ -167,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5e8fe5e01f6914db3d3d99a287f962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 7359617895359802677}
   curSpeed: 20
   pushBackMult: 100
   rangedEnemyStopDis: 7
@@ -214,3 +216,25 @@ MonoBehaviour:
   rb: {fileID: 8210707290463482403}
   imgRotation: 90
   delay: 1
+--- !u!95 &7359617895359802677
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117554061443828387}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41f0d8b36646bc64b9da5a793c965fdb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
