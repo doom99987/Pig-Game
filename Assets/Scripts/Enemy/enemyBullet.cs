@@ -1,46 +1,68 @@
+/****************************************************************************
+* File Name: bullet.cs
+* Author: David Konvisser & Caleb Bohm
+* DigiPen Email: david.konvisser@digipen.edu & caleb.bohm@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: sets the enemy bullet velocity, damage, and lifetime.
+*
+****************************************************************************/
+
 using UnityEngine;
 
 public class enemyBullet : MonoBehaviour
 {
-    protected int bulletPierce;
-    protected GameObject gameManager;
-    protected GameObject player;
+    private GameObject gameManager;
+    private GameObject player;
+    private bool fixVelocity = false;
 
     [Header("Animator")]
-    [SerializeField] protected Animator animator;
+    [SerializeField] private Animator animator;
 
     [Header("RigidBody")]
     [Tooltip("Rigidbody of the object")]
-    [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
 
     [Header("Bullet Variables")]
-    [SerializeField] protected float bulletSpeed = 5f;
-    [SerializeField] protected float bulletDmg = 1f;
-    [SerializeField] protected float bulletTime = 1f;
-    
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float time = 1f;
+    Vector3 dir;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gameManager = GameObject.Find("gameManager");
         player = GameObject.Find("Player");
-        bulletPierce = gameManager.GetComponent<shopManager>().getPierceCount();
         animator.SetInteger("coinState", gameManager.GetComponent<shopManager>().getBulletUpgradeCount());
 
         // Gets a vector in the direction the bullet travels and adds force to the bullet
-        Vector3 dir = (player.transform.position - gameObject.transform.position);
-        rb.AddForce(dir.normalized * bulletSpeed * 100f);
+        dir = (player.transform.position - gameObject.transform.position);
+        rb.AddForce(dir.normalized * speed * 100f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (bulletTime <= 0f)
+        if (gameManager.GetComponent<gameManager>().getGameState())
         {
-            Destroy(gameObject);
+            rb.linearVelocity = Vector2.zero;
+            fixVelocity = true;
         }
-        else
+        else if (fixVelocity)
         {
-            bulletTime -= Time.deltaTime;
+            rb.AddForce(dir.normalized * speed * 100f);
+            fixVelocity = false;
+        }
+        if (!gameManager.GetComponent<gameManager>().getGameState())
+        {
+            if (time <= 0f)
+            {
+                Destroy(gameObject);
+            }
+            else if (gameManager.GetComponent<gameManager>().getGameState() == false)
+            {
+                time -= Time.deltaTime;
+            }
         }
     }
 
