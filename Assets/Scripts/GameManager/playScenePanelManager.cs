@@ -87,11 +87,11 @@ public class playScenePanelManager : MonoBehaviour
     {
         return isVictoryOpen;
     }
-     public bool getIsDeathOpen()
+    public bool getIsDeathOpen()
     {
         return isDeathOpen;
     }
-     public bool getIsPauseOpen()
+    public bool getIsPauseOpen()
     {
         return isPauseOpen;
     }
