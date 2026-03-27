@@ -29,6 +29,7 @@ public class gameManager : MonoBehaviour
            gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() == false && gameObject.GetComponent<playScenePanelManager>().getVictoryOpen() == false)
         {
            gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
+           
         }
     }
 

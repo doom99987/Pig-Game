@@ -25,6 +25,7 @@ public class moneyManager : MonoBehaviour
     {
         moneyText.text = $"${money/100f}";
     }
+
     /// <summary>
     /// adds money to the player.
     /// <param name="amount"></param>
@@ -32,6 +33,7 @@ public class moneyManager : MonoBehaviour
     {
         money += amount;
     }
+
     /// <summary>
     /// removes money from the player.
     /// </summary>
@@ -40,10 +42,15 @@ public class moneyManager : MonoBehaviour
         money -= amount;
     }
 
+    /// <summary>
+    /// getter for the player's current money.
+    /// </summary>
+    /// <returns></returns>
     public float getMoney()
     {
         return money; 
     }
+
     /// <summary>
     /// Toggles the visibility of the money text on the UI. 
     /// It switches the active state of the money text game object and updates the isMoneyTextOn boolean accordingly.

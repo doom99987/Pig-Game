@@ -29,6 +29,7 @@ public class playScenePanelManager : MonoBehaviour
     {
         closeAllPanel();
     }
+
     /// <summary>
     /// Toggles the visibility of the shop panel.
     /// </summary>
@@ -38,6 +39,7 @@ public class playScenePanelManager : MonoBehaviour
         shopPanel.SetActive(isShopOpen);
 
     }
+
     /// <summary>
     /// Toggles the visibility of the death panel.
     /// </summary>
@@ -46,6 +48,7 @@ public class playScenePanelManager : MonoBehaviour
         isDeathOpen = !isDeathOpen;
         deathPanel.SetActive(isDeathOpen);
     }
+
     /// <summary>
     /// Toggles the visibility of the victory panel.
     /// </summary>
@@ -54,6 +57,7 @@ public class playScenePanelManager : MonoBehaviour
         isVictoryOpen = !isVictoryOpen;
         victoryPanel.SetActive(isVictoryOpen);
     }
+
     /// <summary>
     /// Closes all active UI panels, including shop, death, and victory panels.
     /// </summary>
@@ -63,6 +67,7 @@ public class playScenePanelManager : MonoBehaviour
         deathPanel.SetActive(false);
         victoryPanel.SetActive(false);
     }
+
     /// <summary>
     /// toggles the visibility of the pause panel.
     /// </summary>

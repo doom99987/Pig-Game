@@ -20,6 +20,7 @@ public class enemyHp : MonoBehaviour
         hp = round += hp;
         moneyOnDeath = (int)money[round];
     }
+
     /// <summary>
     /// take 1 dmg
     /// </summary>
@@ -35,6 +36,7 @@ public class enemyHp : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     /// <summary>
     /// take dmg
     /// </summary>
@@ -51,7 +53,7 @@ public class enemyHp : MonoBehaviour
         }
     }
     /// <summary>
-    /// 
+    /// getter for the enemy hp
     /// </summary>
     /// <returns></returns>
     public int getEnemyHp()

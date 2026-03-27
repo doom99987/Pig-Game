@@ -72,11 +72,19 @@ public class playerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// getter for the current speed of the player
+    /// </summary>
+    /// <returns></returns>
     public float getCurrentSpeed()
     {
         return curSpeed;
     }
 
+    /// <summary>
+    /// setter for the current speed of the player
+    /// </summary>
+    /// <param name="speed"></param>
     public void setCurSpeed(float speed)
     {
         if(getCurrentSpeed() <=  maxSpeed)

@@ -26,7 +26,10 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("TitleScene");
     }
-    
+
+    /// <summary>
+    /// closes the shop panel and sets round clear to false, allowing the player to continue to the next round.
+    /// </summary>
     public void closeShop()
     {
         gameManager.GetComponent<playScenePanelManager>().toggleShopPanel();
