@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class bullet : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class bullet : MonoBehaviour
     [SerializeField] protected float bulletSpeed = 5f;
     [SerializeField] protected float bulletDmg = 1f;
     [SerializeField] protected float bulletTime = 1f;
+    Vector3 dir;
+
+    protected float bulletCurSpeed;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,36 +31,40 @@ public class bullet : MonoBehaviour
         // Gets a vector in the direction the bullet travels and adds force to the bullet
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
-        Vector3 dir = (mousePos - gameObject.transform.position);
+        dir = (mousePos - gameObject.transform.position);
         rb.AddForce(dir.normalized * bulletSpeed * 100f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (bulletTime <= 0f)
+            if(gameManager.GetComponent<gameManager>().getGameState())
+            {
+                rb.linearVelocity = Vector2.zero;
+        }
+            if (bulletTime <= 0f)
+            {
+                Destroy(gameObject);
+            }
+            else if(gameManager.GetComponent<gameManager>().getGameState() == false)
+        {
+                bulletTime -= Time.deltaTime;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.gameObject.CompareTag("Ranged") || collision.gameObject.CompareTag("Melee"))
+    {
+        collision.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
+        if (bulletPierce <= 0 || collision.gameObject.GetComponent<enemyHp>().getEnemyHp() > 0)
         {
             Destroy(gameObject);
         }
         else
         {
-            bulletTime -= Time.deltaTime;
+            bulletPierce--;
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ranged") || collision.gameObject.CompareTag("Melee"))
-        {
-            collision.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
-            if (bulletPierce <= 0 || collision.gameObject.GetComponent<enemyHp>().getEnemyHp() > 0)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                bulletPierce--;
-            }
-        }
-    }
+}
 }
