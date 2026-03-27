@@ -23,7 +23,7 @@ public class moneyManager : MonoBehaviour
     /// </summary>
     void Update()
     {
-        moneyText.text = $"${money/100f}";
+        moneyText.text = $"${money / 100f}";
     }
 
     /// <summary>
@@ -38,7 +38,8 @@ public class moneyManager : MonoBehaviour
     /// removes money from the player.
     /// </summary>
     /// <param name="amount"></param>
-    public void removeMoney(float amount) {
+    public void removeMoney(float amount)
+    {
         money -= amount;
     }
 
@@ -48,7 +49,7 @@ public class moneyManager : MonoBehaviour
     /// <returns></returns>
     public float getMoney()
     {
-        return money; 
+        return money;
     }
 
     /// <summary>
