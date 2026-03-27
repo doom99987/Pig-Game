@@ -1,3 +1,13 @@
+/****************************************************************************
+* File Name: moneyBagBombMove.cs
+* Author: Caleb Bohm
+* DigiPen Email: caleb.bohm@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: Makes the bombs move and explode
+*
+****************************************************************************/
+
 using UnityEngine;
 
 public class moneyBagBombMove : MonoBehaviour

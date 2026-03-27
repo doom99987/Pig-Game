@@ -1,5 +1,13 @@
-using System.Collections.ObjectModel;
-using TMPro;
+/****************************************************************************
+* File Name: enemyHp.cs
+* Author: Caleb Bohm
+* DigiPen Email: caleb.bohm@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: Sets and manages the enemy's current Hp
+*
+****************************************************************************/
+
 using UnityEngine;
 
 public class enemyHp : MonoBehaviour
@@ -13,6 +21,7 @@ public class enemyHp : MonoBehaviour
     [SerializeField] protected int mulitplier = 5;
     [SerializeField] protected float[] money = { 5, 10, 25, 35 };
 
+    // Ran before update and only once
     public void Start()
     {
         gameManager = GameObject.Find("gameManager");
