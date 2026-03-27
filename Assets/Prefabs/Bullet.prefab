@@ -132,9 +132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5498945145923307860}
   rb: {fileID: -4041330939062071958}
-  bulletSpeed: 10
-  bulletDmg: 1
-  bulletTime: 1
+  speed: 10
+  time: 1
 --- !u!95 &5498945145923307860
 Animator:
   serializedVersion: 7
