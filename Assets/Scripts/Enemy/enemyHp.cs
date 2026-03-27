@@ -11,7 +11,7 @@ public class enemyHp : MonoBehaviour
     [Tooltip("Money give to player on enemy kill (5 = $0.05)")]
     [SerializeField] protected int moneyOnDeath = 0;
     [SerializeField] protected int mulitplier = 5;
-    [SerializeField] protected float[] money = {5, 10 , 25, 35};
+    [SerializeField] protected float[] money = { 5, 10, 25, 35 };
 
     public void Start()
     {

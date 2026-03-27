@@ -16,7 +16,7 @@ public class shopManager : MonoBehaviour
     [Header("bomb settings")]
     protected bool bombBought = false;
     [Tooltip("Total number of bombs you have")]
-        [SerializeField] TextMeshProUGUI bombAmount;
+    [SerializeField] TextMeshProUGUI bombAmount;
     [SerializeField] GameObject bombAmountObject;
 
     // all the counts for the upgrades, used to determine the cost of the next upgrade.
@@ -29,17 +29,17 @@ public class shopManager : MonoBehaviour
 
     [Header("Upgrade Limits")]
     [Tooltip("The maximum number of times the player can upgrade their speed.")]
-        [SerializeField] protected int sCountMax =10;
+    [SerializeField] protected int sCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade their hp.")]
-        [SerializeField] protected int hCountMax = 10;
+    [SerializeField] protected int hCountMax = 10;
     [Tooltip("The maximum number of times the player can heal.")]
-        [SerializeField] protected int healingCountMax = 10;
+    [SerializeField] protected int healingCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade pierce.")]
-        [SerializeField] protected int pierceCountMax = 10;
+    [SerializeField] protected int pierceCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade bullet damage")]
-        [SerializeField] protected int bulletUpgradeCountMax = 10;
+    [SerializeField] protected int bulletUpgradeCountMax = 10;
     [Tooltip("The maximum number of times the player can buy bombs")]
-        [SerializeField] protected int bombCountMax = 10;
+    [SerializeField] protected int bombCountMax = 10;
 
     [Header("References")]
     [SerializeField] GameObject gameManager;
@@ -64,10 +64,10 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buySpeed()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax -1)
-                {
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax - 1)
+        {
             //upgrades the player's speed by 1.
-            player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1); 
+            player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1);
             gameManager.GetComponent<moneyManager>().removeMoney(speedCost[sCount]);
             buySpeedText.text = $"Buy ${speedCost[sCount + 1] / 100f}";
             sCount++;
@@ -78,7 +78,7 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buyHp()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && (hCount < hCountMax -3))
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && (hCount < hCountMax - 3))
         {
             gameManager.GetComponent<hpManager>().upgradeMaxHp();
             gameManager.GetComponent<moneyManager>().removeMoney(hpCost[hCount]);
@@ -91,7 +91,7 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buyHealing()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax -1)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax - 1)
         {
             gameManager.GetComponent<hpManager>().heal();
             gameManager.GetComponent<moneyManager>().removeMoney(healingCost[healingCount]);
@@ -131,7 +131,7 @@ public class shopManager : MonoBehaviour
         if (gameManager.GetComponent<moneyManager>().getMoney() >= bombCost[bombCount] && bombCount < bombCountMax - 1)
         {
             bombAmountObject.SetActive(true);
-            bombAmount.SetText ($"{bombCount + 1}");
+            bombAmount.SetText($"{bombCount + 1}");
             gameManager.GetComponent<moneyManager>().removeMoney(bombCost[bombCount]);
             buyBulletUpgradeText.text = $"Buy ${bombCost[bombCount + 1] / 100f}";
             bombCount++;
