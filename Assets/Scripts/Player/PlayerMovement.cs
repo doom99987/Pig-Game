@@ -1,7 +1,7 @@
 /****************************************************************************
-* File Name: PlayerMovement.cs
-* Author: David Konvisser
-* DigiPen Email: david.konvisser@digipen.edu
+* File Name: bullet.cs
+* Author: David Konvisser & Caleb Bohm
+* DigiPen Email: david.konvisser@digipen.edu & caleb.bohm@digipen.edu
 * Course: Wanic Game Project
 *
 * Description: This script allows the payer to move using wasd.

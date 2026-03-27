@@ -35,7 +35,6 @@ public class bullet : MonoBehaviour
     {
         gameManager = GameObject.Find("gameManager");
         bulletPierce = gameManager.GetComponent<shopManager>().getPierceCount();
-        //
         animator.SetInteger("coinState", gameManager.GetComponent<shopManager>().getBulletUpgradeCount());
 
         // Gets a vector in the direction the bullet travels and adds force to the bullet
@@ -48,11 +47,13 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Pauses the bullet
         if(gameManager.GetComponent<gameManager>().getGameState())
         {
             rb.linearVelocity = Vector2.zero;
             fixVelocity = true;
         }
+        // Unpauses the bullet
         else if (fixVelocity)
         {
             rb.AddForce(dir.normalized * speed * 100f);
@@ -60,6 +61,7 @@ public class bullet : MonoBehaviour
         }
         if (!gameManager.GetComponent<gameManager>().getGameState())
         {
+            // Lifetime of the bullet
             if (time <= 0f)
             {
                 Destroy(gameObject);
@@ -72,18 +74,21 @@ public class bullet : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-{
-    if (collision.gameObject.CompareTag("Ranged") || collision.gameObject.CompareTag("Melee"))
     {
-        collision.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
-        if (bulletPierce <= 0 || collision.gameObject.GetComponent<enemyHp>().getEnemyHp() > 0)
+        // Checks if the bullet collided with an enemy
+        if (collision.gameObject.CompareTag("Ranged") || collision.gameObject.CompareTag("Melee"))
         {
-            Destroy(gameObject);
-        }
-        else
-        {
-            bulletPierce--;
+            // Deals damage to enemy
+            collision.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
+            // Checks if the bullet would pierce the enemy
+            if (bulletPierce <= 0 || collision.gameObject.GetComponent<enemyHp>().getEnemyHp() > 0)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                bulletPierce--;
+            }
         }
     }
-}
 }

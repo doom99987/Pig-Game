@@ -4,7 +4,7 @@
 * DigiPen Email: caleb.bohm@digipen.edu
 * Course: Wanic Game Project
 *
-* Description: Dictates how the enemy moves depending on its type
+* Description: Dictates How the enemy moves depending on its type
 *
 ****************************************************************************/
 

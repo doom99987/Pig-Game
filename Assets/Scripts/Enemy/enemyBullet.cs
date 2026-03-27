@@ -4,7 +4,7 @@
 * DigiPen Email: david.konvisser@digipen.edu & caleb.bohm@digipen.edu
 * Course: Wanic Game Project
 *
-* Description: sets the enemy bullet velocity, damage, and lifetime.
+* Description: Sets the enemy bullet velocity, damage, and lifetime.
 *
 ****************************************************************************/
 
@@ -43,11 +43,13 @@ public class enemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Pauses the bullet
         if (gameManager.GetComponent<gameManager>().getGameState())
         {
             rb.linearVelocity = Vector2.zero;
             fixVelocity = true;
         }
+        // Unpauses the bullet
         else if (fixVelocity)
         {
             rb.AddForce(dir.normalized * speed * 100f);
@@ -55,6 +57,7 @@ public class enemyBullet : MonoBehaviour
         }
         if (!gameManager.GetComponent<gameManager>().getGameState())
         {
+            // Lifetime of the bullet
             if (time <= 0f)
             {
                 Destroy(gameObject);

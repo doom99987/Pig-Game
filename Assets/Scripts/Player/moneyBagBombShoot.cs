@@ -1,3 +1,13 @@
+/****************************************************************************
+* File Name: moneyBagBombShoot.cs
+* Author: Caleb Bohm
+* DigiPen Email: caleb.bohm@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: Allows the player to shoot the bombs
+*
+****************************************************************************/
+
 using UnityEngine;
 
 public class moneyBagBombShoot : MonoBehaviour
@@ -8,12 +18,6 @@ public class moneyBagBombShoot : MonoBehaviour
     [SerializeField] protected float delay;
     [SerializeField] protected float imgRotation;
     [SerializeField] protected GameObject bomb;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
