@@ -1,7 +1,7 @@
 /****************************************************************************
 * File Name: roundManager.cs
-* Author: Caleb Bohm
-* DigiPen Email: caleb.bohm@digipen.edu
+* Author: Caleb Bohm & David Konvisser
+* DigiPen Email: caleb.bohm@digipen.edu & david.konvisser@digipen.edu
 * Course: Wanic Game Project
 *
 * Description: Manages the round timer, ends the round, and opens
@@ -18,27 +18,30 @@ public class roundManager : MonoBehaviour
 
     [Header("Round")]
     [Tooltip("Current Round")]
-    [SerializeField] protected int round = 0;
+        [SerializeField] protected int round = 0;
 
     [Tooltip(("Total number of Rounds"))]
-    [SerializeField] protected int totalRounds = 0;
+        [SerializeField] protected int totalRounds = 0;
 
     [Tooltip("Amount of time in a Round")]
-    [SerializeField] protected float roundTime = 121f;
+        [SerializeField] protected float roundTime = 121f;
 
     [Header("Text Timer")]
     [Tooltip("The Textbox for the Timer")]
-    [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] TextMeshProUGUI roundText;
-    [SerializeField] TextMeshProUGUI deathText;
+        [SerializeField] TextMeshProUGUI timerText;
+    [Tooltip("The Textbox for the current round")]
+        [SerializeField] TextMeshProUGUI roundText;
+    [Tooltip("The Textbox for the death text")]
+        [SerializeField] TextMeshProUGUI deathText;
 
     [Header("End of Round Bonus")]
     [Tooltip("The amount of money given at the end of each round")]
-    [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000};
+        [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000};
 
     // Run is called before any update is called the first time
     private void Start()
     {
+        // Displays the current round and sets the timer
         roundText.text = "Round: " + round + "/" + totalRounds;
         elapsedTime = roundTime;
     }
@@ -64,6 +67,7 @@ public class roundManager : MonoBehaviour
             if (elapsedTime < 1)
             {
                 gameObject.GetComponent<gameManager>().setRoundClear(true);
+                // Check if they beat final round
                 if (round == totalRounds)
                 {
                     gameObject.GetComponent<moneyManager>().toggleMoneyText();
@@ -71,10 +75,12 @@ public class roundManager : MonoBehaviour
                     gameObject.GetComponent<randomMessageManager>().displayWinMessage();
                     gameObject.GetComponent<playScenePanelManager>().toggleVictoryPanel();
                 }
+                // Otherwise go to next round
                 else
                 {
                     gameObject.GetComponent<gameManager>().roundEnded();
                     resetTimer();
+                    // Check if the round number is within the end of round bonus
                     if(endOfRoundBonus.Length > round)
                     {
                         gameObject.GetComponent<moneyManager>().addMoney(endOfRoundBonus[round]);
@@ -98,7 +104,7 @@ public class roundManager : MonoBehaviour
     /// <returns></returns>
     public int getRound()
     {
-               return round;
+        return round;
     }
 }
 

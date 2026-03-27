@@ -1,3 +1,13 @@
+/****************************************************************************
+* File Name: roundManager.cs
+* Author: Caleb Bohm
+* DigiPen Email: caleb.bohm@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: Manages the animation of the bullet
+*
+****************************************************************************/
+
 using UnityEngine;
 
 public class bulletAnimator : MonoBehaviour

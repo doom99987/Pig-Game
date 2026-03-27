@@ -1,14 +1,13 @@
 /****************************************************************************
 * File Name: shopManager.cs
-* Author: David Konvisser
-* DigiPen Email: david.konvisser@digipen.edu
+* Author: David Konvisser & Caleb Bohm
+* DigiPen Email: david.konvisser@digipen.edu & caleb.bohm@digipen.edu
 * Course: Wanic Game Project
 *
 * Description: This script manages the shop, including the functions to buy upgrades for the player, such as speed, max HP, and healing. 
 * It also keeps track of the counts for each upgrade to determine the cost of the next upgrade.
 *
 ****************************************************************************/
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +15,8 @@ public class shopManager : MonoBehaviour
 {
     [Header("bomb settings")]
     protected bool bombBought = false;
-    [SerializeField] TextMeshProUGUI bombAmount;
+    [Tooltip("Total number of bombs you have")]
+        [SerializeField] TextMeshProUGUI bombAmount;
     [SerializeField] GameObject bombAmountObject;
 
     // all the counts for the upgrades, used to determine the cost of the next upgrade.
@@ -29,17 +29,17 @@ public class shopManager : MonoBehaviour
 
     [Header("Upgrade Limits")]
     [Tooltip("The maximum number of times the player can upgrade their speed.")]
-    [SerializeField] protected int sCountMax =10;
+        [SerializeField] protected int sCountMax =10;
     [Tooltip("The maximum number of times the player can upgrade their hp.")]
-    [SerializeField] protected int hCountMax = 10;
+        [SerializeField] protected int hCountMax = 10;
     [Tooltip("The maximum number of times the player can heal.")]
-    [SerializeField] protected int healingCountMax = 10;
+        [SerializeField] protected int healingCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade pierce.")]
-    [SerializeField] protected int pierceCountMax = 10;
+        [SerializeField] protected int pierceCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade bullet damage")]
-    [SerializeField] protected int bulletUpgradeCountMax = 10;
+        [SerializeField] protected int bulletUpgradeCountMax = 10;
     [Tooltip("The maximum number of times the player can buy bombs")]
-    [SerializeField] protected int bombCountMax = 10;
+        [SerializeField] protected int bombCountMax = 10;
 
     [Header("References")]
     [SerializeField] GameObject gameManager;
@@ -59,6 +59,9 @@ public class shopManager : MonoBehaviour
     [SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] bombCost = { 5, 50, 500, 5000 };
+    /// <summary>
+    /// Called to upgrade the players speed by 1
+    /// </summary>
     public void buySpeed()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax -1)
@@ -70,6 +73,9 @@ public class shopManager : MonoBehaviour
             sCount++;
         }
     }
+    /// <summary>
+    /// Called to upgrade the player max Hp by 1
+    /// </summary>
     public void buyHp()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && (hCount < hCountMax -3))
@@ -80,6 +86,9 @@ public class shopManager : MonoBehaviour
             hCount++;
         }
     }
+    /// <summary>
+    /// Called to heal the players Hp by 1
+    /// </summary>
     public void buyHealing()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax -1)
@@ -90,7 +99,9 @@ public class shopManager : MonoBehaviour
             healingCount++;
         }
     }
-
+    /// <summary>
+    /// Called to upgrade the amount of enemies the bullet pierces through by 1
+    /// </summary>
     public void buyPierce()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount] && pierceCount < pierceCountMax - 1)
@@ -100,7 +111,9 @@ public class shopManager : MonoBehaviour
             pierceCount++;
         }
     }
-
+    /// <summary>
+    /// Called to upgrade the damage of the bullet
+    /// </summary>
     public void buyBulletUpgrade()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= bulletUpgradeCost[bulletUpgradeCount] && bulletUpgradeCount < bulletUpgradeCountMax - 1)
@@ -110,7 +123,9 @@ public class shopManager : MonoBehaviour
             bulletUpgradeCount++;
         }
     }
-
+    /// <summary>
+    /// Called to buy 1 bomb
+    /// </summary>
     public void buyBombs()
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= bombCost[bombCount] && bombCount < bombCountMax - 1)
