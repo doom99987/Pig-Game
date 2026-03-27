@@ -8,6 +8,7 @@
 *
 ****************************************************************************/
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
@@ -35,19 +36,16 @@ public class playerMovement : MonoBehaviour
         // Grabs the mouse position
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
-        Vector3 obj = transform.position;
-        // gets the direction from the player to the mouse
-        Vector3 dir = (mousePos - obj);
         // checks if the mouse is facing which direction relative to the player
-        if (transform.position.x > dir.x && Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        if (transform.position.x > mousePos.x && Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
         {
             playerDir = direction.left;
         }
-        else if (transform.position.x < dir.x && Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        else if (transform.position.x < mousePos.x && Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
         {
             playerDir = direction.right;
         }
-        else if (transform.position.y > dir.y && Mathf.Abs(dir.y) > Mathf.Abs(dir.x))
+        else if (transform.position.y > mousePos.y && Mathf.Abs(mousePos.y) > Mathf.Abs(mousePos.x))
         {
             playerDir = direction.down;
         }
