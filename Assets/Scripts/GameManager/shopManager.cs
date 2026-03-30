@@ -51,6 +51,7 @@ public class shopManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI buyHealingText;
     [SerializeField] TextMeshProUGUI buyPierceText;
     [SerializeField] TextMeshProUGUI buyBulletUpgradeText;
+    [SerializeField] TextMeshProUGUI buyBombText;
 
     [Header("Upgrade Costs")]
     [SerializeField] float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
@@ -133,7 +134,7 @@ public class shopManager : MonoBehaviour
             bombAmountObject.SetActive(true);
             bombAmount.SetText($"{bombCount + 1}");
             gameManager.GetComponent<moneyManager>().removeMoney(bombCost[bombCount]);
-            buyBulletUpgradeText.text = $"Buy ${bombCost[bombCount + 1] / 100f}";
+            buyBombText.text = $"Buy ${bombCost[bombCount + 1] / 100f}";
             bombCount++;
         }
     }
@@ -153,5 +154,10 @@ public class shopManager : MonoBehaviour
     public int getBulletUpgradeCount()
     {
         return bulletUpgradeCount;
+    }
+
+    public int getBombCount()
+    {
+        return bombCount;
     }
 }

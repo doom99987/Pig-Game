@@ -18,12 +18,13 @@ public class moneyBagBombShoot : MonoBehaviour
     [SerializeField] protected float delay;
     [SerializeField] protected float imgRotation;
     [SerializeField] protected GameObject bomb;
+    [SerializeField] protected GameObject gameManager;
 
     // Update is called once per frame
     void Update()
     {
         // Checks if your left clicking and delays shooting by the delay
-        if (Input.GetMouseButton(1) && elapsedTime <= 0)
+        if (Input.GetMouseButtonDown(1) && elapsedTime <= 0 && gameManager.GetComponent<shopManager>().getBombCount() > 0)
         {
             // Gets the angle towards the mouse
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
