@@ -160,4 +160,14 @@ public class shopManager : MonoBehaviour
     {
         return bombCount;
     }
+
+    public void subtractBombCount(int amount)
+    {
+        if(bombCount - amount < 0)
+        {
+            bombCount = 0;
+        }
+        bombCount = bombCount - amount;
+        bombAmount.text = $"{bombCount}";
+    }
 }

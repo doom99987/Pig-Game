@@ -35,6 +35,7 @@ public class moneyBagBombShoot : MonoBehaviour
             // Spawns an object pointing towards the mouse
             Instantiate(bomb, gameObject.transform.position, Quaternion.Euler(0, 0, angle));
             elapsedTime = delay;
+            gameManager.GetComponent<shopManager>().subtractBombCount(1);
         }
         // lowers until 0
         if (elapsedTime >= 0)
