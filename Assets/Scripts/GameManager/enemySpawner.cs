@@ -18,7 +18,8 @@ public class enemySpawner : MonoBehaviour
     [Tooltip("The delay between each enemy spawn in seconds.")]
     [SerializeField] protected float spawnDelay = 5f;
     protected float nextSpawnTime;
-   [SerializeField] protected int spawnAmount = 2;
+    [Tooltip("The amount of enemies to spawn each time.")]
+    [SerializeField] protected int spawnAmount = 3;
 
     private void Update()
     {
