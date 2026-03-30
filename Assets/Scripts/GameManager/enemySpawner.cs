@@ -18,6 +18,7 @@ public class enemySpawner : MonoBehaviour
     [Tooltip("The delay between each enemy spawn in seconds.")]
     [SerializeField] protected float spawnDelay = 5f;
     protected float nextSpawnTime;
+   [SerializeField] protected int spawnAmount = 2;
 
     private void Update()
     {
@@ -37,9 +38,14 @@ public class enemySpawner : MonoBehaviour
     public void spawnEnemy()
     {
         //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location and randomizes which enemy spawns.
-        int randomSpawn = Random.Range(0, spawnPoints.Length);
-        int randomEnemy = Random.Range(0, enemyPrefab.Length);
-        Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position, spawnPoints[randomSpawn].rotation);
+        
+        for (int i = 0; i< spawnAmount; i++)
+        {
+            int randomSpawn = Random.Range(0, spawnPoints.Length);
+            int randomEnemy = Random.Range(0, enemyPrefab.Length);
+            Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position, spawnPoints[randomSpawn].rotation);
+        }
+            
     }
 }
 

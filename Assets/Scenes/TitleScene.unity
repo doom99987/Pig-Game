@@ -3141,7 +3141,7 @@ GameObject:
   - component: {fileID: 1832247104}
   - component: {fileID: 1832247103}
   m_Layer: 0
-  m_Name: sfx_ButtonClick
+  m_Name: snort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
