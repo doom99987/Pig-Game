@@ -61,6 +61,7 @@ public class shopManager : MonoBehaviour
     [SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] bombCost = { 5, 50, 500, 5000 };
+
     /// <summary>
     /// Called to upgrade the players speed by 1
     /// </summary>
@@ -75,6 +76,7 @@ public class shopManager : MonoBehaviour
             sCount++;
         }
     }
+
     /// <summary>
     /// Called to upgrade the player max Hp by 1
     /// </summary>
@@ -88,6 +90,7 @@ public class shopManager : MonoBehaviour
             hCount++;
         }
     }
+
     /// <summary>
     /// Called to heal the players Hp by 1
     /// </summary>
@@ -101,6 +104,7 @@ public class shopManager : MonoBehaviour
             healingCount++;
         }
     }
+
     /// <summary>
     /// Called to upgrade the amount of enemies the bullet pierces through by 1
     /// </summary>
@@ -113,6 +117,7 @@ public class shopManager : MonoBehaviour
             pierceCount++;
         }
     }
+
     /// <summary>
     /// Called to upgrade the damage of the bullet
     /// </summary>
@@ -125,6 +130,7 @@ public class shopManager : MonoBehaviour
             bulletUpgradeCount++;
         }
     }
+
     /// <summary>
     /// Called to buy 1 bomb
     /// </summary>
@@ -149,6 +155,7 @@ public class shopManager : MonoBehaviour
     {
         return pierceCount;
     }
+
     /// <summary>
     /// Gives the current bulletUpgrade level
     /// </summary>

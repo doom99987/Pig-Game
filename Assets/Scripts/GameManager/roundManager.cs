@@ -18,25 +18,25 @@ public class roundManager : MonoBehaviour
 
     [Header("Round")]
     [Tooltip("Current Round")]
-        [SerializeField] protected int round = 0;
+    [SerializeField] protected int round = 0;
 
     [Tooltip(("Total number of Rounds"))]
-        [SerializeField] protected int totalRounds = 0;
+    [SerializeField] protected int totalRounds = 0;
 
     [Tooltip("Amount of time in a Round")]
-        [SerializeField] protected float roundTime = 121f;
+    [SerializeField] protected float roundTime = 121f;
 
     [Header("Text Timer")]
     [Tooltip("The Textbox for the Timer")]
-        [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] TextMeshProUGUI timerText;
     [Tooltip("The Textbox for the current round")]
-        [SerializeField] TextMeshProUGUI roundText;
+    [SerializeField] TextMeshProUGUI roundText;
     [Tooltip("The Textbox for the death text")]
-        [SerializeField] TextMeshProUGUI deathText;
+    [SerializeField] TextMeshProUGUI deathText;
 
     [Header("End of Round Bonus")]
     [Tooltip("The amount of money given at the end of each round")]
-        [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000};
+    [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000 };
 
     // Run is called before any update is called the first time
     private void Start()
@@ -59,7 +59,7 @@ public class roundManager : MonoBehaviour
             int minutes = Mathf.FloorToInt((elapsedTime) / 60);
             int seconds = Mathf.FloorToInt((elapsedTime) % 60);
             timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
-            if(deathText != null)
+            if (deathText != null)
             {
                 deathText.text = string.Format("you had: " + "{0:0}:{1:00}", minutes, seconds + " seconds left");
             }
@@ -81,7 +81,7 @@ public class roundManager : MonoBehaviour
                     gameObject.GetComponent<gameManager>().roundEnded();
                     resetTimer();
                     // Check if the round number is within the end of round bonus
-                    if(endOfRoundBonus.Length > round)
+                    if (endOfRoundBonus.Length > round)
                     {
                         gameObject.GetComponent<moneyManager>().addMoney(endOfRoundBonus[round]);
                     }
@@ -91,6 +91,7 @@ public class roundManager : MonoBehaviour
             }
         }
     }
+
     /// <summary>
     /// Resets the Timer
     /// </summary>
@@ -98,6 +99,7 @@ public class roundManager : MonoBehaviour
     {
         elapsedTime = roundTime;
     }
+
     /// <summary>
     /// gets the current round
     /// </summary>

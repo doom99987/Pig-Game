@@ -31,6 +31,7 @@ public class randomMessageManager : MonoBehaviour
         int random = Random.Range(0, winMessages.Length);
         winMessageText.text = winMessages[random];
     }
+
     /// <summary>
     /// prints random lose message to the screen when the player loses the game
     /// </summary>

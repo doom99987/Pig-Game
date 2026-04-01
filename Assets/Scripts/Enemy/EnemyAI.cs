@@ -43,6 +43,7 @@ public class enemyAI : MonoBehaviour
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("gameManager");
     }
+
     // Update is called once per frame
     private void Update()
     {
@@ -88,6 +89,7 @@ public class enemyAI : MonoBehaviour
             }
         }
     }
+
     /// <summary>
     /// Lowers the players life and pushes the enemy back when enemy collides w/ player
     /// </summary>
