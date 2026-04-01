@@ -20,14 +20,6 @@ public class shopManager : MonoBehaviour
     [SerializeField] GameObject bombAmountObject;
     [SerializeField] GameObject bombImage;
 
-    // all the counts for the upgrades, used to determine the cost of the next upgrade.
-    protected int sCount = 0;
-    protected int hCount = 0;
-    protected int healingCount = 0;
-    protected int pierceCount = 0;
-    protected int bulletUpgradeCount = 0;
-    protected int bombCount = 0;
-
     [Header("Upgrade Limits")]
     [Tooltip("The maximum number of times the player can upgrade their speed.")]
     [SerializeField] protected int sCountMax = 10;
@@ -62,18 +54,26 @@ public class shopManager : MonoBehaviour
     [SerializeField] float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
     [SerializeField] float[] bombCost = { 5, 50, 500, 5000 };
 
+    // all the counts for the upgrades, used to determine the cost of the next upgrade.
+    protected int speedCount = 0;
+    protected int hpBuyCount = 0;
+    protected int healingCount = 0;
+    protected int pierceCount = 0;
+    protected int bulletUpgradeCount = 0;
+    protected int bombCount = 0;
+
     /// <summary>
     /// Called to upgrade the players speed by 1
     /// </summary>
     public void buySpeed()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[sCount] && sCount < sCountMax - 1)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[speedCount] && speedCount < sCountMax - 1)
         {
             //upgrades the player's speed by 1.
             player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1);
-            gameManager.GetComponent<moneyManager>().removeMoney(speedCost[sCount]);
-            buySpeedText.text = $"Buy ${speedCost[sCount + 1] / 100f}";
-            sCount++;
+            gameManager.GetComponent<moneyManager>().removeMoney(speedCost[speedCount]);
+            buySpeedText.text = $"Buy ${speedCost[speedCount + 1] / 100f}";
+            speedCount++;
         }
     }
 
@@ -82,12 +82,12 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buyHp()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hCount] && (hCount < hCountMax - 3))
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hpBuyCount] && (hpBuyCount < hCountMax - 3))
         {
             gameManager.GetComponent<hpManager>().upgradeMaxHp();
-            gameManager.GetComponent<moneyManager>().removeMoney(hpCost[hCount]);
-            buyHpText.text = $"Buy ${hpCost[hCount + 1] / 100f}";
-            hCount++;
+            gameManager.GetComponent<moneyManager>().removeMoney(hpCost[hpBuyCount]);
+            buyHpText.text = $"Buy ${hpCost[hpBuyCount + 1] / 100f}";
+            hpBuyCount++;
         }
     }
 
