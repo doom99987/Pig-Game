@@ -18,6 +18,7 @@ public class shopManager : MonoBehaviour
     [Tooltip("Total number of bombs you have")]
     [SerializeField] TextMeshProUGUI bombAmount;
     [SerializeField] GameObject bombAmountObject;
+    [SerializeField] GameObject bombImage;
 
     // all the counts for the upgrades, used to determine the cost of the next upgrade.
     protected int sCount = 0;
@@ -131,6 +132,7 @@ public class shopManager : MonoBehaviour
     {
         if (gameManager.GetComponent<moneyManager>().getMoney() >= bombCost[bombCount] && bombCount < bombCountMax - 1)
         {
+            bombImage.SetActive(true);
             bombAmountObject.SetActive(true);
             bombAmount.SetText($"{bombCount + 1}");
             gameManager.GetComponent<moneyManager>().removeMoney(bombCost[bombCount]);
