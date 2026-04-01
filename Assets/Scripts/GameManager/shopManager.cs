@@ -22,17 +22,17 @@ public class shopManager : MonoBehaviour
 
     [Header("Upgrade Limits")]
     [Tooltip("The maximum number of times the player can upgrade their speed.")]
-    [SerializeField] protected int sCountMax = 10;
+        [SerializeField] protected int sCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade their hp.")]
-    [SerializeField] protected int hCountMax = 10;
+        [SerializeField] protected int hCountMax = 10;
     [Tooltip("The maximum number of times the player can heal.")]
-    [SerializeField] protected int healingCountMax = 10;
+        [SerializeField] protected int healingCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade pierce.")]
-    [SerializeField] protected int pierceCountMax = 10;
+        [SerializeField] protected int pierceCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade bullet damage")]
-    [SerializeField] protected int bulletUpgradeCountMax = 10;
+        [SerializeField] protected int bulletUpgradeCountMax = 10;
     [Tooltip("The maximum number of times the player can buy bombs")]
-    [SerializeField] protected int bombCountMax = 10;
+    [   SerializeField] protected int bombCountMax = 10;
 
     [Header("References")]
     [SerializeField] GameObject gameManager;
