@@ -3284,7 +3284,8 @@ MonoBehaviour:
   - {fileID: 533552292}
   - {fileID: 1894333490}
   - {fileID: 557441603}
-  spawnDelay: 6
+  spawnDelayMin: 5
+  spawnDelayMax: 0
   spawnAmount: 2
 --- !u!114 &972771256 stripped
 MonoBehaviour:

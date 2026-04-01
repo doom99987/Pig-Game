@@ -17,7 +17,8 @@ public class enemySpawner : MonoBehaviour
     [SerializeField] Transform[] spawnPoints;
 
     [Tooltip("The delay between each enemy spawn in seconds.")]
-    [SerializeField] protected float spawnDelay = 5f;
+    [SerializeField] protected float spawnDelayMin = 5f;
+    [SerializeField] protected float spawnDelayMax = 6;
     protected float nextSpawnTime;
 
     [Tooltip("The amount of enemies to spawn each time.")]
@@ -33,7 +34,7 @@ public class enemySpawner : MonoBehaviour
             {
                 spawnEnemy();
                 //spawn delay
-                nextSpawnTime = Time.time + spawnDelay - (float)(round * 0.25f);
+                nextSpawnTime = Time.time + Random.Range(spawnDelayMin, (spawnDelayMax - (float)(round * 0.25f)));
             }
         }
     }
