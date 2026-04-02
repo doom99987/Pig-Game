@@ -21,8 +21,10 @@ public class gameManager : MonoBehaviour
     [Tooltip("Variable to check if the round has been cleared")]
     [SerializeField] protected bool roundClear;
 
+    [Header("Toggle variables")]
     [SerializeField] protected bool isTutorialTextOn = false;
     [SerializeField] protected TextMeshProUGUI tutorialText;
+
 
     public void Update() {
        if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false && 
@@ -77,6 +79,8 @@ public class gameManager : MonoBehaviour
     {
         if (roundClear)
         {
+            gameObject.GetComponent<roundManager>().toggleRoundText();
+            gameObject.GetComponent<roundManager>().toggleTimerText();
             gameObject.GetComponent<playScenePanelManager>().toggleShopPanel();
         }
     }

@@ -38,6 +38,9 @@ public class roundManager : MonoBehaviour
     [Tooltip("The amount of money given at the end of each round")]
     [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000 };
 
+    bool isRoundTextOpen = true;
+    bool isTimerTextOpen = true;
+
     // Run is called before any update is called the first time
     private void Start()
     {
@@ -107,6 +110,18 @@ public class roundManager : MonoBehaviour
     public int getRound()
     {
         return round;
+    }
+
+    public void toggleRoundText()
+    {
+        isRoundTextOpen = !isRoundTextOpen;
+        roundText.gameObject.SetActive(isRoundTextOpen);
+    }
+
+    public void toggleTimerText()
+    {
+        isTimerTextOpen = !isTimerTextOpen;
+        timerText.gameObject.SetActive(isTimerTextOpen);
     }
 }
 
