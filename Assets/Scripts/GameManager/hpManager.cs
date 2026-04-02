@@ -84,6 +84,8 @@ public class hpManager : MonoBehaviour
         }
         if(hp<= 0)
         {
+            foreach (Transform child in heartsContainer)
+                Destroy(child.gameObject);
             isDead = true;
             gameManager.GetComponent<gameManager>().setGameState(true);
             gameManager.GetComponent<moneyManager>().toggleMoneyText();
