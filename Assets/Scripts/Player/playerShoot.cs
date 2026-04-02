@@ -13,7 +13,8 @@ public class playerShoot : MonoBehaviour
 {
     protected float elapsedTime;
     [Tooltip("Amount of money removed when shooting (1 = $0.01)")]
-    [SerializeField] int removeAmount = 1;
+    [SerializeField] int[] removeAmount = {1, 3 ,5};
+  
 
     [Header("Projectile")] 
     [SerializeField] GameObject bullet;
@@ -26,13 +27,16 @@ public class playerShoot : MonoBehaviour
     [SerializeField] protected float imgRotation = 90f;
     [Tooltip("Delay between bullets fired")]
     [SerializeField] protected float delay = 1f;
+
+   
     // Update is called once per frame
     void Update()
     {
+        int bulletUpgradeCount = gameManager.GetComponent<shopManager>().getBulletUpgradeCount();
         // Checks if your left clicking and delays shooting by the delay
         if (Input.GetMouseButton(0) && elapsedTime <= 0 && 
-            gameManager.GetComponent<moneyManager>().getMoney() > (gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 
-            removeAmount) && !gameManager.GetComponent<gameManager>().getGameState())
+            gameManager.GetComponent<moneyManager>().getMoney() > (gameManager.GetComponent<shopManager>().getBulletUpgradeCount() +
+            removeAmount[bulletUpgradeCount]) && !gameManager.GetComponent<gameManager>().getGameState())
         {
             // Gets the angle towards the mouse
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -42,7 +46,7 @@ public class playerShoot : MonoBehaviour
 
             // Spawns an object pointing towards the mouse
             Instantiate(bullet, gameObject.transform.position, Quaternion.Euler(0, 0, angle));
-            gameManager.GetComponent<moneyManager>().removeMoney(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + removeAmount);
+            gameManager.GetComponent<moneyManager>().removeMoney(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + removeAmount[bulletUpgradeCount]);
             elapsedTime = delay;
         }
         // lowers until 0

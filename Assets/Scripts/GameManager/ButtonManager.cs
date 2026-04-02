@@ -37,4 +37,10 @@ public class ButtonManager : MonoBehaviour
         gameManager.GetComponent<roundManager>().toggleTimerText();
         gameManager.GetComponent<gameManager>().setRoundClear(false);
     }
+
+    public void restart()
+    {
+               
+               SceneManager.LoadScene("PlayScene");
+    }
 }
