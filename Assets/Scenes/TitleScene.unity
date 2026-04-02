@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Left click to shoot \nshoot pigs to get money"
+  m_text: Left click to shoot and shoot pigs to get money
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}

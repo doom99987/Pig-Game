@@ -3421,8 +3421,8 @@ MonoBehaviour:
   - {fileID: 533552292}
   - {fileID: 1894333490}
   - {fileID: 557441603}
-  spawnDelayMin: 5
-  spawnDelayMax: 6
+  spawnDelayMin: 6
+  spawnDelayMax: 8
   spawnAmount: 2
 --- !u!114 &972771256 stripped
 MonoBehaviour:
@@ -8591,7 +8591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: spawnAmount
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: enemyPrefab.Array.size
