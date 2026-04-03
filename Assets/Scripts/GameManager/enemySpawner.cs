@@ -49,10 +49,10 @@ public class enemySpawner : MonoBehaviour
         {
             int randomSpawn = Random.Range(0, spawnPoints.Length);
             int randomEnemy = Random.Range(0, enemyPrefab.Length);
-            int randSpawnDis = Random.Range(1, 2);
+            int randSpawnDis = Random.Range(2, 4);
             Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, 0, 0), spawnPoints[randomSpawn].rotation);
             //stall so the enemies don't all spawn at the same time and on top of one another
-            StartCoroutine(wait(0.5f));
+            StartCoroutine(wait(1f));
         }
     }
     IEnumerator wait(float time)
