@@ -18,12 +18,14 @@ public class playScenePanelManager : MonoBehaviour
     [SerializeField] GameObject deathPanel;
     [SerializeField] GameObject victoryPanel;
     [SerializeField] GameObject pausePanel;
+    [SerializeField] GameObject takeDmgPanel;
 
     protected bool isShopOpen = false;
     protected bool isDeathOpen = false;
     protected bool isVictoryOpen = false;
     protected bool isTutorialTextOn = false;
     protected bool isPauseOpen = false;
+    protected bool isTakeDmgOpen = false;
 
     public void Start()
     {
@@ -76,6 +78,12 @@ public class playScenePanelManager : MonoBehaviour
         isPauseOpen = !isPauseOpen;
         gameObject.GetComponent<gameManager>().setGameState(isPauseOpen);
         pausePanel.SetActive(isPauseOpen);
+    }
+
+    public void toggleDmgPanel()
+    {
+        isTakeDmgOpen = !isTakeDmgOpen;
+        takeDmgPanel.SetActive(isTakeDmgOpen);
     }
 
     public bool getIsShopOpen()

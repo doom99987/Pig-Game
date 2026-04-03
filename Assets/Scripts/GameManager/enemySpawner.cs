@@ -48,7 +48,7 @@ public class enemySpawner : MonoBehaviour
         {
             int randomSpawn = Random.Range(0, spawnPoints.Length);
             int randomEnemy = Random.Range(0, enemyPrefab.Length);
-            int randSpawnDis = Random.Range(-2, 2);
+            int randSpawnDis = Random.Range(1, 2);
             Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, 0, 0), spawnPoints[randomSpawn].rotation);
         }
             

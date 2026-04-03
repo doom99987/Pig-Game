@@ -8,6 +8,7 @@
 * It also handles the player's death by toggling the death panel and money text when HP reaches 0.
 *
 ****************************************************************************/
+using System.Collections;
 using TMPro;
 using UnityEngine;
 public class hpManager : MonoBehaviour
@@ -112,6 +113,11 @@ public class hpManager : MonoBehaviour
     /// </summary>
     public void takeDmg()
     {
+        if (hp > 1)
+        {
+            gameManager.GetComponent<playScenePanelManager>().toggleDmgPanel();
+            StartCoroutine(flashRed());
+        }
         if (hp > 0)
         {
             hp--;
@@ -147,6 +153,12 @@ public class hpManager : MonoBehaviour
     public bool getIsDead()
     {
                return isDead;
+    }
+
+    IEnumerator flashRed()
+    {
+        yield return new WaitForSeconds(0.5f);
+        gameManager.GetComponent<playScenePanelManager>().toggleDmgPanel();
     }
 }
 
