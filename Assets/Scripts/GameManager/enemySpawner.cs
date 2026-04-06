@@ -47,27 +47,28 @@ public class enemySpawner : MonoBehaviour
     {
         //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location and randomizes which enemy spawns.
         
+        int[] spawnSave = new int[spawnPoints.Length];
+        for (int j = 0; j < spawnSave.Length; j++)
+        {
+            spawnSave[j] = -1;
+        }
         for (int i = 0; i< spawnAmount; i++)
         {
-            int[] spawnSave = new int[spawnPoints.Length];
             int randomSpawn = Random.Range(0, spawnPoints.Length);
-          for(int j = 0; j < spawnSave.Length; j++)
-            {
-                if(spawnSave[j] == 0)
-                {
-                    spawnSave[j] = randomSpawn;
-                    break;
-                }else
-                {
-
-                }
-            }
-                foreach (int num in spawnSave)
+            foreach (int num in spawnSave)
             {
                 if (num == randomSpawn)
                 {
                     randomSpawn = Random.Range(0, spawnPoints.Length);
                 }
+            for(int j = 0; j < spawnSave.Length; j++)
+            {
+                if(spawnSave[j] == 0)
+                {
+                    spawnSave[j] = randomSpawn;
+                    break;
+                }
+            }
             }
             int randomEnemy = Random.Range(0, enemyPrefab.Length);
             int randSpawnDis = Random.Range(2, 4);
