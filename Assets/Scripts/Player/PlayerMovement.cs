@@ -36,23 +36,10 @@ public class playerMovement : MonoBehaviour
         // Grabs the mouse position
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
-        // checks if the mouse is facing which direction relative to the player
-        if (Mathf.Abs(transform.position.x) > Mathf.Abs(mousePos.x) && Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
-        {
-            playerDir = direction.left;
-        }
-        else if (Mathf.Abs(transform.position.x) < Mathf.Abs(mousePos.x) && Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
-        {
-            playerDir = direction.right;
-        }
-        else if (transform.position.y > mousePos.y && Mathf.Abs(mousePos.y) > Mathf.Abs(mousePos.x))
-        {
-            playerDir = direction.down;
-        }
-        else
-        {
-            playerDir = direction.up;
-        }
+
+        Vector2 dir = (transform.position - mousePos).normalized;
+
+        
 
         animator.SetInteger("playerDirection", (int) playerDir);
     }
