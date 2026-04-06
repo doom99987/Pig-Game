@@ -26,6 +26,7 @@ public class playerMovement : MonoBehaviour
     [SerializeField] protected float maxSpeed = 35f; 
     [SerializeField] Rigidbody2D rb;
 
+
     private direction playerDir;
     private enum direction
     {
@@ -71,6 +72,7 @@ public class playerMovement : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
+        checkIsMoving();
         if (!gameManager.GetComponent<gameManager>().getGameState())
         {
             float horizontal = Input.GetAxis("Horizontal");
@@ -99,6 +101,18 @@ public class playerMovement : MonoBehaviour
         if(getCurrentSpeed() <=  maxSpeed)
         {
             curSpeed = speed;
+        }
+    }
+
+    public void checkIsMoving()
+    {
+        if (rb.linearVelocity.magnitude >= 1f)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
     }
 
