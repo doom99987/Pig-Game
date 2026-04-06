@@ -26,6 +26,8 @@ public class enemySpawner : MonoBehaviour
     [Tooltip("The amount of enemies to spawn each time.")]
     [SerializeField] protected int spawnAmount = 3;
 
+   
+
     private void Update()
     {
         int round = gameObject.GetComponent<roundManager>().getRound();
@@ -47,7 +49,26 @@ public class enemySpawner : MonoBehaviour
         
         for (int i = 0; i< spawnAmount; i++)
         {
+            int[] spawnSave = new int[spawnPoints.Length];
             int randomSpawn = Random.Range(0, spawnPoints.Length);
+          for(int j = 0; j < spawnSave.Length; j++)
+            {
+                if(spawnSave[j] == 0)
+                {
+                    spawnSave[j] = randomSpawn;
+                    break;
+                }else
+                {
+
+                }
+            }
+                foreach (int num in spawnSave)
+            {
+                if (num == randomSpawn)
+                {
+                    randomSpawn = Random.Range(0, spawnPoints.Length);
+                }
+            }
             int randomEnemy = Random.Range(0, enemyPrefab.Length);
             int randSpawnDis = Random.Range(2, 4);
             Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, 0, 0), spawnPoints[randomSpawn].rotation);
