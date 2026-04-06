@@ -7,6 +7,7 @@
 * Description: This script allows the payer to move using wasd.
 *
 ****************************************************************************/
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -39,7 +40,28 @@ public class playerMovement : MonoBehaviour
 
         Vector2 dir = (transform.position - mousePos).normalized;
 
-        
+        if (Vector2.Distance(dir, Vector2.left) < Vector2.Distance(dir, Vector2.up) && Vector2.Distance(dir, Vector2.down) > Vector2.Distance(dir, Vector2.left))
+        {
+            playerDir = direction.right;
+        }
+        else if (Vector2.Distance(dir, Vector2.right) < Vector2.Distance(dir, Vector2.down) && Vector2.Distance(dir, Vector2.up) > Vector2.Distance(dir, Vector2.right))
+        {
+            playerDir = direction.left;
+        }
+        else if (dir.y > 0)
+        {
+            playerDir = direction.down;
+        }
+        else if (Vector2.Distance(dir, Vector2.down) < Vector2.Distance(dir, Vector2.right) && Vector2.Distance(dir, Vector2.left) > Vector2.Distance(dir, Vector2.down))
+        {
+            playerDir = direction.up;
+        }
+        else
+        {
+            playerDir = direction.down;
+        }
+
+
 
         animator.SetInteger("playerDirection", (int) playerDir);
     }
