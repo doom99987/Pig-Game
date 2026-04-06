@@ -47,22 +47,27 @@ public class enemyAI : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        // checks if the mouse is facing which direction relative to the player
-        if (transform.position.x > player.transform.position.x && Mathf.Abs(player.transform.position.x) > Mathf.Abs(player.transform.position.y))
-        {
-            enemyDir = direction.left;
-        }
-        else if (transform.position.x < player.transform.position.x && Mathf.Abs(player.transform.position.x) > Mathf.Abs(player.transform.position.y))
+        Vector2 dir = (transform.position - player.transform.position).normalized;
+
+        if (Vector2.Distance(dir, Vector2.left) < Vector2.Distance(dir, Vector2.up) && Vector2.Distance(dir, Vector2.down) > Vector2.Distance(dir, Vector2.left))
         {
             enemyDir = direction.right;
         }
-        else if (transform.position.y > player.transform.position.y && Mathf.Abs(player.transform.position.y) > Mathf.Abs(player.transform.position.x))
+        else if (Vector2.Distance(dir, Vector2.right) < Vector2.Distance(dir, Vector2.down) && Vector2.Distance(dir, Vector2.up) > Vector2.Distance(dir, Vector2.right))
+        {
+            enemyDir = direction.left;
+        }
+        else if (dir.y > 0)
         {
             enemyDir = direction.down;
         }
-        else
+        else if (Vector2.Distance(dir, Vector2.down) < Vector2.Distance(dir, Vector2.right) && Vector2.Distance(dir, Vector2.left) > Vector2.Distance(dir, Vector2.down))
         {
             enemyDir = direction.up;
+        }
+        else
+        {
+            enemyDir = direction.down;
         }
 
         animator.SetInteger("enemyDirection", (int) enemyDir);

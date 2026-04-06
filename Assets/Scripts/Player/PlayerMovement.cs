@@ -7,6 +7,7 @@
 * Description: This script allows the payer to move using wasd.
 *
 ****************************************************************************/
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,6 +26,7 @@ public class playerMovement : MonoBehaviour
     [SerializeField] protected float maxSpeed = 35f; 
     [SerializeField] Rigidbody2D rb;
 
+
     private direction playerDir;
     private enum direction
     {
@@ -39,7 +41,28 @@ public class playerMovement : MonoBehaviour
 
         Vector2 dir = (transform.position - mousePos).normalized;
 
-        
+        if (Vector2.Distance(dir, Vector2.left) < Vector2.Distance(dir, Vector2.up) && Vector2.Distance(dir, Vector2.down) > Vector2.Distance(dir, Vector2.left))
+        {
+            playerDir = direction.right;
+        }
+        else if (Vector2.Distance(dir, Vector2.right) < Vector2.Distance(dir, Vector2.down) && Vector2.Distance(dir, Vector2.up) > Vector2.Distance(dir, Vector2.right))
+        {
+            playerDir = direction.left;
+        }
+        else if (dir.y > 0)
+        {
+            playerDir = direction.down;
+        }
+        else if (Vector2.Distance(dir, Vector2.down) < Vector2.Distance(dir, Vector2.right) && Vector2.Distance(dir, Vector2.left) > Vector2.Distance(dir, Vector2.down))
+        {
+            playerDir = direction.up;
+        }
+        else
+        {
+            playerDir = direction.down;
+        }
+
+
 
         animator.SetInteger("playerDirection", (int) playerDir);
     }
@@ -49,6 +72,7 @@ public class playerMovement : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
+        checkIsMoving();
         if (!gameManager.GetComponent<gameManager>().getGameState())
         {
             float horizontal = Input.GetAxis("Horizontal");
@@ -77,6 +101,18 @@ public class playerMovement : MonoBehaviour
         if(getCurrentSpeed() <=  maxSpeed)
         {
             curSpeed = speed;
+        }
+    }
+
+    public void checkIsMoving()
+    {
+        if (rb.linearVelocity.magnitude >= 1f)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
     }
 
