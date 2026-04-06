@@ -1224,6 +1224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombAmount: {fileID: 0}
   bombAmountObject: {fileID: 0}
+  bombImage: {fileID: 0}
   sCountMax: 10
   hCountMax: 10
   healingCountMax: 10
@@ -1237,6 +1238,7 @@ MonoBehaviour:
   buyHealingText: {fileID: 0}
   buyPierceText: {fileID: 0}
   buyBulletUpgradeText: {fileID: 0}
+  buyBombText: {fileID: 0}
   speedCost:
   - 5
   - 50
@@ -1297,6 +1299,7 @@ MonoBehaviour:
   deathPanel: {fileID: 1045642523}
   victoryPanel: {fileID: 1404448693}
   pausePanel: {fileID: 0}
+  takeDmgPanel: {fileID: 0}
 --- !u!114 &314735960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,6 +2236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Melee
       objectReference: {fileID: 0}
+    - target: {fileID: 9138140974693094062, guid: 3a8da8a5ddb935c49973f445c4ed32f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2698,6 +2705,7 @@ MonoBehaviour:
   delay: 0.1
   imgRotation: 90
   bomb: {fileID: 4507199373465970868, guid: a007fbea873e94f45887b95f2af0c4d4, type: 3}
+  gameManager: {fileID: 0}
 --- !u!95 &1135400306
 Animator:
   serializedVersion: 7
