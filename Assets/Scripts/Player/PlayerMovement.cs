@@ -37,11 +37,11 @@ public class playerMovement : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         // checks if the mouse is facing which direction relative to the player
-        if (transform.position.x > mousePos.x && Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
+        if (Mathf.Abs(transform.position.x) > Mathf.Abs(mousePos.x) && Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
         {
             playerDir = direction.left;
         }
-        else if (transform.position.x < mousePos.x && Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
+        else if (Mathf.Abs(transform.position.x) < Mathf.Abs(mousePos.x) && Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
         {
             playerDir = direction.right;
         }
