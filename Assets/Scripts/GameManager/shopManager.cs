@@ -62,6 +62,16 @@ public class shopManager : MonoBehaviour
     protected int bulletUpgradeCount = 0;
     protected int bombCount = 0;
 
+    private void Start()
+    {
+        buySpeedText.text = $"Buy ${speedCost[speedCount] / 100f}";
+        buyHpText.text = $"Buy ${hpCost[hpBuyCount] / 100f}";
+        buyHealingText.text = $"Buy ${healingCost[healingCount] / 100f}";
+        buyPierceText.text = $"Buy ${pierceCost[pierceCount] / 100f}";
+        buyBulletUpgradeText.text = $"Buy ${bulletUpgradeCost[bulletUpgradeCount] / 100f}";
+        buyBombText.text = $"Buy ${bombCost[bombCount] / 100f}";
+    }
+
     /// <summary>
     /// Called to upgrade the players speed by 1
     /// </summary>
