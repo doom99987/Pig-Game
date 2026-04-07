@@ -12,9 +12,9 @@ using UnityEngine;
 public class playerShoot : MonoBehaviour
 {
     protected float elapsedTime;
-    [Tooltip("Amount of money removed when shooting (1 = $0.01)")]
-    [SerializeField] int[] removeAmount = {1, 3 ,5};
-  
+    [Header("Shoot Animation Direction")]
+    [Tooltip("Controls the spot which the bullet spawns according to the direction the player is facing")]
+    [SerializeField] GameObject[] spawnPoints;
 
     [Header("Projectile")] 
     [SerializeField] GameObject bullet;
@@ -23,15 +23,24 @@ public class playerShoot : MonoBehaviour
     [SerializeField] GameObject gameManager;
 
     [Header("Bullet Variables")]
+    [Tooltip("Amount of money removed when shooting (1 = $0.01)")]
+    [SerializeField] int[] removeAmount = {1, 3 ,5};
     [Tooltip("Manages the angle the object is spawned in at")]
     [SerializeField] protected float imgRotation = 90f;
     [Tooltip("Delay between bullets fired")]
     [SerializeField] protected float delay = 1f;
 
-   
+    private int playerDir = 0;
     // Update is called once per frame
     void Update()
     {
+        // lowers until 0
+        if (elapsedTime >= 0)
+        {
+            elapsedTime -= Time.deltaTime;
+        }
+        //playerDir = gameManager.GetComponent<playerMovement>().getPlayerDir();
+        Debug.Log(playerDir);
         int bulletUpgradeCount = gameManager.GetComponent<shopManager>().getBulletUpgradeCount();
         // Checks if your left clicking and delays shooting by the delay
         if (Input.GetMouseButton(0) && elapsedTime <= 0 && 
@@ -45,14 +54,9 @@ public class playerShoot : MonoBehaviour
             float angle = (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg) + imgRotation;
 
             // Spawns an object pointing towards the mouse
-            Instantiate(bullet, gameObject.transform.position, Quaternion.Euler(0, 0, angle));
+            Instantiate(bullet, spawnPoints[playerDir].transform.position, Quaternion.Euler(0, 0, angle));
             gameManager.GetComponent<moneyManager>().removeMoney(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + removeAmount[bulletUpgradeCount]);
             elapsedTime = delay;
-        }
-        // lowers until 0
-        if (elapsedTime >= 0)
-        {
-            elapsedTime -= Time.deltaTime;
         }
     }
 

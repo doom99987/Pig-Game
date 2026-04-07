@@ -7,9 +7,7 @@
 * Description: This script allows the payer to move using wasd.
 *
 ****************************************************************************/
-using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
@@ -27,8 +25,8 @@ public class playerMovement : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
 
 
-    private direction playerDir;
-    private enum direction
+    public direction playerDir = direction.left;
+    public enum direction
     {
         left, right, up, down
     }
@@ -66,12 +64,13 @@ public class playerMovement : MonoBehaviour
         {
             playerDir = direction.down;
         }
-
-
-
         animator.SetInteger("playerDirection", (int) playerDir);
     }
 
+    public int getPlayerDir()
+    {
+        return (int) playerDir;
+    }
     /// <summary>
     /// if player is moving, add force to the player rigid body in the direction of the movement
     /// </summary>
