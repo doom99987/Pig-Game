@@ -71,7 +71,10 @@ public class playerMovement : MonoBehaviour
         }
         animator.SetInteger("playerDirection", (int) playerDir);
     }
-
+    /// <summary>
+    /// Gives the players current facing direction
+    /// </summary>
+    /// <returns></returns>
     public int getPlayerDir()
     {
         return playerDirectionInt;
