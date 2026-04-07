@@ -137,12 +137,12 @@ TextureImporter:
       name: Girl Up Walk Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 1306
-        width: 492
-        height: 618
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1300
+        width: 507
+        height: 650
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,12 +159,12 @@ TextureImporter:
       name: Girl Up Walk Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 511
-        y: 1305
-        width: 496
-        height: 633
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 507
+        y: 1300
+        width: 507
+        height: 650
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: Girl Up Walk Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1013
+        x: 1014
         y: 1300
-        width: 508
+        width: 507
         height: 650
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: Girl Up Walk Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 4
-        y: 655
-        width: 496
-        height: 633
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 650
+        width: 507
+        height: 650
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: Girl Up Walk Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 513
-        y: 656
-        width: 492
-        height: 618
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 507
+        y: 650
+        width: 507
+        height: 650
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: Girl Up Walk Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 655
-        width: 496
-        height: 633
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1014
+        y: 650
+        width: 507
+        height: 650
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,10 +271,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 508
-        height: 651
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 507
+        height: 650
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -291,12 +291,12 @@ TextureImporter:
       name: Girl Up Walk Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 511
-        y: 5
-        width: 496
-        height: 633
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 507
+        y: 0
+        width: 507
+        height: 650
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2066ca7416760214f8439b80da71626f
     internalID: 0
     vertices: []
     indices: 

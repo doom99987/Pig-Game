@@ -137,12 +137,12 @@ TextureImporter:
       name: Girl R Walk Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 1279
-        width: 725
-        height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1280
+        width: 748
+        height: 640
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,12 +159,12 @@ TextureImporter:
       name: Girl R Walk Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 765
-        y: 1279
-        width: 732
-        height: 630
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 748
+        y: 1280
+        width: 748
+        height: 640
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -182,11 +182,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1496
-        y: 1293
+        y: 1280
         width: 748
-        height: 627
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 640
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -204,11 +204,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 11
-        width: 749
-        height: 630
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 640
+        width: 748
+        height: 640
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: Girl R Walk Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 17
-        y: 639
-        width: 732
-        height: 630
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 748
+        y: 640
+        width: 748
+        height: 640
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: Girl R Walk Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 772
-        y: 639
-        width: 725
-        height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1496
+        y: 640
+        width: 748
+        height: 640
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,12 +269,12 @@ TextureImporter:
       name: Girl R Walk Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 1513
-        y: 639
-        width: 731
-        height: 630
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 748
+        height: 640
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -291,12 +291,12 @@ TextureImporter:
       name: Girl R Walk Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 765
+        x: 748
         y: 0
-        width: 732
-        height: 629
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 748
+        height: 640
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -309,11 +309,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Girl R Walk Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 0
+        width: 748
+        height: 640
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81224e34faf655b4a96749d8f5ff3c7e
+      internalID: -1437454046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5467e13814c4c8b45a7da3dd9ad3f9bf
     internalID: 0
     vertices: []
     indices: 
@@ -331,6 +353,7 @@ TextureImporter:
       Girl R Walk Spritesheet_5: -7164024130031302159
       Girl R Walk Spritesheet_6: -1961857510882651010
       Girl R Walk Spritesheet_7: -8494797370705714798
+      Girl R Walk Spritesheet_8: -1437454046
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
