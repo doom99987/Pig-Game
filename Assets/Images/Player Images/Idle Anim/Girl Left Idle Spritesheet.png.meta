@@ -1,0 +1,338 @@
+fileFormatVersion: 2
+guid: 7aa6ff046e792c742bdbc99842d1681b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3980645380384739698
+    second: Girl Left Idle Spritesheet_0
+  - first:
+      213: 8376423772558861947
+    second: Girl Left Idle Spritesheet_1
+  - first:
+      213: 5230897880661850436
+    second: Girl Left Idle Spritesheet_2
+  - first:
+      213: 1922133018933847037
+    second: Girl Left Idle Spritesheet_3
+  - first:
+      213: -6610641879847813812
+    second: Girl Left Idle Spritesheet_4
+  - first:
+      213: -4450899533543660461
+    second: Girl Left Idle Spritesheet_5
+  - first:
+      213: 2388414734668156366
+    second: Girl Left Idle Spritesheet_6
+  - first:
+      213: -6247838382526843019
+    second: Girl Left Idle Spritesheet_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Girl Left Idle Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1290
+        width: 754
+        height: 645
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e2e5ded18e1c8c0800000000000000
+      internalID: -3980645380384739698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Girl Left Idle Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1290
+        width: 754
+        height: 645
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76228b7a090f3470800000000000000
+      internalID: 8376423772558861947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Girl Left Idle Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 1290
+        width: 754
+        height: 645
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449713178e1e79840800000000000000
+      internalID: 5230897880661850436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Girl Left Idle Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 645
+        width: 754
+        height: 645
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3e99cfbc9ccaa10800000000000000
+      internalID: 1922133018933847037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Girl Left Idle Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 645
+        width: 754
+        height: 645
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4db9562c384244a0800000000000000
+      internalID: -6610641879847813812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Girl Left Idle Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 645
+        width: 754
+        height: 645
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 354ad24c47a3b32c0800000000000000
+      internalID: -4450899533543660461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Girl Left Idle Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 754
+        height: 645
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd443cfb8a552120800000000000000
+      internalID: 2388414734668156366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Girl Left Idle Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 0
+        width: 754
+        height: 645
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 577bf63f7183b49a0800000000000000
+      internalID: -6247838382526843019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7093144a03208db4dbd3fc0c718dfd83
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Girl Left Idle Spritesheet_0: -3980645380384739698
+      Girl Left Idle Spritesheet_1: 8376423772558861947
+      Girl Left Idle Spritesheet_2: 5230897880661850436
+      Girl Left Idle Spritesheet_3: 1922133018933847037
+      Girl Left Idle Spritesheet_4: -6610641879847813812
+      Girl Left Idle Spritesheet_5: -4450899533543660461
+      Girl Left Idle Spritesheet_6: 2388414734668156366
+      Girl Left Idle Spritesheet_7: -6247838382526843019
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

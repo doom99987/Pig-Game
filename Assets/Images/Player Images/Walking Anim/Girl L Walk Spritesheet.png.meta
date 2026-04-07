@@ -225,8 +225,8 @@ TextureImporter:
       name: Girl L Walk Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 735
-        y: 640
+        x: 749
+        y: 642
         width: 748
         height: 640
       alignment: 9
