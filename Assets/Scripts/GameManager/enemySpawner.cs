@@ -26,7 +26,10 @@ public class enemySpawner : MonoBehaviour
     [Tooltip("The amount of enemies to spawn each time.")]
     [SerializeField] protected int spawnAmount = 3;
 
-   
+    [Tooltip("The amount of seconds to decrease the spawn delay by each round.")]
+    [SerializeField] protected float roundSpawnDelay = 0.25f;
+
+
 
     private void Update()
     {
@@ -38,7 +41,7 @@ public class enemySpawner : MonoBehaviour
             {
                 spawnEnemy();
                 //spawn delay
-                nextSpawnTime = Time.time + Random.Range(spawnDelayMin, (spawnDelayMax - (float)(round * 0.25f)));
+                nextSpawnTime = Time.time + Random.Range(spawnDelayMin, (spawnDelayMax - (float)(round * roundSpawnDelay)));
             }
         }
     }
