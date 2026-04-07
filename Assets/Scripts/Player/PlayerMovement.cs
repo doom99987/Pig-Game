@@ -40,12 +40,17 @@ public class playerMovement : MonoBehaviour
         mousePos.z = 0;
 
         Vector2 dir = (transform.position - mousePos).normalized;
+        float dLeft = Vector2.Distance(dir, Vector2.left);
+        float dRight = Vector2.Distance(dir, Vector2.right);
+        float dUp = Vector2.Distance(dir, Vector2.up);
+        float dDown = Vector2.Distance(dir, Vector2.down);
 
-        if (Vector2.Distance(dir, Vector2.left) < Vector2.Distance(dir, Vector2.up) && Vector2.Distance(dir, Vector2.down) > Vector2.Distance(dir, Vector2.left))
+
+        if (dLeft < dUp && dDown > dLeft)
         {
             playerDir = direction.right;
         }
-        else if (Vector2.Distance(dir, Vector2.right) < Vector2.Distance(dir, Vector2.down) && Vector2.Distance(dir, Vector2.up) > Vector2.Distance(dir, Vector2.right))
+        else if (dRight < dDown && dUp > dRight)
         {
             playerDir = direction.left;
         }
@@ -53,7 +58,7 @@ public class playerMovement : MonoBehaviour
         {
             playerDir = direction.down;
         }
-        else if (Vector2.Distance(dir, Vector2.down) < Vector2.Distance(dir, Vector2.right) && Vector2.Distance(dir, Vector2.left) > Vector2.Distance(dir, Vector2.down))
+        else if (dDown < dRight && dLeft > dDown)
         {
             playerDir = direction.up;
         }
