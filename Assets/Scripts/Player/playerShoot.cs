@@ -30,7 +30,7 @@ public class playerShoot : MonoBehaviour
     [Tooltip("Delay between bullets fired")]
     [SerializeField] protected float delay = 1f;
 
-    private int playerDir = 0;
+    protected int playerDir = 0;
     // Update is called once per frame
     void Update()
     {
@@ -39,7 +39,7 @@ public class playerShoot : MonoBehaviour
         {
             elapsedTime -= Time.deltaTime;
         }
-        //playerDir = gameManager.GetComponent<playerMovement>().getPlayerDir();
+        playerDir = gameObject.GetComponent<playerMovement>().getPlayerDir();
         Debug.Log(playerDir);
         int bulletUpgradeCount = gameManager.GetComponent<shopManager>().getBulletUpgradeCount();
         // Checks if your left clicking and delays shooting by the delay

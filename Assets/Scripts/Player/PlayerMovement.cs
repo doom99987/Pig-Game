@@ -26,6 +26,7 @@ public class playerMovement : MonoBehaviour
 
 
     public direction playerDir = direction.left;
+    int playerDirectionInt = 0;
     public enum direction
     {
         left, right, up, down
@@ -47,18 +48,22 @@ public class playerMovement : MonoBehaviour
         if (dLeft < dUp && dDown > dLeft)
         {
             playerDir = direction.right;
+            playerDirectionInt = 1;
         }
         else if (dRight < dDown && dUp > dRight)
         {
             playerDir = direction.left;
+                playerDirectionInt = 0;
         }
         else if (dir.y > 0)
         {
             playerDir = direction.down;
+            playerDirectionInt = 3;
         }
         else if (dDown < dRight && dLeft > dDown)
         {
             playerDir = direction.up;
+            playerDirectionInt = 2;
         }
         else
         {
@@ -69,7 +74,7 @@ public class playerMovement : MonoBehaviour
 
     public int getPlayerDir()
     {
-        return (int) playerDir;
+        return playerDirectionInt;
     }
     /// <summary>
     /// if player is moving, add force to the player rigid body in the direction of the movement
