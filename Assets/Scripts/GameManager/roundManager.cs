@@ -40,7 +40,7 @@ public class roundManager : MonoBehaviour
     [Tooltip("The amount of money given at the end of each round")]
     [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000 };
 
-    List<GameObject> enemies = new List<GameObject>();
+    List<GameObject> things = new List<GameObject>();
 
     bool isRoundTextOpen = true;
     bool isTimerTextOpen = true;
@@ -94,11 +94,11 @@ public class roundManager : MonoBehaviour
                     }
                     round++;
                     roundText.text = "Round: " + round + "/" + totalRounds;
-                    for (int i = 0; i < enemies.Count; i++)
+                    for (int i = 0; i < things.Count; i++)
                     {
-                        if (enemies[i] != null)
+                        if (things[i] != null)
                         {
-                            Destroy(enemies[i]);
+                            Destroy(things[i]);
                         }
 
                     }
@@ -136,9 +136,9 @@ public class roundManager : MonoBehaviour
         timerText.gameObject.SetActive(isTimerTextOpen);
     }
 
-    public void getEnemy(GameObject enemy)
+    public void getObjects(GameObject thing)
     {
-        enemies.Add(enemy);
+        things.Add(thing);
     }
 }
 

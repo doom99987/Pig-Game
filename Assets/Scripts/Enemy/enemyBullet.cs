@@ -34,7 +34,7 @@ public class enemyBullet : MonoBehaviour
         gameManager = GameObject.Find("gameManager");
         player = GameObject.Find("Player");
         animator.SetInteger("coinState", gameManager.GetComponent<shopManager>().getBulletUpgradeCount());
-        gameManager.GetComponent<roundManager>().getEnemy(gameObject);
+        gameManager.GetComponent<roundManager>().getObjects(gameObject);
 
         // Gets a vector in the direction the bullet travels and adds force to the bullet
         dir = (player.transform.position - gameObject.transform.position);
