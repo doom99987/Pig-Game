@@ -36,6 +36,7 @@ public class bullet : MonoBehaviour
         gameManager = GameObject.Find("gameManager");
         bulletPierce = gameManager.GetComponent<shopManager>().getPierceCount();
         animator.SetInteger("coinState", gameManager.GetComponent<shopManager>().getBulletUpgradeCount());
+        gameManager.GetComponent<roundManager>().getEnemy(gameObject);
 
         // Gets a vector in the direction the bullet travels and adds force to the bullet
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

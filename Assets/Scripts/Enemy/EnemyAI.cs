@@ -42,6 +42,7 @@ public class enemyAI : MonoBehaviour
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("gameManager");
+        gameManager.GetComponent<roundManager>().getEnemy(gameObject);
     }
 
     // Update is called once per frame
