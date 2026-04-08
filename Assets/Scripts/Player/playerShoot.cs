@@ -40,7 +40,6 @@ public class playerShoot : MonoBehaviour
             elapsedTime -= Time.deltaTime;
         }
         playerDir = gameObject.GetComponent<playerMovement>().getPlayerDir();
-        Debug.Log(playerDir);
         int bulletUpgradeCount = gameManager.GetComponent<shopManager>().getBulletUpgradeCount();
         // Checks if your left clicking and delays shooting by the delay
         if (Input.GetMouseButton(0) && elapsedTime <= 0 && 
