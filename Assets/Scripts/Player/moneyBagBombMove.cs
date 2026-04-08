@@ -51,25 +51,29 @@ public class moneyBagBombMove : MonoBehaviour
             lifeTime -= Time.deltaTime;
         }
     }
-        void ExplosionDamage(Vector2 center, float radius)
+    /// <summary>
+    /// Destroys all the enemies within the bombs radius.
+    /// </summary>
+    /// <param name="center">Center of the explosion</param>
+    /// <param name="radius">Size of the explosion</param>
+    void ExplosionDamage(Vector2 center, float radius)
+    {
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(center, radius);
+        foreach (var hitCollider in hitColliders)
         {
-            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(center, radius);
-            foreach (var hitCollider in hitColliders)
-            {
             if (hitCollider.gameObject.CompareTag("Ranged") || hitCollider.gameObject.CompareTag("Melee"))
                 {
                     hitCollider.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
                 }
             }
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
+    }
 
     // Draw the Box Overlap as a gizmo to show where it currently is testing. Click the Gizmos button to see this.
     void OnDrawGizmos()
     {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, explosionSize);
-        // Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
     }
 }
 

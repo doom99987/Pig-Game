@@ -26,6 +26,8 @@ public class enemyBullet : MonoBehaviour
     [Header("Bullet Variables")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private float time = 1f;
+    [SerializeField] private float rotSpeed = 5f;
+
     Vector3 dir;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,12 +35,17 @@ public class enemyBullet : MonoBehaviour
     {
         gameManager = GameObject.Find("gameManager");
         player = GameObject.Find("Player");
+        // Sets the animation of the bullet
         animator.SetInteger("coinState", gameManager.GetComponent<shopManager>().getBulletUpgradeCount());
+        // Sets the object into a list to be cleared when round ends
         gameManager.GetComponent<roundManager>().getObjects(gameObject);
 
-        // Gets a vector in the direction the bullet travels and adds force to the bullet
-        dir = (player.transform.position - gameObject.transform.position);
+        // Gets a vector in the direction the bullet travels
+        dir = player.transform.position - gameObject.transform.position;
+
         rb.AddForce(dir.normalized * speed * 100f);
+        rb.AddTorque(rotSpeed);
+
     }
 
     // Update is called once per frame
