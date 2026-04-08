@@ -37,13 +37,6 @@ public class hpManager : MonoBehaviour
         updateHearts();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C)) takeDmg();
-        if (Input.GetKeyDown(KeyCode.H)) heal();
-        if (Input.GetKeyDown(KeyCode.U)) upgradeMaxHp();
-    }
-
     public void spawnPrefabs()
     {
         //destroys all the children of the hearts container before spawning new ones to avoid duplicates.
