@@ -91,6 +91,8 @@ public class hpManager : MonoBehaviour
             gameManager.GetComponent<gameManager>().setGameState(true);
             gameManager.GetComponent<moneyManager>().toggleMoneyText();
             gameManager.GetComponent<randomMessageManager>().displayLoseMessage();
+            gameManager.GetComponent<roundManager>().toggleRoundText();
+            gameManager.GetComponent<roundManager>().toggleTimerText();
             gameManager.GetComponent<playScenePanelManager>().toggleDeathPanel();
             deathPanelMoneyText.text = $"You Had ${gameManager.GetComponent<moneyManager>().getMoney() / 100f} left";
             Debug.Log("Player is dead!");
