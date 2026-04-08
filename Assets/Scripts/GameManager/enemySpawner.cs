@@ -8,9 +8,8 @@
 *
 ****************************************************************************/
 using System.Collections;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
+
 
 public class enemySpawner : MonoBehaviour
 {
@@ -30,7 +29,10 @@ public class enemySpawner : MonoBehaviour
     [SerializeField] protected float roundSpawnDelay = 0.25f;
 
 
-
+    // Update is called once per frame
+    /// <summary>
+    /// Handles enemy spawning each frame based on the current game state and round.
+    /// </summary>
     private void Update()
     {
         int round = gameObject.GetComponent<roundManager>().getRound();
@@ -80,6 +82,12 @@ public class enemySpawner : MonoBehaviour
             StartCoroutine(wait(1f));
         }
     }
+
+    /// <summary>
+    ///  coroutine that waits for a specified amount of time before allowing the next enemy to spawn.
+    /// </summary>
+    /// <param name="time"></param>
+    /// <returns></returns>
     IEnumerator wait(float time)
     {
         yield return new WaitForSeconds(time);
