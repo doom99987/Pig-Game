@@ -136,6 +136,10 @@ public class roundManager : MonoBehaviour
         timerText.gameObject.SetActive(isTimerTextOpen);
     }
 
+    /// <summary>
+    /// adds objects to a list to be destroyed at the end of the round
+    /// </summary>
+    /// <param name="thing"></param>
     public void getObjects(GameObject thing)
     {
         things.Add(thing);
