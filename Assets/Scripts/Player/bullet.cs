@@ -26,6 +26,7 @@ public class bullet : MonoBehaviour
     [Header("Bullet Variables")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private float time = 1f;
+    [SerializeField] private float rotSpeed = 5f;
     Vector3 dir;
 
     protected float bulletCurSpeed;
@@ -34,8 +35,11 @@ public class bullet : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("gameManager");
+        // Gets the total pierce level
         bulletPierce = gameManager.GetComponent<shopManager>().getPierceCount();
+        // Sets the animation of the bullet
         animator.SetInteger("coinState", gameManager.GetComponent<shopManager>().getBulletUpgradeCount());
+        // Sets the object into a list to be cleared when round ends
         gameManager.GetComponent<roundManager>().getObjects(gameObject);
 
         // Gets a vector in the direction the bullet travels and adds force to the bullet
@@ -43,6 +47,7 @@ public class bullet : MonoBehaviour
         mousePos.z = 0;
         dir = (mousePos - gameObject.transform.position);
         rb.AddForce(dir.normalized * speed * 100f);
+        rb.AddTorque(rotSpeed);
     }
 
     // Update is called once per frame
