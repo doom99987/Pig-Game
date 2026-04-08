@@ -1,0 +1,338 @@
+fileFormatVersion: 2
+guid: d2dd27fde0ad339439b604372c3dbedc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8424009864675572860
+    second: Lvl 1 Pig Up Walk Spritesheet_0
+  - first:
+      213: 7421237393831323841
+    second: Lvl 1 Pig Up Walk Spritesheet_1
+  - first:
+      213: 313377534536898131
+    second: Lvl 1 Pig Up Walk Spritesheet_2
+  - first:
+      213: -1700197109616057381
+    second: Lvl 1 Pig Up Walk Spritesheet_3
+  - first:
+      213: 2147198127039656129
+    second: Lvl 1 Pig Up Walk Spritesheet_4
+  - first:
+      213: -995335668842235602
+    second: Lvl 1 Pig Up Walk Spritesheet_5
+  - first:
+      213: -6441159580130587558
+    second: Lvl 1 Pig Up Walk Spritesheet_6
+  - first:
+      213: 4152861929566487152
+    second: Lvl 1 Pig Up Walk Spritesheet_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lvl 1 Pig Up Walk Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1016
+        width: 476
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48340af09a7e71b80800000000000000
+      internalID: -8424009864675572860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Up Walk Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1016
+        width: 476
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c8692d17188df660800000000000000
+      internalID: 7421237393831323841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Up Walk Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1016
+        width: 476
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356d8a21537595400800000000000000
+      internalID: 313377534536898131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Up Walk Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 508
+        width: 476
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd36031acbfa768e0800000000000000
+      internalID: -1700197109616057381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Up Walk Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 508
+        width: 476
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c03598f1516ccd10800000000000000
+      internalID: 2147198127039656129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Up Walk Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 508
+        width: 476
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29f1629b7bdf22f0800000000000000
+      internalID: -995335668842235602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Up Walk Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 476
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c46b41d776c96a0800000000000000
+      internalID: -6441159580130587558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Up Walk Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 476
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072cd011cede1a930800000000000000
+      internalID: 4152861929566487152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7ccb408988c4a0745b3df024dca58eaa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lvl 1 Pig Up Walk Spritesheet_0: -8424009864675572860
+      Lvl 1 Pig Up Walk Spritesheet_1: 7421237393831323841
+      Lvl 1 Pig Up Walk Spritesheet_2: 313377534536898131
+      Lvl 1 Pig Up Walk Spritesheet_3: -1700197109616057381
+      Lvl 1 Pig Up Walk Spritesheet_4: 2147198127039656129
+      Lvl 1 Pig Up Walk Spritesheet_5: -995335668842235602
+      Lvl 1 Pig Up Walk Spritesheet_6: -6441159580130587558
+      Lvl 1 Pig Up Walk Spritesheet_7: 4152861929566487152
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
