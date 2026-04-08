@@ -42,7 +42,7 @@ public class bullet : MonoBehaviour
         // Sets the object into a list to be cleared when round ends
         gameManager.GetComponent<roundManager>().getObjects(gameObject);
 
-        // Gets a vector in the direction the bullet travels and adds force to the bullet
+        // Gets a vector in the direction the bullet travels
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         dir = (mousePos - gameObject.transform.position);

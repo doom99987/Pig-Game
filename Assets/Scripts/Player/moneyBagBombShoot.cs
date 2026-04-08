@@ -23,7 +23,7 @@ public class moneyBagBombShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Checks if your left clicking and delays shooting by the delay
+        // Checks if your left clicking and delays shooting by the delayed amount
         if (Input.GetMouseButtonDown(1) && elapsedTime <= 0 && gameManager.GetComponent<shopManager>().getBombCount() > 0)
         {
             // Gets the angle towards the mouse
@@ -37,7 +37,7 @@ public class moneyBagBombShoot : MonoBehaviour
             elapsedTime = delay;
             gameManager.GetComponent<shopManager>().subtractBombCount(1);
         }
-        // lowers until 0
+        // Timer
         if (elapsedTime >= 0)
         {
             elapsedTime -= Time.deltaTime;

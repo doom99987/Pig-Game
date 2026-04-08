@@ -39,8 +39,11 @@ public class playerShoot : MonoBehaviour
         {
             elapsedTime -= Time.deltaTime;
         }
+        // Gets the facing direction of the player
         playerDir = gameObject.GetComponent<playerMovement>().getPlayerDir();
+
         int bulletUpgradeCount = gameManager.GetComponent<shopManager>().getBulletUpgradeCount();
+
         // Checks if your left clicking and delays shooting by the delay
         if (Input.GetMouseButton(0) && elapsedTime <= 0 && 
             gameManager.GetComponent<moneyManager>().getMoney() > (gameManager.GetComponent<shopManager>().getBulletUpgradeCount() +

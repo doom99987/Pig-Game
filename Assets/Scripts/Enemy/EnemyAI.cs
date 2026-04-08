@@ -81,10 +81,12 @@ public class enemyAI : MonoBehaviour
             enemyDistanceFromPlayer = Vector2.Distance(player.transform.position, gameObject.transform.position);
             Vector2 movement = (player.transform.position - gameObject.transform.position).normalized;
 
+            // Melee movement
             if (gameObject.CompareTag("Melee"))
             {
                 rb.AddForce(movement * curSpeed);
             }
+            // Ranged movement
             else if (gameObject.CompareTag("Ranged") && Mathf.Abs(enemyDistanceFromPlayer) > rangedEnemyStopDis)
             {
                 rb.AddForce(movement * curSpeed);
