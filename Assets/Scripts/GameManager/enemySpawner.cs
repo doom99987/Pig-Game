@@ -51,46 +51,14 @@ public class enemySpawner : MonoBehaviour
     public void spawnEnemy()
     {
         //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location and randomizes which enemy spawns.
-        
-        int[] spawnSave = new int[spawnPoints.Length];
-        for (int j = 0; j < spawnSave.Length; j++)
-        {
-            spawnSave[j] = -1;
-        }
-        for (int i = 0; i< spawnAmount; i++)
-        {
-            int randomSpawn = Random.Range(0, spawnPoints.Length);
-            foreach (int num in spawnSave)
-            {
-                if (num == randomSpawn)
-                {
-                    randomSpawn = Random.Range(0, spawnPoints.Length);
-                }
-            for(int j = 0; j < spawnSave.Length; j++)
-            {
-                if(spawnSave[j] == 0)
-                {
-                    spawnSave[j] = randomSpawn;
-                    break;
-                }
-            }
-            }
-            int randomEnemy = Random.Range(0, enemyPrefab.Length);
-            int randSpawnDis = Random.Range(2, 4);
-            Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, 0, 0), spawnPoints[randomSpawn].rotation);
-            //stall so the enemies don't all spawn at the same time and on top of one another
-            StartCoroutine(wait(1f));
-        }
-    }
 
-    /// <summary>
-    ///  coroutine that waits for a specified amount of time before allowing the next enemy to spawn.
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    IEnumerator wait(float time)
-    {
-        yield return new WaitForSeconds(time);
+
+        int randomSpawn = Random.Range(0, spawnPoints.Length);
+        int randomEnemy = Random.Range(0, enemyPrefab.Length);
+        int randSpawnDis = Random.Range(2, 4);
+        Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, -1, 0), spawnPoints[randomSpawn].rotation);
+        //stall so the enemies don't all spawn at the same time and on top of one another
     }
 }
+
 
