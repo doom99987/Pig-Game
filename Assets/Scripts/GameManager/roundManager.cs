@@ -94,6 +94,7 @@ public class roundManager : MonoBehaviour
                     }
                     round++;
                     roundText.text = "Round: " + round + "/" + totalRounds;
+                    //destroys all the objects in the list of things to be destroyed at the end of the round
                     for (int i = 0; i < things.Count; i++)
                     {
                         if (things[i] != null)
@@ -124,12 +125,18 @@ public class roundManager : MonoBehaviour
         return round;
     }
 
+    /// <summary>
+    /// toggles the round text on and off
+    /// </summary>
     public void toggleRoundText()
     {
         isRoundTextOpen = !isRoundTextOpen;
         roundText.gameObject.SetActive(isRoundTextOpen);
     }
 
+    /// <summary>
+    /// toggles the timer text on and off
+    /// </summary>
     public void toggleTimerText()
     {
         isTimerTextOpen = !isTimerTextOpen;

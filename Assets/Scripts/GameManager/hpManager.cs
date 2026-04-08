@@ -111,14 +111,17 @@ public class hpManager : MonoBehaviour
     }
 
     /// <summary>
-    /// take 1 dmg
+    /// take 1 dmg and flashes the screen red if above certain Hp.
     /// </summary>
     public void takeDmg()
     {
         if (hp > 1)
         {
-            gameManager.GetComponent<playScenePanelManager>().toggleDmgPanel();
-            StartCoroutine(flashRed());
+            if(getIsDead() == false)
+            {
+                gameManager.GetComponent<playScenePanelManager>().toggleDmgPanel();
+                StartCoroutine(flashRed());
+            }
         }
         if (hp > 0)
         {
