@@ -2554,6 +2554,7 @@ MonoBehaviour:
   curSpeed: 25
   maxSpeed: 35
   rb: {fileID: 1135400301}
+  playerDir: 0
 --- !u!58 &1135400300
 CircleCollider2D:
   m_ObjectHideFlags: 0
