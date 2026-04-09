@@ -32,7 +32,7 @@ public class shopManager : MonoBehaviour
     [Tooltip("The maximum number of times the player can upgrade bullet damage")]
         [SerializeField] protected int bulletUpgradeCountMax = 10;
     [Tooltip("The maximum number of times the player can buy bombs")]
-    [   SerializeField] protected int bombCountMax = 10;
+        [SerializeField] protected int bombCountMax = 10;
 
     [Header("References")]
     [SerializeField] GameObject gameManager;

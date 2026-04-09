@@ -11379,7 +11379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bulletUpgradeCost.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[0]'
@@ -11419,6 +11419,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[9]'
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bulletUpgradeCost.Array.data[10]'
       value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
