@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: d2dd27fde0ad339439b604372c3dbedc
+guid: 97b4a17bf6723b14ab3fa18d12e8ac28
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8424009864675572860
-    second: Lvl 1 Pig Up Walk Spritesheet_0
+      213: -8539612974608475740
+    second: Lvl 1 Pig Damaged Down Walk Spritesheet_0
   - first:
-      213: 7421237393831323841
-    second: Lvl 1 Pig Up Walk Spritesheet_1
+      213: -7487289232040210094
+    second: Lvl 1 Pig Damaged Down Walk Spritesheet_1
   - first:
-      213: 313377534536898131
-    second: Lvl 1 Pig Up Walk Spritesheet_2
+      213: 7612744254804512687
+    second: Lvl 1 Pig Damaged Down Walk Spritesheet_2
   - first:
-      213: -1700197109616057381
-    second: Lvl 1 Pig Up Walk Spritesheet_3
+      213: 598227416431025420
+    second: Lvl 1 Pig Damaged Down Walk Spritesheet_3
   - first:
-      213: 2147198127039656129
-    second: Lvl 1 Pig Up Walk Spritesheet_4
+      213: 2635059865256706136
+    second: Lvl 1 Pig Damaged Down Walk Spritesheet_4
   - first:
-      213: -995335668842235602
-    second: Lvl 1 Pig Up Walk Spritesheet_5
+      213: 6679159099382434165
+    second: Lvl 1 Pig Damaged Down Walk Spritesheet_5
   - first:
-      213: -6441159580130587558
-    second: Lvl 1 Pig Up Walk Spritesheet_6
+      213: 6035637758207767353
+    second: Lvl 1 Pig Damaged Down Walk Spritesheet_6
   - first:
-      213: 4152861929566487152
-    second: Lvl 1 Pig Up Walk Spritesheet_7
+      213: 5248084298732212522
+    second: Lvl 1 Pig Damaged Down Walk Spritesheet_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lvl 1 Pig Up Walk Spritesheet_0
+      name: Lvl 1 Pig Damaged Down Walk Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1016
-        width: 476
-        height: 508
+        y: 976
+        width: 483
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48340af09a7e71b80800000000000000
-      internalID: -8424009864675572860
+      spriteID: 4a915219e333d7980800000000000000
+      internalID: -8539612974608475740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 1 Pig Up Walk Spritesheet_1
+      name: Lvl 1 Pig Damaged Down Walk Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 476
-        y: 1016
-        width: 476
-        height: 508
+        x: 483
+        y: 976
+        width: 483
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c8692d17188df660800000000000000
-      internalID: 7421237393831323841
+      spriteID: 251d2a1ec1ec71890800000000000000
+      internalID: -7487289232040210094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 1 Pig Up Walk Spritesheet_2
+      name: Lvl 1 Pig Damaged Down Walk Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 952
-        y: 1016
-        width: 476
-        height: 508
+        x: 966
+        y: 976
+        width: 483
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 356d8a21537595400800000000000000
-      internalID: 313377534536898131
+      spriteID: fafc481d096e5a960800000000000000
+      internalID: 7612744254804512687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 1 Pig Up Walk Spritesheet_3
+      name: Lvl 1 Pig Damaged Down Walk Spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 508
-        width: 476
-        height: 508
+        y: 488
+        width: 483
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd36031acbfa768e0800000000000000
-      internalID: -1700197109616057381
+      spriteID: c0d554b6aa45d4800800000000000000
+      internalID: 598227416431025420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 1 Pig Up Walk Spritesheet_4
+      name: Lvl 1 Pig Damaged Down Walk Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 476
-        y: 508
-        width: 476
-        height: 508
+        x: 483
+        y: 488
+        width: 483
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c03598f1516ccd10800000000000000
-      internalID: 2147198127039656129
+      spriteID: 850c38e7cfc919420800000000000000
+      internalID: 2635059865256706136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 1 Pig Up Walk Spritesheet_5
+      name: Lvl 1 Pig Damaged Down Walk Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 952
-        y: 508
-        width: 476
-        height: 508
+        x: 966
+        y: 488
+        width: 483
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +259,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e29f1629b7bdf22f0800000000000000
-      internalID: -995335668842235602
+      spriteID: 579020d20d321bc50800000000000000
+      internalID: 6679159099382434165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 1 Pig Up Walk Spritesheet_6
+      name: Lvl 1 Pig Damaged Down Walk Spritesheet_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 476
-        height: 508
+        width: 483
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5c46b41d776c96a0800000000000000
-      internalID: -6441159580130587558
+      spriteID: 933b8ea1094e2c350800000000000000
+      internalID: 6035637758207767353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 1 Pig Up Walk Spritesheet_7
+      name: Lvl 1 Pig Damaged Down Walk Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 476
+        x: 483
         y: 0
-        width: 476
-        height: 508
+        width: 483
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 072cd011cede1a930800000000000000
-      internalID: 4152861929566487152
+      spriteID: a211d393dd0f4d840800000000000000
+      internalID: 5248084298732212522
       vertices: []
       indices: 
       edges: []
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7ccb408988c4a0745b3df024dca58eaa
+    spriteID: 3953bb3af6c94b4409aedcd1e96097ab
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lvl 1 Pig Up Walk Spritesheet_0: -8424009864675572860
-      Lvl 1 Pig Up Walk Spritesheet_1: 7421237393831323841
-      Lvl 1 Pig Up Walk Spritesheet_2: 313377534536898131
-      Lvl 1 Pig Up Walk Spritesheet_3: -1700197109616057381
-      Lvl 1 Pig Up Walk Spritesheet_4: 2147198127039656129
-      Lvl 1 Pig Up Walk Spritesheet_5: -995335668842235602
-      Lvl 1 Pig Up Walk Spritesheet_6: -6441159580130587558
-      Lvl 1 Pig Up Walk Spritesheet_7: 4152861929566487152
+      Lvl 1 Pig Damaged Down Walk Spritesheet_0: -8539612974608475740
+      Lvl 1 Pig Damaged Down Walk Spritesheet_1: -7487289232040210094
+      Lvl 1 Pig Damaged Down Walk Spritesheet_2: 7612744254804512687
+      Lvl 1 Pig Damaged Down Walk Spritesheet_3: 598227416431025420
+      Lvl 1 Pig Damaged Down Walk Spritesheet_4: 2635059865256706136
+      Lvl 1 Pig Damaged Down Walk Spritesheet_5: 6679159099382434165
+      Lvl 1 Pig Damaged Down Walk Spritesheet_6: 6035637758207767353
+      Lvl 1 Pig Damaged Down Walk Spritesheet_7: 5248084298732212522
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
