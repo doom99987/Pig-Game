@@ -24,7 +24,6 @@ public class playScenePanelManager : MonoBehaviour
     private bool isShopOpen = false;
     private bool isDeathOpen = false;
     private bool isVictoryOpen = false;
-    private bool isTutorialTextOn = false;
     private bool isPauseOpen = false;
     private bool isTakeDmgOpen = false;
     private bool isQuitConfirmationOpen = false;
