@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PigD (Wmelee)
+  m_Name: pigR (Wranged)
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 40172712540876074, guid: 2867fa0b69c51a64398e4b5cdfe98791, type: 3}
+      value: {fileID: -8402453181651267890, guid: a92396103d57fa74ebe93e8c676096a6, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 40172712540876074, guid: 2867fa0b69c51a64398e4b5cdfe98791, type: 3}
+    - {fileID: -8402453181651267890, guid: a92396103d57fa74ebe93e8c676096a6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
