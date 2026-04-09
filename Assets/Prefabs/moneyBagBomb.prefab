@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5250516516134586605}
-  explosionSize: 2
-  speed: 1.95
+  explosionSize: 3
+  speed: 1
   dmg: 1
   lifeTime: 1

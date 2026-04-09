@@ -11407,19 +11407,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[6]'
-      value: 4500
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[7]'
-      value: 6000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[8]'
-      value: 8000
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[9]'
-      value: 10000
+      value: 8000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[10]'
