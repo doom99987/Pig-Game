@@ -21,13 +21,13 @@ public class playScenePanelManager : MonoBehaviour
     [SerializeField] GameObject takeDmgPanel;
     [SerializeField] GameObject quitConfirmationPanel;
 
-    protected bool isShopOpen = false;
-    protected bool isDeathOpen = false;
-    protected bool isVictoryOpen = false;
-    protected bool isTutorialTextOn = false;
-    protected bool isPauseOpen = false;
-    protected bool isTakeDmgOpen = false;
-    protected bool isQuitConfirmationOpen = false;
+    private bool isShopOpen = false;
+    private bool isDeathOpen = false;
+    private bool isVictoryOpen = false;
+    private bool isTutorialTextOn = false;
+    private bool isPauseOpen = false;
+    private bool isTakeDmgOpen = false;
+    private bool isQuitConfirmationOpen = false;
 
     public void Start()
     {
