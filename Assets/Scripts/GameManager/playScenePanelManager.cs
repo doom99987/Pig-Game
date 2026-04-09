@@ -19,6 +19,7 @@ public class playScenePanelManager : MonoBehaviour
     [SerializeField] GameObject victoryPanel;
     [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject takeDmgPanel;
+    [SerializeField] GameObject quitConfirmationPanel;
 
     protected bool isShopOpen = false;
     protected bool isDeathOpen = false;
@@ -26,6 +27,7 @@ public class playScenePanelManager : MonoBehaviour
     protected bool isTutorialTextOn = false;
     protected bool isPauseOpen = false;
     protected bool isTakeDmgOpen = false;
+    protected bool isQuitConfirmationOpen = false;
 
     public void Start()
     {
@@ -84,6 +86,12 @@ public class playScenePanelManager : MonoBehaviour
     {
         isTakeDmgOpen = !isTakeDmgOpen;
         takeDmgPanel.SetActive(isTakeDmgOpen);
+    }
+
+    public void toggleQuitConfirmationPanel()
+    {
+        isQuitConfirmationOpen = !isQuitConfirmationOpen;
+        quitConfirmationPanel.SetActive(isQuitConfirmationOpen);
     }
 
     public bool getIsShopOpen()
