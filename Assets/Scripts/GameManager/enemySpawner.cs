@@ -52,12 +52,15 @@ public class enemySpawner : MonoBehaviour
     {
         //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location and randomizes which enemy spawns.
 
+        for(int i = 0; i < spawnAmount; i++)
+        {
+            int randomSpawn = Random.Range(0, spawnPoints.Length);
+            int randomEnemy = Random.Range(0, enemyPrefab.Length);
+            float randSpawnDis = Random.Range(2f, 4f);
 
-        int randomSpawn = Random.Range(0, spawnPoints.Length);
-        int randomEnemy = Random.Range(0, enemyPrefab.Length);
-        int randSpawnDis = Random.Range(2, 4);
-        Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, -1, 0), spawnPoints[randomSpawn].rotation);
-        //stall so the enemies don't all spawn at the same time and on top of one another
+            Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, -1, 0), spawnPoints[randomSpawn].rotation);
+        }
+        
     }
 }
 
