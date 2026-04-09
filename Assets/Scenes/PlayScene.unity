@@ -13000,6 +13000,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8845561386923922636, guid: 38f0109b73f73ab478174a267cdc86cb, type: 3}
+    - target: {fileID: 8094920049260999489, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094920049260999489, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094920049260999489, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094920049260999489, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8227714100617754919, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
       propertyPath: gameManager
       value: 
