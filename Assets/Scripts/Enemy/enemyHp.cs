@@ -19,15 +19,21 @@ public class enemyHp : MonoBehaviour
     [Tooltip("Money give to player on enemy kill (5 = $0.05)")]
     [SerializeField] protected int moneyOnDeath = 0;
     [SerializeField] protected int mulitplier = 5;
-    [SerializeField] protected float[] money = { 5, 10, 25, 35 };
+    [SerializeField] protected float[] money;
+    [SerializeField] protected int[] bulletUpgradeBonus;
+    [SerializeField] protected int bulletUpgradeBonusAmount;
+
+    protected int bulletUpgradeCount;
 
     // Ran before update and only once
     public void Start()
     {
         gameManager = GameObject.Find("gameManager");
+        bulletUpgradeCount = gameManager.GetComponent<shopManager>().getBulletUpgradeCount();
         int round = gameManager.GetComponent<roundManager>().getRound();
         hp = round += hp;
         moneyOnDeath = (int)money[round];
+        bulletUpgradeBonusAmount = bulletUpgradeBonus[bulletUpgradeCount];
     }
 
     /// <summary>
@@ -77,5 +83,6 @@ public class enemyHp : MonoBehaviour
     public void giveMoneyOnDeath()
     {
         gameManager.GetComponent<moneyManager>().addMoney(moneyOnDeath);
+        gameManager.GetComponent<moneyManager>().addMoney(bulletUpgradeBonusAmount);
     }
 }
