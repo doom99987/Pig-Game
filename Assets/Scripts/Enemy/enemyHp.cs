@@ -12,18 +12,18 @@ using UnityEngine;
 
 public class enemyHp : MonoBehaviour
 {
-    protected GameObject gameManager;
+    private GameObject gameManager;
     [Header("HP Settings")]
     [Tooltip("Current HP of the enemy.")]
-    [SerializeField] protected int hp = 1;
+    [SerializeField] private int hp = 1;
     [Tooltip("Money give to player on enemy kill (5 = $0.05)")]
-    [SerializeField] protected int moneyOnDeath = 0;
+    [SerializeField] private int moneyOnDeath = 0;
     [SerializeField] protected int mulitplier = 5;
-    [SerializeField] protected float[] money;
-    [SerializeField] protected int[] bulletUpgradeBonus;
-    [SerializeField] protected int bulletUpgradeBonusAmount;
+    [SerializeField] private float[] money;
+    [SerializeField] private int[] bulletUpgradeBonus;
+    [SerializeField] private int bulletUpgradeBonusAmount;
 
-    protected int bulletUpgradeCount;
+    private int bulletUpgradeCount;
 
     // Ran before update and only once
     public void Start()
@@ -64,6 +64,7 @@ public class enemyHp : MonoBehaviour
         if (hp <= 0)
         {
             giveMoneyOnDeath();
+            gameManager.GetComponent<audioManager>().playEnemyDeathSound();
             Destroy(gameObject);
         }
     }
@@ -85,4 +86,5 @@ public class enemyHp : MonoBehaviour
         gameManager.GetComponent<moneyManager>().addMoney(moneyOnDeath);
         gameManager.GetComponent<moneyManager>().addMoney(bulletUpgradeBonusAmount);
     }
+
 }

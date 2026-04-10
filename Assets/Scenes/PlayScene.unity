@@ -1807,7 +1807,7 @@ GameObject:
   - component: {fileID: 398503774}
   - component: {fileID: 398503773}
   m_Layer: 0
-  m_Name: sfx_ButtonClick
+  m_Name: snort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4928,6 +4928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameMusic: {fileID: 1491016205}
+  deathSound: {fileID: 398503773}
 --- !u!1 &978515675
 GameObject:
   m_ObjectHideFlags: 0
@@ -9216,7 +9217,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 6a78d22c62919874d8322cb4aaf27c64, type: 3}
+  m_Resource: {fileID: 8300000, guid: 6088b9fad64dafa42999afb745c54621, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   moneyOnDeath: 5
-  mulitplier: 5
+  mulitplier: -268
   money:
   - 4
   - 4
@@ -203,6 +203,7 @@ MonoBehaviour:
   - 125
   bulletUpgradeBonus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   bulletUpgradeBonusAmount: 0
+  deathSound: {fileID: 0}
 --- !u!114 &-156059216757164469
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using UnityEngine;
 public class audioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource gameMusic;
+    [SerializeField] private AudioSource deathSound;
 
     // Update is called once per frame
     void Update()
@@ -19,5 +20,10 @@ public class audioManager : MonoBehaviour
         {
             gameMusic.UnPause();
         }
+    }
+
+    public void playEnemyDeathSound()
+    {
+               deathSound.Play();
     }
 }
