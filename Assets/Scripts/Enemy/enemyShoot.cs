@@ -15,7 +15,7 @@ public class enemyShoot : MonoBehaviour
     private GameObject player;
     private GameObject gameManager;
 
-    [Header("Projectile")] 
+    [Header("Projectile")]
     [SerializeField] GameObject bullet;
 
     [Header("Rigidbody2D")]
@@ -23,9 +23,9 @@ public class enemyShoot : MonoBehaviour
 
     [Header("Bullet Variables")]
     [Tooltip("Manages the angle the object is spawned in at")]
-    [SerializeField] private float imgRotation = 90f;
+        [SerializeField] private float imgRotation = 90f;
     [Tooltip("Delay between bullets fired")]
-    [SerializeField] private float delay = 1f;
+        [SerializeField] private float delay = 1f;
 
     private void Start()
     {

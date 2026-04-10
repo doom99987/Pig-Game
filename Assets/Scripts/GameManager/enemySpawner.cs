@@ -35,10 +35,13 @@ public class enemySpawner : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        // Current round
         int round = gameObject.GetComponent<roundManager>().getRound();
 
+        // Check if the game is paused
         if (!gameObject.GetComponent<gameManager>().getGameState())
         {
+            // Check when to spawn enemy
             if (Time.time > nextSpawnTime)
             {
                 spawnEnemy();
@@ -48,16 +51,23 @@ public class enemySpawner : MonoBehaviour
         }
     }
 
-    public void spawnEnemy()
+    /// <summary>
+    /// Called to spawn in an enemy at a given spawnpoint
+    /// </summary>
+    private void spawnEnemy()
     {
         //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location and randomizes which enemy spawns.
 
         for(int i = 0; i < spawnAmount; i++)
         {
+            // Gets a spawnpoint
             int randomSpawn = Random.Range(0, spawnPoints.Length);
+            // Gets an enemy to spawn
             int randomEnemy = Random.Range(0, enemyPrefab.Length);
+            // Where around the spawnpoint they spawn
             float randSpawnDis = Random.Range(2f, 4f);
 
+            // Spawns enemy
             Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, -1, 0), spawnPoints[randomSpawn].rotation);
         }
         

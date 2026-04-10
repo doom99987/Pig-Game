@@ -13,8 +13,8 @@ using UnityEngine;
 
 public class shopManager : MonoBehaviour
 {
+    
     [Header("bomb settings")]
-    protected bool bombBought = false;
     [Tooltip("Total number of bombs you have")]
     [SerializeField] TextMeshProUGUI bombAmount;
     [SerializeField] GameObject bombAmountObject;
@@ -22,45 +22,45 @@ public class shopManager : MonoBehaviour
 
     [Header("Upgrade Limits")]
     [Tooltip("The maximum number of times the player can upgrade their speed.")]
-        [SerializeField] protected int sCountMax = 10;
+        [SerializeField] private int sCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade their hp.")]
-        [SerializeField] protected int hCountMax = 10;
+        [SerializeField] private int hCountMax = 10;
     [Tooltip("The maximum number of times the player can heal.")]
-        [SerializeField] protected int healingCountMax = 10;
+        [SerializeField] private int healingCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade pierce.")]
-        [SerializeField] protected int pierceCountMax = 10;
+        [SerializeField] private int pierceCountMax = 10;
     [Tooltip("The maximum number of times the player can upgrade bullet damage")]
-        [SerializeField] protected int bulletUpgradeCountMax = 10;
+        [SerializeField] private int bulletUpgradeCountMax = 10;
     [Tooltip("The maximum number of times the player can buy bombs")]
-        [SerializeField] protected int bombCountMax = 10;
+        [SerializeField] private int bombCountMax = 10;
 
     [Header("References")]
-    [SerializeField] GameObject gameManager;
-    [SerializeField] GameObject player;
+    [SerializeField] private GameObject gameManager;
+    [SerializeField] private GameObject player;
 
     [Header("UI")]
-    [SerializeField] TextMeshProUGUI buySpeedText;
-    [SerializeField] TextMeshProUGUI buyHpText;
-    [SerializeField] TextMeshProUGUI buyHealingText;
-    [SerializeField] TextMeshProUGUI buyPierceText;
-    [SerializeField] TextMeshProUGUI buyBulletUpgradeText;
-    [SerializeField] TextMeshProUGUI buyBombText;
+    [SerializeField] private TextMeshProUGUI buySpeedText;
+    [SerializeField] private TextMeshProUGUI buyHpText;
+    [SerializeField] private TextMeshProUGUI buyHealingText;
+    [SerializeField] private TextMeshProUGUI buyPierceText;
+    [SerializeField] private TextMeshProUGUI buyBulletUpgradeText;
+    [SerializeField] private TextMeshProUGUI buyBombText;
 
     [Header("Upgrade Costs")]
-    [SerializeField] float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [SerializeField] float[] hpCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [SerializeField] float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [SerializeField] float[] pierceCost = { 5, 50, 500, 5000 };
-    [SerializeField] float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
-    [SerializeField] float[] bombCost = { 5, 50, 500, 5000 };
+    [SerializeField] private float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
+    [SerializeField] private float[] hpCost = { 5, 50, 500, 5000, 50000, 500000 };
+    [SerializeField] private float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
+    [SerializeField] private float[] pierceCost = { 5, 50, 500, 5000 };
+    [SerializeField] private float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
+    [SerializeField] private float[] bombCost = { 5, 50, 500, 5000 };
 
     // all the counts for the upgrades, used to determine the cost of the next upgrade.
-    protected int speedCount = 0;
-    protected int hpBuyCount = 0;
-    protected int healingCount = 0;
-    protected int pierceCount = 0;
-    protected int bulletUpgradeCount = 0;
-    protected int bombCount = 0;
+    private int speedCount = 0;
+    private int hpBuyCount = 0;
+    private int healingCount = 0;
+    private int pierceCount = 0;
+    private int bulletUpgradeCount = 0;
+    private int bombCount = 0;
 
     private void Start()
     {
@@ -199,11 +199,19 @@ public class shopManager : MonoBehaviour
         return bulletUpgradeCount;
     }
 
+    /// <summary>
+    /// Gives the current amount of bombs
+    /// </summary>
+    /// <returns></returns>
     public int getBombCount()
     {
         return bombCount;
     }
 
+    /// <summary>
+    /// Retracts from the amount of bombs you have
+    /// </summary>
+    /// <param name="amount">amount to remove</param>
     public void subtractBombCount(int amount)
     {
         if(bombCount - amount < 0)

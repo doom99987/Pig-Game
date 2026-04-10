@@ -16,25 +16,25 @@ using System.Collections.Generic;
 
 public class roundManager : MonoBehaviour
 {
-    protected float elapsedTime;
+    private float elapsedTime;
 
     [Header("Round")]
     [Tooltip("Current Round")]
-    [SerializeField] protected int round = 0;
+    [SerializeField] private int round = 0;
 
     [Tooltip(("Total number of Rounds"))]
-    [SerializeField] protected int totalRounds = 0;
+    [SerializeField] private int totalRounds = 0;
 
     [Tooltip("Amount of time in a Round")]
-    [SerializeField] protected float roundTime = 121f;
+    [SerializeField] private float roundTime = 121f;
 
     [Header("Text Timer")]
     [Tooltip("The Textbox for the Timer")]
-    [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshProUGUI timerText;
     [Tooltip("The Textbox for the current round")]
-    [SerializeField] TextMeshProUGUI roundText;
+    [SerializeField] private TextMeshProUGUI roundText;
     [Tooltip("The Textbox for the death text")]
-    [SerializeField] TextMeshProUGUI deathText;
+    [SerializeField] private TextMeshProUGUI deathText;
 
     [Header("End of Round Bonus")]
     [Tooltip("The amount of money given at the end of each round")]
@@ -66,6 +66,7 @@ public class roundManager : MonoBehaviour
             int minutes = Mathf.FloorToInt((elapsedTime) / 60);
             int seconds = Mathf.FloorToInt((elapsedTime) % 60);
             timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+            // Displays the time on the deathscreen
             if (deathText != null)
             {
                 deathText.text = string.Format("you had: " + "{0:0}:{1:00}", minutes, seconds + " seconds left");
@@ -85,6 +86,7 @@ public class roundManager : MonoBehaviour
                 // Otherwise go to next round
                 else
                 {
+                    // Opens shop panel
                     gameObject.GetComponent<gameManager>().roundEnded();
                     resetTimer();
                     // Check if the round number is within the end of round bonus
@@ -92,9 +94,11 @@ public class roundManager : MonoBehaviour
                     {
                         gameObject.GetComponent<moneyManager>().addMoney(endOfRoundBonus[round]);
                     }
+
                     round++;
+                    // Display current round
                     roundText.text = "Round: " + round + "/" + totalRounds;
-                    //destroys all the objects in the list of things to be destroyed at the end of the round
+                    // Destroys all the objects in the list of things to be destroyed at the end of the round
                     for (int i = 0; i < things.Count; i++)
                     {
                         if (things[i] != null)
