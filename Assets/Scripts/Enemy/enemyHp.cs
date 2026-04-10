@@ -16,8 +16,7 @@ public class enemyHp : MonoBehaviour
     [Header("HP Settings")]
     [Tooltip("Current HP of the enemy.")]
     [SerializeField] private int hp = 1;
-    [Tooltip("Money give to player on enemy kill (5 = $0.05)")]
-    [SerializeField] private int moneyOnDeath = 0;
+    [SerializeField] protected int moneyOnDeath = 0;
     [SerializeField] protected int mulitplier = 5;
     [SerializeField] private float[] money;
     [SerializeField] private int[] bulletUpgradeBonus;
