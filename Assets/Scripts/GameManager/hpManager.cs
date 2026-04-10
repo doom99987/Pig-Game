@@ -155,6 +155,10 @@ public class hpManager : MonoBehaviour
                return isDead;
     }
 
+    /// <summary>
+    /// flashes the player red a for a second to indicate damage taken, then resets the color back to white.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator flashRed()
     {
         yield return new WaitForSeconds(0.5f);
