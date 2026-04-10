@@ -21,7 +21,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -640, y: 0, z: 0}
-  m_EntryPosition: {x: -450, y: -60, z: 0}
+  m_EntryPosition: {x: -600, y: -60, z: 0}
   m_ExitPosition: {x: -270, y: 10, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1757919660898166268}
@@ -218,7 +218,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hurt Blend Tree
+  m_Name: 'Idle Blend Tree '
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

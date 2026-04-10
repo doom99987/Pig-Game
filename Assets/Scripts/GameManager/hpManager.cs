@@ -138,7 +138,7 @@ public class hpManager : MonoBehaviour
         // Check if players hp is greater than 1 hp and player is not dead
         if (hp > 1 && getIsDead() == false)
         {
-            
+
         }
         if (hp > 0)
         {
