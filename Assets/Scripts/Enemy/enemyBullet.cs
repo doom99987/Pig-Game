@@ -76,11 +76,15 @@ public class enemyBullet : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    ///  Deal damage to the player
+    /// </summary>
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Check if collided with player
         if (collision.gameObject.CompareTag("Player") && !gameManager.GetComponent<gameManager>().getGameState())
         {
+            // Player Takes dmg and destroy the bullet
             gameManager.GetComponent<hpManager>().takeDmg();
             Destroy(gameObject);
         }
