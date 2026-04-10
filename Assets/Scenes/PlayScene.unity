@@ -13060,12 +13060,16 @@ PrefabInstance:
       objectReference: {fileID: 467091595}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: roundTime
-      value: 1
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1360411631}
+    - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: heartsContainer
+      value: 
+      objectReference: {fileID: 1258520856}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: endOfRoundBonus.Array.size
       value: 10

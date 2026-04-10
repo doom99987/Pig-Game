@@ -113,7 +113,6 @@ public class hpManager : MonoBehaviour
         {
             if(getIsDead() == false)
             {
-                //gameManager.GetComponent<playScenePanelManager>().toggleDmgPanel();
                 playerHit.color = new Color(1f, 0f, 0f, 0.95f);
                 StartCoroutine(flashRed());
             }
@@ -162,7 +161,6 @@ public class hpManager : MonoBehaviour
     IEnumerator flashRed()
     {
         yield return new WaitForSeconds(0.5f);
-        //gameManager.GetComponent<playScenePanelManager>().toggleDmgPanel();
         playerHit.color = Color.white;  
     }
 }

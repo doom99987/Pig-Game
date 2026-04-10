@@ -40,6 +40,7 @@ public class roundManager : MonoBehaviour
     [Tooltip("The amount of money given at the end of each round")]
     [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000 };
 
+    [SerializeField] Transform heartsContainer;
     List<GameObject> things = new List<GameObject>();
 
     bool isRoundTextOpen = true;
@@ -78,6 +79,10 @@ public class roundManager : MonoBehaviour
                 // Check if they beat final round
                 if (round == totalRounds)
                 {
+                    foreach (Transform child in heartsContainer)
+                        Destroy(child.gameObject);
+                    gameObject.GetComponent<roundManager>().toggleRoundText();
+                    gameObject.GetComponent<roundManager>().toggleTimerText();
                     gameObject.GetComponent<moneyManager>().toggleMoneyText();
                     gameObject.GetComponent<playScenePanelManager>().toggleShopPanel();
                     gameObject.GetComponent<randomMessageManager>().displayWinMessage();
