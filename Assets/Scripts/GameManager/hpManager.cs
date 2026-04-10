@@ -15,29 +15,39 @@ public class hpManager : MonoBehaviour
 {
     [Header("HP Settings")]
     [Tooltip("Current HP of the player.")]
-    [SerializeField] protected int hp = 3;
+        [SerializeField] private int hp = 3;
     [Tooltip("Maximum HP of the player.")]
-    [SerializeField] protected int maxHp = 3;
+        [SerializeField] private int maxHp = 3;
     [Tooltip("Number of hearts to display per row in the UI.")]
-    [SerializeField] protected int heartsPerRow = 4;
-    protected bool isDead = false;
-    [Header("Prefabs, Containers and Refrences")]
-    [SerializeField] GameObject heartPrefab;
-    [SerializeField] GameObject emptyHeartPrefab;
-    [SerializeField] Transform heartsContainer;
-    [SerializeField] GameObject gameManager;
-    [SerializeField] TextMeshProUGUI deathPanelMoneyText;
-    [SerializeField] SpriteRenderer playerHit;
+        [SerializeField] private int heartsPerRow = 4;
 
-    GameObject[] fullHearts;
-    GameObject[] emptyHearts;
+    [Header("Heart Prefabs")]
+    [SerializeField] private GameObject heartPrefab;
+    [SerializeField] private GameObject emptyHeartPrefab;
+    [SerializeField] private Transform heartsContainer;
+
+    [Header("Damage Flash")]
+    [SerializeField] private Color damageColor;
+    [SerializeField] private SpriteRenderer playerHit;
+
+    [Header("Extra Necessities")]
+    [SerializeField] private GameObject gameManager;
+    [SerializeField] private TextMeshProUGUI deathPanelMoneyText;
+
+    private GameObject[] fullHearts;
+    private GameObject[] emptyHearts;
+    private bool isDead = false;
 
     void Start()
     {
+        // Spawn in starting hearts
         spawnPrefabs();
+        // Updates current state of the hearts
         updateHearts();
     }
-
+    /// <summary>
+    /// Spawns in the hearts
+    /// </summary>
     public void spawnPrefabs()
     {
         //destroys all the children of the hearts container before spawning new ones to avoid duplicates.
@@ -69,25 +79,39 @@ public class hpManager : MonoBehaviour
     }
 
     /// <summary>
-    /// updates the heart display based on the current HP. It sets the active state of the full hearts based on the current HP and checks if the player is dead (HP <= 0) to toggle the death panel and money text.
+    /// Updates the heart display based on the current HP. It sets the active state of the 
+    /// full hearts based on the current HP and checks if the player is dead (HP <= 0) to 
+    /// toggle the death panel and money text.
     /// </summary>
     public void updateHearts()
     {
+        // Set all the hearts active
         for (int i = 0; i < fullHearts.Length; i++)
         {
             fullHearts[i].SetActive(i < hp);
         }
-        if(hp<= 0)
+        // Check if player died
+        if(hp <= 0)
         {
+            // Destroy all the hearts
             foreach (Transform child in heartsContainer)
                 Destroy(child.gameObject);
+            // Enable dead
             isDead = true;
+            // Enable end game
             gameManager.GetComponent<gameManager>().setGameState(true);
+            // Toggles on the money text
             gameManager.GetComponent<moneyManager>().toggleMoneyText();
+            // Displays the loss message on death screen
             gameManager.GetComponent<randomMessageManager>().displayLoseMessage();
+            // Disables the round text
             gameManager.GetComponent<roundManager>().toggleRoundText();
+            // Disables the round timer text
             gameManager.GetComponent<roundManager>().toggleTimerText();
+            // Enables the death panel
             gameManager.GetComponent<playScenePanelManager>().toggleDeathPanel();
+
+            // Displays how much money you had left
             deathPanelMoneyText.text = $"You Had ${gameManager.GetComponent<moneyManager>().getMoney() / 100f} left";
             Debug.Log("Player is dead!");
         }
@@ -100,7 +124,9 @@ public class hpManager : MonoBehaviour
     {
         maxHp++;
         hp++;
+        // respawns the hearts
         spawnPrefabs();
+        // updates the hearts
         updateHearts();
     }
 
@@ -109,13 +135,10 @@ public class hpManager : MonoBehaviour
     /// </summary>
     public void takeDmg()
     {
-        if (hp > 1)
+        // Check if players hp is greater than 1 hp and player is not dead
+        if (hp > 1 && getIsDead() == false)
         {
-            if(getIsDead() == false)
-            {
-                playerHit.color = new Color(1f, 0f, 0f, 0.95f);
-                StartCoroutine(flashRed());
-            }
+            
         }
         if (hp > 0)
         {
@@ -151,18 +174,17 @@ public class hpManager : MonoBehaviour
     /// <returns></returns>
     public bool getIsDead()
     {
-               return isDead;
+        return isDead;
     }
 
-    /// <summary>
-    /// flashes the player red a for a second to indicate damage taken, then resets the color back to white.
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator flashRed()
-    {
-        yield return new WaitForSeconds(0.5f);
-        playerHit.color = Color.white;  
-    }
+    //IEnumerator dmgFlash()
+    //{
+    //    bool reverse = false;
+    //    for (float num = 1f; num >= 0; num -= 0.1f)
+    //    {
+    //        playerHit
+    //    }
+    //}
 }
 
 
