@@ -18,7 +18,7 @@ public class enemyAI : MonoBehaviour
     private Vector2 movement;
 
     [Header("Animator")]
-    [SerializeField] Animator animator;
+    [SerializeField] private Animator animator;
 
     [Header("Enemy Movement")]
     [Tooltip("Variable to control the current speed of the Enemy")]
@@ -37,6 +37,7 @@ public class enemyAI : MonoBehaviour
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("gameManager");
         gameManager.GetComponent<roundManager>().getObjects(gameObject);
+        // Sets the movement direction
         movement = (player.transform.position - gameObject.transform.position).normalized;
     }
 
