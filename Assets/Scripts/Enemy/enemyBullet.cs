@@ -15,6 +15,7 @@ public class enemyBullet : MonoBehaviour
     private GameObject gameManager;
     private GameObject player;
     private bool fixVelocity = false;
+    private Vector3 dir;
 
     [Header("Animator")]
     [SerializeField] private Animator animator;
@@ -28,7 +29,6 @@ public class enemyBullet : MonoBehaviour
     [SerializeField] private float time = 1f;
     [SerializeField] private float rotSpeed = 5f;
 
-    Vector3 dir;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
