@@ -14,19 +14,19 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
     [Header("Enemy Spawning Settings")]
-    [SerializeField] protected GameObject[] enemyPrefab;
+    [SerializeField] private GameObject[] enemyPrefab;
     [SerializeField] Transform[] spawnPoints;
 
     [Tooltip("The delay between each enemy spawn in seconds.")]
-    [SerializeField] protected float spawnDelayMin = 5f;
-    [SerializeField] protected float spawnDelayMax = 6;
-    protected float nextSpawnTime;
+    [SerializeField] private float spawnDelayMin = 5f;
+    [SerializeField] private float spawnDelayMax = 6;
+    private float nextSpawnTime;
 
     [Tooltip("The amount of enemies to spawn each time.")]
-    [SerializeField] protected int spawnAmount = 3;
+    [SerializeField] private int spawnAmount = 3;
 
     [Tooltip("The amount of seconds to decrease the spawn delay by each round.")]
-    [SerializeField] protected float roundSpawnDelay = 0.25f;
+    [SerializeField] private float roundSpawnDelay = 0.25f;
 
 
     // Update is called once per frame

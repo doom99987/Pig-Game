@@ -12,25 +12,21 @@ using UnityEngine;
 
 public class moneyBagBombMove : MonoBehaviour
 {
-    protected int bulletPierce;
-    protected GameObject gameManager;
-    protected bool explode = false;
+    private GameObject gameManager;
 
     [Header("RigidBody")]
     [Tooltip("Rigidbody of the object")]
-    [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
 
-    [Header("Variables")]
-    [SerializeField] protected float explosionSize = 1;
-    [SerializeField] protected float speed = 1.95f;
-    [SerializeField] protected float dmg = 1f;
-    [SerializeField] protected float lifeTime = 1f;
+    [Header("Bomb Variables")]
+    [SerializeField] private float explosionSize = 1;
+    [SerializeField] private float speed = 1.95f;
+    [SerializeField] private float lifeTime = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gameManager = GameObject.Find("gameManager");
-        bulletPierce = gameManager.GetComponent<shopManager>().getPierceCount();
 
         // Gets a vector in the direction the bullet travels and adds force to the bullet
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -58,11 +54,15 @@ public class moneyBagBombMove : MonoBehaviour
     /// <param name="radius">Size of the explosion</param>
     void ExplosionDamage(Vector2 center, float radius)
     {
+        // Gets all the gameObjects collideres within range
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(center, radius);
+        // Loop over all colliders
         foreach (var hitCollider in hitColliders)
         {
+            // if its an enemy's collider
             if (hitCollider.gameObject.CompareTag("Ranged") || hitCollider.gameObject.CompareTag("Melee"))
                 {
+                    // The enemy takes damage equal to the amount of upgrades
                     hitCollider.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
                 }
             }
