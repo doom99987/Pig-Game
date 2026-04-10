@@ -85,7 +85,11 @@ public class shopManager : MonoBehaviour
             buySpeedText.text = $"Buy ${speedCost[speedCount + 1] / 100f}";
             speedCount++;
         }
-    }
+        else if (speedCount >= sCountMax - 1)
+        {
+            buySpeedText.text = "Max Level";
+        }
+        }
 
     /// <summary>
     /// Called to upgrade the player max Hp by 1
@@ -99,7 +103,11 @@ public class shopManager : MonoBehaviour
             buyHpText.text = $"Buy ${hpCost[hpBuyCount + 1] / 100f}";
             hpBuyCount++;
         }
-    }
+        else if (hpBuyCount >= hCountMax - 3)
+        {
+            buyHpText.text = "Max Level";
+        }
+        }
 
     /// <summary>
     /// Called to heal the players Hp by 1
@@ -113,7 +121,11 @@ public class shopManager : MonoBehaviour
             buyHealingText.text = $"Buy ${healingCost[healingCount + 1] / 100f}";
             healingCount++;
         }
-    }
+        else if (healingCount >= healingCountMax - 1)
+        {
+            buyHealingText.text = "Max Level";
+        }
+        }
 
     /// <summary>
     /// Called to upgrade the amount of enemies the bullet pierces through by 1
@@ -126,7 +138,11 @@ public class shopManager : MonoBehaviour
             buyPierceText.text = $"Buy ${pierceCost[pierceCount + 1] / 100f}";
             pierceCount++;
         }
-    }
+        else if (pierceCount >= pierceCountMax - 1)
+        {
+            buyPierceText.text = "Max Level";
+        }
+        }
 
     /// <summary>
     /// Called to upgrade the damage of the bullet
@@ -139,7 +155,11 @@ public class shopManager : MonoBehaviour
             buyBulletUpgradeText.text = $"Buy ${bulletUpgradeCost[bulletUpgradeCount + 1] / 100f}";
             bulletUpgradeCount++;
         }
-    }
+        else if (bulletUpgradeCount >= bulletUpgradeCountMax - 1)
+        {
+            buyBulletUpgradeText.text = "Max Level";
+        }
+        }
 
     /// <summary>
     /// Called to buy 1 bomb
@@ -155,7 +175,11 @@ public class shopManager : MonoBehaviour
             buyBombText.text = $"Buy ${bombCost[bombCount + 1] / 100f}";
             bombCount++;
         }
-    }
+        else if (bombCount >= bombCountMax - 1)
+        {
+            buyBombText.text = "Max Level";
+        }
+        }
 
     /// <summary>
     /// Gives the current pierce level
