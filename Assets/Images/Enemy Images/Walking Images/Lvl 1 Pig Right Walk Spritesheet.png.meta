@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: 50f5e9e8ba4458e4a9751c03ace5b8db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3356629158474598368
+    second: Lvl 1 Pig Right Walk Spritesheet_0
+  - first:
+      213: -5190439264811035881
+    second: Lvl 1 Pig Right Walk Spritesheet_1
+  - first:
+      213: 9110375801916836964
+    second: Lvl 1 Pig Right Walk Spritesheet_2
+  - first:
+      213: 3070980536109829006
+    second: Lvl 1 Pig Right Walk Spritesheet_3
+  - first:
+      213: -4023999898055510865
+    second: Lvl 1 Pig Right Walk Spritesheet_4
+  - first:
+      213: 173686506908896412
+    second: Lvl 1 Pig Right Walk Spritesheet_5
+  - first:
+      213: -6485912974671151839
+    second: Lvl 1 Pig Right Walk Spritesheet_6
+  - first:
+      213: -4587752435109961959
+    second: Lvl 1 Pig Right Walk Spritesheet_7
+  - first:
+      213: -3075548500253054549
+    second: Lvl 1 Pig Right Walk Spritesheet_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lvl 1 Pig Right Walk Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 954
+        width: 622
+        height: 477
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7c8997f64259e20800000000000000
+      internalID: 3356629158474598368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Right Walk Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 954
+        width: 622
+        height: 477
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713d2b02dfad7f7b0800000000000000
+      internalID: -5190439264811035881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Right Walk Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 954
+        width: 622
+        height: 477
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c4193e58e8e6e70800000000000000
+      internalID: 9110375801916836964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Right Walk Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 477
+        width: 622
+        height: 477
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b07fed6805e9a20800000000000000
+      internalID: 3070980536109829006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Right Walk Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 477
+        width: 622
+        height: 477
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4713ca961e728c0800000000000000
+      internalID: -4023999898055510865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Right Walk Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 477
+        width: 622
+        height: 477
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c459235fe096200800000000000000
+      internalID: 173686506908896412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Right Walk Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 622
+        height: 477
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12df0ac63886df5a0800000000000000
+      internalID: -6485912974671151839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 1 Pig Right Walk Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 0
+        width: 622
+        height: 477
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f56db97770550c0800000000000000
+      internalID: -4587752435109961959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 23b72e141ce95c14e994bcb8a7352e44
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lvl 1 Pig Right Walk Spritesheet_0: 3356629158474598368
+      Lvl 1 Pig Right Walk Spritesheet_1: -5190439264811035881
+      Lvl 1 Pig Right Walk Spritesheet_2: 9110375801916836964
+      Lvl 1 Pig Right Walk Spritesheet_3: 3070980536109829006
+      Lvl 1 Pig Right Walk Spritesheet_4: -4023999898055510865
+      Lvl 1 Pig Right Walk Spritesheet_5: 173686506908896412
+      Lvl 1 Pig Right Walk Spritesheet_6: -6485912974671151839
+      Lvl 1 Pig Right Walk Spritesheet_7: -4587752435109961959
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
