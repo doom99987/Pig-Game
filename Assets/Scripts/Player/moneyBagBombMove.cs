@@ -62,7 +62,7 @@ public class moneyBagBombMove : MonoBehaviour
             // if its an enemy's collider
             if (hitCollider.gameObject.CompareTag("Ranged") || hitCollider.gameObject.CompareTag("Melee"))
                 {
-                    // The enemy takes damage equal to the amount of upgrades
+                    // The enemy takes damage equal to 99999
                     hitCollider.gameObject.GetComponent<enemyHp>().takeDmg(99999);
                 }
             }
