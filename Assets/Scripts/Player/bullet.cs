@@ -81,6 +81,10 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
         // Checks if the bullet collided with an enemy
         if (collision.gameObject.CompareTag("Ranged") || collision.gameObject.CompareTag("Melee"))
         {

@@ -7,6 +7,7 @@
 * Description: This script spawns enemies at random spawn points after a certain delay and also checks the game state to stop spawning when the player dies.
 *
 ****************************************************************************/
+using System.Collections;
 using UnityEngine;
 
 
@@ -25,6 +26,8 @@ public class enemySpawner : MonoBehaviour
         [SerializeField] private int spawnAmount = 3;
     [Tooltip("The amount of seconds to decrease the spawn delay by each round.")]
         [SerializeField] private float roundSpawnDelay = 0.25f;
+    [Tooltip("The time until the next enemy spawn")]
+    [SerializeField] private float spawnDelayTime; 
 
     private float nextSpawnTime;
 
@@ -59,17 +62,24 @@ public class enemySpawner : MonoBehaviour
 
         for(int i = 0; i < spawnAmount; i++)
         {
-            // Gets a spawnpoint
-            int randomSpawn = Random.Range(0, spawnPoints.Length);
-            // Gets an enemy to spawn
-            int randomEnemy = Random.Range(0, enemyPrefab.Length);
-            // Where around the spawnpoint they spawn
-            float randSpawnDis = Random.Range(2f, 4f);
-
-            // Spawns enemy
-            Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, -1, 0), spawnPoints[randomSpawn].rotation);
+           StartCoroutine(spawnEnemyDelay());
         }
         
+    }
+
+    IEnumerator spawnEnemyDelay()
+    {
+        // Waits for the spawn delay and then spawns an enemy
+        yield return new WaitForSeconds(spawnDelayTime);
+        // Gets a spawnpoint
+        int randomSpawn = Random.Range(0, spawnPoints.Length);
+        // Gets an enemy to spawn
+        int randomEnemy = Random.Range(0, enemyPrefab.Length);
+        // Where around the spawnpoint they spawn
+        float randSpawnDis = Random.Range(2f, 4f);
+
+        // Spawns enemy
+        Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, -1, 0), spawnPoints[randomSpawn].rotation);
     }
 }
 

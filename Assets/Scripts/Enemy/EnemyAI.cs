@@ -22,15 +22,15 @@ public class enemyAI : MonoBehaviour
 
     [Header("Enemy Movement")]
     [Tooltip("Variable to control the current speed of the Enemy")]
-        [SerializeField] private float curSpeed = 25f;
+    [SerializeField] private float curSpeed = 25f;
     [Tooltip("A multiplier of how strong the enemy gets pushed back after hitting a player")]
-        [SerializeField] private float pushBackMult = 100;
+    [SerializeField] private float pushBackMult = 100;
     [Tooltip("The distance an enemy stops from the player")]
-        [SerializeField] private float rangedEnemyStopDis = 7;
+    [SerializeField] private float rangedEnemyStopDis = 7;
     [Tooltip("How close the player has to be for the enemy to run away")]
-        [SerializeField] private float rangedEnemyBackOffDis = 3;
+    [SerializeField] private float rangedEnemyBackOffDis = 3;
     [Tooltip("Enemy rigid body")]
-        [SerializeField] Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
 
     private void Start()
     {
@@ -75,7 +75,7 @@ public class enemyAI : MonoBehaviour
     /// <summary>
     /// Lowers the players life and pushes the enemy back when enemy collides w/ player
     /// </summary>
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !gameManager.GetComponent<gameManager>().getGameState())
         {

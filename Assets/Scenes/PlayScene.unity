@@ -1541,7 +1541,7 @@ GameObject:
   - component: {fileID: 253558613}
   m_Layer: 0
   m_Name: Square (25)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4885,6 +4885,7 @@ MonoBehaviour:
   spawnDelayMax: 10
   spawnAmount: 2
   roundSpawnDelay: 0.25
+  spawnDelayTime: 0
 --- !u!114 &972771256 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5556571325964931556, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
@@ -5623,7 +5624,7 @@ GameObject:
   - component: {fileID: 1047655011}
   m_Layer: 0
   m_Name: Square (16)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5757,7 +5758,7 @@ GameObject:
   - component: {fileID: 1059140836}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6418,7 +6419,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -7855,7 +7856,7 @@ GameObject:
   - component: {fileID: 1317979071}
   m_Layer: 0
   m_Name: Square (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8797,7 +8798,7 @@ GameObject:
   - component: {fileID: 1414844066}
   m_Layer: 0
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9943,7 +9944,7 @@ GameObject:
   - component: {fileID: 1573450483}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10450,7 +10451,7 @@ GameObject:
   - component: {fileID: 1651187747}
   m_Layer: 0
   m_Name: Square (24)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11423,7 +11424,7 @@ GameObject:
   - component: {fileID: 1870923814}
   m_Layer: 0
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13765,6 +13766,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 925202391219473229, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1156143664}
+    - targetCorrespondingSourceObject: {fileID: 925202391219473229, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7693117642344008864}
   m_SourcePrefab: {fileID: 100100000, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
 --- !u!4 &7693117642344008862 stripped
 Transform:
@@ -13776,6 +13780,42 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8094920049260999489, guid: acf817da4eeca2e41abd257cbc18b8cf, type: 3}
   m_PrefabInstance: {fileID: 7693117642344008861}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &7693117642344008864
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156143644}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.014804458, y: -1.8284024}
+  m_Radius: 1.0560848
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
