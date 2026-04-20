@@ -70,7 +70,7 @@ public class roundManager : MonoBehaviour
             // Displays the time on the deathscreen
             if (deathText != null)
             {
-                deathText.text = string.Format("you had: " + "{0:0}:{1:00}", minutes, seconds + " seconds left");
+                deathText.text = string.Format("You had: " + "{0:0}:{1:00}", minutes, seconds + " seconds left");
             }
             // Checks if the round needs to be ended
             if (elapsedTime < 1)
