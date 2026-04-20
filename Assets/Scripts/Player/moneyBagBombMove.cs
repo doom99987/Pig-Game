@@ -63,7 +63,7 @@ public class moneyBagBombMove : MonoBehaviour
             if (hitCollider.gameObject.CompareTag("Ranged") || hitCollider.gameObject.CompareTag("Melee"))
                 {
                     // The enemy takes damage equal to the amount of upgrades
-                    hitCollider.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
+                    hitCollider.gameObject.GetComponent<enemyHp>().takeDmg(99999);
                 }
             }
         Destroy(gameObject);
