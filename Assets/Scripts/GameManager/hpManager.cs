@@ -29,6 +29,12 @@ public class hpManager : MonoBehaviour
     [Header("Damage Flash")]
     [SerializeField] private Color damageColor;
     [SerializeField] private SpriteRenderer playerHit;
+    [Tooltip("How long till the flash reaches maximum color")]
+        [SerializeField] private float maxFlashTime = 1;
+    [Tooltip("How long till the flash reaches minimum color")]
+        [SerializeField] private float minFlashTime = 1;
+    [Tooltip("Max color the thing will flash")]
+    [SerializeField] private Color maxFlashColor;
 
     [Header("Extra Necessities")]
     [SerializeField] private GameObject gameManager;
@@ -142,6 +148,7 @@ public class hpManager : MonoBehaviour
         }
         if (hp > 0)
         {
+            StartCoroutine(dmgFlash());
             hp--;
         }
         updateHearts();
@@ -169,7 +176,7 @@ public class hpManager : MonoBehaviour
     }
 
     /// <summary>
-    /// gets if the player is dead.
+    /// Returns if the player is dead.
     /// </summary>
     /// <returns></returns>
     public bool getIsDead()
@@ -177,14 +184,22 @@ public class hpManager : MonoBehaviour
         return isDead;
     }
 
-    //IEnumerator dmgFlash()
-    //{
-    //    bool reverse = false;
-    //    for (float num = 1f; num >= 0; num -= 0.1f)
-    //    {
-    //        playerHit
-    //    }
-    //}
+    private IEnumerator dmgFlash()
+    {
+        Color currentColor = new Color(1f, 1f, 1f, 1f);
+        for (float num = 1f; num >= maxFlashColor.g; num -= 0.01f)
+        {
+            currentColor = new Color(1f, num, num, 1f);
+            playerHit.color = currentColor;
+            yield return new WaitForSeconds(maxFlashTime);
+        }
+        for (float num = maxFlashColor.g; num <= 1; num += 0.01f)
+        {
+            currentColor = new Color(1f, num, num, 1f);
+            playerHit.color = currentColor;
+            yield return new WaitForSeconds(minFlashTime);
+        }
+    }
 }
 
 

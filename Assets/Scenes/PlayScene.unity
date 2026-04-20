@@ -13675,9 +13675,41 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: maxFlashTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: minFlashTime
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: damageColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: damageColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: damageColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: heartsContainer
       value: 
       objectReference: {fileID: 1258520856}
+    - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: maxFlashColor.b
+      value: 0.57254905
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: maxFlashColor.g
+      value: 0.57254905
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: maxFlashColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: deathPanelMoneyText
       value: 
