@@ -21,7 +21,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -490, y: 70, z: 0}
-  m_EntryPosition: {x: -410, y: -90, z: 0}
+  m_EntryPosition: {x: -400, y: -90, z: 0}
   m_ExitPosition: {x: -80, y: 70, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -523970198038045759}
@@ -36,7 +36,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 5eadb18e02f2e82428ad97af5f57be9a, type: 2}
     m_Threshold: 0
-    m_Position: {x: 1, y: 0}
+    m_Position: {x: -1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -44,7 +44,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 21d79b373a0377446ac86196a42b0e07, type: 2}
     m_Threshold: 0.33333334
-    m_Position: {x: -1, y: 0}
+    m_Position: {x: 1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -52,7 +52,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 67d2aef49dd3af74c89c4652468f504c, type: 2}
     m_Threshold: 0.6666667
-    m_Position: {x: 0, y: -1}
+    m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -60,7 +60,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: ef0d8dbd8ed06154580387b0283c9f52, type: 2}
     m_Threshold: 1
-    m_Position: {x: 0, y: 1}
+    m_Position: {x: 0, y: -1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -234,17 +234,20 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: hurt
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7805273398872293586}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1

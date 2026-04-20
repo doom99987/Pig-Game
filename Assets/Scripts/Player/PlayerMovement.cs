@@ -12,16 +12,16 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     [Header("Game Manager")]
-    [SerializeField] protected GameObject gameManager;
+    [SerializeField] private GameObject gameManager;
 
     [Header("Animator")]
     [SerializeField] Animator animator;
 
     [Header("Player Movement")]
     //variable to control the current speed of the player
-    [SerializeField] protected float curSpeed = 25f;
+    [SerializeField] private float curSpeed = 25f;
     //variable to control the max speed of the player
-    [SerializeField] protected float maxSpeed = 35f; 
+    [SerializeField] private float maxSpeed = 35f; 
     [SerializeField] Rigidbody2D rb;
 
 
