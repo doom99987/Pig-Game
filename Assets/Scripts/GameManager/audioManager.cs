@@ -1,3 +1,12 @@
+/****************************************************************************
+* File Name: audioManager.cs
+* Author: David Konvisser
+* DigiPen Email: david.konvisser@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: This script has all the audio manager functions.
+*
+****************************************************************************/
 using UnityEngine;
 
 public class audioManager : MonoBehaviour

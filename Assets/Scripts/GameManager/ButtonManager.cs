@@ -40,7 +40,6 @@ public class ButtonManager : MonoBehaviour
 
     public void restart()
     {
-               
                SceneManager.LoadScene("PlayScene");
     }
 }

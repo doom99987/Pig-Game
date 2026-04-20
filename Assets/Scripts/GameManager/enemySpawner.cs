@@ -7,7 +7,6 @@
 * Description: This script spawns enemies at random spawn points after a certain delay and also checks the game state to stop spawning when the player dies.
 *
 ****************************************************************************/
-using System.Collections;
 using UnityEngine;
 
 
