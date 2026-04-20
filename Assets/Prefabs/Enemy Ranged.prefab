@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917b97b0a64dccb469aba4feb3b064e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 0
   moneyOnDeath: 5
   mulitplier: -268
   money:
@@ -203,7 +203,6 @@ MonoBehaviour:
   - 125
   bulletUpgradeBonus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   bulletUpgradeBonusAmount: 0
-  deathSound: {fileID: 0}
 --- !u!114 &-156059216757164469
 MonoBehaviour:
   m_ObjectHideFlags: 0
