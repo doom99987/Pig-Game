@@ -13464,6 +13464,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 668740719}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: hCountMax
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: sCountMax
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bombAmount
       value: 
       objectReference: {fileID: 493677823}
@@ -13471,6 +13479,10 @@ PrefabInstance:
       propertyPath: buyBombText
       value: 
       objectReference: {fileID: 1861321474}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: bombCountMax
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: buySpeedText
       value: 
@@ -13485,7 +13497,11 @@ PrefabInstance:
       objectReference: {fileID: 1169595379}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: pierceCountMax
-      value: 5
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: healingCountMax
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bombAmountObject
@@ -13641,19 +13657,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[0]'
-      value: 300
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[1]'
-      value: 600
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[2]'
-      value: 900
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[3]'
-      value: 1200
+      value: 1250
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[4]'
@@ -13721,7 +13737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bulletUpgradeCost.Array.size
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[0]'
@@ -13749,23 +13765,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[6]'
-      value: 4000
+      value: 4500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[7]'
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
-      propertyPath: 'bulletUpgradeCost.Array.data[8]'
       value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
-      propertyPath: 'bulletUpgradeCost.Array.data[9]'
+      propertyPath: 'bulletUpgradeCost.Array.data[8]'
       value: 8000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
-      propertyPath: 'bulletUpgradeCost.Array.data[10]'
+      propertyPath: 'bulletUpgradeCost.Array.data[9]'
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bulletUpgradeCost.Array.data[10]'
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: round
@@ -13813,23 +13829,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'endOfRoundBonus.Array.data[5]'
-      value: 4000
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'endOfRoundBonus.Array.data[6]'
-      value: 6000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'endOfRoundBonus.Array.data[7]'
-      value: 8000
+      value: 7000
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'endOfRoundBonus.Array.data[8]'
-      value: 10000
+      value: 9000
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'endOfRoundBonus.Array.data[9]'
-      value: 10000
+      value: 9000
       objectReference: {fileID: 0}
     - target: {fileID: 5556571325964931556, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: tutorialText
