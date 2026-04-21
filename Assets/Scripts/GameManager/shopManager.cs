@@ -20,20 +20,6 @@ public class shopManager : MonoBehaviour
     [SerializeField] GameObject bombAmountObject;
     [SerializeField] GameObject bombImage;
 
-    [Header("Upgrade Limits")]
-    [Tooltip("The maximum number of times the player can upgrade their speed.")]
-    private int sCountMax;
-    [Tooltip("The maximum number of times the player can upgrade their hp.")]
-    private int hCountMax;
-    [Tooltip("The maximum number of times the player can heal.")]
-    private int healingCountMax;
-    [Tooltip("The maximum number of times the player can upgrade pierce.")]
-    private int pierceCountMax;
-    [Tooltip("The maximum number of times the player can upgrade bullet damage")]
-    private int bulletUpgradeCountMax;
-    [Tooltip("The maximum number of times the player can buy bombs")]
-    private int bombCountMax;
-
     [Header("References")]
     [SerializeField] private GameObject gameManager;
     [SerializeField] private GameObject player;
@@ -47,18 +33,32 @@ public class shopManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI buyBombText;
 
     [Header("Upgrade Costs")]
-    [Tooltip("The cost of each speed upgrade. The max level is determined by the length of this array.")]
+    [Tooltip("The cost of each speed upgrade. The max count is determined by the length of this array.")]
     [SerializeField] private float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [Tooltip("The cost of each hp upgrade. The max level is determined by the length of this array.")]
+    [Tooltip("The cost of each hp upgrade. The max count is determined by the length of this array.")]
     [SerializeField] private float[] hpCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [Tooltip("The cost of each healing upgrade. The max level is determined by the length of this array.")]
+    [Tooltip("The cost of each healing upgrade. The max count is determined by the length of this array.")]
     [SerializeField] private float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [Tooltip("The cost of each pierce upgrade. The max level is determined by the length of this array.")]
+    [Tooltip("The cost of each pierce upgrade. The max count is determined by the length of this array.")]
     [SerializeField] private float[] pierceCost = { 5, 50, 500, 5000 };
-    [Tooltip("The cost of each bullet damage upgrade. The max level is determined by the length of this array.")]
+    [Tooltip("The cost of each bullet damage upgrade. The max count is determined by the length of this array.")]
     [SerializeField] private float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
-    [Tooltip("The cost of each bomb. The max level is determined by the length of this array.")]
+    [Tooltip("The cost of each bomb. The max count is determined by the length of this array.")]
     [SerializeField] private float[] bombCost = { 5, 50, 500, 5000 };
+
+    [Header("Upgrade Limits")]
+    [Tooltip("The maximum number of times the player can upgrade their speed.")]
+    private int sCountMax;
+    [Tooltip("The maximum number of times the player can upgrade their hp.")]
+    private int hCountMax;
+    [Tooltip("The maximum number of times the player can heal.")]
+    private int healingCountMax;
+    [Tooltip("The maximum number of times the player can upgrade pierce.")]
+    private int pierceCountMax;
+    [Tooltip("The maximum number of times the player can upgrade bullet damage")]
+    private int bulletUpgradeCountMax;
+    [Tooltip("The maximum number of times the player can buy bombs")]
+    private int bombCountMax;
 
     // all the counts for the upgrades, used to determine the cost of the next upgrade.
     private int speedCount = 0;
