@@ -13,7 +13,7 @@ using UnityEngine;
 
 public class shopManager : MonoBehaviour
 {
-    
+
     [Header("bomb settings")]
     [Tooltip("Total number of bombs you have")]
     [SerializeField] TextMeshProUGUI bombAmount;
@@ -22,17 +22,17 @@ public class shopManager : MonoBehaviour
 
     [Header("Upgrade Limits")]
     [Tooltip("The maximum number of times the player can upgrade their speed.")]
-        [SerializeField] private int sCountMax = 10;
+    private int sCountMax;
     [Tooltip("The maximum number of times the player can upgrade their hp.")]
-        [SerializeField] private int hCountMax = 10;
+    private int hCountMax;
     [Tooltip("The maximum number of times the player can heal.")]
-        [SerializeField] private int healingCountMax = 10;
+    private int healingCountMax;
     [Tooltip("The maximum number of times the player can upgrade pierce.")]
-        [SerializeField] private int pierceCountMax = 10;
+    private int pierceCountMax;
     [Tooltip("The maximum number of times the player can upgrade bullet damage")]
-        [SerializeField] private int bulletUpgradeCountMax = 10;
+    private int bulletUpgradeCountMax;
     [Tooltip("The maximum number of times the player can buy bombs")]
-        [SerializeField] private int bombCountMax = 10;
+    private int bombCountMax;
 
     [Header("References")]
     [SerializeField] private GameObject gameManager;
@@ -64,6 +64,15 @@ public class shopManager : MonoBehaviour
 
     private void Start()
     {
+        //sets all the max counts for the upgrades based on the length of the cost arrays,
+        //and sets the text for each upgrade button to show the cost of the first upgrade.
+        sCountMax = speedCost.Length;
+        hCountMax = hpCost.Length;
+        healingCountMax = healingCost.Length;
+        pierceCountMax = pierceCost.Length;
+        bulletUpgradeCountMax = bulletUpgradeCost.Length;
+        bombCountMax = bombCost.Length;
+
         buySpeedText.text = $"Buy ${speedCost[speedCount] / 100f}";
         buyHpText.text = $"Buy ${hpCost[hpBuyCount] / 100f}";
         buyHealingText.text = $"Buy ${healingCost[healingCount] / 100f}";
@@ -89,7 +98,7 @@ public class shopManager : MonoBehaviour
         {
             buySpeedText.text = "Max Level";
         }
-        }
+    }
 
     /// <summary>
     /// Called to upgrade the player max Hp by 1
@@ -107,7 +116,7 @@ public class shopManager : MonoBehaviour
         {
             buyHpText.text = "Max Level";
         }
-        }
+    }
 
     /// <summary>
     /// Called to heal the players Hp by 1
@@ -125,7 +134,7 @@ public class shopManager : MonoBehaviour
         {
             buyHealingText.text = "Max Level";
         }
-        }
+    }
 
     /// <summary>
     /// Called to upgrade the amount of enemies the bullet pierces through by 1
@@ -142,7 +151,7 @@ public class shopManager : MonoBehaviour
         {
             buyPierceText.text = "Max Level";
         }
-        }
+    }
 
     /// <summary>
     /// Called to upgrade the damage of the bullet
@@ -159,7 +168,7 @@ public class shopManager : MonoBehaviour
         {
             buyBulletUpgradeText.text = "Max Level";
         }
-        }
+    }
 
     /// <summary>
     /// Called to buy 1 bomb
@@ -179,7 +188,7 @@ public class shopManager : MonoBehaviour
         {
             buyBombText.text = "Max Level";
         }
-        }
+    }
 
     /// <summary>
     /// Gives the current pierce level
@@ -214,7 +223,7 @@ public class shopManager : MonoBehaviour
     /// <param name="amount">amount to remove</param>
     public void subtractBombCount(int amount)
     {
-        if(bombCount - amount < 0)
+        if (bombCount - amount < 0)
         {
             bombCount = 0;
         }
