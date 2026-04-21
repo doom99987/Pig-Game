@@ -46,18 +46,12 @@ public class shopManager : MonoBehaviour
     [Tooltip("The cost of each bomb. The max count is determined by the length of this array.")]
     [SerializeField] private float[] bombCost = { 5, 50, 500, 5000 };
 
-    [Header("Upgrade Limits")]
-    [Tooltip("The maximum number of times the player can upgrade their speed.")]
+    //upgrade limits
     private int sCountMax;
-    [Tooltip("The maximum number of times the player can upgrade their hp.")]
     private int hCountMax;
-    [Tooltip("The maximum number of times the player can heal.")]
     private int healingCountMax;
-    [Tooltip("The maximum number of times the player can upgrade pierce.")]
     private int pierceCountMax;
-    [Tooltip("The maximum number of times the player can upgrade bullet damage")]
     private int bulletUpgradeCountMax;
-    [Tooltip("The maximum number of times the player can buy bombs")]
     private int bombCountMax;
 
     // all the counts for the upgrades, used to determine the cost of the next upgrade.
@@ -71,7 +65,6 @@ public class shopManager : MonoBehaviour
     private void Start()
     {
         //sets all the max counts for the upgrades based on the length of the cost arrays,
-        //and sets the text for each upgrade button to show the cost of the first upgrade.
         sCountMax = speedCost.Length;
         hCountMax = hpCost.Length;
         healingCountMax = healingCost.Length;
@@ -79,6 +72,7 @@ public class shopManager : MonoBehaviour
         bulletUpgradeCountMax = bulletUpgradeCost.Length;
         bombCountMax = bombCost.Length;
 
+        //sets the text for each upgrade button to show the cost of the first upgrade.
         buySpeedText.text = $"Buy ${speedCost[speedCount] / 100f}";
         buyHpText.text = $"Buy ${hpCost[hpBuyCount] / 100f}";
         buyHealingText.text = $"Buy ${healingCost[healingCount] / 100f}";
