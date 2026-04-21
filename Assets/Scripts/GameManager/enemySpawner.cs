@@ -48,7 +48,7 @@ public class enemySpawner : MonoBehaviour
             {
                 spawnEnemy();
                 //spawn delay
-                nextSpawnTime = Time.time + Random.Range(spawnDelayMin, (spawnDelayMax - (float)(round * roundSpawnDelay) - (float)(round * roundSpawnDelay)));
+                nextSpawnTime = Time.time + Random.Range(spawnDelayMin, (spawnDelayMax - (float)(round * roundSpawnDelay)));
             }
         }
     }

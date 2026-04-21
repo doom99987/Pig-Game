@@ -114,7 +114,7 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buyHealing()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax - 1)
+        if ((gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax - 1) && gameManager.GetComponent<hpManager>().getCurrentHp() < gameManager.GetComponent<hpManager>().getMaxHp())
         {
             gameManager.GetComponent<hpManager>().heal();
             gameManager.GetComponent<moneyManager>().removeMoney(healingCost[healingCount]);

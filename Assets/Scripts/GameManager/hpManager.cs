@@ -184,6 +184,16 @@ public class hpManager : MonoBehaviour
         return isDead;
     }
 
+    public int getCurrentHp()
+    {
+        return hp;
+    }
+
+    public int getMaxHp()
+    {
+        return maxHp;
+    }
+
     private IEnumerator dmgFlash()
     {
         Color currentColor = new Color(1f, 1f, 1f, 1f);
