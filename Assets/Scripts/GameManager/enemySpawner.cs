@@ -76,10 +76,12 @@ public class enemySpawner : MonoBehaviour
         // Gets an enemy to spawn
         int randomEnemy = Random.Range(0, enemyPrefab.Length);
         // Where around the spawnpoint they spawn
-        float randSpawnDis = Random.Range(2f, 4f);
+        float randSpawnDisX = Random.Range(2f, 4f);
+        // Randomizes the direction they spawn in Y axis
+        float randSpawnDisY = Random.Range(-1f, 1f);
 
         // Spawns enemy
-        Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDis, -1, 0), spawnPoints[randomSpawn].rotation);
+        Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDisX, randSpawnDisY, 0), spawnPoints[randomSpawn].rotation);
     }
 }
 
