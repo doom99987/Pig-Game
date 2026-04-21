@@ -8,12 +8,14 @@ public class fadeInShop : MonoBehaviour
 
     [Header("Sprite Renderer")]
     [SerializeField] private SpriteRenderer mySr;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         mySr = gameObject.GetComponent<SpriteRenderer>();
         StartCoroutine(fadeIn());
     }
+
     /// <summary>
     /// causes a fade in transperancy animation on the sprite
     /// </summary>
@@ -32,6 +34,7 @@ public class fadeInShop : MonoBehaviour
             yield return new WaitForSeconds(flashTime);
         }
     }
+
     /// <summary>
     /// causes a fade out transperancy animation on the sprite
     /// </summary>
