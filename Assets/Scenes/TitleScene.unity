@@ -1838,6 +1838,7 @@ GameObject:
   - component: {fileID: 1259928744}
   - component: {fileID: 1259928746}
   - component: {fileID: 1259928745}
+  - component: {fileID: 1259928747}
   m_Layer: 5
   m_Name: fadeOutPanel
   m_TagString: Untagged
@@ -1877,7 +1878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1902,6 +1903,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259928743}
   m_CullTransparentMesh: 1
+--- !u!114 &1259928747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259928743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390946054bc233f4590f6f8fd5cbe950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashTime: 0.001
+  img: {fileID: 1259928745}
 --- !u!1 &1284690981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,6 +2942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  fadeManager: {fileID: 1259928743}
 --- !u!114 &1595941137
 MonoBehaviour:
   m_ObjectHideFlags: 0

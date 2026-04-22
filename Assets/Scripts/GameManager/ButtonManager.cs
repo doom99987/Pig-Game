@@ -7,14 +7,20 @@
 * Description: This script has all the button manager functions.
 *
 ****************************************************************************/
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
-    [SerializeField] GameObject gameManager;
-    public static void goToPlayScene()
+    [Header("GameManager")]
+    [SerializeField] private GameObject gameManager;
+
+    [Header("FadeSceneManager")]
+    [SerializeField] private GameObject fadeManager;
+    public void goToPlayScene()
     {
-        SceneManager.LoadScene("PlayScene");
+        fadeManager.SetActive(true);
+        fadeManager.GetComponent<fadeInManager>().fadeInSceneSwap();
     }
 
     public static void closeGame()

@@ -23,6 +23,10 @@ public class gameManager : MonoBehaviour
     [SerializeField] protected bool isTutorialTextOn = false;
     [SerializeField] protected TextMeshProUGUI tutorialText;
 
+    [Header("FadeManager")]
+    [Tooltip("the object used for fading in and out")]
+        [SerializeField] private GameObject fadeManager;
+
     public void Update() {
        if (Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false && 
            gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() == false && gameObject.GetComponent<playScenePanelManager>().getVictoryOpen() == false)
@@ -76,9 +80,8 @@ public class gameManager : MonoBehaviour
     {
         if (roundClear)
         {
-            gameObject.GetComponent<roundManager>().toggleRoundText();
-            gameObject.GetComponent<roundManager>().toggleTimerText();
-            gameObject.GetComponent<playScenePanelManager>().toggleShopPanel();
+            fadeManager.SetActive(true);
+            fadeManager.GetComponent<fadeInManager>().fadeInShop();
         }
     }
 
