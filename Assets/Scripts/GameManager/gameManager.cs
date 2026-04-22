@@ -8,10 +8,8 @@
 *
 ****************************************************************************/
 
-using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Windows;
 
 public class gameManager : MonoBehaviour
 {
@@ -25,9 +23,8 @@ public class gameManager : MonoBehaviour
     [SerializeField] protected bool isTutorialTextOn = false;
     [SerializeField] protected TextMeshProUGUI tutorialText;
 
-
     public void Update() {
-       if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false && 
+       if (Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false && 
            gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() == false && gameObject.GetComponent<playScenePanelManager>().getVictoryOpen() == false)
         {
            gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
