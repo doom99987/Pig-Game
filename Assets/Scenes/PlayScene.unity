@@ -11248,6 +11248,7 @@ GameObject:
   - component: {fileID: 1509270525}
   - component: {fileID: 1509270527}
   - component: {fileID: 1509270526}
+  - component: {fileID: 1509270528}
   m_Layer: 5
   m_Name: fadeInPanel
   m_TagString: Untagged
@@ -11312,6 +11313,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509270524}
   m_CullTransparentMesh: 1
+--- !u!114 &1509270528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509270524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390946054bc233f4590f6f8fd5cbe950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashTime: 0.004
+  img: {fileID: 1509270526}
+  gameManager: {fileID: 789329630}
 --- !u!1 &1509539499
 GameObject:
   m_ObjectHideFlags: 0
@@ -15759,6 +15775,10 @@ PrefabInstance:
       value: 9000
       objectReference: {fileID: 0}
     - target: {fileID: 5556571325964931556, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: fadeManager
+      value: 
+      objectReference: {fileID: 1509270524}
+    - target: {fileID: 5556571325964931556, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: tutorialText
       value: 
       objectReference: {fileID: 123576201}
@@ -15910,6 +15930,10 @@ PrefabInstance:
       propertyPath: quitConfirmationPanel
       value: 
       objectReference: {fileID: 1907348618}
+    - target: {fileID: 8020151026777373688, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: fadeManager
+      value: 
+      objectReference: {fileID: 1509270524}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

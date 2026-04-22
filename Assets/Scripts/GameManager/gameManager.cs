@@ -27,6 +27,12 @@ public class gameManager : MonoBehaviour
     [Tooltip("the object used for fading in and out")]
         [SerializeField] private GameObject fadeManager;
 
+    private void Start()
+    {
+        fadeManager.SetActive(true);
+        fadeManager.GetComponent<fadeInManager>().fadeOut();
+    }
+
     public void Update() {
        if (Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false && 
            gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() == false && gameObject.GetComponent<playScenePanelManager>().getVictoryOpen() == false)
