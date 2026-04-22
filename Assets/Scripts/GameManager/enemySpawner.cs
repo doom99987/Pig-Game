@@ -28,8 +28,9 @@ public class enemySpawner : MonoBehaviour
         [SerializeField] private float roundSpawnDelay = 0.25f;
     [Tooltip("The time until the next enemy spawn")]
         [SerializeField] private float spawnDelayTime;
-    [Tooltip("Extra enemies to spawn per round")]
-        [SerializeField] private int spawnAmountPerRound;
+
+    //Extra enemies to spawn per round
+        private int spawnAmountPerRound;
 
 
     private void Start()
