@@ -27,8 +27,15 @@ public class enemySpawner : MonoBehaviour
     [Tooltip("The amount of seconds to decrease the spawn delay by each round.")]
         [SerializeField] private float roundSpawnDelay = 0.25f;
     [Tooltip("The time until the next enemy spawn")]
-    [SerializeField] private float spawnDelayTime; 
+        [SerializeField] private float spawnDelayTime;
+    [Tooltip("Extra enemies to spawn per round")]
+        [SerializeField] private int spawnAmountPerRound;
 
+
+    private void Start()
+    {
+        spawnAmountPerRound = gameObject.GetComponent<roundManager>().getRound();
+    }
     private float nextSpawnTime;
 
     // Update is called once per frame
@@ -60,7 +67,7 @@ public class enemySpawner : MonoBehaviour
     {
         //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location and randomizes which enemy spawns.
 
-        for(int i = 0; i < spawnAmount; i++)
+        for(int i = 0; i < spawnAmount + spawnAmountPerRound; i++)
         {
            StartCoroutine(spawnEnemyDelay());
         }
