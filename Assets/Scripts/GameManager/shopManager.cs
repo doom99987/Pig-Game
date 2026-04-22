@@ -45,6 +45,8 @@ public class shopManager : MonoBehaviour
     [SerializeField] private float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
     [Tooltip("The cost of each bomb. The max count is determined by the length of this array.")]
     [SerializeField] private float[] bombCost = { 5, 50, 500, 5000 };
+    [Tooltip("The amount the player's speed increases by when buying a speed upgrade.")]
+    [SerializeField] private float speedAmount = 1f;
 
     //upgrade limits
     private int sCountMax;
@@ -89,7 +91,7 @@ public class shopManager : MonoBehaviour
         if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[speedCount] && speedCount < sCountMax - 1)
         {
             //upgrades the player's speed by 1.
-            player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + 1);
+            player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + speedAmount);
             gameManager.GetComponent<moneyManager>().removeMoney(speedCost[speedCount]);
             buySpeedText.text = $"Buy ${speedCost[speedCount + 1] / 100f}";
             speedCount++;
