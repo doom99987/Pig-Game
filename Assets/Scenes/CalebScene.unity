@@ -1190,6 +1190,7 @@ MonoBehaviour:
   - 5000
   - 50000
   - 500000
+  heartsContainer: {fileID: 0}
 --- !u!114 &314735956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1208,6 +1209,11 @@ MonoBehaviour:
   heartPrefab: {fileID: 8434808722506023490, guid: 9a8da9e8637f46c40832bc14a9efe247, type: 3}
   emptyHeartPrefab: {fileID: 2059551736068323304, guid: 7c052e6ccad086e469b9457a66ed95ba, type: 3}
   heartsContainer: {fileID: 1496309840}
+  damageColor: {r: 0, g: 0, b: 0, a: 0}
+  playerHit: {fileID: 0}
+  maxFlashTime: 1
+  minFlashTime: 1
+  maxFlashColor: {r: 0, g: 0, b: 0, a: 0}
   gameManager: {fileID: 314735954}
   deathPanelMoneyText: {fileID: 0}
 --- !u!114 &314735957
@@ -1225,12 +1231,6 @@ MonoBehaviour:
   bombAmount: {fileID: 0}
   bombAmountObject: {fileID: 0}
   bombImage: {fileID: 0}
-  sCountMax: 10
-  hCountMax: 10
-  healingCountMax: 10
-  pierceCountMax: 10
-  bulletUpgradeCountMax: 10
-  bombCountMax: 10
   gameManager: {fileID: 314735954}
   player: {fileID: 0}
   buySpeedText: {fileID: 83356998}
@@ -1269,6 +1269,7 @@ MonoBehaviour:
   - 50
   - 500
   - 5000
+  speedAmount: 1
 --- !u!114 &314735958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,6 +1301,7 @@ MonoBehaviour:
   victoryPanel: {fileID: 1404448693}
   pausePanel: {fileID: 0}
   takeDmgPanel: {fileID: 0}
+  quitConfirmationPanel: {fileID: 0}
 --- !u!114 &314735960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,6 +1315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  fadeManager: {fileID: 0}
 --- !u!114 &314735961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,6 +1332,7 @@ MonoBehaviour:
   roundClear: 0
   isTutorialTextOn: 1
   tutorialText: {fileID: 0}
+  fadeManager: {fileID: 0}
 --- !u!4 &314735962
 Transform:
   m_ObjectHideFlags: 0
@@ -5279,6 +5283,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095199358}
   m_CullTransparentMesh: 1
+--- !u!1001 &2807697646504957583
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.044258542
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505672784872075692, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
+      propertyPath: m_Name
+      value: ShopUIMoney
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
 --- !u!1001 &6138965036195214246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5351,3 +5412,4 @@ SceneRoots:
   - {fileID: 6138965036195214246}
   - {fileID: 544838229}
   - {fileID: 769339684}
+  - {fileID: 2807697646504957583}
