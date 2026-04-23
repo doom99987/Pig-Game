@@ -27,7 +27,7 @@ public class playScenePanelManager : MonoBehaviour
     private bool isPauseOpen = false;
     private bool isTakeDmgOpen = false;
     private bool isQuitConfirmationOpen = false;
-    private bool isOpen = false;
+   
 
     public void Start()
     {
@@ -96,8 +96,7 @@ public class playScenePanelManager : MonoBehaviour
 
     public void togglePanel(GameObject panel)
     {
-        isOpen = !isOpen;
-        panel.SetActive(isOpen);
+        panel.SetActive(!panel.activeSelf);
     }
 
     public bool getIsShopOpen()
