@@ -45,18 +45,21 @@ public class enemySpawner : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        // Current round
-        int round = gameObject.GetComponent<roundManager>().getRound();
-
-        // Check if the game is paused
-        if (!gameObject.GetComponent<gameManager>().getGameState())
+        if (!gameObject.GetComponent<roundManager>().getStartDelay())
         {
-            // Check when to spawn enemy
-            if (Time.time > nextSpawnTime)
+            // Current round
+            int round = gameObject.GetComponent<roundManager>().getRound();
+
+            // Check if the game is paused
+            if (!gameObject.GetComponent<gameManager>().getGameState())
             {
-                spawnEnemy();
-                //spawn delay
-                nextSpawnTime = Time.time + Random.Range(spawnDelayMin, (spawnDelayMax - (float)(round * roundSpawnDelay)));
+                // Check when to spawn enemy
+                if (Time.time > nextSpawnTime)
+                {
+                    spawnEnemy();
+                    //spawn delay
+                    nextSpawnTime = Time.time + Random.Range(spawnDelayMin, (spawnDelayMax - (float)(round * roundSpawnDelay)));
+                }
             }
         }
     }

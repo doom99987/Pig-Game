@@ -8,7 +8,7 @@
 *              the victory panel after a certain amount of rounds
 *
 ****************************************************************************/
-
+using System.Collections;
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
@@ -16,6 +16,7 @@ using System.Collections.Generic;
 public class roundManager : MonoBehaviour
 {
     private float elapsedTime;
+    private bool roundStartDelay = true;
 
     [Header("Round")]
     [Tooltip("Current Round")]
@@ -24,7 +25,8 @@ public class roundManager : MonoBehaviour
     [Tooltip(("Total number of Rounds"))]
     [SerializeField] private int totalRounds = 0;
 
-    [Tooltip("Amount of time in a Round")]
+    [Tooltip("Time")]
+    [SerializeField] private float startDelayTime = 5f;
     [SerializeField] private float roundTime = 121f;
 
     [Header("Text Timer")]
@@ -53,13 +55,14 @@ public class roundManager : MonoBehaviour
         // Displays the current round and sets the timer
         roundText.text = "Round: " + round + "/" + totalRounds;
         elapsedTime = roundTime;
+        StartCoroutine(startDelay());
     }
 
     // Update is called once per frame
     void Update()
     {
         // Checks if the game is paused
-        if (!gameObject.GetComponent<gameManager>().getGameState())
+        if (!gameObject.GetComponent<gameManager>().getGameState() && !roundStartDelay)
         {
             // Updates the total time thats passed
             elapsedTime -= Time.deltaTime;
@@ -161,6 +164,22 @@ public class roundManager : MonoBehaviour
     public void getObjects(GameObject thing)
     {
         things.Add(thing);
+    }
+
+    public bool getStartDelay()
+    {
+        return roundStartDelay;
+    }
+
+    /// <summary>
+    /// delays the start of the round
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator startDelay()
+    {
+        yield return new WaitForSeconds(startDelayTime);
+        // Starts the round
+        roundStartDelay = false;
     }
 }
 
