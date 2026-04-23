@@ -1,3 +1,13 @@
+/****************************************************************************
+* File Name: fadeInManager.cs
+* Author: Caleb Bohm
+* DigiPen Email: caleb.bohm@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: fades in and out panels
+*
+****************************************************************************/
+
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;

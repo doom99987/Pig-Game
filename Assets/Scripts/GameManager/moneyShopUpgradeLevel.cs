@@ -1,3 +1,13 @@
+/****************************************************************************
+* File Name: moenyShopUpgradeLevel.cs
+* Author: Caleb Bohm
+* DigiPen Email: caleb.bohm@digipen.edu
+* Course: Wanic Game Project
+*
+* Description: Shows which upgrade is next in the list
+*
+****************************************************************************/
+
 using UnityEngine;
 
 public class moneyShopUpgradeLevel : MonoBehaviour
@@ -11,6 +21,7 @@ public class moneyShopUpgradeLevel : MonoBehaviour
     void Update()
     {
         gameManager = GameObject.Find("gameManager");
-        animator.SetInteger("coinState", gameManager.GetComponent<shopManager>().getBulletUpgradeCount());
+        // Sets the current animation state in the shop
+        animator.SetInteger("coinState", gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
     }
 }
