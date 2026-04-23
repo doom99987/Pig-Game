@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2639559657369193837}
   - component: {fileID: 5250516516134586605}
   - component: {fileID: 2343945786507730356}
+  - component: {fileID: 419898253264499719}
   m_Layer: 0
   m_Name: moneyBagBomb
   m_TagString: Untagged
@@ -132,3 +133,25 @@ MonoBehaviour:
   explosionSize: 4
   speed: 1
   lifeTime: 1
+--- !u!95 &419898253264499719
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4507199373465970868}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 151dbc3e4f3168e44857d435937c8df0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

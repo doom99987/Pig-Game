@@ -7,27 +7,30 @@
 * Description: Makes the bombs move and explode
 *
 ****************************************************************************/
-
+using System.Collections;
 using UnityEngine;
 
 public class moneyBagBombMove : MonoBehaviour
 {
-    private GameObject gameManager;
 
     [Header("RigidBody")]
     [Tooltip("Rigidbody of the object")]
     [SerializeField] private Rigidbody2D rb;
 
+    [Header("Animator")]
+    private Animator animator;
+
     [Header("Bomb Variables")]
     [SerializeField] private float explosionSize = 1;
     [SerializeField] private float speed = 1.95f;
     [SerializeField] private float lifeTime = 1f;
+    [Tooltip("Delays destroying the bomb object by a set amount of time")]
+        [SerializeField] private float delayDestruction = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gameManager = GameObject.Find("gameManager");
-
+        animator = gameObject.GetComponent<Animator>();
         // Gets a vector in the direction the bullet travels and adds force to the bullet
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
@@ -66,6 +69,13 @@ public class moneyBagBombMove : MonoBehaviour
                     hitCollider.gameObject.GetComponent<enemyHp>().takeDmg(99999);
                 }
             }
+        StartCoroutine(bombBoom());
+    }
+
+    private IEnumerator bombBoom()
+    {
+        animator.SetTrigger("Explode");
+        yield return new WaitForSeconds(delayDestruction);
         Destroy(gameObject);
     }
 
