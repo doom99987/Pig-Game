@@ -6524,6 +6524,7 @@ MonoBehaviour:
   - You Won!
   loseMessages:
   - You Lost
+  - Skill Issue
 --- !u!114 &972771265
 MonoBehaviour:
   m_ObjectHideFlags: 0
