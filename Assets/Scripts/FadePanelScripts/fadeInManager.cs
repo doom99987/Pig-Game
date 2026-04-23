@@ -59,6 +59,17 @@ public class fadeInManager : MonoBehaviour
     {
         StartCoroutine(cfadeInShop());
     }
+
+    public void fadeInDeath()
+    {
+        StartCoroutine(cfadeInDeath());
+    }
+
+    public void fadeInVictory()
+    {
+        StartCoroutine(cfadeInVictory());
+    }
+
     /// <summary>
     /// causes a fade in transperancy animation on the sprite
     /// </summary>
@@ -136,6 +147,60 @@ public class fadeInManager : MonoBehaviour
         gameManager.GetComponent<roundManager>().toggleRoundText();
         gameManager.GetComponent<roundManager>().toggleTimerText();
         gameManager.GetComponent<playScenePanelManager>().toggleShopPanel();
+        // loops over fading out the img
+        for (float num = 1f; num >= 0f; num -= 0.01f)
+        {
+            // sets the color of the img
+            currentColor = new Color(0f, 0f, 0f, num);
+            img.color = currentColor;
+            // delays the method
+            yield return new WaitForSeconds(flashTime);
+        }
+        gameObject.SetActive(false);
+    }
+
+    private IEnumerator cfadeInDeath()
+    {
+        // current color of the img
+        Color currentColor;
+        // loops over fading in the img
+        for (float num = 0f; num <= 1f; num += 0.01f)
+        {
+            // Sets the current color
+            currentColor = new Color(0f, 0f, 0f, num);
+            img.color = currentColor;
+            // delays the method
+            yield return new WaitForSeconds(flashTime);
+        }
+        // Opens the death panel
+        gameManager.GetComponent<playScenePanelManager>().toggleDeathPanel();
+        // loops over fading out the img
+        for (float num = 1f; num >= 0f; num -= 0.01f)
+        {
+            // sets the color of the img
+            currentColor = new Color(0f, 0f, 0f, num);
+            img.color = currentColor;
+            // delays the method
+            yield return new WaitForSeconds(flashTime);
+        }
+        gameObject.SetActive(false);
+    }
+
+    private IEnumerator cfadeInVictory()
+    {
+        // current color of the img
+        Color currentColor;
+        // loops over fading in the img
+        for (float num = 0f; num <= 1f; num += 0.01f)
+        {
+            // Sets the current color
+            currentColor = new Color(0f, 0f, 0f, num);
+            img.color = currentColor;
+            // delays the method
+            yield return new WaitForSeconds(flashTime);
+        }
+        // Opens the death panel
+        gameManager.GetComponent<playScenePanelManager>().toggleVictoryPanel();
         // loops over fading out the img
         for (float num = 1f; num >= 0f; num -= 0.01f)
         {

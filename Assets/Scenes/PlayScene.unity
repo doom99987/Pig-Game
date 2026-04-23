@@ -17144,6 +17144,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1025944406}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 1509270524}
+    - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: roundText
       value: 
       objectReference: {fileID: 467091595}
@@ -17219,6 +17223,10 @@ PrefabInstance:
       propertyPath: color.r
       value: 0.9496855
       objectReference: {fileID: 0}
+    - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 1509270524}
     - target: {fileID: 5573460323755748083, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: playerHit
       value: 
