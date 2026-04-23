@@ -39,6 +39,7 @@ public class hpManager : MonoBehaviour
     [Header("Extra Necessities")]
     [SerializeField] private GameObject gameManager;
     [SerializeField] private TextMeshProUGUI deathPanelMoneyText;
+    [SerializeField] private GameObject fadePanel;
 
     private GameObject[] fullHearts;
     private GameObject[] emptyHearts;
@@ -114,9 +115,8 @@ public class hpManager : MonoBehaviour
             gameManager.GetComponent<roundManager>().toggleRoundText();
             // Disables the round timer text
             gameManager.GetComponent<roundManager>().toggleTimerText();
-            // Enables the death panel
-            gameManager.GetComponent<playScenePanelManager>().toggleDeathPanel();
-
+            fadePanel.SetActive(true);
+            fadePanel.GetComponent<fadeInManager>().fadeInDeath();
             // Displays how much money you had left
             deathPanelMoneyText.text = $"You Had ${gameManager.GetComponent<moneyManager>().getMoney() / 100f} left";
             Debug.Log("Player is dead!");

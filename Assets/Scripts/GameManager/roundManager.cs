@@ -42,6 +42,8 @@ public class roundManager : MonoBehaviour
     [SerializeField] Transform heartsContainer;
     List<GameObject> things = new List<GameObject>();
 
+    [SerializeField] private GameObject fadePanel;
+
     bool isRoundTextOpen = true;
     bool isTimerTextOpen = true;
 
@@ -85,7 +87,8 @@ public class roundManager : MonoBehaviour
                     gameObject.GetComponent<moneyManager>().toggleMoneyText();
                     gameObject.GetComponent<playScenePanelManager>().toggleShopPanel();
                     gameObject.GetComponent<randomMessageManager>().displayWinMessage();
-                    gameObject.GetComponent<playScenePanelManager>().toggleVictoryPanel();
+                    fadePanel.SetActive(true);
+                    fadePanel.GetComponent<fadeInManager>().fadeInVictory();
                 }
                 // Otherwise go to next round
                 else
