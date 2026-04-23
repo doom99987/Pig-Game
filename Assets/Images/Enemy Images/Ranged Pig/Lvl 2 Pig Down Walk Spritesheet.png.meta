@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 060f332c37e8e034f80a2ebffbac570e
+guid: 263d1753c344ae644b2c3bb2f9ce2244
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4681626586813160162
-    second: Lvl 2 Pig Down Walk Spritesheet_0
+      213: 1195420247542378341
+    second: Lvl 2 Pig Down Walk Spritesheet (1)_0
   - first:
-      213: -7513346216650694819
-    second: Lvl 2 Pig Down Walk Spritesheet_1
+      213: -1211026612897499940
+    second: Lvl 2 Pig Down Walk Spritesheet (1)_1
   - first:
-      213: 5259896963891340608
-    second: Lvl 2 Pig Down Walk Spritesheet_2
+      213: -8992878550863051875
+    second: Lvl 2 Pig Down Walk Spritesheet (1)_2
   - first:
-      213: 7630403019732848342
-    second: Lvl 2 Pig Down Walk Spritesheet_3
+      213: 632160932767677336
+    second: Lvl 2 Pig Down Walk Spritesheet (1)_3
   - first:
-      213: 357908442907086943
-    second: Lvl 2 Pig Down Walk Spritesheet_4
+      213: -6146933575202320625
+    second: Lvl 2 Pig Down Walk Spritesheet (1)_4
   - first:
-      213: 8576880947440234766
-    second: Lvl 2 Pig Down Walk Spritesheet_5
+      213: -853989182554377488
+    second: Lvl 2 Pig Down Walk Spritesheet (1)_5
   - first:
-      213: -3959070177705105116
-    second: Lvl 2 Pig Down Walk Spritesheet_6
+      213: -5498150159892497618
+    second: Lvl 2 Pig Down Walk Spritesheet (1)_6
   - first:
-      213: 6074889583728888217
-    second: Lvl 2 Pig Down Walk Spritesheet_7
+      213: -9070883177424152639
+    second: Lvl 2 Pig Down Walk Spritesheet (1)_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lvl 2 Pig Down Walk Spritesheet_0
+      name: Lvl 2 Pig Down Walk Spritesheet (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 976
-        width: 483
-        height: 488
+        x: 6
+        y: 978
+        width: 472
+        height: 484
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e152af17c65870fb0800000000000000
-      internalID: -4681626586813160162
+      spriteID: 56fa21ca16cf69010800000000000000
+      internalID: 1195420247542378341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 2 Pig Down Walk Spritesheet_1
+      name: Lvl 2 Pig Down Walk Spritesheet (1)_1
       rect:
         serializedVersion: 2
-        x: 483
-        y: 976
-        width: 483
-        height: 488
+        x: 488
+        y: 978
+        width: 474
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5f92026c6b3bb790800000000000000
-      internalID: -7513346216650694819
+      spriteID: cd433bc36b1913fe0800000000000000
+      internalID: -1211026612897499940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 2 Pig Down Walk Spritesheet_2
+      name: Lvl 2 Pig Down Walk Spritesheet (1)_2
       rect:
         serializedVersion: 2
-        x: 966
-        y: 976
-        width: 483
-        height: 488
+        x: 971
+        y: 978
+        width: 474
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04526e7ab68eef840800000000000000
-      internalID: 5259896963891340608
+      spriteID: d930493ba90e23380800000000000000
+      internalID: -8992878550863051875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 2 Pig Down Walk Spritesheet_3
+      name: Lvl 2 Pig Down Walk Spritesheet (1)_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 488
-        width: 483
-        height: 488
+        x: 5
+        y: 490
+        width: 474
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6de8e3c6e13a4e960800000000000000
-      internalID: 7630403019732848342
+      spriteID: 89b3f7ed403e5c800800000000000000
+      internalID: 632160932767677336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 2 Pig Down Walk Spritesheet_4
+      name: Lvl 2 Pig Down Walk Spritesheet (1)_4
       rect:
         serializedVersion: 2
-        x: 483
-        y: 488
-        width: 483
-        height: 488
+        x: 489
+        y: 490
+        width: 472
+        height: 484
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f50179125db87f400800000000000000
-      internalID: 357908442907086943
+      spriteID: f0fc4203b74b1baa0800000000000000
+      internalID: -6146933575202320625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 2 Pig Down Walk Spritesheet_5
+      name: Lvl 2 Pig Down Walk Spritesheet (1)_5
       rect:
         serializedVersion: 2
-        x: 966
-        y: 488
-        width: 483
-        height: 488
+        x: 971
+        y: 490
+        width: 473
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +259,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e01bdf887c3370770800000000000000
-      internalID: 8576880947440234766
+      spriteID: 0f2f1d3fc550624f0800000000000000
+      internalID: -853989182554377488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 2 Pig Down Walk Spritesheet_6
+      name: Lvl 2 Pig Down Walk Spritesheet (1)_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 483
-        height: 488
+        x: 5
+        y: 2
+        width: 474
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4296b0146ae8e09c0800000000000000
-      internalID: -3959070177705105116
+      spriteID: e2bb9dd5f85a2b3b0800000000000000
+      internalID: -5498150159892497618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lvl 2 Pig Down Walk Spritesheet_7
+      name: Lvl 2 Pig Down Walk Spritesheet (1)_7
       rect:
         serializedVersion: 2
-        x: 483
-        y: 0
-        width: 483
-        height: 488
+        x: 488
+        y: 2
+        width: 473
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99981e7e3e75e4450800000000000000
-      internalID: 6074889583728888217
+      spriteID: 1c7119a4fcfbd1280800000000000000
+      internalID: -9070883177424152639
       vertices: []
       indices: 
       edges: []
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8d8018e7a90589a40a516fd3edf42b55
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lvl 2 Pig Down Walk Spritesheet_0: -4681626586813160162
-      Lvl 2 Pig Down Walk Spritesheet_1: -7513346216650694819
-      Lvl 2 Pig Down Walk Spritesheet_2: 5259896963891340608
-      Lvl 2 Pig Down Walk Spritesheet_3: 7630403019732848342
-      Lvl 2 Pig Down Walk Spritesheet_4: 357908442907086943
-      Lvl 2 Pig Down Walk Spritesheet_5: 8576880947440234766
-      Lvl 2 Pig Down Walk Spritesheet_6: -3959070177705105116
-      Lvl 2 Pig Down Walk Spritesheet_7: 6074889583728888217
+      Lvl 2 Pig Down Walk Spritesheet (1)_0: 1195420247542378341
+      Lvl 2 Pig Down Walk Spritesheet (1)_1: -1211026612897499940
+      Lvl 2 Pig Down Walk Spritesheet (1)_2: -8992878550863051875
+      Lvl 2 Pig Down Walk Spritesheet (1)_3: 632160932767677336
+      Lvl 2 Pig Down Walk Spritesheet (1)_4: -6146933575202320625
+      Lvl 2 Pig Down Walk Spritesheet (1)_5: -853989182554377488
+      Lvl 2 Pig Down Walk Spritesheet (1)_6: -5498150159892497618
+      Lvl 2 Pig Down Walk Spritesheet (1)_7: -9070883177424152639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
