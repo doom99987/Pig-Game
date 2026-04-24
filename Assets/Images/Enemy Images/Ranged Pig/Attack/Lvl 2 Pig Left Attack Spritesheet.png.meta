@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: d20479bffa5147d4c81fc44e806b862b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6693164393633942736
+    second: Lvl 2 Pig Left Attack Spritesheet_0
+  - first:
+      213: -274611761310987397
+    second: Lvl 2 Pig Left Attack Spritesheet_1
+  - first:
+      213: -4414182274616354103
+    second: Lvl 2 Pig Left Attack Spritesheet_2
+  - first:
+      213: 3217774495672021756
+    second: Lvl 2 Pig Left Attack Spritesheet_3
+  - first:
+      213: -4858792203575576361
+    second: Lvl 2 Pig Left Attack Spritesheet_4
+  - first:
+      213: 2324796041958957618
+    second: Lvl 2 Pig Left Attack Spritesheet_5
+  - first:
+      213: -5026145963660744443
+    second: Lvl 2 Pig Left Attack Spritesheet_6
+  - first:
+      213: 6592689281625686889
+    second: Lvl 2 Pig Left Attack Spritesheet_7
+  - first:
+      213: 1053213098318587792
+    second: Lvl 2 Pig Left Attack Spritesheet_8
+  - first:
+      213: -6068049137719951662
+    second: Lvl 2 Pig Left Attack Spritesheet_9
+  - first:
+      213: -998672666104714865
+    second: Lvl 2 Pig Left Attack Spritesheet_10
+  - first:
+      213: -2534263702196487659
+    second: Lvl 2 Pig Left Attack Spritesheet_11
+  - first:
+      213: 7617156641236653399
+    second: Lvl 2 Pig Left Attack Spritesheet_12
+  - first:
+      213: -3029488255555660393
+    second: Lvl 2 Pig Left Attack Spritesheet_13
+  - first:
+      213: 4292686083542601264
+    second: Lvl 2 Pig Left Attack Spritesheet_14
+  - first:
+      213: -5373301362778280990
+    second: Lvl 2 Pig Left Attack Spritesheet_15
+  - first:
+      213: -6051495881562457461
+    second: Lvl 2 Pig Left Attack Spritesheet_16
+  - first:
+      213: 2855373334464509462
+    second: Lvl 2 Pig Left Attack Spritesheet_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lvl 2 Pig Left Attack Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1102
+        width: 620
+        height: 551
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc08d9dd85e2ec50800000000000000
+      internalID: 6693164393633942736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 2 Pig Left Attack Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1102
+        width: 620
+        height: 551
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b0aebde02603cf0800000000000000
+      internalID: -274611761310987397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 2 Pig Left Attack Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1102
+        width: 620
+        height: 551
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca9aabcb9cadb2c0800000000000000
+      internalID: -4414182274616354103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 2 Pig Left Attack Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 551
+        width: 620
+        height: 551
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2b7d5fad4d7ac20800000000000000
+      internalID: 3217774495672021756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 2 Pig Left Attack Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 551
+        width: 620
+        height: 551
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8b07cdb3a129cb0800000000000000
+      internalID: -4858792203575576361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 2 Pig Left Attack Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 551
+        width: 620
+        height: 551
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232a230dea5534020800000000000000
+      internalID: 2324796041958957618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 2 Pig Left Attack Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 620
+        height: 551
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509ecbe20ea8f3ab0800000000000000
+      internalID: -5026145963660744443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 2 Pig Left Attack Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 0
+        width: 620
+        height: 551
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96303d9d8ffed7b50800000000000000
+      internalID: 6592689281625686889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 2 Pig Left Attack Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 0
+        width: 620
+        height: 551
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09761169bb3cd9e00800000000000000
+      internalID: 1053213098318587792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 14cad27fe28ecb64d8be451d0cf1cd43
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lvl 2 Pig Left Attack Spritesheet_0: 6693164393633942736
+      Lvl 2 Pig Left Attack Spritesheet_1: -274611761310987397
+      Lvl 2 Pig Left Attack Spritesheet_2: -4414182274616354103
+      Lvl 2 Pig Left Attack Spritesheet_3: 3217774495672021756
+      Lvl 2 Pig Left Attack Spritesheet_4: -4858792203575576361
+      Lvl 2 Pig Left Attack Spritesheet_5: 2324796041958957618
+      Lvl 2 Pig Left Attack Spritesheet_6: -5026145963660744443
+      Lvl 2 Pig Left Attack Spritesheet_7: 6592689281625686889
+      Lvl 2 Pig Left Attack Spritesheet_8: 1053213098318587792
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
