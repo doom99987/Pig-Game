@@ -20,6 +20,12 @@ public class playScenePanelManager : MonoBehaviour
     [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject takeDmgPanel;
     [SerializeField] GameObject quitConfirmationPanel;
+    [SerializeField] GameObject dmgInfoPanel;
+    [SerializeField] GameObject healingInfoPanel;
+    [SerializeField] GameObject pierceInfoPanel;
+    [SerializeField] GameObject speedInfoPanel;
+    [SerializeField] GameObject hpUpInfoPanel;
+    [SerializeField] GameObject bombSkillInfoPanel;
 
     private bool isShopOpen = false;
     private bool isDeathOpen = false;
@@ -108,6 +114,16 @@ public class playScenePanelManager : MonoBehaviour
     {
         panel.SetActive(!panel.activeSelf);
     }
+
+    public void closeAllInfoPanels()
+    {
+        dmgInfoPanel.SetActive(false);
+        healingInfoPanel.SetActive(false);
+        pierceInfoPanel.SetActive(false);
+        speedInfoPanel.SetActive(false);
+        hpUpInfoPanel.SetActive(false);
+        bombSkillInfoPanel.SetActive(false);
+    } 
 
     public bool getIsShopOpen()
     {

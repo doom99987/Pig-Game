@@ -60,6 +60,9 @@ public class roundManager : MonoBehaviour
         // Displays the current round and sets the timer
         roundText.text = "Round: " + round + "/" + totalRounds;
         elapsedTime = roundTime;
+        tutorialText.gameObject.SetActive(true);
+        tutorialText2.gameObject.SetActive(true);
+        tutorialText3.gameObject.SetActive(true);
         StartCoroutine(startDelay());
     }
 

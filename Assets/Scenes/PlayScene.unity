@@ -1149,7 +1149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &146224233
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2092,7 +2092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &382613336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6790,10 +6790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 972771256}
-  winMessageText: {fileID: 423564499}
   loseMessageText: {fileID: 1463077069}
-  winMessages:
-  - You Won!
   loseMessages:
   - You Lost
   - Skill Issue
@@ -7777,7 +7774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1066959647
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9815,7 +9812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1247873610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10279,6 +10276,18 @@ MonoBehaviour:
       - m_Target: {fileID: 398503773}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200045620867612166}
+        m_TargetAssemblyTypeName: playScenePanelManager, Assembly-CSharp
+        m_MethodName: closeAllInfoPanels
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17773,6 +17782,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1842138134}
     - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: dmgInfoPanel
+      value: 
+      objectReference: {fileID: 1323377864}
+    - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: takeDmgPanel
       value: 
       objectReference: {fileID: 1920151868}
@@ -17784,6 +17797,26 @@ PrefabInstance:
       propertyPath: victoryPanel
       value: 
       objectReference: {fileID: 1169849384}
+    - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: hpUpInfoPanel
+      value: 
+      objectReference: {fileID: 2031839108}
+    - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: speedInfoPanel
+      value: 
+      objectReference: {fileID: 554019679}
+    - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: pierceInfoPanel
+      value: 
+      objectReference: {fileID: 1203001863}
+    - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: healingInfoPanel
+      value: 
+      objectReference: {fileID: 1766821310}
+    - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: bombSkillInfoPanel
+      value: 
+      objectReference: {fileID: 627395361}
     - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: quitConfirmationPanel
       value: 
