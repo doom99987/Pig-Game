@@ -22,11 +22,10 @@ public class enemyHp : MonoBehaviour
     [SerializeField] protected int moneyOnDeath = 0;
     [Tooltip("The multiplier used to calculate the money given to the player when the enemy dies.")]
     [SerializeField] protected int multiplier = 5;
-
-    private float[] money;
-    private int[] bulletUpgradeBonus;
-    private int bulletUpgradeBonusAmount;
-    private int bulletUpgradeCount;
+    [SerializeField] private float[] money;
+    [SerializeField] private int[] bulletUpgradeBonus;
+    [SerializeField] private int bulletUpgradeBonusAmount;
+    [SerializeField] private int bulletUpgradeCount;
 
     // Ran before update and only once
     public void Start()
