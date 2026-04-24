@@ -97,7 +97,6 @@ public class roundManager : MonoBehaviour
                     gameObject.GetComponent<roundManager>().toggleTimerText();
                     gameObject.GetComponent<moneyManager>().toggleMoneyText();
                     gameObject.GetComponent<playScenePanelManager>().toggleShopPanel();
-                    gameObject.GetComponent<randomMessageManager>().displayWinMessage();
                     fadePanel.SetActive(true);
                     fadePanel.GetComponent<fadeInManager>().fadeInVictory();
                 }

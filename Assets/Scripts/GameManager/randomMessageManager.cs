@@ -14,23 +14,10 @@ public class randomMessageManager : MonoBehaviour
 {
     [Header("Refrences")]
     [SerializeField] private gameManager gameManager;
-    [SerializeField] protected TextMeshProUGUI winMessageText;
     [SerializeField] protected TextMeshProUGUI loseMessageText;
 
-    [Header("Messages")]
-    [Tooltip("The messages that can be randomly selected when the player wins the game.")]
-    [SerializeField] private string[] winMessages = { "you won!" };
     [Tooltip("The messages that can be randomly selected when the player loses the game.")]
     [SerializeField] private string[] loseMessages = { "you got robbed" };
-
-    /// <summary>
-    /// prints random win message to the screen when the player wins the game
-    /// </summary>
-    public void displayWinMessage()
-    {
-        int random = Random.Range(0, winMessages.Length);
-        winMessageText.text = winMessages[random];
-    }
 
     /// <summary>
     /// prints random lose message to the screen when the player loses the game
