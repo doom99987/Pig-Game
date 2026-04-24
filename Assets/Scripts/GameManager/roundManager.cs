@@ -71,6 +71,7 @@ public class roundManager : MonoBehaviour
         {
             tutorialText.gameObject.SetActive(false);
             tutorialText2.gameObject.SetActive(false);
+            tutorialText3.gameObject.SetActive(false);
             // Updates the total time thats passed
             elapsedTime -= Time.deltaTime;
 
