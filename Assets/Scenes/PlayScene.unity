@@ -1149,7 +1149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &146224233
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7642,7 +7642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1066959647
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17436,6 +17436,14 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1360411631}
+    - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: tutorialText
+      value: 
+      objectReference: {fileID: 146224234}
+    - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: tutorialText2
+      value: 
+      objectReference: {fileID: 1066959648}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: heartsContainer
       value: 

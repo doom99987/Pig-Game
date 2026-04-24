@@ -46,6 +46,9 @@ public class roundManager : MonoBehaviour
 
     [SerializeField] private GameObject fadePanel;
 
+    [SerializeField] private TextMeshProUGUI tutorialText;
+    [SerializeField] private TextMeshProUGUI tutorialText2;
+
     bool isRoundTextOpen = true;
     bool isTimerTextOpen = true;
 
@@ -64,6 +67,8 @@ public class roundManager : MonoBehaviour
         // Checks if the game is paused
         if (!gameObject.GetComponent<gameManager>().getGameState() && !roundStartDelay)
         {
+            tutorialText.gameObject.SetActive(false);
+            tutorialText2.gameObject.SetActive(false);
             // Updates the total time thats passed
             elapsedTime -= Time.deltaTime;
 
