@@ -21,8 +21,11 @@ public class enemyBullet : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     [Header("Bullet Variables")]
+    [Tooltip("Speed of the bullet")]
     [SerializeField] private float speed = 5f;
+    [Tooltip("Lifetime of the bullet")]
     [SerializeField] private float time = 1f;
+    [Tooltip("Rotation speed of the bullet")]
     [SerializeField] private float rotSpeed = 5f;
 
     private GameObject gameManager;

@@ -16,12 +16,16 @@ public class enemyHp : MonoBehaviour
     [Header("HP Settings")]
     [Tooltip("Current HP of the enemy.")]
     [SerializeField] private int hp = 1;
-    [SerializeField] protected int moneyOnDeath = 0;
-    [SerializeField] protected int mulitplier = 5;
-    [SerializeField] private float[] money;
-    [SerializeField] private int[] bulletUpgradeBonus;
-    [SerializeField] private int bulletUpgradeBonusAmount;
 
+    [Header("Money Settings")]
+    [Tooltip("The amount of money given to the player when the enemy dies.")]
+    [SerializeField] protected int moneyOnDeath = 0;
+    [Tooltip("The multiplier used to calculate the money given to the player when the enemy dies.")]
+    [SerializeField] protected int multiplier = 5;
+
+    private float[] money;
+    private int[] bulletUpgradeBonus;
+    private int bulletUpgradeBonusAmount;
     private int bulletUpgradeCount;
 
     // Ran before update and only once

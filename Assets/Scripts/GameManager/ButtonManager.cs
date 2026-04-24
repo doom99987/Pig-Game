@@ -26,11 +26,17 @@ public class buttonManager : MonoBehaviour
         fadeManager.GetComponent<fadeInManager>().fadeInSceneSwap();
     }
 
+    /// <summary>
+    /// closes the game with apllication quit only works when the game is built, in the editor it will do nothing.
+    /// </summary>
     public static void closeGame()
     {
         Application.Quit();
     }
 
+    /// <summary>
+    /// swaps to title scene.
+    /// </summary>
     public static void goToTitleScreen()
     {
         SceneManager.LoadScene("TitleScene");
@@ -47,6 +53,9 @@ public class buttonManager : MonoBehaviour
         gameManager.GetComponent<gameManager>().setRoundClear(false);
     }
 
+    /// <summary>
+    /// loads the plat scene restarting the game
+    /// </summary>
     public void restart()
     {
                SceneManager.LoadScene("PlayScene");
