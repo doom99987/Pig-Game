@@ -90,7 +90,6 @@ public class enemySpawner : MonoBehaviour
         float randSpawnDisX = Random.Range(2f, 4f);
         // Randomizes the direction they spawn in Y axis
         float randSpawnDisY = Random.Range(-1f, 1f);
-
         // Spawns enemy
         Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDisX, randSpawnDisY, 0), spawnPoints[randomSpawn].rotation);
     }
