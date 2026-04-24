@@ -6624,9 +6624,9 @@ MonoBehaviour:
   - {fileID: 1986910619}
   - {fileID: 606547279}
   - {fileID: 573736595}
-  spawnDelayMin: 7
-  spawnDelayMax: 10
-  spawnAmount: 2
+  spawnDelayMin: 9
+  spawnDelayMax: 12
+  spawnAmount: 1
   roundSpawnDelay: 0.25
   spawnDelayTime: 0
 --- !u!114 &972771256 stripped
@@ -17233,7 +17233,7 @@ PrefabInstance:
       objectReference: {fileID: 493677822}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: hpCost.Array.size
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bombCost.Array.size
@@ -17269,7 +17269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[6]'
-      value: 4500
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[7]'
@@ -17445,15 +17445,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'healingCost.Array.data[6]'
-      value: 2250
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'healingCost.Array.data[7]'
-      value: 3000
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'healingCost.Array.data[8]'
-      value: 4000
+      value: 3500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'healingCost.Array.data[9]'
@@ -17461,7 +17461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bulletUpgradeCost.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[0]'
@@ -17489,15 +17489,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[6]'
-      value: 4500
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[7]'
-      value: 6000
+      value: 7500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[8]'
-      value: 8000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bulletUpgradeCost.Array.data[9]'
@@ -17577,15 +17577,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'endOfRoundBonus.Array.data[7]'
-      value: 7000
+      value: 7500
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'endOfRoundBonus.Array.data[8]'
-      value: 9000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 4486989826461412376, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'endOfRoundBonus.Array.data[9]'
-      value: 9000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 5556571325964931556, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: fadeManager
@@ -17665,10 +17665,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: spawnAmount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: spawnDelayMax
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: spawnDelayMin
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
