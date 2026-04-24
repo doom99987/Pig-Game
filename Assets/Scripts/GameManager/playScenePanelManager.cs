@@ -38,6 +38,7 @@ public class playScenePanelManager : MonoBehaviour
     public void Start()
     {
         closeAllPanel();
+        closeAllInfoPanels();
     }
 
     /// <summary>
