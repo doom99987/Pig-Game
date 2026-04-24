@@ -1778,7 +1778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390946054bc233f4590f6f8fd5cbe950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashTime: 0.004
+  flashTime: 0.002
   img: {fileID: 1259928745}
   gameManager: {fileID: 0}
 --- !u!1 &1284690981
