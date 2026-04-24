@@ -46,8 +46,10 @@ public class roundManager : MonoBehaviour
 
     [SerializeField] private GameObject fadePanel;
 
+    [Header("Tutorial Text")]
     [SerializeField] private TextMeshProUGUI tutorialText;
     [SerializeField] private TextMeshProUGUI tutorialText2;
+    [SerializeField] private TextMeshProUGUI tutorialText3;
 
     bool isRoundTextOpen = true;
     bool isTimerTextOpen = true;
