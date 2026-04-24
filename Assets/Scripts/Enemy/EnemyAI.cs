@@ -12,13 +12,6 @@ using UnityEngine;
 
 public class enemyAI : MonoBehaviour
 {
-    private GameObject player;
-    private float enemyDistanceFromPlayer;
-    private GameObject gameManager;
-    private Vector2 movement;
-
-    [Header("Animator")]
-    [SerializeField] private Animator animator;
 
     [Header("Enemy Movement")]
     [Tooltip("Variable to control the current speed of the Enemy")]
@@ -32,11 +25,18 @@ public class enemyAI : MonoBehaviour
     [Tooltip("Enemy rigid body")]
     [SerializeField] Rigidbody2D rb;
 
+    private GameObject player;
+    private GameObject gameManager;
+    private Animator animator;
+    private Vector2 movement;
+    private float enemyDistanceFromPlayer;
+
     private void Start()
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("gameManager");
         gameManager.GetComponent<roundManager>().getObjects(gameObject);
+        animator = gameObject.GetComponent<Animator>();
         // Sets the movement direction
         movement = (player.transform.position - gameObject.transform.position).normalized;
     }
@@ -63,12 +63,16 @@ public class enemyAI : MonoBehaviour
             // Ranged movement
             else if (gameObject.CompareTag("Ranged") && Mathf.Abs(enemyDistanceFromPlayer) > rangedEnemyStopDis)
             {
+                animator.SetBool("walking", true);
                 rb.AddForce(movement * curSpeed);
             }
             else if (gameObject.CompareTag("Ranged") && Mathf.Abs(enemyDistanceFromPlayer) < rangedEnemyBackOffDis)
             {
+                animator.SetBool("walking", true);
                 rb.AddForce(movement * -curSpeed);
             }
+            else
+                animator.SetBool("walking", false);
         }
     }
 
