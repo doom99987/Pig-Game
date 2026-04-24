@@ -76,6 +76,7 @@ public class enemyBullet : MonoBehaviour
             }
         }
     }
+
     /// <summary>
     ///  Deal damage to the player
     /// </summary>

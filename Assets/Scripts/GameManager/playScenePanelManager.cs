@@ -82,18 +82,28 @@ public class playScenePanelManager : MonoBehaviour
         pausePanel.SetActive(isPauseOpen);
     }
 
+    /// <summary>
+    /// toggles dmg panel
+    /// </summary>
     public void toggleDmgPanel()
     {
         isTakeDmgOpen = !isTakeDmgOpen;
         takeDmgPanel.SetActive(isTakeDmgOpen);
     }
 
+    /// <summary>
+    /// toggles quit confirmation panel
+    /// </summary>
     public void toggleQuitConfirmationPanel()
     {
         isQuitConfirmationOpen = !isQuitConfirmationOpen;
         quitConfirmationPanel.SetActive(isQuitConfirmationOpen);
     }
 
+    /// <summary>
+    /// generic function to toggle any panel on or off, mostly used for panels that are activated by buttons.
+    /// </summary>
+    /// <param name="panel"></param>
     public void togglePanel(GameObject panel)
     {
         panel.SetActive(!panel.activeSelf);

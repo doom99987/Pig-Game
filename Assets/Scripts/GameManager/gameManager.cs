@@ -34,7 +34,8 @@ public class gameManager : MonoBehaviour
     }
 
     public void Update() {
-       if (Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false && 
+        //opening the pause menu when you press escape and the player is not dead and the shop and victory panels are not open
+        if (Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false && 
            gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() == false && gameObject.GetComponent<playScenePanelManager>().getVictoryOpen() == false)
         {
            gameObject.GetComponent<playScenePanelManager>().togglePausePanel();

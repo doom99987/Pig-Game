@@ -17,6 +17,7 @@ public class audioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //checks if shop is open, if player is dead and decideds whether to pause, stop or unpause the music.
         if (gameObject.GetComponent<playScenePanelManager>().getIsShopOpen())
         {
             gameMusic.Pause();
@@ -31,6 +32,10 @@ public class audioManager : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// plays the enemy death sound effect.
+    /// </summary>
     public void playEnemyDeathSound()
     {
                deathSound.Play();

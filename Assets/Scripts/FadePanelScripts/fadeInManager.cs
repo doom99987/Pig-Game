@@ -33,6 +33,7 @@ public class fadeInManager : MonoBehaviour
         // Gets the objects img
         img = gameObject.GetComponent<Image>();
     }
+
     /// <summary>
     /// makes the object fade Out
     /// </summary>
@@ -45,6 +46,7 @@ public class fadeInManager : MonoBehaviour
     {
         StartCoroutine(cfadeInSceneSwap());
     }
+
     /// <summary>
     /// makes the object fade in
     /// </summary>
@@ -52,6 +54,7 @@ public class fadeInManager : MonoBehaviour
     {
         StartCoroutine(cfadeIn());
     }
+
     /// <summary>
     /// Opens the shop with a fade in
     /// </summary>
@@ -60,6 +63,9 @@ public class fadeInManager : MonoBehaviour
         StartCoroutine(cfadeInShop());
     }
 
+    /// <summary>
+    /// starts fadeing in the death panel coroutine
+    /// </summary>
     public void fadeInDeath()
     {
         StartCoroutine(cfadeInDeath());
@@ -89,6 +95,7 @@ public class fadeInManager : MonoBehaviour
         }
         gameObject.SetActive(false);
     }
+
     /// <summary>
     /// causes a fade out transperancy animation on the sprite
     /// </summary>
@@ -107,6 +114,7 @@ public class fadeInManager : MonoBehaviour
             yield return new WaitForSeconds(flashTime);
         }
     }
+
     /// <summary>
     /// Fades In and swaps to the play scene
     /// </summary>
@@ -126,6 +134,7 @@ public class fadeInManager : MonoBehaviour
         }
         SceneManager.LoadScene("PlayScene");
     }
+
     /// <summary>
     /// Fades in the shop
     /// </summary>
@@ -159,6 +168,10 @@ public class fadeInManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// fades in the death panel and then fades out the panel
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator cfadeInDeath()
     {
         // current color of the img
@@ -186,6 +199,10 @@ public class fadeInManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// fades in the victory panel and then fades out the panel
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator cfadeInVictory()
     {
         // current color of the img

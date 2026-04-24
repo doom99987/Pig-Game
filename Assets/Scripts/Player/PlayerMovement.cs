@@ -69,6 +69,7 @@ public class playerMovement : MonoBehaviour
         animator.SetFloat("Xdirection", dir.x);
         animator.SetFloat("Ydirection", dir.y);
     }
+
     /// <summary>
     /// Gives the players current facing direction
     /// </summary>
@@ -77,6 +78,7 @@ public class playerMovement : MonoBehaviour
     {
         return (int) playerDir;
     }
+
     /// <summary>
     /// if player is moving, add force to the player rigid body in the direction of the movement
     /// </summary>
@@ -114,6 +116,9 @@ public class playerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks if the player is moving and sets the animation accordingly
+    /// </summary>
     public void checkIsMoving()
     {
         if (rb.linearVelocity.magnitude >= 1f)

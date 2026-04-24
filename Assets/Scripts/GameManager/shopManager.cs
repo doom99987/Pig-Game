@@ -125,7 +125,9 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buyHealing()
     {
-        if ((gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax - 1) && gameManager.GetComponent<hpManager>().getCurrentHp() < gameManager.GetComponent<hpManager>().getMaxHp())
+        //checks if they have enough money, if they are not at max healing level, and if their current Hp is less than their max Hp before allowing them to buy healing.
+        if ((gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax - 1) 
+            && gameManager.GetComponent<hpManager>().getCurrentHp() < gameManager.GetComponent<hpManager>().getMaxHp())
         {
             gameManager.GetComponent<hpManager>().heal();
             gameManager.GetComponent<moneyManager>().removeMoney(healingCost[healingCount]);

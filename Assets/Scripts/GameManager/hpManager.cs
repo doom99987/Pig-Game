@@ -194,6 +194,10 @@ public class hpManager : MonoBehaviour
         return maxHp;
     }
 
+    /// <summary>
+    /// dmg flash for when the player gets hit. it flashes the player red.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator dmgFlash()
     {
         Color currentColor = new Color(1f, 1f, 1f, 1f);
