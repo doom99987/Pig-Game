@@ -37,7 +37,6 @@ public class shopManager : MonoBehaviour
     [Tooltip("Total number of bombs you have")]
         [SerializeField] TextMeshProUGUI bombAmount;
 
-
     [Header("bomb settings")]
     [SerializeField] GameObject bombAmountObject;
     [SerializeField] GameObject bombImage;
