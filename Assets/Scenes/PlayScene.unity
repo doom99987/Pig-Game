@@ -6629,34 +6629,6 @@ MonoBehaviour:
   spawnAmount: 1
   roundSpawnDelay: 0.25
   spawnDelayTime: 0
---- !u!114 &972771256 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5556571325964931556, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
-  m_PrefabInstance: {fileID: 200045620867612165}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789329630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ef22148c5c8d174b851a70657dc85bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &972771258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789329630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c177a10c220d6c4382ad84a59143572, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 972771256}
-  loseMessageText: {fileID: 0}
-  loseMessages:
-  - You Lost
-  - Skill Issue
 --- !u!114 &972771265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17648,9 +17620,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3293688853142343199, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 972771250}
-    - targetCorrespondingSourceObject: {fileID: 3293688853142343199, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 972771258}
     - targetCorrespondingSourceObject: {fileID: 3293688853142343199, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 972771265}
