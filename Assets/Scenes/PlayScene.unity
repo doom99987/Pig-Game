@@ -6554,7 +6554,7 @@ MonoBehaviour:
   spawnDelayMax: 12
   spawnAmount: 1
   roundSpawnDelay: 0.25
-  spawnDelayTime: 0.1
+  spawnDelayTime: 0.2
 --- !u!114 &972771265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8724,16 +8724,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8c32419d848d14eb7dc92433c60cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 2944631408402898741, guid: f1e6de5b75f497c40a9d7227246a7ede, type: 3}
   spawnPoints:
   - {fileID: 103785222}
   - {fileID: 982974799}
   - {fileID: 2045940920}
   - {fileID: 828571707}
-  bullet: {fileID: 2944631408402898741, guid: f1e6de5b75f497c40a9d7227246a7ede, type: 3}
-  gameManager: {fileID: 789329630}
   removeAmount: 0100000003000000050000000a000000140000001e000000280000003c0000005000000064000000
   imgRotation: 90
   delay: 0.3
+  gameManager: {fileID: 789329630}
 --- !u!114 &1156143655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8746,10 +8746,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5649e5031c92c4d4396fb0db653f1d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curSpeed: 4.5
   gameManager: {fileID: 789329630}
   animator: {fileID: 1156143659}
-  curSpeed: 4.5
-  maxSpeed: 12
   rb: {fileID: 1156143647}
   playerDir: 0
 --- !u!95 &1156143659
@@ -8787,8 +8786,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 1
-  dmg: 1
   elapsedTime: 0.2
+  dmg: 1
   delay: 0.2
   imgRotation: 0
   bomb: {fileID: 4507199373465970868, guid: a007fbea873e94f45887b95f2af0c4d4, type: 3}
@@ -17958,7 +17957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: spawnDelayTime
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: roundSpawnDelay
