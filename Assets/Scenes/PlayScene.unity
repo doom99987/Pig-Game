@@ -8218,8 +8218,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bullets become piercing and are able to hit through more than one enemy.
-    Each level of Pierce increases the amount of enemies you can shoot through.
+  m_text: Bullets become piercing and are able to hit through more than one enemy
+    if it kills the first enemy it hits. Each level of Pierce increases the amount
+    of enemies you can shoot through.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
@@ -8746,7 +8747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5649e5031c92c4d4396fb0db653f1d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curSpeed: 4.5
+  curSpeed: 4.4
   gameManager: {fileID: 789329630}
   animator: {fileID: 1156143659}
   rb: {fileID: 1156143647}
@@ -17485,23 +17486,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[5]'
-      value: 3000
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[6]'
-      value: 4000
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[7]'
-      value: 5000
+      value: 3500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[8]'
-      value: 6000
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[9]'
-      value: 7500
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: speedCost.Array.size
@@ -17621,11 +17622,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'speedCost.Array.data[3]'
-      value: 1000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'speedCost.Array.data[4]'
-      value: 1500
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'speedCost.Array.data[5]'
@@ -17649,23 +17650,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[0]'
-      value: 500
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[1]'
-      value: 750
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[2]'
-      value: 1000
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[3]'
-      value: 1250
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[4]'
-      value: 1500
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'pierceCost.Array.data[5]'
