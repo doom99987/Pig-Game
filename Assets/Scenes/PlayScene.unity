@@ -2215,7 +2215,7 @@ GameObject:
   - component: {fileID: 399876539}
   - component: {fileID: 399876538}
   m_Layer: 0
-  m_Name: shopui2_0
+  m_Name: healUiImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2285,7 +2285,7 @@ Transform:
   m_GameObject: {fileID: 399876537}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 70, z: 0}
+  m_LocalPosition: {x: 0, y: 80, z: 0}
   m_LocalScale: {x: 16.133394, y: 16.133394, z: 16.133394}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3099,7 +3099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 385, y: -150}
+  m_AnchoredPosition: {x: 385, y: -180}
   m_SizeDelta: {x: 31.18, y: 24.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449179199
@@ -3232,7 +3232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -150}
+  m_AnchoredPosition: {x: 300, y: -180}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &459189656
@@ -5028,7 +5028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86, y: -150}
+  m_AnchoredPosition: {x: 86, y: -180}
   m_SizeDelta: {x: 31.18, y: 24.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649512810
@@ -5646,7 +5646,7 @@ GameObject:
   - component: {fileID: 746141884}
   - component: {fileID: 746141883}
   m_Layer: 0
-  m_Name: shopui2_2
+  m_Name: SpeedUiImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5716,7 +5716,7 @@ Transform:
   m_GameObject: {fileID: 746141882}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -300, y: 70, z: 0}
+  m_LocalPosition: {x: -300, y: 80, z: 0}
   m_LocalScale: {x: 12.309747, y: 12.309747, z: 12.309747}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5756,7 +5756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286.8, y: 138}
+  m_AnchoredPosition: {x: -286.8, y: 150}
   m_SizeDelta: {x: 125, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773400596
@@ -6707,7 +6707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -180}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978515677
@@ -9762,7 +9762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1247873610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10592,7 +10592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -150}
+  m_AnchoredPosition: {x: -300, y: -180}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1311545032
@@ -11664,7 +11664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -90
+      value: -110
       objectReference: {fileID: 0}
     - target: {fileID: 3360656835308276835, guid: 66b97bf8971ec7347b74b74f5c73a86d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12148,7 +12148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -217.8, y: -150}
+  m_AnchoredPosition: {x: -217.8, y: -180}
   m_SizeDelta: {x: 31.18, y: 24.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430177387
@@ -13123,7 +13123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 138}
+  m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 230, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526217450
@@ -13307,7 +13307,7 @@ Transform:
   m_GameObject: {fileID: 1533503416}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 300, y: -90, z: 0}
+  m_LocalPosition: {x: 300, y: -110, z: 0}
   m_LocalScale: {x: 24.956911, y: 24.956911, z: 24.956911}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13802,7 +13802,7 @@ Transform:
   m_GameObject: {fileID: 1590675777}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -90, z: 0}
+  m_LocalPosition: {x: 0, y: -110, z: 0}
   m_LocalScale: {x: 16.574387, y: 16.574387, z: 16.574387}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14971,7 +14971,7 @@ GameObject:
   - component: {fileID: 1851379543}
   - component: {fileID: 1851379542}
   m_Layer: 0
-  m_Name: shopui2_1
+  m_Name: PierceUiImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15041,7 +15041,7 @@ Transform:
   m_GameObject: {fileID: 1851379541}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 300, y: 70, z: 0}
+  m_LocalPosition: {x: 300, y: 80, z: 0}
   m_LocalScale: {x: 16.574387, y: 16.574387, z: 16.574387}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15919,7 +15919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 138}
+  m_AnchoredPosition: {x: 300, y: 150}
   m_SizeDelta: {x: 125, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000032453

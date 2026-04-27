@@ -41,7 +41,9 @@ public class fadeInManager : MonoBehaviour
     {
         StartCoroutine(cfadeOut());
     }
-
+    /// <summary>
+    /// fades in and swaps scene
+    /// </summary>
     public void fadeInSceneSwap()
     {
         StartCoroutine(cfadeInSceneSwap());
