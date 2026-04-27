@@ -109,8 +109,6 @@ public class hpManager : MonoBehaviour
             gameManager.GetComponent<gameManager>().setGameState(true);
             // Toggles on the money text
             gameManager.GetComponent<moneyManager>().toggleMoneyText();
-            // Displays the loss message on death screen
-            gameManager.GetComponent<randomMessageManager>().displayLoseMessage();
             // Disables the round text
             gameManager.GetComponent<roundManager>().toggleRoundText();
             // Disables the round timer text
