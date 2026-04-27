@@ -45,6 +45,8 @@ public class shopManager : MonoBehaviour
     [SerializeField] private float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
     [Tooltip("The cost of each bomb. The max count is determined by the length of this array.")]
     [SerializeField] private float[] bombCost = { 5, 50, 500, 5000 };
+
+    [Header("Upgrade Amounts")]
     [Tooltip("The amount the player's speed increases by when buying a speed upgrade.")]
     [SerializeField] private float speedAmount = 1f;
 
