@@ -15,9 +15,9 @@ public class gameManager : MonoBehaviour
 {
     [Header("Game States")]
     [Tooltip("True = Game is Paused, False = Game is Unpaused")]
-    [SerializeField] protected bool gamePaused;
+        [SerializeField] protected bool gamePaused;
     [Tooltip("Variable to check if the round has been cleared")]
-    [SerializeField] protected bool roundClear;
+        [SerializeField] protected bool roundClear;
 
     [Header("Toggle variables")]
     [SerializeField] protected bool isTutorialTextOn = false;

@@ -15,6 +15,7 @@ public class bullet : MonoBehaviour
     private int bulletPierce;
     private GameObject gameManager;
     private bool fixVelocity = false;
+    private Vector3 dir;
 
     [Header("Animator")]
     [SerializeField] private Animator animator;
@@ -23,21 +24,21 @@ public class bullet : MonoBehaviour
     [Tooltip("Rigidbody of the object")]
         [SerializeField] private Rigidbody2D rb;
 
-    [Header("Bullet Variables")]
+    [Header("Bullet")]
     [Tooltip("Speed of the bullet")]
-    [SerializeField] private float speed = 5f;
+        [SerializeField] private float speed = 5f;
     [Tooltip("Time until the bullet is destroyed")]
-    [SerializeField] private float time = 1f;
+        [SerializeField] private float time = 1f;
     [Tooltip("Rotation speed of the bullet")]
-    [SerializeField] private float rotSpeed = 5f;
-    Vector3 dir;
+        [SerializeField] private float rotSpeed = 5f;
 
     protected float bulletCurSpeed;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gameManager = GameObject.Find("gameManager");
+        // Grabs gameManager
+        gameManager = FindFirstObjectByType<shopManager>().gameObject;
         // Gets the total pierce level
         bulletPierce = gameManager.GetComponent<shopManager>().getPierceCount();
         // Sets the animation of the bullet
@@ -49,6 +50,7 @@ public class bullet : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         dir = (mousePos - gameObject.transform.position);
+        // Gives the bullet speed in the direction of dir
         rb.AddForce(dir.normalized * speed * 100f);
         rb.AddTorque(rotSpeed);
     }
@@ -84,6 +86,7 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // If the bullet hits a wall
         if (collision.gameObject.CompareTag("Wall"))
         {
             Destroy(gameObject);
@@ -93,7 +96,7 @@ public class bullet : MonoBehaviour
         {
             // Deals damage to enemy
             collision.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
-            // Checks if the bullet would pierce the enemy
+            // Checks if the bullet would not pierce the enemy
             if (bulletPierce <= 0 || collision.gameObject.GetComponent<enemyHp>().getEnemyHp() > 0)
             {
                 Destroy(gameObject);

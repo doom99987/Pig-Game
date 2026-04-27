@@ -15,15 +15,18 @@ public class moneyBagBombMove : MonoBehaviour
 
     [Header("RigidBody")]
     [Tooltip("Rigidbody of the object")]
-    [SerializeField] private Rigidbody2D rb;
+        [SerializeField] private Rigidbody2D rb;
 
     [Header("Animator")]
     private Animator animator;
 
     [Header("Bomb Variables")]
-    [SerializeField] private float explosionSize = 1;
-    [SerializeField] private float speed = 1.95f;
-    [SerializeField] private float lifeTime = 1f;
+    [Tooltip("Size of the bombs explosion")]
+        [SerializeField] private float explosionSize = 1;
+    [Tooltip("speed at which the bomb moves (DO NOT TOUCH PLEASE If you want to change the speed talk to programmers)")]
+        [SerializeField] private float speed = 1.95f;
+    [Tooltip("How long the bomb will last before exploding (DO NOT TOUCH PLEASE If you want to change the speed talk to programmers)")]
+        [SerializeField] private float lifeTime = 1f;
     [Tooltip("Delays destroying the bomb object by a set amount of time")]
         [SerializeField] private float delayDestruction = 1f;
 
@@ -82,8 +85,9 @@ public class moneyBagBombMove : MonoBehaviour
     // Draw the Box Overlap as a gizmo to show where it currently is testing. Click the Gizmos button to see this.
     void OnDrawGizmos()
     {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, explosionSize);
+        // Draws the bom explosion radius
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionSize);
     }
 }
 

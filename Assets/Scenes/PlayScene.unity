@@ -2497,7 +2497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increases your hp by 1
+  m_text: Increases your max HP by 1.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
@@ -4239,7 +4239,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Right click to shoot the bomb
+  m_text: Gives you one bomb. Each bomb is a one-time use and explodes in an AOE
+    radius. Right click to use.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
@@ -6154,7 +6155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Heals 1 hp
+  m_text: Heals you for 1 HP. Cannot be bought if at full HP.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
@@ -8217,8 +8218,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increases how many enemies your bullets goes through if it does more dmg
-    than enemies health
+  m_text: Bullets become piercing and are able to hit through more than one enemy.
+    Each level of Pierce increases the amount of enemies you can shoot through.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
@@ -8748,7 +8749,7 @@ MonoBehaviour:
   gameManager: {fileID: 789329630}
   animator: {fileID: 1156143659}
   curSpeed: 4.5
-  maxSpeed: 14.5
+  maxSpeed: 12
   rb: {fileID: 1156143647}
   playerDir: 0
 --- !u!95 &1156143659
@@ -9788,7 +9789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1247873610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10890,7 +10891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1323377865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12869,7 +12870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increases your speed
+  m_text: Increases your movespeed.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
@@ -17420,6 +17421,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1861321474}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: speedAmount
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bombCountMax
       value: 11
       objectReference: {fileID: 0}
@@ -17453,7 +17458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bombCost.Array.size
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: buyBulletUpgradeText
@@ -17489,19 +17494,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[7]'
-      value: 4000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[8]'
-      value: 4000
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'hpCost.Array.data[9]'
-      value: 4000
+      value: 7500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: speedCost.Array.size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bulletUpgradeCountMax
@@ -17517,7 +17522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[0]'
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[1]'
@@ -17525,19 +17530,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[2]'
-      value: 600
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[3]'
-      value: 700
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[4]'
-      value: 800
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[5]'
-      value: 900
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[6]'
@@ -17545,19 +17550,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[7]'
-      value: 1100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[8]'
-      value: 1200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'bombCost.Array.data[9]'
-      value: 1500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: healingCost.Array.size
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[10]'
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[11]'
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[12]'
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[13]'
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[14]'
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[15]'
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[16]'
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[17]'
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[18]'
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[19]'
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: 'bombCost.Array.data[20]'
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: 'speedCost.Array.data[0]'

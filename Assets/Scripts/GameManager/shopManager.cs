@@ -9,14 +9,36 @@
 *
 ****************************************************************************/
 using TMPro;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class shopManager : MonoBehaviour
 {
 
-    [Header("bomb settings")]
+
+
+    [Header("Upgrade Costs")]
+    [Tooltip("The cost of each speed upgrade. The max count is determined by the length of this array.")]
+        [SerializeField] private float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
+    [Tooltip("The cost of each hp upgrade. The max count is determined by the length of this array.")]
+        [SerializeField] private float[] hpCost = { 5, 50, 500, 5000, 50000, 500000 };
+    [Tooltip("The cost of each healing upgrade. The max count is determined by the length of this array.")]
+        [SerializeField] private float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
+    [Tooltip("The cost of each pierce upgrade. The max count is determined by the length of this array.")]
+        [SerializeField] private float[] pierceCost = { 5, 50, 500, 5000 };
+    [Tooltip("The cost of each bullet damage upgrade. The max count is determined by the length of this array.")]
+        [SerializeField] private float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
+    [Tooltip("The cost of each bomb. The max count is determined by the length of this array.")]
+        [SerializeField] private float[] bombCost = { 5, 50, 500, 5000 };
+
+    [Header("Upgrade Amounts")]
+    [Tooltip("The amount the player's speed increases by when buying a speed upgrade.")]
+        [SerializeField] private float speedAmount = 1f;
     [Tooltip("Total number of bombs you have")]
-    [SerializeField] TextMeshProUGUI bombAmount;
+        [SerializeField] TextMeshProUGUI bombAmount;
+
+
+    [Header("bomb settings")]
     [SerializeField] GameObject bombAmountObject;
     [SerializeField] GameObject bombImage;
 
@@ -31,24 +53,6 @@ public class shopManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI buyPierceText;
     [SerializeField] private TextMeshProUGUI buyBulletUpgradeText;
     [SerializeField] private TextMeshProUGUI buyBombText;
-
-    [Header("Upgrade Costs")]
-    [Tooltip("The cost of each speed upgrade. The max count is determined by the length of this array.")]
-    [SerializeField] private float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [Tooltip("The cost of each hp upgrade. The max count is determined by the length of this array.")]
-    [SerializeField] private float[] hpCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [Tooltip("The cost of each healing upgrade. The max count is determined by the length of this array.")]
-    [SerializeField] private float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [Tooltip("The cost of each pierce upgrade. The max count is determined by the length of this array.")]
-    [SerializeField] private float[] pierceCost = { 5, 50, 500, 5000 };
-    [Tooltip("The cost of each bullet damage upgrade. The max count is determined by the length of this array.")]
-    [SerializeField] private float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
-    [Tooltip("The cost of each bomb. The max count is determined by the length of this array.")]
-    [SerializeField] private float[] bombCost = { 5, 50, 500, 5000 };
-
-    [Header("Upgrade Amounts")]
-    [Tooltip("The amount the player's speed increases by when buying a speed upgrade.")]
-    [SerializeField] private float speedAmount = 1f;
 
     //upgrade limits
     private int sCountMax;
