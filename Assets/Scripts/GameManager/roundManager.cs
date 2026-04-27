@@ -8,15 +8,13 @@
 *              the victory panel after a certain amount of rounds
 *
 ****************************************************************************/
+using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using System.Collections.Generic;
 
 public class roundManager : MonoBehaviour
 {
-    private float elapsedTime;
-    private bool roundStartDelay = true;
 
     [Header("Round")]
     [Tooltip("Current Round")]
@@ -29,30 +27,28 @@ public class roundManager : MonoBehaviour
     [SerializeField] private float startDelayTime = 5f;
     [SerializeField] private float roundTime = 121f;
 
-    [Header("Text Timer")]
-    [Tooltip("The Textbox for the Timer")]
-    [SerializeField] private TextMeshProUGUI timerText;
-    [Tooltip("The Textbox for the current round")]
-    [SerializeField] private TextMeshProUGUI roundText;
-    [Tooltip("The Textbox for the death text")]
-    [SerializeField] private TextMeshProUGUI deathText;
-
     [Header("End of Round Bonus")]
     [Tooltip("The amount of money given at the end of each round")]
-    [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000 };
+        [SerializeField] float[] endOfRoundBonus = { 5, 50, 500, 5000, 50000, 500000, 50000000, 50000000, 50000000, 5000000, 5000000 };
 
+    [Header("Necessities")]
     [SerializeField] Transform heartsContainer;
-    List<GameObject> things = new List<GameObject>();
-
     [SerializeField] private GameObject fadePanel;
-
-    [Header("Tutorial Text")]
+    [Tooltip("The Textbox for the Timer")]
+        [SerializeField] private TextMeshProUGUI timerText;
+    [Tooltip("The Textbox for the current round")]
+        [SerializeField] private TextMeshProUGUI roundText;
+    [Tooltip("The Textbox for the death text")]
+        [SerializeField] private TextMeshProUGUI deathText;
     [SerializeField] private TextMeshProUGUI tutorialText;
     [SerializeField] private TextMeshProUGUI tutorialText2;
     [SerializeField] private TextMeshProUGUI tutorialText3;
 
-    bool isRoundTextOpen = true;
-    bool isTimerTextOpen = true;
+    private List<GameObject> things = new List<GameObject>();
+    private float elapsedTime;
+    private bool roundStartDelay = true;
+    private bool isRoundTextOpen = true;
+    private bool isTimerTextOpen = true;
 
     // Run is called before any update is called the first time
     private void Start()

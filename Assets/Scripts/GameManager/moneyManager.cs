@@ -14,9 +14,10 @@ using UnityEngine;
 public class moneyManager : MonoBehaviour
 {
     [Header("Money")]
-    protected bool isMoneyTextOn = true;
     [SerializeField] float money = 2500f;
     [SerializeField] TextMeshProUGUI moneyText;
+
+    private bool isMoneyTextOn = true;
 
     /// <summary>
     /// updates money. 

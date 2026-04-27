@@ -21,11 +21,6 @@ public class hpManager : MonoBehaviour
     [Tooltip("Number of hearts to display per row in the UI.")]
         [SerializeField] private int heartsPerRow = 4;
 
-    [Header("Heart Prefabs")]
-    [SerializeField] private GameObject heartPrefab;
-    [SerializeField] private GameObject emptyHeartPrefab;
-    [SerializeField] private Transform heartsContainer;
-
     [Header("Damage Flash")]
     [SerializeField] private Color damageColor;
     [SerializeField] private SpriteRenderer playerHit;
@@ -37,6 +32,9 @@ public class hpManager : MonoBehaviour
     [SerializeField] private Color maxFlashColor;
 
     [Header("Extra Necessities")]
+    [SerializeField] private GameObject heartPrefab;
+    [SerializeField] private GameObject emptyHeartPrefab;
+    [SerializeField] private Transform heartsContainer;
     [SerializeField] private GameObject gameManager;
     [SerializeField] private TextMeshProUGUI deathPanelMoneyText;
     [SerializeField] private GameObject fadePanel;

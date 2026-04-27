@@ -11,18 +11,15 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    [Header("Game Manager")]
-    [SerializeField] private GameObject gameManager;
-
-    [Header("Animator")]
-    [SerializeField] Animator animator;
-
     [Header("Player Movement")]
-    //variable to control the current speed of the player
-    [SerializeField] private float curSpeed = 25f;
-    //variable to control the max speed of the player
-    [SerializeField] private float maxSpeed = 35f; 
+    [Tooltip("Current Speed of the player")]
+        [SerializeField] private float curSpeed = 25f;
+
+    [Header("Necesities")]
+    [SerializeField] private GameObject gameManager;
+    [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rb;
+
 
 
     public direction playerDir = direction.left;
@@ -110,10 +107,7 @@ public class playerMovement : MonoBehaviour
     /// <param name="speed"></param>
     public void setCurSpeed(float speed)
     {
-        if(getCurrentSpeed() <=  maxSpeed)
-        {
             curSpeed = speed;
-        }
     }
 
     /// <summary>

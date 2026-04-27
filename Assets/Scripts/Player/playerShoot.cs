@@ -11,24 +11,22 @@
 using UnityEngine;
 public class playerShoot : MonoBehaviour
 {
-    protected float elapsedTime;
-    [Header("Shoot Animation Direction")]
-    [Tooltip("Controls the spot which the bullet spawns according to the direction the player is facing")]
-    [SerializeField] GameObject[] spawnPoints;
+    private float elapsedTime;
 
-    [Header("Projectile")] 
+    [Header("Projectile Stuff")] 
     [SerializeField] GameObject bullet;
+    [Tooltip("Controls the spot which the bullet spawns according to the direction the player is facing")]
+        [SerializeField] GameObject[] spawnPoints;
+    [Tooltip("Amount of money removed when shooting (1 = $0.01)")]
+        [SerializeField] int[] removeAmount = {1, 3 ,5};
+    [Tooltip("Manages the angle the object is spawned in at")]
+        [SerializeField] private float imgRotation = 90f;
+    [Tooltip("Delay between bullets fired")]
+        [SerializeField] private float delay = 1f;
 
-    [Header("Refrences")]
+    [Header("Necessities")]
     [SerializeField] GameObject gameManager;
 
-    [Header("Bullet Variables")]
-    [Tooltip("Amount of money removed when shooting (1 = $0.01)")]
-    [SerializeField] int[] removeAmount = {1, 3 ,5};
-    [Tooltip("Manages the angle the object is spawned in at")]
-    [SerializeField] protected float imgRotation = 90f;
-    [Tooltip("Delay between bullets fired")]
-    [SerializeField] protected float delay = 1f;
 
     protected int playerDir = 0;
     // Update is called once per frame
