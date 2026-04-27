@@ -116,6 +116,11 @@ public class playScenePanelManager : MonoBehaviour
         panel.SetActive(!panel.activeSelf);
     }
 
+    public void toggleShopOff()
+    {
+        shopPanel.SetActive(false);
+    }
+
     public void closeAllInfoPanels()
     {
         dmgInfoPanel.SetActive(false);
