@@ -7,8 +7,6 @@
 * Description: This script has all the functions to open and close panels in the play scene, such as the shop panel, death, and victory panels.
 *
 ****************************************************************************/
-using System.Collections;
-using TMPro;
 using UnityEngine;
 
 public class playScenePanelManager : MonoBehaviour
@@ -27,6 +25,7 @@ public class playScenePanelManager : MonoBehaviour
     [SerializeField] GameObject hpUpInfoPanel;
     [SerializeField] GameObject bombSkillInfoPanel;
 
+    //bools to keep track of which panels are open, used for toggling the panels on and off.
     private bool isShopOpen = false;
     private bool isDeathOpen = false;
     private bool isVictoryOpen = false;
@@ -116,11 +115,17 @@ public class playScenePanelManager : MonoBehaviour
         panel.SetActive(!panel.activeSelf);
     }
 
+    /// <summary>
+    /// toggles the shop off used for turning off the shop panel when the rounds over and goes to the victory panel.
+    /// </summary>
     public void toggleShopOff()
     {
         shopPanel.SetActive(false);
     }
 
+    /// <summary>
+    /// closes all the panels that show the info about the different upgrades and skills, such as the damage upgrade, healing upgrade, and bomb skill.
+    /// </summary>
     public void closeAllInfoPanels()
     {
         dmgInfoPanel.SetActive(false);
