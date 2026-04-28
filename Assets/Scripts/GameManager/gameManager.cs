@@ -44,10 +44,13 @@ public class gameManager : MonoBehaviour
         {
             openPauseSound.Play();
             gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
-        }else if(gameObject.GetComponent<playScenePanelManager>().getIsPauseOpen() == true && Input.GetKeyDown(KeyCode.Escape))
+            fadeManager.GetComponent<fadeInManager>().cursorSwap();
+        }
+        else if(gameObject.GetComponent<playScenePanelManager>().getIsPauseOpen() == true && Input.GetKeyDown(KeyCode.Escape))
         {
             closePauseSound.Play();
             gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
+            fadeManager.GetComponent<fadeInManager>().cursorSwap();
         }
     }
 
