@@ -27,6 +27,9 @@ public class gameManager : MonoBehaviour
     [Tooltip("the object used for fading in and out")]
         [SerializeField] private GameObject fadeManager;
 
+    [SerializeField] private AudioSource openPauseSound;
+    [SerializeField] private AudioSource closePauseSound;
+
     private void Start()
     {
         fadeManager.SetActive(true);
@@ -36,10 +39,15 @@ public class gameManager : MonoBehaviour
     public void Update() {
         //opening the pause menu when you press escape and the player is not dead and the shop and victory panels are not open
         if (Input.GetKeyDown(KeyCode.Escape) && gameObject.GetComponent<hpManager>().getIsDead() == false && 
-           gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() == false && gameObject.GetComponent<playScenePanelManager>().getVictoryOpen() == false)
+           gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() == false && 
+           gameObject.GetComponent<playScenePanelManager>().getVictoryOpen() == false)
         {
-           gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
-           
+            openPauseSound.Play();
+            gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
+        }else if(gameObject.GetComponent<playScenePanelManager>().getIsPauseOpen() == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            closePauseSound.Play();
+            gameObject.GetComponent<playScenePanelManager>().togglePausePanel();
         }
     }
 
