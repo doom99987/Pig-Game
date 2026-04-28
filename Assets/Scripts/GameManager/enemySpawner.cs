@@ -18,20 +18,27 @@ public class enemySpawner : MonoBehaviour
         [SerializeField] private GameObject[] enemyPrefab;
     [Tooltip("List of positions the enemies can spawn at")]
         [SerializeField] Transform[] spawnPoints;
-    [Tooltip("Minimum delay between enemy spawns")]
-        [SerializeField] private float spawnDelayMin = 5f;
-    [Tooltip("Maximum delay between enemy spawns")]
-        [SerializeField] private float spawnDelayMax = 6;
-    [Tooltip("The amount of enemies to spawn each time.")]
-        [SerializeField] private int spawnAmount = 3;
-    [Tooltip("The amount of seconds to decrease the spawn delay by each round.")]
-        [SerializeField] private float roundSpawnDelay = 0.25f;
-    [Tooltip("The time until the next enemy spawn")]
-        [SerializeField] private float spawnDelayTime = 0.1f;
+
+    [System.Serializable] struct enemySpawn
+    {
+        [Tooltip("Minimum delay between enemy spawns")]
+            [SerializeField] public float spawnDelayMin;// = 5f;
+        [Tooltip("Maximum delay between enemy spawns")]
+            [SerializeField] public float spawnDelayMax; // = 6;
+        [Tooltip("The amount of enemies to spawn each time.")]
+            [SerializeField] public int spawnAmount; // = 3;
+        [Tooltip("The amount of seconds to decrease the spawn delay by each round.")]
+            [SerializeField] public float roundSpawnDelay; // = 0.25f;
+        [Tooltip("The time until the next enemy spawn")]
+            [SerializeField] public float spawnDelayTime; // = 0.1f;
+    }
+    [Header("Enemy Round Settings")]
+    [SerializeField] private enemySpawn[] enemyRoundSettings;
+
 
     //Extra enemies to spawn per round
         private int spawnAmountPerRound;
-
+        private int round;
 
     private void Start()
     {
@@ -45,10 +52,11 @@ public class enemySpawner : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        
         if (!gameObject.GetComponent<roundManager>().getStartDelay())
         {
             // Current round
-            int round = gameObject.GetComponent<roundManager>().getRound();
+            round = gameObject.GetComponent<roundManager>().getRound();
 
             // Check if the game is paused
             if (!gameObject.GetComponent<gameManager>().getGameState())
@@ -58,7 +66,7 @@ public class enemySpawner : MonoBehaviour
                 {
                     spawnEnemy();
                     //spawn delay
-                    nextSpawnTime = Time.time + Random.Range(spawnDelayMin, (spawnDelayMax - (float)(round * roundSpawnDelay)));
+                    nextSpawnTime = Time.time + Random.Range(enemyRoundSettings[round].spawnDelayMin, (enemyRoundSettings[round].spawnDelayMax - (float)(round * enemyRoundSettings[round].roundSpawnDelay)));
                 }
             }
         }
@@ -71,27 +79,34 @@ public class enemySpawner : MonoBehaviour
     {
         //randomizes the spawn point for the enemy to spawn at and then spawns the enemy at that location and randomizes which enemy spawns.
 
-        for(int i = 0; i < spawnAmount + spawnAmountPerRound; i++)
-        {
-           StartCoroutine(spawnEnemyDelay());
-        }
+        StartCoroutine(spawnEnemyDelay());
         
     }
 
     IEnumerator spawnEnemyDelay()
     {
-        // Waits for the spawn delay and then spawns an enemy
-        yield return new WaitForSeconds(spawnDelayTime);
-        // Gets a spawnpoint
-        int randomSpawn = Random.Range(0, spawnPoints.Length);
-        // Gets an enemy to spawn
-        int randomEnemy = Random.Range(0, enemyPrefab.Length);
-        // Where around the spawnpoint they spawn
-        float randSpawnDisX = Random.Range(2f, 4f);
-        // Randomizes the direction they spawn in Y axis
-        float randSpawnDisY = Random.Range(-1f, 1f);
-        // Spawns enemy
-        Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDisX, randSpawnDisY, 0), spawnPoints[randomSpawn].rotation);
+        int lastPos = -1;
+        int randomSpawn = -1;
+        for (int i = 0; i < enemyRoundSettings[round].spawnAmount + spawnAmountPerRound; i++)
+        {
+            // Waits for the spawn delay and then spawns an enemy
+            yield return new WaitForSeconds(enemyRoundSettings[round].spawnDelayTime);
+            // Gets an enemy to spawn
+            int randomEnemy = Random.Range(0, enemyPrefab.Length);
+            // Where around the spawnpoint they spawn
+            float randSpawnDisX = Random.Range(2f, 4f);
+            // Randomizes the direction they spawn in Y axis
+            float randSpawnDisY = Random.Range(-1f, 1f);
+            // Rerandomizes spawnpoint until not equal to last spawnpoint
+            while (lastPos == randomSpawn)
+            {
+            // Gets a spawnpoint
+            randomSpawn = Random.Range(0, spawnPoints.Length);
+            }
+            // Spawns enemy
+            Instantiate(enemyPrefab[randomEnemy], spawnPoints[randomSpawn].position + new Vector3(randSpawnDisX, randSpawnDisY, 0), spawnPoints[randomSpawn].rotation);
+            lastPos = randomSpawn;
+        }
     }
 }
 

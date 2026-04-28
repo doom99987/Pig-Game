@@ -867,7 +867,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e2b0c59dd35eba2469064e8b53111529, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2480,7 +2480,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: f4f87fa5ef66b104c9637f582fcd021f, type: 3}
+  m_Resource: {fileID: 8300000, guid: 253f9986162e57f45a4183bc06bc9f02, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7028,6 +7028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 934885795}
+  - component: {fileID: 934885796}
   m_Layer: 0
   m_Name: sfx
   m_TagString: Untagged
@@ -7058,6 +7059,103 @@ Transform:
   - {fileID: 120692140}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &934885796
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934885794}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: e2b0c59dd35eba2469064e8b53111529, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &935079375
 GameObject:
   m_ObjectHideFlags: 0
@@ -7373,11 +7471,57 @@ MonoBehaviour:
   - {fileID: 1986910619}
   - {fileID: 606547279}
   - {fileID: 573736595}
-  spawnDelayMin: 9
-  spawnDelayMax: 12
-  spawnAmount: 1
-  roundSpawnDelay: 0.25
-  spawnDelayTime: 0.2
+  enemyRoundSettings:
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
+  - spawnDelayMin: 0
+    spawnDelayMax: 0
+    spawnAmount: 0
+    roundSpawnDelay: 0
+    spawnDelayTime: 0
 --- !u!114 &972771265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10313,8 +10457,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 313.1, y: 108.89}
-  m_SizeDelta: {x: -643.93, y: -358.16}
+  m_AnchoredPosition: {x: 302.7, y: 72.4}
+  m_SizeDelta: {x: -693.34, y: -422.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203001865
 MonoBehaviour:
@@ -10597,7 +10741,7 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 1
+  m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
@@ -11794,7 +11938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -296.6, y: -101.3}
+  m_AnchoredPosition: {x: -296.6, y: -94.8}
   m_SizeDelta: {x: -642.34, y: -429.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1324788268
@@ -15432,7 +15576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1646369438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17543,7 +17687,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1247873610}
-  - {fileID: 1233582121}
   - {fileID: 2013922726}
   - {fileID: 1128684188}
   - {fileID: 1360411630}
@@ -17552,6 +17695,7 @@ RectTransform:
   - {fileID: 1920151869}
   - {fileID: 1646369438}
   - {fileID: 1842138135}
+  - {fileID: 1233582121}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -19388,6 +19532,10 @@ PrefabInstance:
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: roundSpawnDelay
       value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: sEnemy.Array.size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: enemyPrefab.Array.size
