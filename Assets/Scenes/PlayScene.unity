@@ -11195,6 +11195,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1509270528}
+        m_TargetAssemblyTypeName: fadeInManager, Assembly-CSharp
+        m_MethodName: cursorSwap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1270597219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14252,6 +14264,8 @@ MonoBehaviour:
   flashTime: 0.004
   img: {fileID: 1509270526}
   gameManager: {fileID: 789329630}
+  cursorTexture: {fileID: 2800000, guid: 7c0618ab00604ed46b53c2b56a9ea2f4, type: 3}
+  cursorCrosshair: {fileID: 2800000, guid: 4790374ebe5daf943beb11e3721f7569, type: 3}
 --- !u!1 &1509539499
 GameObject:
   m_ObjectHideFlags: 0

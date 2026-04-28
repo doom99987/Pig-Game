@@ -26,12 +26,42 @@ public class fadeInManager : MonoBehaviour
     [Header("Game Manager")]
     [SerializeField] private GameObject gameManager;
 
-
+    [Header("Cursor")]
+    [SerializeField] private Texture2D cursorTexture;
+    [SerializeField] private Texture2D cursorCrosshair;
+    
+    private CursorMode cursorMode = CursorMode.Auto;
+    private Vector2 hotSpot = Vector2.zero;
+    private enum currentCursor
+    {
+        crosshair, cursor
+    }   private currentCursor cursorState = currentCursor.cursor;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // Gets the objects img
         img = gameObject.GetComponent<Image>();
+        if (gameManager != null)
+        {
+            cursorSwap();
+        }
+    }
+    /// <summary>
+    /// Swaps the cursor sprite
+    /// </summary>
+    public void cursorSwap()
+    {
+        if (cursorState == currentCursor.cursor)
+        {
+            Cursor.SetCursor(cursorCrosshair, hotSpot, cursorMode);
+            cursorState = currentCursor.crosshair;
+        }
+        else
+        {
+            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+            cursorState = currentCursor.cursor;
+        }
     }
 
     /// <summary>
@@ -158,6 +188,7 @@ public class fadeInManager : MonoBehaviour
         gameManager.GetComponent<roundManager>().toggleRoundText();
         gameManager.GetComponent<roundManager>().toggleTimerText();
         gameManager.GetComponent<playScenePanelManager>().toggleShopPanel();
+        cursorSwap();
         // loops over fading out the img
         for (float num = 1f; num >= 0f; num -= 0.01f)
         {
@@ -189,6 +220,7 @@ public class fadeInManager : MonoBehaviour
         }
         // Opens the death panel
         gameManager.GetComponent<playScenePanelManager>().toggleDeathPanel();
+        cursorSwap();
         // loops over fading out the img
         for (float num = 1f; num >= 0f; num -= 0.01f)
         {
@@ -220,6 +252,7 @@ public class fadeInManager : MonoBehaviour
         }
         // Opens the death panel
         gameManager.GetComponent<playScenePanelManager>().toggleVictoryPanel();
+        cursorSwap();
         // loops over fading out the img
         for (float num = 1f; num >= 0f; num -= 0.01f)
         {
