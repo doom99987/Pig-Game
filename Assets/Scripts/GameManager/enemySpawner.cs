@@ -21,6 +21,7 @@ public class enemySpawner : MonoBehaviour
 
     [System.Serializable] struct enemySpawn
     {
+        public string name;
         [Tooltip("Minimum delay between enemy spawns")]
             [SerializeField] public float spawnDelayMin;// = 5f;
         [Tooltip("Maximum delay between enemy spawns")]

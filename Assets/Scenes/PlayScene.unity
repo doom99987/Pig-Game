@@ -7472,52 +7472,62 @@ MonoBehaviour:
   - {fileID: 606547279}
   - {fileID: 573736595}
   enemyRoundSettings:
-  - spawnDelayMin: 0
+  - name: Round 1
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
     spawnDelayTime: 0
-  - spawnDelayMin: 0
+  - name: Round 2
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
     spawnDelayTime: 0
-  - spawnDelayMin: 0
+  - name: Round 3
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
     spawnDelayTime: 0
-  - spawnDelayMin: 0
+  - name: Round 4
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
     spawnDelayTime: 0
-  - spawnDelayMin: 0
+  - name: Round 5
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
     spawnDelayTime: 0
-  - spawnDelayMin: 0
+  - name: Round 6
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
     spawnDelayTime: 0
-  - spawnDelayMin: 0
+  - name: Round 7
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
     spawnDelayTime: 0
-  - spawnDelayMin: 0
+  - name: Round 8
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
     spawnDelayTime: 0
-  - spawnDelayMin: 0
+  - name: Round 9
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
     spawnDelayTime: 0
-  - spawnDelayMin: 0
+  - name: Round 10
+    spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
     roundSpawnDelay: 0
@@ -19008,6 +19018,10 @@ PrefabInstance:
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: hpCost.Array.size
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: numbers.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bombCost.Array.size

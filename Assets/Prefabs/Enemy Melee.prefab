@@ -117,7 +117,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1289149286652109733
 CircleCollider2D:
@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5e8fe5e01f6914db3d3d99a287f962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 3246206151224794277}
   curSpeed: 20
   pushBackMult: 100
   rangedEnemyStopDis: 7
@@ -187,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   moneyOnDeath: 0
-  mulitplier: 5
+  multiplier: 5
   money:
   - 4
   - 4
@@ -202,6 +201,7 @@ MonoBehaviour:
   - 200
   bulletUpgradeBonus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   bulletUpgradeBonusAmount: 0
+  bulletUpgradeCount: 0
 --- !u!95 &3246206151224794277
 Animator:
   serializedVersion: 7

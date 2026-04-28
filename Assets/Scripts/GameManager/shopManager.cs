@@ -53,6 +53,10 @@ public class shopManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI buyBulletUpgradeText;
     [SerializeField] private TextMeshProUGUI buyBombText;
 
+    //[Header("Testing")]
+    //[SerializeField] List<int[]> upgrades = new List<int[]>();
+    // need to creat a list of struct that have an array in them with system.serializable
+
     //upgrade limits
     private int sCountMax;
     private int hCountMax;
