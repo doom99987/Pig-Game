@@ -40,9 +40,7 @@ public class roundManager : MonoBehaviour
         [SerializeField] private TextMeshProUGUI roundText;
     [Tooltip("The Textbox for the death text")]
         [SerializeField] private TextMeshProUGUI deathText;
-    [SerializeField] private TextMeshProUGUI tutorialText;
-    [SerializeField] private TextMeshProUGUI tutorialText2;
-    [SerializeField] private TextMeshProUGUI tutorialText3;
+    [SerializeField] private GameObject tutorialStuff;
 
     private List<GameObject> things = new List<GameObject>();
     private float elapsedTime;
@@ -56,9 +54,7 @@ public class roundManager : MonoBehaviour
         // Displays the current round and sets the timer
         roundText.text = "Round: " + round + "/" + totalRounds;
         elapsedTime = roundTime;
-        tutorialText.gameObject.SetActive(true);
-        tutorialText2.gameObject.SetActive(true);
-        tutorialText3.gameObject.SetActive(true);
+        tutorialStuff.SetActive(true);
         StartCoroutine(startDelay());
     }
 
@@ -68,9 +64,7 @@ public class roundManager : MonoBehaviour
         // Checks if the game is paused
         if (!gameObject.GetComponent<gameManager>().getGameState() && !roundStartDelay)
         {
-            tutorialText.gameObject.SetActive(false);
-            tutorialText2.gameObject.SetActive(false);
-            tutorialText3.gameObject.SetActive(false);
+            tutorialStuff.SetActive(false);
             // Updates the total time thats passed
             elapsedTime -= Time.deltaTime;
 
