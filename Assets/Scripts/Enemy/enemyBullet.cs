@@ -13,9 +13,6 @@ using UnityEngine;
 public class enemyBullet : MonoBehaviour
 {
 
-    [Header("Animator")]
-    [SerializeField] private Animator animator;
-
     [Header("RigidBody")]
     [Tooltip("Rigidbody of the object")]
     [SerializeField] private Rigidbody2D rb;
@@ -38,8 +35,6 @@ public class enemyBullet : MonoBehaviour
     {
         gameManager = GameObject.Find("gameManager");
         player = GameObject.Find("Player");
-        // Sets the animation of the bullet
-        animator.SetInteger("coinState", 2);
         // Sets the object into a list to be cleared when round ends
         gameManager.GetComponent<roundManager>().getObjects(gameObject);
 
