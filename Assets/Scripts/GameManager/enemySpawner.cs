@@ -28,9 +28,7 @@ public class enemySpawner : MonoBehaviour
             [SerializeField] public float spawnDelayMax; // = 6;
         [Tooltip("The amount of enemies to spawn each time.")]
             [SerializeField] public int spawnAmount; // = 3;
-        [Tooltip("The amount of seconds to decrease the spawn delay by each round.")]
-            [SerializeField] public float roundSpawnDelay; // = 0.25f;
-        [Tooltip("The time until the next enemy spawn")]
+        [Tooltip("Delay in between when the each unit spawns in a group (set to 0.1)")]
             [SerializeField] public float spawnDelayTime; // = 0.1f;
     }
     [Header("Enemy Round Settings")]
@@ -67,7 +65,7 @@ public class enemySpawner : MonoBehaviour
                 {
                     spawnEnemy();
                     //spawn delay
-                    nextSpawnTime = Time.time + Random.Range(enemyRoundSettings[round].spawnDelayMin, (enemyRoundSettings[round].spawnDelayMax - (float)(round * enemyRoundSettings[round].roundSpawnDelay)));
+                    nextSpawnTime = Time.time + Random.Range(enemyRoundSettings[round].spawnDelayMin, enemyRoundSettings[round].spawnDelayMax);
                 }
             }
         }
