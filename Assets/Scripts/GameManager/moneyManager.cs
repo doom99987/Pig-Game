@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: moneyManager.cs
+* Name: moneyManager.cs
 * Author: David Konvisser
 * DigiPen Email: david.konvisser@digipen.edu
 * Course: Wanic Game Project

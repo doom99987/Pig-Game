@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: shopManager.cs
+* Name: shopManager.cs
 * Author: David Konvisser & Caleb Bohm
 * DigiPen Email: david.konvisser@digipen.edu & caleb.bohm@digipen.edu
 * Course: Wanic Game Project

@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: bullet.cs
+* Name: bullet.cs
 * Author: David Konvisser & Caleb Bohm
 * DigiPen Email: david.konvisser@digipen.edu & caleb.bohm@digipen.edu
 * Course: Wanic Game Project
@@ -97,7 +97,7 @@ public class bullet : MonoBehaviour
             // Deals damage to enemy
             collision.gameObject.GetComponent<enemyHp>().takeDmg(gameManager.GetComponent<shopManager>().getBulletUpgradeCount() + 1);
             // Checks if the bullet would not pierce the enemy
-            if (bulletPierce <= 0 || collision.gameObject.GetComponent<enemyHp>().getEnemyHp() > 0)
+            if (bulletPierce <= 0)
             {
                 Destroy(gameObject);
             }

@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: enemyShoot.cs
+* Name: enemyShoot.cs
 * Author: Caleb Bohm
 * DigiPen Email: caleb.bohm@digipen.edu
 * Course: Wanic Game Project
