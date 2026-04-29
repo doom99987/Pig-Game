@@ -7473,65 +7473,55 @@ MonoBehaviour:
   - {fileID: 573736595}
   enemyRoundSettings:
   - name: Round 1
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 9
+    spawnDelayMax: 12
+    spawnAmount: 1
+    spawnDelayTime: 0.1
   - name: Round 2
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 9
+    spawnDelayMax: 11
+    spawnAmount: 1
+    spawnDelayTime: 0.1
   - name: Round 3
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 8
+    spawnDelayMax: 11
+    spawnAmount: 1
+    spawnDelayTime: 0.1
   - name: Round 4
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 7
+    spawnDelayMax: 11
+    spawnAmount: 1
+    spawnDelayTime: 0.1
   - name: Round 5
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 7
+    spawnDelayMax: 10
+    spawnAmount: 2
+    spawnDelayTime: 0.1
   - name: Round 6
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 8
+    spawnDelayMax: 11
+    spawnAmount: 2
+    spawnDelayTime: 0.1
   - name: Round 7
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 7
+    spawnDelayMax: 10
+    spawnAmount: 3
+    spawnDelayTime: 0.1
   - name: Round 8
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 7
+    spawnDelayMax: 10
+    spawnAmount: 3
+    spawnDelayTime: 0.1
   - name: Round 9
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 6
+    spawnDelayMax: 9
+    spawnAmount: 3
+    spawnDelayTime: 0.1
   - name: Round 10
-    spawnDelayMin: 0
-    spawnDelayMax: 0
-    spawnAmount: 0
-    roundSpawnDelay: 0
-    spawnDelayTime: 0
+    spawnDelayMin: 5
+    spawnDelayMax: 8
+    spawnAmount: 3
+    spawnDelayTime: 0.1
 --- !u!114 &972771265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19595,6 +19585,210 @@ PrefabInstance:
       propertyPath: 'spawnPoints.Array.data[7]'
       value: 
       objectReference: {fileID: 606547279}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[0].name
+      value: Round 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[1].name
+      value: Round 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[2].name
+      value: Round 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[3].name
+      value: Round 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[4].name
+      value: Round 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[5].name
+      value: Round 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[6].name
+      value: Round 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[7].name
+      value: Round 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[8].name
+      value: Round 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[9].name
+      value: Round 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[0].spawnAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[1].spawnAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[2].spawnAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[3].spawnAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[4].spawnAmount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[5].spawnAmount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[6].spawnAmount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[7].spawnAmount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[8].spawnAmount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[9].spawnAmount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[0].spawnDelayMax
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[0].spawnDelayMin
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[1].spawnDelayMax
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[1].spawnDelayMin
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[2].spawnDelayMax
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[2].spawnDelayMin
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[3].spawnDelayMax
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[3].spawnDelayMin
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[4].spawnDelayMax
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[4].spawnDelayMin
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[5].spawnDelayMax
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[5].spawnDelayMin
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[6].spawnDelayMax
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[6].spawnDelayMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[7].spawnDelayMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[7].spawnDelayMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[8].spawnDelayMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[8].spawnDelayMin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[9].spawnDelayMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[9].spawnDelayMin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[0].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[1].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[2].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[3].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[4].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[5].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[6].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[7].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[8].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
+      propertyPath: enemyRoundSettings.Array.data[9].spawnDelayTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7997098603333375749, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: shopPanel
       value: 
