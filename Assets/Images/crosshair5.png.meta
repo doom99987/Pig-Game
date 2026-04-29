@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 7072a5a74e9aff6438da87e6a7575578
+guid: ee702368aef293946b2d1f8776c32fb3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5307650564873572255
-    second: crosshair4_0
+      213: -4148158915001637412
+    second: crosshair5_0
   - first:
-      213: 8034900388315934120
-    second: crosshair4_1
+      213: -234683493716656084
+    second: crosshair5_1
   - first:
-      213: 6781244884015548726
-    second: crosshair4_2
+      213: -7265137400781102136
+    second: crosshair5_2
   - first:
-      213: -8595372380765783923
-    second: crosshair4_3
+      213: 7011821168083585801
+    second: crosshair5_3
   - first:
-      213: 6387979125379944437
-    second: crosshair4_4
+      213: -1637873631800743753
+    second: crosshair5_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crosshair4_0
+      name: crosshair5_0
       rect:
         serializedVersion: 2
         x: 41
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1603fc0beef6756b0800000000000000
-      internalID: -5307650564873572255
+      spriteID: cd52577d177ce66c0800000000000000
+      internalID: -4148158915001637412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair4_1
+      name: crosshair5_1
       rect:
         serializedVersion: 2
         x: 0
@@ -162,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ad283b1553b18f60800000000000000
-      internalID: 8034900388315934120
+      spriteID: c200f5a1b9c3ebcf0800000000000000
+      internalID: -234683493716656084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair4_2
+      name: crosshair5_2
       rect:
         serializedVersion: 2
         x: 42
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6398eae1b42db1e50800000000000000
-      internalID: 6781244884015548726
+      spriteID: 8c3a90eb60c0d2b90800000000000000
+      internalID: -7265137400781102136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair4_3
+      name: crosshair5_3
       rect:
         serializedVersion: 2
         x: 63
@@ -206,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8870442c5a17b880800000000000000
-      internalID: -8595372380765783923
+      spriteID: 90bcf20c33efe4160800000000000000
+      internalID: 7011821168083585801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crosshair4_4
+      name: crosshair5_4
       rect:
         serializedVersion: 2
         x: 41
@@ -228,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ffc1e86b29a6a850800000000000000
-      internalID: 6387979125379944437
+      spriteID: 7b8a9851c9a1549e0800000000000000
+      internalID: -1637873631800743753
       vertices: []
       indices: 
       edges: []
@@ -248,11 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      crosshair4_0: -5307650564873572255
-      crosshair4_1: 8034900388315934120
-      crosshair4_2: 6781244884015548726
-      crosshair4_3: -8595372380765783923
-      crosshair4_4: 6387979125379944437
+      crosshair5_0: -4148158915001637412
+      crosshair5_1: -234683493716656084
+      crosshair5_2: -7265137400781102136
+      crosshair5_3: 7011821168083585801
+      crosshair5_4: -1637873631800743753
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
