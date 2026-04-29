@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: fadeInManager.cs
+* Name: fadeInManager.cs
 * Author: Caleb Bohm
 * DigiPen Email: caleb.bohm@digipen.edu
 * Course: Wanic Game Project

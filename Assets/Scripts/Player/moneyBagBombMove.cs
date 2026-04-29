@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: moneyBagBombMove.cs
+* Name: moneyBagBombMove.cs
 * Author: Caleb Bohm
 * DigiPen Email: caleb.bohm@digipen.edu
 * Course: Wanic Game Project

@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: audioManager.cs
+* Name: audioManager.cs
 * Author: David Konvisser
 * DigiPen Email: david.konvisser@digipen.edu
 * Course: Wanic Game Project

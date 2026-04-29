@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: TitleScreenPanelManager.cs
+* Name: titleScreenPanelManager.cs
 * Author: David Konvisser
 * DigiPen Email: david.konvisser@digipen.edu
 * Course: Wanic Game Project

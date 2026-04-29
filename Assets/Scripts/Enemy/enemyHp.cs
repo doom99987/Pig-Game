@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: enemyHp.cs
+* Name: enemyHp.cs
 * Author: Caleb Bohm
 * DigiPen Email: caleb.bohm@digipen.edu
 * Course: Wanic Game Project

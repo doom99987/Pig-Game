@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: hpManager.cs
+* Name: hpManager.cs
 * Author: David Konvisser
 * DigiPen Email: david.konvisser@digipen.edu
 * Course: Wanic Game Project

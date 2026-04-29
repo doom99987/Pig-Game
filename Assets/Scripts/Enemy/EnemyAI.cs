@@ -1,5 +1,5 @@
 /****************************************************************************
-* File Name: gameManager.cs
+* Name: gameManager.cs
 * Author: Caleb Bohm
 * DigiPen Email: caleb.bohm@digipen.edu
 * Course: Wanic Game Project
