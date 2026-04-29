@@ -18,18 +18,23 @@ public class shopManager : MonoBehaviour
 
 
     [Header("Upgrade Costs")]
-    [Tooltip("The cost of each speed upgrade. The max count is determined by the length of this array.")]
-        [SerializeField] private float[] speedCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [Tooltip("The cost of each hp upgrade. The max count is determined by the length of this array.")]
-        [SerializeField] private float[] hpCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [Tooltip("The cost of each healing upgrade. The max count is determined by the length of this array.")]
-        [SerializeField] private float[] healingCost = { 5, 50, 500, 5000, 50000, 500000 };
-    [Tooltip("The cost of each pierce upgrade. The max count is determined by the length of this array.")]
-        [SerializeField] private float[] pierceCost = { 5, 50, 500, 5000 };
-    [Tooltip("The cost of each bullet damage upgrade. The max count is determined by the length of this array.")]
-        [SerializeField] private float[] bulletUpgradeCost = { 5, 50, 500, 5000 };
-    [Tooltip("The cost of each bomb. The max count is determined by the length of this array.")]
-        [SerializeField] private float[] bombCost = { 5, 50, 500, 5000 };
+    [Tooltip("The Shop Upgrades")]
+    [SerializeField] private upgrade[] upgrades;
+    /// <summary>
+    /// holds the cost for the upgrade
+    /// </summary>
+    [System.Serializable] private struct upgrade
+    {
+        [SerializeField] private string name;
+        [SerializeField] public int[] cost;
+    } 
+    /// <summary>
+    /// holds the array value for all the upgrades
+    /// </summary>
+    private enum u
+    {
+        speed, hp, healing, pierce, bulletUpgrade, bomb
+    }
 
     [Header("Upgrade Amounts")]
     [Tooltip("The amount the player's speed increases by when buying a speed upgrade.")]
@@ -53,10 +58,6 @@ public class shopManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI buyBulletUpgradeText;
     [SerializeField] private TextMeshProUGUI buyBombText;
 
-    //[Header("Testing")]
-    //[SerializeField] List<int[]> upgrades = new List<int[]>();
-    // need to creat a list of struct that have an array in them with system.serializable
-
     //upgrade limits
     private int sCountMax;
     private int hCountMax;
@@ -76,20 +77,20 @@ public class shopManager : MonoBehaviour
     private void Start()
     {
         //sets all the max counts for the upgrades based on the length of the cost arrays,
-        sCountMax = speedCost.Length;
-        hCountMax = hpCost.Length;
-        healingCountMax = healingCost.Length;
-        pierceCountMax = pierceCost.Length;
-        bulletUpgradeCountMax = bulletUpgradeCost.Length;
-        bombCountMax = bombCost.Length;
+        sCountMax = upgrades[(int)u.speed].cost.Length;
+        hCountMax = upgrades[1].cost.Length;
+        healingCountMax = upgrades[2].cost.Length;
+        pierceCountMax = upgrades[3].cost.Length;
+        bulletUpgradeCountMax = upgrades[4].cost.Length;
+        bombCountMax = upgrades[5].cost.Length;
 
         //sets the text for each upgrade button to show the cost of the first upgrade.
-        buySpeedText.text = $"Buy ${speedCost[speedCount] / 100f}";
-        buyHpText.text = $"Buy ${hpCost[hpBuyCount] / 100f}";
-        buyHealingText.text = $"Buy ${healingCost[healingCount] / 100f}";
-        buyPierceText.text = $"Buy ${pierceCost[pierceCount] / 100f}";
-        buyBulletUpgradeText.text = $"Buy ${bulletUpgradeCost[bulletUpgradeCount] / 100f}";
-        buyBombText.text = $"Buy ${bombCost[bombCount] / 100f}";
+        buySpeedText.text = $"Buy ${upgrades[(int)u.speed].cost[speedCount] / 100f}";
+        buyHpText.text = $"Buy ${upgrades[(int)u.hp].cost[hpBuyCount] / 100f}";
+        buyHealingText.text = $"Buy ${upgrades[(int)u.healing].cost[healingCount] / 100f}";
+        buyPierceText.text = $"Buy ${upgrades[(int)u.pierce].cost[pierceCount] / 100f}";
+        buyBulletUpgradeText.text = $"Buy ${upgrades[(int)u.bulletUpgrade].cost[bulletUpgradeCount] / 100f}";
+        buyBombText.text = $"Buy ${upgrades[(int)u.bomb].cost[bombCount] / 100f}";
     }
 
     /// <summary>
@@ -97,12 +98,12 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buySpeed()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= speedCost[speedCount] && speedCount < sCountMax - 1)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= upgrades[(int)u.speed].cost[speedCount] && speedCount < sCountMax - 1)
         {
             //upgrades the player's speed by 1.
             player.GetComponent<playerMovement>().setCurSpeed(player.GetComponent<playerMovement>().getCurrentSpeed() + speedAmount);
-            gameManager.GetComponent<moneyManager>().removeMoney(speedCost[speedCount]);
-            buySpeedText.text = $"Buy ${speedCost[speedCount + 1] / 100f}";
+            gameManager.GetComponent<moneyManager>().removeMoney(upgrades[(int)u.speed].cost[speedCount]);
+            buySpeedText.text = $"Buy ${upgrades[(int)u.speed].cost[speedCount + 1] / 100f}";
             speedCount++;
         }
         else if (speedCount >= sCountMax - 1)
@@ -116,11 +117,11 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buyHp()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= hpCost[hpBuyCount] && (hpBuyCount < hCountMax - 3))
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= upgrades[(int)u.hp].cost[hpBuyCount] && (hpBuyCount < hCountMax - 3))
         {
             gameManager.GetComponent<hpManager>().upgradeMaxHp();
-            gameManager.GetComponent<moneyManager>().removeMoney(hpCost[hpBuyCount]);
-            buyHpText.text = $"Buy ${hpCost[hpBuyCount + 1] / 100f}";
+            gameManager.GetComponent<moneyManager>().removeMoney(upgrades[(int)u.hp].cost[hpBuyCount]);
+            buyHpText.text = $"Buy ${upgrades[(int)u.hp].cost[hpBuyCount + 1] / 100f}";
             hpBuyCount++;
         }
         else if (hpBuyCount >= hCountMax - 3)
@@ -135,12 +136,12 @@ public class shopManager : MonoBehaviour
     public void buyHealing()
     {
         //checks if they have enough money, if they are not at max healing level, and if their current Hp is less than their max Hp before allowing them to buy healing.
-        if ((gameManager.GetComponent<moneyManager>().getMoney() >= healingCost[healingCount] && healingCount < healingCountMax - 1) 
+        if ((gameManager.GetComponent<moneyManager>().getMoney() >= upgrades[(int)u.healing].cost[healingCount] && healingCount < healingCountMax - 1) 
             && gameManager.GetComponent<hpManager>().getCurrentHp() < gameManager.GetComponent<hpManager>().getMaxHp())
         {
             gameManager.GetComponent<hpManager>().heal();
-            gameManager.GetComponent<moneyManager>().removeMoney(healingCost[healingCount]);
-            buyHealingText.text = $"Buy ${healingCost[healingCount + 1] / 100f}";
+            gameManager.GetComponent<moneyManager>().removeMoney(upgrades[(int)u.healing].cost[healingCount]);
+            buyHealingText.text = $"Buy ${upgrades[(int)u.healing].cost[healingCount + 1] / 100f}";
             healingCount++;
         }
         else if (healingCount >= healingCountMax - 1)
@@ -154,10 +155,10 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buyPierce()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= pierceCost[pierceCount] && pierceCount < pierceCountMax - 1)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= upgrades[(int)u.pierce].cost[pierceCount] && pierceCount < pierceCountMax - 1)
         {
-            gameManager.GetComponent<moneyManager>().removeMoney(pierceCost[pierceCount]);
-            buyPierceText.text = $"Buy ${pierceCost[pierceCount + 1] / 100f}";
+            gameManager.GetComponent<moneyManager>().removeMoney(upgrades[(int)u.pierce].cost[pierceCount]);
+            buyPierceText.text = $"Buy ${upgrades[(int)u.pierce].cost[pierceCount + 1] / 100f}";
             pierceCount++;
         }
         else if (pierceCount >= pierceCountMax - 1)
@@ -171,10 +172,10 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buyBulletUpgrade()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= bulletUpgradeCost[bulletUpgradeCount] && bulletUpgradeCount < bulletUpgradeCountMax - 1)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= upgrades[(int)u.bulletUpgrade].cost[bulletUpgradeCount] && bulletUpgradeCount < bulletUpgradeCountMax - 1)
         {
-            gameManager.GetComponent<moneyManager>().removeMoney(bulletUpgradeCost[bulletUpgradeCount]);
-            buyBulletUpgradeText.text = $"Buy ${bulletUpgradeCost[bulletUpgradeCount + 1] / 100f}";
+            gameManager.GetComponent<moneyManager>().removeMoney(upgrades[(int)u.bulletUpgrade].cost[bulletUpgradeCount]);
+            buyBulletUpgradeText.text = $"Buy ${upgrades[(int)u.bulletUpgrade].cost[bulletUpgradeCount + 1] / 100f}";
             bulletUpgradeCount++;
         }
         else if (bulletUpgradeCount >= bulletUpgradeCountMax - 1)
@@ -188,13 +189,13 @@ public class shopManager : MonoBehaviour
     /// </summary>
     public void buyBombs()
     {
-        if (gameManager.GetComponent<moneyManager>().getMoney() >= bombCost[bombCount] && bombCount < bombCountMax - 1)
+        if (gameManager.GetComponent<moneyManager>().getMoney() >= upgrades[(int)u.bomb].cost[bombCount] && bombCount < bombCountMax - 1)
         {
             bombImage.SetActive(true);
             bombAmountObject.SetActive(true);
             bombAmount.SetText($"{bombCount + 1}");
-            gameManager.GetComponent<moneyManager>().removeMoney(bombCost[bombCount]);
-            buyBombText.text = $"Buy ${bombCost[bombCount + 1] / 100f}";
+            gameManager.GetComponent<moneyManager>().removeMoney(upgrades[(int)u.bomb].cost[bombCount]);
+            buyBombText.text = $"Buy ${upgrades[(int)u.bomb].cost[bombCount + 1] / 100f}";
             bombCount++;
         }
         else if (bombCount >= bombCountMax - 1)
