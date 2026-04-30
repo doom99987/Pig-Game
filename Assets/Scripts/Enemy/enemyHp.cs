@@ -26,6 +26,7 @@ public class enemyHp : MonoBehaviour
     [SerializeField] private int[] bulletUpgradeBonus;
     [SerializeField] private int bulletUpgradeBonusAmount;
     [SerializeField] private int bulletUpgradeCount;
+    [SerializeField] private ParticleSystem particle;
 
     // Ran before update and only once
     public void Start()
@@ -67,6 +68,7 @@ public class enemyHp : MonoBehaviour
         {
             giveMoneyOnDeath();
             gameManager.GetComponent<audioManager>().playEnemyDeathSound();
+            Instantiate(particle, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

@@ -204,6 +204,7 @@ MonoBehaviour:
   bulletUpgradeBonus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   bulletUpgradeBonusAmount: 0
   bulletUpgradeCount: 0
+  particle: {fileID: 0}
 --- !u!114 &3103007746802694855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +482,7 @@ MonoBehaviour:
   bulletUpgradeBonus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   bulletUpgradeBonusAmount: 0
   bulletUpgradeCount: 0
+  particle: {fileID: 7863337216541584730, guid: 917bed96eb8e4304e87181720b9c3069, type: 3}
 --- !u!114 &-156059216757164469
 MonoBehaviour:
   m_ObjectHideFlags: 0
