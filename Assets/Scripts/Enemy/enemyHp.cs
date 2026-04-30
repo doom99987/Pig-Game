@@ -63,6 +63,7 @@ public class enemyHp : MonoBehaviour
         if (hp >= 1)
         {
             hp -= dmg;
+            Instantiate(particle, transform.position, Quaternion.identity);
         }
         if (hp <= 0)
         {
