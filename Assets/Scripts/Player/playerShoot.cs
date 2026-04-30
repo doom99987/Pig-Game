@@ -12,6 +12,7 @@ using UnityEngine;
 public class playerShoot : MonoBehaviour
 {
     private float elapsedTime;
+    private int playerDir = 0;
 
     [Header("Projectile Stuff")] 
     [SerializeField] GameObject bullet;
@@ -28,7 +29,6 @@ public class playerShoot : MonoBehaviour
     [SerializeField] GameObject gameManager;
 
 
-    protected int playerDir = 0;
     // Update is called once per frame
     void Update()
     {

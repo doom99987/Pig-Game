@@ -20,8 +20,6 @@ public class enemyHp : MonoBehaviour
     [Header("Money Settings")]
     [Tooltip("The amount of money given to the player when the enemy dies.")]
         [SerializeField] private int moneyOnDeath = 0;
-    [Tooltip("The multiplier used to calculate the money given to the player when the enemy dies.")]
-        [SerializeField] private int multiplier = 5;
     [SerializeField] private float[] money;
     [SerializeField] private int[] bulletUpgradeBonus;
     [SerializeField] private int bulletUpgradeBonusAmount;
@@ -32,7 +30,7 @@ public class enemyHp : MonoBehaviour
     // Ran before update and only once
     public void Start()
     {
-        gameManager = GameObject.Find("gameManager");
+        gameManager = FindFirstObjectByType<shopManager>().gameObject;
         bulletUpgradeCount = gameManager.GetComponent<shopManager>().getBulletUpgradeCount();
         int round = gameManager.GetComponent<roundManager>().getRound();
         hp = round += hp;
@@ -48,10 +46,12 @@ public class enemyHp : MonoBehaviour
         if (hp > 1)
         {
             hp--;
+            Instantiate(particleHit, transform.position, Quaternion.identity);
         }
         else
         {
             giveMoneyOnDeath();
+            Instantiate(particleDeath, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

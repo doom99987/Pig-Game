@@ -12,10 +12,11 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
+    private float bulletCurSpeed;
     private int bulletPierce;
-    private GameObject gameManager;
     private bool fixVelocity = false;
     private Vector3 dir;
+    private GameObject gameManager;
 
     [Header("Animator")]
     [SerializeField] private Animator animator;
@@ -32,7 +33,6 @@ public class bullet : MonoBehaviour
     [Tooltip("Rotation speed of the bullet")]
         [SerializeField] private float rotSpeed = 5f;
 
-    protected float bulletCurSpeed;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
