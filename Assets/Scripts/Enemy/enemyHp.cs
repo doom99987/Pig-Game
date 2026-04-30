@@ -26,7 +26,8 @@ public class enemyHp : MonoBehaviour
     [SerializeField] private int[] bulletUpgradeBonus;
     [SerializeField] private int bulletUpgradeBonusAmount;
     [SerializeField] private int bulletUpgradeCount;
-    [SerializeField] private ParticleSystem particle;
+    [SerializeField] private ParticleSystem particleDeath;
+    [SerializeField] private ParticleSystem particleHit;
 
     // Ran before update and only once
     public void Start()
@@ -63,12 +64,13 @@ public class enemyHp : MonoBehaviour
         if (hp >= 1)
         {
             hp -= dmg;
+            Instantiate(particleHit, transform.position, Quaternion.identity);
         }
         if (hp <= 0)
         {
             giveMoneyOnDeath();
             gameManager.GetComponent<audioManager>().playEnemyDeathSound();
-            Instantiate(particle, transform.position, Quaternion.identity);
+            Instantiate(particleDeath, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
