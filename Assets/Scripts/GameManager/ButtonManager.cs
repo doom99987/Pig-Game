@@ -33,9 +33,9 @@ public class buttonManager : MonoBehaviour
     {
         if(Application.platform == RuntimePlatform.WindowsPlayer || Application.isEditor)
         {
-            throw new System.Exception("Application.Quit() does not work in the editor, but it will work when the game is built.");
+            Debug.Log("Game can't close in editor");
         }
-        else
+        else if(Application.isPlaying)
         {
             Application.Quit();
         }
