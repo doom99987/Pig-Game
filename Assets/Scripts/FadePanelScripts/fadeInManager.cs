@@ -30,7 +30,7 @@ public class fadeInManager : MonoBehaviour
     [SerializeField] private Texture2D cursorTexture;
     [SerializeField] private Texture2D cursorCrosshair;
 
-    private CursorMode cursorMode = CursorMode.Auto;
+    private CursorMode cursorMode = CursorMode.ForceSoftware;
     private Vector2 hotSpot = Vector2.zero;
     private Vector2 hotSpotOffset;
     private enum currentCursor
@@ -65,6 +65,7 @@ public class fadeInManager : MonoBehaviour
         {
             Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
             cursorState = currentCursor.cursor;
+
         }
     }
 
