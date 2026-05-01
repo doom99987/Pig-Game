@@ -202,7 +202,8 @@ MonoBehaviour:
   bulletUpgradeBonus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   bulletUpgradeBonusAmount: 0
   bulletUpgradeCount: 0
-  particle: {fileID: 7200012985491429303, guid: 9e90b480a6b8a674b94a665d4b667888, type: 3}
+  particleDeath: {fileID: 7200012985491429303, guid: f8e3be20625087a4e84dfe0891d95bb0, type: 3}
+  particleHit: {fileID: 7200012985491429303, guid: ccd7d1e2a6ee124498d1b7c440939d57, type: 3}
 --- !u!95 &3246206151224794277
 Animator:
   serializedVersion: 7

@@ -19,19 +19,18 @@ public class enemyHp : MonoBehaviour
 
     [Header("Money Settings")]
     [Tooltip("The amount of money given to the player when the enemy dies.")]
-    [SerializeField] protected int moneyOnDeath = 0;
-    [Tooltip("The multiplier used to calculate the money given to the player when the enemy dies.")]
-    [SerializeField] protected int multiplier = 5;
+        [SerializeField] private int moneyOnDeath = 0;
     [SerializeField] private float[] money;
     [SerializeField] private int[] bulletUpgradeBonus;
     [SerializeField] private int bulletUpgradeBonusAmount;
     [SerializeField] private int bulletUpgradeCount;
-    [SerializeField] private ParticleSystem particle;
+    [SerializeField] private ParticleSystem particleDeath;
+    [SerializeField] private ParticleSystem particleHit;
 
     // Ran before update and only once
     public void Start()
     {
-        gameManager = GameObject.Find("gameManager");
+        gameManager = FindFirstObjectByType<shopManager>().gameObject;
         bulletUpgradeCount = gameManager.GetComponent<shopManager>().getBulletUpgradeCount();
         int round = gameManager.GetComponent<roundManager>().getRound();
         hp = round += hp;
@@ -47,10 +46,12 @@ public class enemyHp : MonoBehaviour
         if (hp > 1)
         {
             hp--;
+            Instantiate(particleHit, transform.position, Quaternion.identity);
         }
         else
         {
             giveMoneyOnDeath();
+            Instantiate(particleDeath, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
@@ -63,13 +64,13 @@ public class enemyHp : MonoBehaviour
         if (hp >= 1)
         {
             hp -= dmg;
-            Instantiate(particle, transform.position, Quaternion.identity);
+            Instantiate(particleHit, transform.position, Quaternion.identity);
         }
         if (hp <= 0)
         {
             giveMoneyOnDeath();
             gameManager.GetComponent<audioManager>().playEnemyDeathSound();
-            Instantiate(particle, transform.position, Quaternion.identity);
+            Instantiate(particleDeath, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

@@ -20,7 +20,11 @@ public class deleteScript : MonoBehaviour
     {
         StartCoroutine(delete(deleteDelay));
     }
-
+    /// <summary>
+    /// Deletes the given object after specified amount of time
+    /// </summary>
+    /// <param name="delay"></param>
+    /// <returns></returns>
     private IEnumerator delete(int delay)
     {
         yield return new WaitForSeconds(delay);
