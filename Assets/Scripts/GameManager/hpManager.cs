@@ -39,6 +39,9 @@ public class hpManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI deathPanelMoneyText;
     [SerializeField] private GameObject fadePanel;
 
+    [Header("Sfx")]
+    [SerializeField] private AudioSource deathSound;
+
     private GameObject[] fullHearts;
     private GameObject[] emptyHearts;
     private bool isDead = false;
@@ -103,6 +106,8 @@ public class hpManager : MonoBehaviour
                 Destroy(child.gameObject);
             // Enable dead
             isDead = true;
+            // Play death sound effect
+            deathSound.Play();
             // Enable end game
             gameManager.GetComponent<gameManager>().setGameState(true);
             // Toggles on the money text
