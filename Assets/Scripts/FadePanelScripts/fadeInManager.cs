@@ -32,7 +32,7 @@ public class fadeInManager : MonoBehaviour
 
     private CursorMode cursorMode = CursorMode.Auto;
     private Vector2 hotSpot = Vector2.zero;
-    private Vector2 hotSpotOffset = new Vector2(0.5f, 0.5f);
+    private Vector2 hotSpotOffset;
     private enum currentCursor
     {
         crosshair, cursor
@@ -43,6 +43,9 @@ public class fadeInManager : MonoBehaviour
     {
         // Gets the objects img
         img = gameObject.GetComponent<Image>();
+        // Gets the center of the image
+        hotSpotOffset = new Vector2(cursorCrosshair.width / 2f, cursorCrosshair.height / 2f);
+        
         if (gameManager != null)
         {
             cursorSwap();

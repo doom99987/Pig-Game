@@ -7472,7 +7472,7 @@ MonoBehaviour:
   - {fileID: 606547279}
   - {fileID: 573736595}
   enemyRoundSettings:
-  - name: x
+  - name: Round 0
     spawnDelayMin: 0
     spawnDelayMax: 0
     spawnAmount: 0
@@ -19920,7 +19920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: enemyRoundSettings.Array.data[0].name
-      value: x
+      value: Round 0
       objectReference: {fileID: 0}
     - target: {fileID: 6310038832464514193, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: enemyRoundSettings.Array.data[1].name
