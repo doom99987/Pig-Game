@@ -5000,7 +5000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bullet Dmg
+  m_text: Bullet damage
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
   m_sharedMaterial: {fileID: -4026371697014486238, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
@@ -6106,7 +6106,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 300, y: -80}
-  m_SizeDelta: {x: 180, y: 50}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &743939432
 MonoBehaviour:
@@ -6128,7 +6128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bomb Skill
+  m_text: Money bomb
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
   m_sharedMaterial: {fileID: -4026371697014486238, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
@@ -14618,7 +14618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase Hp 1
+  m_text: Max Hp
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
   m_sharedMaterial: {fileID: -4026371697014486238, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
@@ -14780,7 +14780,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 300, y: -110, z: 0}
-  m_LocalScale: {x: 24.956911, y: 24.956911, z: 24.956911}
+  m_LocalScale: {x: 45, y: 45, z: 45}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 904122105}
@@ -19093,7 +19093,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Heal 1 Hp
+  m_text: Heal Hp
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
   m_sharedMaterial: {fileID: -4026371697014486238, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
