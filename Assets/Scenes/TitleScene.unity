@@ -2426,8 +2426,8 @@ MonoBehaviour:
   flashTime: 0.002
   img: {fileID: 1259928745}
   gameManager: {fileID: 0}
-  cursorTexture: {fileID: 2800000, guid: 7c0618ab00604ed46b53c2b56a9ea2f4, type: 3}
-  cursorCrosshair: {fileID: 2800000, guid: 7072a5a74e9aff6438da87e6a7575578, type: 3}
+  cursorTexture: {fileID: 2800000, guid: e53aa048eb1481144afd977505b20bf6, type: 3}
+  cursorCrosshair: {fileID: 2800000, guid: 1748a062c36ff484cac050b3ebd65e87, type: 3}
 --- !u!1 &1284690981
 GameObject:
   m_ObjectHideFlags: 0
