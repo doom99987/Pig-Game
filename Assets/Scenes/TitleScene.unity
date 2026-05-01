@@ -2622,24 +2622,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' David Konvisser & Caleb Bohm
+  m_text: 'David & Caleb
 
-    Amelia Venturini & Niki Szavuly
+    Amelia & Niki
 
-    Audrey 
-    Wu & Palak Kumar
+    Audrey & Palak
 
-    Vanilla Caramel - https://www.dafont.com/vanilla-caramel.font
+    Vanilla Caramel
+    - https://www.dafont.com/vanilla-caramel.font
 
-    Pacifico
-    - https://www.dafont.com/pacifico.font
+    Pacifico - https://www.dafont.com/pacifico.font
 
 
 
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
-  m_sharedMaterial: {fileID: -4026371697014486238, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
+  m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2705,7 +2704,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1295979579
