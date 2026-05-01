@@ -10251,7 +10251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Quit game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
   m_sharedMaterial: {fileID: -4026371697014486238, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
@@ -15656,7 +15656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Main menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
   m_sharedMaterial: {fileID: -4026371697014486238, guid: aa2b62eab0521b545bc6e6317765c7e3, type: 2}
