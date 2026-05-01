@@ -40,6 +40,7 @@ public class hpManager : MonoBehaviour
     [SerializeField] private GameObject fadePanel;
 
     [Header("Sfx")]
+    [SerializeField] private AudioSource takeDamageSound;
     [SerializeField] private AudioSource deathSound;
 
     private GameObject[] fullHearts;
@@ -150,6 +151,7 @@ public class hpManager : MonoBehaviour
         if (hp > 0)
         {
             StartCoroutine(dmgFlash());
+            takeDamageSound.Play();
             hp--;
         }
         updateHearts();
