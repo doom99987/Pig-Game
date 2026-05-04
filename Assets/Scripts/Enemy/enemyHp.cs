@@ -69,7 +69,6 @@ public class enemyHp : MonoBehaviour
         if (hp <= 0)
         {
             giveMoneyOnDeath();
-            gameManager.GetComponent<audioManager>().playEnemyDeathSound();
             Instantiate(particleDeath, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

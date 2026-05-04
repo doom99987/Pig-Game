@@ -36,13 +36,4 @@ public class audioManager : MonoBehaviour
             gameMusic.UnPause();
         }
     }
-
-
-    /// <summary>
-    /// plays the enemy death sound effect.
-    /// </summary>
-    public void playEnemyDeathSound()
-    {
-               deathSound.Play();
-    }
 }
