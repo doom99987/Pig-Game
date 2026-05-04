@@ -9753,7 +9753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5649e5031c92c4d4396fb0db653f1d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curSpeed: 4.4
+  curSpeed: 4.25
   gameManager: {fileID: 789329630}
   animator: {fileID: 1156143659}
   rb: {fileID: 1156143647}
@@ -14233,7 +14233,7 @@ MonoBehaviour:
   img: {fileID: 1509270526}
   gameManager: {fileID: 789329630}
   cursorTexture: {fileID: 2800000, guid: e53aa048eb1481144afd977505b20bf6, type: 3}
-  cursorCrosshair: {fileID: 2800000, guid: 1748a062c36ff484cac050b3ebd65e87, type: 3}
+  cursorCrosshair: {fileID: 2800000, guid: 4027963b2d1b3ac41a58e26028bdba4e, type: 3}
 --- !u!1 &1509539499
 GameObject:
   m_ObjectHideFlags: 0
@@ -19430,7 +19430,7 @@ PrefabInstance:
       objectReference: {fileID: 1861321474}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: speedAmount
-      value: 1.5
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bombCountMax
