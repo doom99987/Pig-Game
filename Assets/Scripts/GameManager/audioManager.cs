@@ -8,6 +8,7 @@
 *
 ****************************************************************************/
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class audioManager : MonoBehaviour
 {
