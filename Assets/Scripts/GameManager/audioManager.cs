@@ -20,7 +20,7 @@ public class audioManager : MonoBehaviour
         //checks if shop is open, if player is dead and decideds whether to pause, stop or unpause the music.
         if (gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() || gameObject.GetComponent<gameManager>().getGameState())
         {
-            gameMusic.Pause();
+            gameMusic.Stop();
         }
         else if (gameObject.GetComponent<hpManager>().getIsDead() == true)
         {
@@ -28,7 +28,7 @@ public class audioManager : MonoBehaviour
         }
         else
         {
-            gameMusic.UnPause();
+            gameMusic.Play();
         }
     }
 
