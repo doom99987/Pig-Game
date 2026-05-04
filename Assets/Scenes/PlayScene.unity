@@ -19430,7 +19430,7 @@ PrefabInstance:
       objectReference: {fileID: 1861321474}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: speedAmount
-      value: 1.25
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bombCountMax

@@ -186,7 +186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   moneyOnDeath: 0
-  multiplier: 5
   money:
   - 4
   - 4
@@ -198,7 +197,7 @@ MonoBehaviour:
   - 75
   - 100
   - 125
-  - 200
+  - 100
   bulletUpgradeBonus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   bulletUpgradeBonusAmount: 0
   bulletUpgradeCount: 0
