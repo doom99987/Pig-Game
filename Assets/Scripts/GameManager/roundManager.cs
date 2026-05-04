@@ -50,6 +50,7 @@ public class roundManager : MonoBehaviour
     private bool roundStartDelay = true;
     private bool isRoundTextOpen = true;
     private bool isTimerTextOpen = true;
+    private bool playMusic = true;
 
     // Run is called before any update is called the first time
     private void Start()
@@ -64,9 +65,15 @@ public class roundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         // Checks if the game is paused
         if (!gameObject.GetComponent<gameManager>().getGameState() && !roundStartDelay)
         {
+            while (playMusic)
+            {
+                mainGpSound.Play();
+                playMusic = false;
+            }
             tutorialStuff.SetActive(false);
             // Updates the total time thats passed
             elapsedTime -= Time.deltaTime;
@@ -172,6 +179,11 @@ public class roundManager : MonoBehaviour
     public bool getStartDelay()
     {
         return roundStartDelay;
+    }
+
+    public void setMusicbool()
+    {
+        playMusic = true;
     }
 
     /// <summary>

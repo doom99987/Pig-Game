@@ -21,14 +21,18 @@ public class audioManager : MonoBehaviour
         if (gameObject.GetComponent<playScenePanelManager>().getIsShopOpen() || gameObject.GetComponent<gameManager>().getGameState())
         {
             gameMusic.Stop();
+            gameObject.GetComponent<roundManager>().setMusicbool();
+        }else if(gameObject.GetComponent<playScenePanelManager>().getIsPauseOpen())
+        {
+            gameMusic.Pause();
         }
         else if (gameObject.GetComponent<hpManager>().getIsDead() == true)
         {
             gameMusic.Stop();
-        }
-        else
+            gameObject.GetComponent<roundManager>().setMusicbool();
+        }else
         {
-            gameMusic.Play();
+            gameMusic.UnPause();
         }
     }
 
