@@ -45,7 +45,9 @@ public class fadeInManager : MonoBehaviour
         img = gameObject.GetComponent<Image>();
         // Gets the center of the image
         hotSpotOffset = new Vector2(cursorCrosshair.width / 2f, cursorCrosshair.height / 2f);
-        
+        // Sets the cursors main texture properly
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        // Start on crosshair
         if (gameManager != null)
         {
             cursorSwap();
