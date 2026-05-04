@@ -42,6 +42,9 @@ public class roundManager : MonoBehaviour
         [SerializeField] private TextMeshProUGUI deathText;
     [SerializeField] private GameObject tutorialStuff;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource mainGpSound;
+
     private List<GameObject> things = new List<GameObject>();
     private float elapsedTime;
     private bool roundStartDelay = true;
