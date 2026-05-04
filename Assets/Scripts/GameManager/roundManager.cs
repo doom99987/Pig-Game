@@ -69,7 +69,7 @@ public class roundManager : MonoBehaviour
         // Checks if the game is paused
         if (!gameObject.GetComponent<gameManager>().getGameState() && !roundStartDelay)
         {
-            while (playMusic)
+            if (playMusic)
             {
                 mainGpSound.Play();
                 playMusic = false;
