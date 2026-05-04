@@ -67,7 +67,6 @@ public class roundManager : MonoBehaviour
         // Checks if the game is paused
         if (!gameObject.GetComponent<gameManager>().getGameState() && !roundStartDelay)
         {
-            mainGpSound.Play();
             tutorialStuff.SetActive(false);
             // Updates the total time thats passed
             elapsedTime -= Time.deltaTime;
