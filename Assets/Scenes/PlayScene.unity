@@ -9753,7 +9753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5649e5031c92c4d4396fb0db653f1d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curSpeed: 4.4
+  curSpeed: 4.25
   gameManager: {fileID: 789329630}
   animator: {fileID: 1156143659}
   rb: {fileID: 1156143647}
@@ -19430,7 +19430,7 @@ PrefabInstance:
       objectReference: {fileID: 1861321474}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: speedAmount
-      value: 1.5
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4346451578922403678, guid: 26374c0bc79d7574789b09d67db27f11, type: 3}
       propertyPath: bombCountMax
