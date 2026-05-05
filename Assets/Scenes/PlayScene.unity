@@ -9088,7 +9088,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrades your dmg but also increases the amount needed to shoot
+  m_text: Increases the amount damage from your bullets, but increases the cost to
+    shoot.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
@@ -9225,9 +9226,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bullets become piercing and are able to hit through more than one enemy
-    if it kills the first enemy it hits. Each level of Pierce increases the amount
-    of enemies you can shoot through.
+  m_text: Bullets become piercing and are able to hit through more than one enemy.
+    Each level of Pierce increases the amount of enemies you can shoot through by
+    one.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
   m_sharedMaterial: {fileID: 2754108515663802357, guid: e904adc1a6dd54947a6271c9f2cafad6, type: 2}
@@ -10497,8 +10498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 300, y: 125}
-  m_SizeDelta: {x: -680, y: -350}
+  m_AnchoredPosition: {x: 300, y: 120}
+  m_SizeDelta: {x: -680, y: -360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203001865
 MonoBehaviour:
